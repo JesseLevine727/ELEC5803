@@ -1,0 +1,59 @@
+WARNING: [vitis-run 60-2507] Dispatch failed to load the system diagram library librdi_system_diagram. Diagrams will not be produced.
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls'.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/mem.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Tue Jan 13 17:04:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/hls_data.json outdir=/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip srcdir=/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/misc
+INFO: Copied 6 verilog file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/verilog
+INFO: Copied 5 vhdl file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/vhdl
+INFO: Import ports from HDL: /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/vhdl/cpu.vhd (cpu)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add data interface mem_address0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/elfo/Documents/2025.1/Vivado/data/ip'.
+INFO: Add data interface mem_d0
+INFO: Add data interface mem_q0
+INFO: Add data interface pstrb
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/component.xml
+INFO: Created IP archive /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/xilinx_com_hls_cpu_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 13 17:05:00 2026...
+INFO: [HLS 200-802] Generated output file riscv_hls/cpu.zip
+INFO: [HLS 200-112] Total CPU user time: 6.25 seconds. Total CPU system time: 0.43 seconds. Total elapsed time: 23.54 seconds; peak allocated memory: 313.629 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 26s

@@ -1,0 +1,3 @@
+relativeroot=/home/elfo/Documents/ELEC5803/riscv_hls
+original_argv=--mode hls --impl --config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg --work_dir riscv_hls 
+

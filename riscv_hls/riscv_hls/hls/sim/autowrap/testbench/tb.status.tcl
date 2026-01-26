@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/./sim/autowrap/testbench/riscv32i.cc_pre.cc.tb.cc

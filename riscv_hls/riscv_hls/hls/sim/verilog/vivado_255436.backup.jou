@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Jan 20 09:44:03 2026
+# Process ID         : 255436
+# Current directory  : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog
+# Command line       : vivado -source open_wave.tcl
+# Log file           : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/vivado.log
+# Journal file       : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/vivado.jou
+# Running On         : gondor
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
+# CPU Frequency      : 2850.248 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 64919 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 73509 MB
+# Available Virtual  : 65954 MB
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu.wcfg
+close_sim

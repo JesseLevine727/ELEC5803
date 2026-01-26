@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/riscv_hls.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Jan 20 09:47:01 2026",
+ "timestampMillis": "1768920421339",
+ "buildStep": {
+  "cmdId": "c0b16958-87ff-4098-8620-297c64f26e75",
+  "name": "vitis-run",
+  "logFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/logs/riscv_hls.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg --work_dir riscv_hls ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg",
+   "--work_dir",
+   "riscv_hls"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/riscv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:47:01 2026",
+ "timestampMillis": "1768920421339",
+ "status": {
+  "cmdId": "c0b16958-87ff-4098-8620-297c64f26e75",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422962",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cpu",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h",
+     "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "buildStep": {
+  "cmdId": "b2342ec3-092d-4cd9-afc2-c79deb2e040a",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/riscv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "status": {
+  "cmdId": "b2342ec3-092d-4cd9-afc2-c79deb2e040a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:47:02 2026",
+ "timestampMillis": "1768920422963",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:49:59 2026",
+ "timestampMillis": "1768920599405",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:49:59 2026",
+ "timestampMillis": "1768920599406",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:49:59 2026",
+ "timestampMillis": "1768920599406",
+ "status": {
+  "cmdId": "b2342ec3-092d-4cd9-afc2-c79deb2e040a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:49:59 2026",
+ "timestampMillis": "1768920599463",
+ "status": {
+  "cmdId": "c0b16958-87ff-4098-8620-297c64f26e75",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:49:59 2026",
+ "timestampMillis": "1768920599463",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:49:59 2026",
+ "timestampMillis": "1768920599463",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

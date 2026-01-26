@@ -1,0 +1,4 @@
+1 warning and 1 error generated.
+Error while processing /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc.
+clang-tidy applied 6 of 6 suggested fixes.
+Suppressed 1 warnings (1 with check filters).

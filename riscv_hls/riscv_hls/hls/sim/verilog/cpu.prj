@@ -1,0 +1,10 @@
+sv work "glbl.v"
+sv xil_defaultlib "cpu_flow_control_loop_pipe_sequential_init.v"
+sv xil_defaultlib "cpu_cpu_Pipeline_VITIS_LOOP_22_1.v"
+sv xil_defaultlib "cpu_cpu_Pipeline_PROGRAM_LOOP.v"
+sv xil_defaultlib "cpu.v"
+sv xil_defaultlib "cpu_reg_file_RAM_1WNR_AUTO_1R1W.v"
+sv xil_defaultlib "cpu.autotb.v"
+sv xil_defaultlib "AESL_automem_mem.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

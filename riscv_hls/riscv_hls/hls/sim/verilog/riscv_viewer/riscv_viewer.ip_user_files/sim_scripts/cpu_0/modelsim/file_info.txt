@@ -1,0 +1,7 @@
+cpu_cpu_Pipeline_PROGRAM_LOOP.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/cpu_cpu_Pipeline_PROGRAM_LOOP.v,incdir="../../../../../../../../../../../2025.1/data/rsb/busdef"
+cpu_cpu_Pipeline_VITIS_LOOP_22_1.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_22_1.v,incdir="../../../../../../../../../../../2025.1/data/rsb/busdef"
+cpu_flow_control_loop_pipe_sequential_init.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/cpu_flow_control_loop_pipe_sequential_init.v,incdir="../../../../../../../../../../../2025.1/data/rsb/busdef"
+cpu_reg_file_RAM_1WNR_AUTO_1R1W.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/cpu_reg_file_RAM_1WNR_AUTO_1R1W.v,incdir="../../../../../../../../../../../2025.1/data/rsb/busdef"
+cpu.v,verilog,xil_defaultlib,../../../ipstatic/hdl/verilog/cpu.v,incdir="../../../../../../../../../../../2025.1/data/rsb/busdef"
+cpu_0.v,verilog,xil_defaultlib,../../../../riscv_viewer.gen/sources_1/ip/cpu_0/sim/cpu_0.v,incdir="../../../../../../../../../../../2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

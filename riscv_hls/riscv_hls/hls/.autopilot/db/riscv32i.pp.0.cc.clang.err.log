@@ -1,0 +1,11 @@
+directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cpu_XLX_SEP_ PragmaOptions=name=cpu_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=cpu
+        ^
+../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cpu_XLX_SEP_ PragmaOptions=ap_none port=pstrb_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_none port=pstrb
+        ^
+../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
+        ^
+../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cpu_XLX_SEP_ PragmaOptions=variable=mem core=RAM_1P_BRAM_XLX_SEP_ [-Wdump-hls-pragmas]
+4 warnings generated.

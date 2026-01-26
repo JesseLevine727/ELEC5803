@@ -1,0 +1,2 @@
+XILINX_VITIS=/home/elfo/Documents/2025.1/Vitis
+cmdline: /home/elfo/Documents/2025.1/Vitis/bin/xcd -p 33627 -t 27bdd8e6-f60e-11f0-9400-bcfce73dcffe

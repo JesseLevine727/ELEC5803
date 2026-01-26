@@ -1,0 +1,137 @@
+{
+    "top_level_hw_fn_id": 258,
+    "functions": {
+        "200": {
+            "fn_id": 200,
+            "mangled_name": "_GLOBAL__sub_I_riscv32i_tb.cc",
+            "fully_qualified_name": "_GLOBAL__sub_I_riscv32i_tb",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "201": {
+            "fn_id": 201,
+            "mangled_name": "__cxx_global_var_init",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "252": {
+            "fn_id": 252,
+            "mangled_name": "_GLOBAL__sub_I_riscv32i.cc",
+            "fully_qualified_name": "_GLOBAL__sub_I_riscv32i",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "253": {
+            "fn_id": 253,
+            "mangled_name": "__cxx_global_var_init.2",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "254": {
+            "fn_id": 254,
+            "mangled_name": "_GLOBAL__sub_I_riscv32i.cc.5",
+            "fully_qualified_name": "_GLOBAL__sub_I_riscv32i",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "255": {
+            "fn_id": 255,
+            "mangled_name": "__cxx_global_var_init.6",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "256": {
+            "fn_id": 256,
+            "mangled_name": "__dtor__ZStL8__ioinit",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/elfo/Documents/2025.1/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "258": {
+            "fn_id": 258,
+            "mangled_name": "_Z3cpuP7ap_uintILi32EEPVS_ILi4EE",
+            "fully_qualified_name": "cpu",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc",
+                "line": 13,
+                "column": 1
+            }
+        }
+    },
+    "loops": {
+        "5": {
+            "fn_id": 258,
+            "lp_id": 5,
+            "label": "PROGRAM_LOOP"
+        },
+        "6": {
+            "fn_id": 258,
+            "lp_id": 6
+        }
+    },
+    "used_types": [
+        {
+            "type_name": "Init",
+            "dwarf_tag": "class",
+            "count": 3
+        },
+        {
+            "type_name": "ap_uint",
+            "dwarf_tag": "struct",
+            "count": 25
+        },
+        {
+            "type_name": "int",
+            "dwarf_tag": "base",
+            "count": 1
+        }
+    ]
+}

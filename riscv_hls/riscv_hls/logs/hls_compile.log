@@ -1,0 +1,136 @@
+WARNING: [v++ 60-2507] Dispatch failed to load the system diagram library librdi_system_diagram. Diagrams will not be produced.
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/mem.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.99 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.15 seconds; current allocated memory: 251.355 MB.
+INFO: [HLS 200-10] Analyzing design file '../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.28 seconds. CPU system time: 0.2 seconds. Elapsed time: 1.6 seconds; current allocated memory: 253.344 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 10,869 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 800 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 271 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 270 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 270 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 250 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 235 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 235 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 235 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 236 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 236 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 236 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 235 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 235 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 238 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 244 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 214-340] The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead (../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_22_1> at ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:22:20 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< PROGRAM_LOOP> at ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:29:17 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.4 seconds. CPU system time: 0.15 seconds. Elapsed time: 6.27 seconds; current allocated memory: 255.156 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 255.156 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 255.578 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 255.930 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 278.969 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.359 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cpu' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cpu_Pipeline_VITIS_LOOP_22_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'reg_file'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 290.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 290.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cpu_Pipeline_PROGRAM_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'reg_file'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'PROGRAM_LOOP'.
+WARNING: [HLS 200-880] The II Violation in module 'cpu_Pipeline_PROGRAM_LOOP' (loop 'PROGRAM_LOOP'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'br' operation 0 bit ('br_ln144', ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:144) and 'load' operation 32 bit ('insn', ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:34) on array 'mem'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cpu_Pipeline_PROGRAM_LOOP' (loop 'PROGRAM_LOOP'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'store' operation 0 bit ('mem_addr_2_write_ln248', ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:248) of variable 'imm12' on array 'mem' and 'load' operation 32 bit ('insn', ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:34) on array 'mem'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 6, loop 'PROGRAM_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 292.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 292.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cpu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 292.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 292.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cpu_Pipeline_VITIS_LOOP_22_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cpu_Pipeline_VITIS_LOOP_22_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 292.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cpu_Pipeline_PROGRAM_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cpu_Pipeline_PROGRAM_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 292.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cpu' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cpu/mem' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cpu/pstrb' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'pstrb' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cpu' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cpu'.
+INFO: [RTMG 210-278] Implementing memory 'cpu_reg_file_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 295.906 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 297.395 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 300.297 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for cpu.
+INFO: [VLOG 209-307] Generating Verilog RTL for cpu.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 149.99 MHz
+INFO: [HLS 200-112] Total CPU user time: 4.17 seconds. Total CPU system time: 0.51 seconds. Total elapsed time: 9.62 seconds; peak allocated memory: 300.297 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 12s

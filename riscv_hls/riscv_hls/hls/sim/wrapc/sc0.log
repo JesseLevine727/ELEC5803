@@ -1,0 +1,6 @@
+   Build using "/home/elfo/Documents/2025.1/Vitis/lnx64/tools/vcxx/libexec//clang++"
+   Compiling apatb_cpu.cpp
+   Compiling riscv32i.cc_pre.cc.tb.cc
+   Compiling riscv32i_tb.cc_pre.cc.tb.cc
+   Compiling apatb_cpu_ir.ll
+   Generating cosim.tv.exe

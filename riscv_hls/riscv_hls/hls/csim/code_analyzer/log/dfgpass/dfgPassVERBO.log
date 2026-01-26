@@ -1,0 +1,93 @@
+dfgPass::INFOR: DFG Pass going to run on Module: /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/csim/code_analyzer/.internal/instrument/app_0/project.symbols.bc
+dfgPass::INFOR:     Parsing the provided input trace files...
+dfgPass::INFOR:     Initializing InstructionCounter...
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond16
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body18
+dfgPass::VERBO:         - memlocal of :fptr:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +3 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - arrayctor.loop
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN11ap_int_baseILi32ELb0EE18checkOverflowBaseCIiEEvT_ is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi32ELb0ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi32ELb0ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN11ap_int_baseILi32ELb0EE18checkOverflowBaseCIjEEvT_ is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi4ELb0ELb1EE10set_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     _ZN10ap_privateILi4ELb0ELb1EE12check_canaryEv is skipped for analysis (only accesses local vars)
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:         - memlocal of :unnamed:1
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :unnamed:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::INFOR:     Parsing trace...
+dfgPass::INFOR:     End of the trace parse

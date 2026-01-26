@@ -1,0 +1,1 @@
+parallelismSelector::WARNG: WARNING: [SIM 211-200] /home/elfo/Documents/ELEC5803/riscv_hls/../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:29:17: the dynamic loop had a trip count of min=5 max=5 during C simulation. (#pragma HLS loop_tripcount min=5 max=5)

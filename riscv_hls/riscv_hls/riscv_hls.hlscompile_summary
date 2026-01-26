@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/riscv_hls.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Jan 20 09:42:46 2026",
+ "timestampMillis": "1768920166890",
+ "buildStep": {
+  "cmdId": "636b6520-94a1-49cb-a5c2-296ac8b237bd",
+  "name": "v++",
+  "logFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/logs/riscv_hls.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg --work_dir riscv_hls ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg",
+   "--work_dir",
+   "riscv_hls"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg",
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h\nsyn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc\ntb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc\ntb.file=../hls_riscv/RISCV-RV32I-H1/mem.txt\nsyn.top=cpu\ncosim.wave_debug=1\ncosim.trace_level=all\ncsim.code_analyzer=1"
+   }
+  ],
+  "cwd": "/home/elfo/Documents/ELEC5803/riscv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:42:46 2026",
+ "timestampMillis": "1768920166890",
+ "status": {
+  "cmdId": "636b6520-94a1-49cb-a5c2-296ac8b237bd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Jan 20 09:42:48 2026",
+ "timestampMillis": "1768920168456",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cpu",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h",
+     "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Jan 20 09:42:48 2026",
+ "timestampMillis": "1768920168456",
+ "buildStep": {
+  "cmdId": "de489da3-c75d-47f5-9dd4-7e15ede2bde6",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/riscv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:42:48 2026",
+ "timestampMillis": "1768920168456",
+ "status": {
+  "cmdId": "de489da3-c75d-47f5-9dd4-7e15ede2bde6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:48 2026",
+ "timestampMillis": "1768920168456",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:48 2026",
+ "timestampMillis": "1768920168456",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:48 2026",
+ "timestampMillis": "1768920168456",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177204",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177204",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177204",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177204",
+ "status": {
+  "cmdId": "de489da3-c75d-47f5-9dd4-7e15ede2bde6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177254",
+ "status": {
+  "cmdId": "636b6520-94a1-49cb-a5c2-296ac8b237bd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177264",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/reports/v++_compile_riscv_hls_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Jan 20 09:42:57 2026",
+ "timestampMillis": "1768920177264",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/reports/.db/v++_compile_riscv_hls_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

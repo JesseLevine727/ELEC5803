@@ -1,0 +1,18 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5539" msg_severity="WARNING" msg_loc="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=cpu" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=pstrb" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=mem core=RAM_1P_BRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-340" msg_severity="WARNING" msg_loc="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9" msg_body="The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead">
+        <args Pragma="call" Pragma-DebugLoc="File ../hls_riscv/RISCV-RV32I-H1/riscv32i.cc Line 16 Column 9"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'cpu'" level="0">
-<item name = "Date">Tue Jan 20 09:42:57 2026
+<item name = "Date">Sat Jan 31 20:47:18 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">riscv_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.667 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.912 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32">cpu_Pipeline_VITIS_LOOP_22_1, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32">cpu_Pipeline_VITIS_LOOP_27_1, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 <column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_38">cpu_Pipeline_PROGRAM_LOOP, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
@@ -51,20 +51,20 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 671, 1559, -</column>
+<column name="Instance">-, 3, 946, 1756, -</column>
 <column name="Memory">2, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, 0, 99, -</column>
 <column name="Register">-, -, 10, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, 0, ~0, 3, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 1, ~0, 3, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_38">cpu_Pipeline_PROGRAM_LOOP, 0, 0, 663, 1504, 0</column>
-<column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32">cpu_Pipeline_VITIS_LOOP_22_1, 0, 0, 8, 55, 0</column>
+<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_38">cpu_Pipeline_PROGRAM_LOOP, 0, 3, 938, 1701, 0</column>
+<column name="grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32">cpu_Pipeline_VITIS_LOOP_27_1, 0, 0, 8, 55, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -99,7 +99,7 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
 <column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg">1, 0, 1, 0</column>
 <column name="pstrb_reg">4, 0, 4, 0</column>
 </table>
 </item>

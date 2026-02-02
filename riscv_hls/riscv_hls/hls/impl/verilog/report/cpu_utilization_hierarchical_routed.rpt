@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Tue Jan 20 09:49:38 2026
+| Date         : Sat Jan 31 20:52:31 2026
 | Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/cpu_utilization_hierarchical_routed.rpt
 | Design       : bd_0_wrapper
@@ -19,16 +19,16 @@ Table of Contents
 1. Utilization by Hierarchy
 ---------------------------
 
-+---------------------------------------------+-------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
-|                   Instance                  |                      Module                     | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
-+---------------------------------------------+-------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
-| bd_0_wrapper                                |                                           (top) |       1246 |       1246 |       0 |    0 | 480 |      1 |      0 |          0 |
-|   bd_0_i                                    |                                            bd_0 |       1246 |       1246 |       0 |    0 | 480 |      1 |      0 |          0 |
-|     hls_inst                                |                                 bd_0_hls_inst_0 |       1246 |       1246 |       0 |    0 | 480 |      1 |      0 |          0 |
-|       inst                                  |                             bd_0_hls_inst_0_cpu |       1246 |       1246 |       0 |    0 | 480 |      1 |      0 |          0 |
-|         reg_file_U                          | bd_0_hls_inst_0_cpu_reg_file_RAM_1WNR_AUTO_1R1W |        169 |        169 |       0 |    0 |   0 |      1 |      0 |          0 |
-|         grp_cpu_Pipeline_PROGRAM_LOOP_fu_38 |   bd_0_hls_inst_0_cpu_cpu_Pipeline_PROGRAM_LOOP |       1086 |       1086 |       0 |    0 | 463 |      0 |      0 |          0 |
-+---------------------------------------------+-------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
++-------------------------------------------------+-----------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                     Instance                    |                     Module                    | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------------------------+-----------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                                    |                                         (top) |       1302 |       1302 |       0 |    0 | 598 |      1 |      0 |          3 |
+|   bd_0_i                                        |                                          bd_0 |       1302 |       1302 |       0 |    0 | 598 |      1 |      0 |          3 |
+|     hls_inst                                    |                               bd_0_hls_inst_0 |       1302 |       1302 |       0 |    0 | 598 |      1 |      0 |          3 |
+|       inst                                      |                           bd_0_hls_inst_0_cpu |       1302 |       1302 |       0 |    0 | 598 |      1 |      0 |          3 |
+|         grp_cpu_Pipeline_PROGRAM_LOOP_fu_38     | bd_0_hls_inst_0_cpu_cpu_Pipeline_PROGRAM_LOOP |       1254 |       1254 |       0 |    0 | 581 |      0 |      0 |          3 |
+|           (grp_cpu_Pipeline_PROGRAM_LOOP_fu_38) | bd_0_hls_inst_0_cpu_cpu_Pipeline_PROGRAM_LOOP |       1239 |       1239 |       0 |    0 | 564 |      0 |      0 |          0 |
++-------------------------------------------------+-----------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 
 

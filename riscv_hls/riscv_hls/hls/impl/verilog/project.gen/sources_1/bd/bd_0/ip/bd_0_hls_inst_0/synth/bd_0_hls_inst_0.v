@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:cpu:1.0
-// IP Revision: 2114444147
+// IP Revision: 2114460649
 
 (* X_CORE_INFO = "cpu,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,cpu,{}" *)
-(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,cpu,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=cpu,x_ipVersion=1.0,x_ipCoreRevision=2114444147,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,cpu,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=cpu,x_ipVersion=1.0,x_ipCoreRevision=2114460649,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_0_hls_inst_0 (

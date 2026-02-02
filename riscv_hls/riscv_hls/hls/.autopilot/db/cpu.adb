@@ -95,7 +95,7 @@
               <name>reg_file</name>
               <fileName>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</fileName>
               <fileDirectory>../.</fileDirectory>
-              <lineNumber>19</lineNumber>
+              <lineNumber>24</lineNumber>
               <contextFuncName>cpu</contextFuncName>
               <contextNormFuncName>cpu</contextNormFuncName>
               <inlineStackInfo>
@@ -111,7 +111,7 @@
                         <first>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</first>
                         <second>cpu</second>
                       </first>
-                      <second>19</second>
+                      <second>24</second>
                     </item>
                   </second>
                 </item>
@@ -159,7 +159,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName></originalName>
-              <rtlName>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32</rtlName>
+              <rtlName>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32</rtlName>
               <control></control>
               <opType></opType>
               <implIndex></implIndex>
@@ -238,10 +238,10 @@
             <Obj>
               <type>0</type>
               <id>11</id>
-              <name>_ln273</name>
+              <name>_ln252</name>
               <fileName>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</fileName>
               <fileDirectory>../.</fileDirectory>
-              <lineNumber>273</lineNumber>
+              <lineNumber>252</lineNumber>
               <contextFuncName>cpu</contextFuncName>
               <contextNormFuncName>cpu</contextNormFuncName>
               <inlineStackInfo>
@@ -257,7 +257,7 @@
                         <first>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</first>
                         <second>cpu</second>
                       </first>
-                      <second>273</second>
+                      <second>252</second>
                     </item>
                   </second>
                 </item>
@@ -328,7 +328,7 @@
             <Obj>
               <type>2</type>
               <id>15</id>
-              <name>cpu_Pipeline_VITIS_LOOP_22_1</name>
+              <name>cpu_Pipeline_VITIS_LOOP_27_1</name>
               <fileName></fileName>
               <fileDirectory></fileDirectory>
               <lineNumber>0</lineNumber>
@@ -352,7 +352,7 @@
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:cpu_Pipeline_VITIS_LOOP_22_1&gt;</content>
+          <content>&lt;constant:cpu_Pipeline_VITIS_LOOP_27_1&gt;</content>
         </item>
         <item class_id_reference="16" object_id="_9">
           <Value>
@@ -458,14 +458,14 @@
         <item class_id_reference="20" object_id="_15">
           <id>20</id>
           <edge_type>1</edge_type>
-          <source_obj>1</source_obj>
+          <source_obj>8</source_obj>
           <sink_obj>10</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_16">
           <id>21</id>
           <edge_type>1</edge_type>
-          <source_obj>8</source_obj>
+          <source_obj>1</source_obj>
           <sink_obj>10</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -664,20 +664,24 @@
         <item class_id="36" tracking_level="0" version="0">
           <first>grp_cpu_Pipeline_PROGRAM_LOOP_fu_38 (cpu_Pipeline_PROGRAM_LOOP)</first>
           <second class_id="37" tracking_level="0" version="0">
-            <count>2</count>
+            <count>3</count>
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
+              <first>DSP</first>
+              <second>3</second>
+            </item>
+            <item>
               <first>FF</first>
-              <second>663</second>
+              <second>938</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1504</second>
+              <second>1701</second>
             </item>
           </second>
         </item>
         <item>
-          <first>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32 (cpu_Pipeline_VITIS_LOOP_22_1)</first>
+          <first>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32 (cpu_Pipeline_VITIS_LOOP_27_1)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -978,7 +982,7 @@
           </second>
         </item>
         <item>
-          <first>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg</first>
+          <first>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1027,7 +1031,7 @@
           </second>
         </item>
         <item>
-          <first>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32</first>
+          <first>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1046,7 +1050,7 @@
           </second>
         </item>
         <item>
-          <first>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32 (cpu_Pipeline_VITIS_LOOP_22_1)</first>
+          <first>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32 (cpu_Pipeline_VITIS_LOOP_27_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1177,7 +1181,7 @@
         </second>
       </item>
       <item>
-        <first>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32</first>
+        <first>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>

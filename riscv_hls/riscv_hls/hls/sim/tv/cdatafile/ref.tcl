@@ -3,7 +3,7 @@ set depth_list {
   {pstrb 1}
 }
 set trans_depth {
-  {mem { 1024 } mem}
+  {mem { 1024 1024 1024 1024 } mem}
 }
 set containsVLA 0
-set trans_num 1
+set trans_num 4

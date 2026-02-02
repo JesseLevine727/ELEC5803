@@ -1,5 +1,0 @@
-INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-   Compiling ../../../../../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc in debug mode
-   Compiling ../../../../../hls_riscv/RISCV-RV32I-H1/riscv32i.cc in debug mode
-   Generating csim.exe

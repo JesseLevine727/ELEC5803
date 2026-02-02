@@ -12,9 +12,6 @@
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
 # 1 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc" 2
-
-
-
 # 1 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h" 1
 
 
@@ -59881,55 +59878,1506 @@ void apatb_cpu_sw(ap_uint<32> *, volatile ap_uint<4> *);
 #endif
 # 122 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h"
 void cpu(arch_t*, volatile strb_t*);
+# 2 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc" 2
+
+
+# 1 "/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/stdlib.h" 1 3
 # 5 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc" 2
 
+static void load_hex_words(const char *path, arch_t mem[(1 << 10)]) {
+  FILE *fptr = fopen(path, "r");
+  if (!fptr) {
+    perror("fopen program");
+    exit(1);
+  }
+
+  int i = 0;
+  unsigned tmp;
+  while (i < (1 << 10) && fscanf(fptr, "%x", &tmp) == 1) {
+    mem[i++] = (arch_t)tmp;
+  }
+  fclose(fptr);
+
+
+  for (; i < (1 << 10); i++)
+    mem[i] = 0;
+}
+
+static void run(int a, int b, int expected) {
+  arch_t mem[(1 << 10)];
+  ap_uint<4> wstrb = 0;
+  strb_t *pstrb = &wstrb;
 
 
 
-#ifndef HLS_FASTSIM
-# 8 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
-int main(void) {
- arch_t mem[(1 << 10)];
- ap_uint<4> wstrb;
- strb_t* pstrb = &wstrb;
 
 
- FILE* fptr = fopen("mem.txt", "r");
- if (!fptr) { perror("mem.txt"); return 1;}
- int i = 0;
- unsigned int tmp;
- while (i < (1 << 10) && fscanf(fptr, "%x", &tmp) == 1) {
-     mem[i++] = tmp;
- }
-
- for (; i < (1 << 10); mem[i++] = 0);
- fclose(fptr);
 
 
- 
+ load_hex_words("mult_int.txt", mem);
+
+
+
+
+  mem[0x40] = (arch_t)a;
+  mem[0x41] = (arch_t)b;
+
+
+  
 #ifndef HLS_FASTSIM
 #define cpu apatb_cpu_sw
 #endif
-# 26 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
+# 45 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
 cpu
 #undef cpu
-# 26 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
+# 45 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
 (mem, pstrb);
 #undef cpu
-# 26 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
+# 45 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
 
 
 
- fptr = fopen("dump.txt", "w");
- if (!fptr) { perror("dump.txt"); return 1; }
- for (int i = 0; i < (1 << 10); i++)
-   fprintf(fptr, "mem[%04x] = %08x\n", i, (uint32_t) mem[i]);
- fclose(fptr);
+  uint32_t got = (uint32_t)mem[0x42];
+
+  if (got == (uint32_t)expected)
+    printf("PASS: %d * %d = %u\n", a, b, got);
+  else
+    printf("FAIL: %d * %d = %u (expected %d)\n",
+           a, b, got, expected);
 
 
- return 0;
+
+
+  FILE *out = fopen("dump_mult_int.txt", "w");
+  if (!out) {
+    perror("fopen dump");
+    exit(1);
+  }
+
+  for (int j = 0; j < (1 << 10); j++)
+    fprintf(out, "mem[%04x] = %08x\n", j, (uint32_t)mem[j]);
+
+  fclose(out);
+}
+
+# 1 "/usr/include/unistd.h" 1 3 4
+# 27 "/usr/include/unistd.h" 3 4
+extern "C" {
+# 202 "/usr/include/unistd.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/posix_opt.h" 1 3 4
+# 203 "/usr/include/unistd.h" 2 3 4
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/environments.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/environments.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/environments.h" 2 3 4
+# 207 "/usr/include/unistd.h" 2 3 4
+# 226 "/usr/include/unistd.h" 3 4
+# 1 "/home/elfo/Documents/2025.1/lnx64/tools/vcxx/lib/clang/14.0.6/include/stddef.h" 1 3 4
+# 227 "/usr/include/unistd.h" 2 3 4
+# 274 "/usr/include/unistd.h" 3 4
+typedef __socklen_t socklen_t;
+# 287 "/usr/include/unistd.h" 3 4
+extern int access (const char *__name, int __type) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+extern int euidaccess (const char *__name, int __type)
+     noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+extern int eaccess (const char *__name, int __type)
+     noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+extern int execveat (int __fd, const char *__path, char *const __argv[],
+                     char *const __envp[], int __flags)
+    noexcept (true) __attribute__ ((__nonnull__ (2, 3)));
+
+
+
+
+
+
+extern int faccessat (int __fd, const char *__file, int __type, int __flag)
+     noexcept (true) __attribute__ ((__nonnull__ (2))) ;
+# 339 "/usr/include/unistd.h" 3 4
+extern __off_t lseek (int __fd, __off_t __offset, int __whence) noexcept (true);
+# 350 "/usr/include/unistd.h" 3 4
+extern __off64_t lseek64 (int __fd, __off64_t __offset, int __whence)
+     noexcept (true);
+
+
+
+
+
+
+extern int close (int __fd);
+
+
+
+
+extern void closefrom (int __lowfd) noexcept (true);
+
+
+
+
+
+
+
+extern ssize_t read (int __fd, void *__buf, size_t __nbytes)
+                                                  ;
+
+
+
+
+
+extern ssize_t write (int __fd, const void *__buf, size_t __n)
+                                         ;
+# 389 "/usr/include/unistd.h" 3 4
+extern ssize_t pread (int __fd, void *__buf, size_t __nbytes,
+        __off_t __offset)
+                                                  ;
+
+
+
+
+
+
+extern ssize_t pwrite (int __fd, const void *__buf, size_t __n,
+         __off_t __offset)
+                                         ;
+# 422 "/usr/include/unistd.h" 3 4
+extern ssize_t pread64 (int __fd, void *__buf, size_t __nbytes,
+   __off64_t __offset)
+                                                  ;
+
+
+extern ssize_t pwrite64 (int __fd, const void *__buf, size_t __n,
+    __off64_t __offset)
+                                         ;
+
+
+
+
+
+
+
+extern int pipe (int __pipedes[2]) noexcept (true) ;
+
+
+
+
+extern int pipe2 (int __pipedes[2], int __flags) noexcept (true) ;
+# 452 "/usr/include/unistd.h" 3 4
+extern unsigned int alarm (unsigned int __seconds) noexcept (true);
+# 464 "/usr/include/unistd.h" 3 4
+extern unsigned int sleep (unsigned int __seconds);
+
+
+
+
+
+
+
+extern __useconds_t ualarm (__useconds_t __value, __useconds_t __interval)
+     noexcept (true);
+
+
+
+
+
+
+extern int usleep (__useconds_t __useconds);
+# 489 "/usr/include/unistd.h" 3 4
+extern int pause (void);
+
+
+
+extern int chown (const char *__file, __uid_t __owner, __gid_t __group)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern int fchown (int __fd, __uid_t __owner, __gid_t __group) noexcept (true) ;
+
+
+
+
+extern int lchown (const char *__file, __uid_t __owner, __gid_t __group)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+
+extern int fchownat (int __fd, const char *__file, __uid_t __owner,
+       __gid_t __group, int __flag)
+     noexcept (true) __attribute__ ((__nonnull__ (2))) ;
+
+
+
+extern int chdir (const char *__path) noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern int fchdir (int __fd) noexcept (true) ;
+# 531 "/usr/include/unistd.h" 3 4
+extern char *getcwd (char *__buf, size_t __size) noexcept (true) ;
+
+
+
+
+
+extern char *get_current_dir_name (void) noexcept (true);
+
+
+
+
+
+
+
+extern char *getwd (char *__buf)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) __attribute__ ((__deprecated__))
+                                       ;
+
+
+
+
+extern int dup (int __fd) noexcept (true) ;
+
+
+extern int dup2 (int __fd, int __fd2) noexcept (true);
+
+
+
+
+extern int dup3 (int __fd, int __fd2, int __flags) noexcept (true);
+
+
+
+extern char **__environ;
+
+extern char **environ;
+
+
+
+
+
+extern int execve (const char *__path, char *const __argv[],
+     char *const __envp[]) noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int fexecve (int __fd, char *const __argv[], char *const __envp[])
+     noexcept (true) __attribute__ ((__nonnull__ (2)));
+
+
+
+
+extern int execv (const char *__path, char *const __argv[])
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int execle (const char *__path, const char *__arg, ...)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int execl (const char *__path, const char *__arg, ...)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int execvp (const char *__file, char *const __argv[])
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int execlp (const char *__file, const char *__arg, ...)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+extern int execvpe (const char *__file, char *const __argv[],
+      char *const __envp[])
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+extern int nice (int __inc) noexcept (true) ;
+
+
+
+
+extern void _exit (int __status) __attribute__ ((__noreturn__));
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/confname.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/confname.h" 3 4
+enum
+  {
+    _PC_LINK_MAX,
+
+    _PC_MAX_CANON,
+
+    _PC_MAX_INPUT,
+
+    _PC_NAME_MAX,
+
+    _PC_PATH_MAX,
+
+    _PC_PIPE_BUF,
+
+    _PC_CHOWN_RESTRICTED,
+
+    _PC_NO_TRUNC,
+
+    _PC_VDISABLE,
+
+    _PC_SYNC_IO,
+
+    _PC_ASYNC_IO,
+
+    _PC_PRIO_IO,
+
+    _PC_SOCK_MAXBUF,
+
+    _PC_FILESIZEBITS,
+
+    _PC_REC_INCR_XFER_SIZE,
+
+    _PC_REC_MAX_XFER_SIZE,
+
+    _PC_REC_MIN_XFER_SIZE,
+
+    _PC_REC_XFER_ALIGN,
+
+    _PC_ALLOC_SIZE_MIN,
+
+    _PC_SYMLINK_MAX,
+
+    _PC_2_SYMLINKS
+
+  };
+
+
+enum
+  {
+    _SC_ARG_MAX,
+
+    _SC_CHILD_MAX,
+
+    _SC_CLK_TCK,
+
+    _SC_NGROUPS_MAX,
+
+    _SC_OPEN_MAX,
+
+    _SC_STREAM_MAX,
+
+    _SC_TZNAME_MAX,
+
+    _SC_JOB_CONTROL,
+
+    _SC_SAVED_IDS,
+
+    _SC_REALTIME_SIGNALS,
+
+    _SC_PRIORITY_SCHEDULING,
+
+    _SC_TIMERS,
+
+    _SC_ASYNCHRONOUS_IO,
+
+    _SC_PRIORITIZED_IO,
+
+    _SC_SYNCHRONIZED_IO,
+
+    _SC_FSYNC,
+
+    _SC_MAPPED_FILES,
+
+    _SC_MEMLOCK,
+
+    _SC_MEMLOCK_RANGE,
+
+    _SC_MEMORY_PROTECTION,
+
+    _SC_MESSAGE_PASSING,
+
+    _SC_SEMAPHORES,
+
+    _SC_SHARED_MEMORY_OBJECTS,
+
+    _SC_AIO_LISTIO_MAX,
+
+    _SC_AIO_MAX,
+
+    _SC_AIO_PRIO_DELTA_MAX,
+
+    _SC_DELAYTIMER_MAX,
+
+    _SC_MQ_OPEN_MAX,
+
+    _SC_MQ_PRIO_MAX,
+
+    _SC_VERSION,
+
+    _SC_PAGESIZE,
+
+
+    _SC_RTSIG_MAX,
+
+    _SC_SEM_NSEMS_MAX,
+
+    _SC_SEM_VALUE_MAX,
+
+    _SC_SIGQUEUE_MAX,
+
+    _SC_TIMER_MAX,
+
+
+
+
+    _SC_BC_BASE_MAX,
+
+    _SC_BC_DIM_MAX,
+
+    _SC_BC_SCALE_MAX,
+
+    _SC_BC_STRING_MAX,
+
+    _SC_COLL_WEIGHTS_MAX,
+
+    _SC_EQUIV_CLASS_MAX,
+
+    _SC_EXPR_NEST_MAX,
+
+    _SC_LINE_MAX,
+
+    _SC_RE_DUP_MAX,
+
+    _SC_CHARCLASS_NAME_MAX,
+
+
+    _SC_2_VERSION,
+
+    _SC_2_C_BIND,
+
+    _SC_2_C_DEV,
+
+    _SC_2_FORT_DEV,
+
+    _SC_2_FORT_RUN,
+
+    _SC_2_SW_DEV,
+
+    _SC_2_LOCALEDEF,
+
+
+    _SC_PII,
+
+    _SC_PII_XTI,
+
+    _SC_PII_SOCKET,
+
+    _SC_PII_INTERNET,
+
+    _SC_PII_OSI,
+
+    _SC_POLL,
+
+    _SC_SELECT,
+
+    _SC_UIO_MAXIOV,
+
+    _SC_IOV_MAX = _SC_UIO_MAXIOV,
+
+    _SC_PII_INTERNET_STREAM,
+
+    _SC_PII_INTERNET_DGRAM,
+
+    _SC_PII_OSI_COTS,
+
+    _SC_PII_OSI_CLTS,
+
+    _SC_PII_OSI_M,
+
+    _SC_T_IOV_MAX,
+
+
+
+    _SC_THREADS,
+
+    _SC_THREAD_SAFE_FUNCTIONS,
+
+    _SC_GETGR_R_SIZE_MAX,
+
+    _SC_GETPW_R_SIZE_MAX,
+
+    _SC_LOGIN_NAME_MAX,
+
+    _SC_TTY_NAME_MAX,
+
+    _SC_THREAD_DESTRUCTOR_ITERATIONS,
+
+    _SC_THREAD_KEYS_MAX,
+
+    _SC_THREAD_STACK_MIN,
+
+    _SC_THREAD_THREADS_MAX,
+
+    _SC_THREAD_ATTR_STACKADDR,
+
+    _SC_THREAD_ATTR_STACKSIZE,
+
+    _SC_THREAD_PRIORITY_SCHEDULING,
+
+    _SC_THREAD_PRIO_INHERIT,
+
+    _SC_THREAD_PRIO_PROTECT,
+
+    _SC_THREAD_PROCESS_SHARED,
+
+
+    _SC_NPROCESSORS_CONF,
+
+    _SC_NPROCESSORS_ONLN,
+
+    _SC_PHYS_PAGES,
+
+    _SC_AVPHYS_PAGES,
+
+    _SC_ATEXIT_MAX,
+
+    _SC_PASS_MAX,
+
+
+    _SC_XOPEN_VERSION,
+
+    _SC_XOPEN_XCU_VERSION,
+
+    _SC_XOPEN_UNIX,
+
+    _SC_XOPEN_CRYPT,
+
+    _SC_XOPEN_ENH_I18N,
+
+    _SC_XOPEN_SHM,
+
+
+    _SC_2_CHAR_TERM,
+
+    _SC_2_C_VERSION,
+
+    _SC_2_UPE,
+
+
+    _SC_XOPEN_XPG2,
+
+    _SC_XOPEN_XPG3,
+
+    _SC_XOPEN_XPG4,
+
+
+    _SC_CHAR_BIT,
+
+    _SC_CHAR_MAX,
+
+    _SC_CHAR_MIN,
+
+    _SC_INT_MAX,
+
+    _SC_INT_MIN,
+
+    _SC_LONG_BIT,
+
+    _SC_WORD_BIT,
+
+    _SC_MB_LEN_MAX,
+
+    _SC_NZERO,
+
+    _SC_SSIZE_MAX,
+
+    _SC_SCHAR_MAX,
+
+    _SC_SCHAR_MIN,
+
+    _SC_SHRT_MAX,
+
+    _SC_SHRT_MIN,
+
+    _SC_UCHAR_MAX,
+
+    _SC_UINT_MAX,
+
+    _SC_ULONG_MAX,
+
+    _SC_USHRT_MAX,
+
+
+    _SC_NL_ARGMAX,
+
+    _SC_NL_LANGMAX,
+
+    _SC_NL_MSGMAX,
+
+    _SC_NL_NMAX,
+
+    _SC_NL_SETMAX,
+
+    _SC_NL_TEXTMAX,
+
+
+    _SC_XBS5_ILP32_OFF32,
+
+    _SC_XBS5_ILP32_OFFBIG,
+
+    _SC_XBS5_LP64_OFF64,
+
+    _SC_XBS5_LPBIG_OFFBIG,
+
+
+    _SC_XOPEN_LEGACY,
+
+    _SC_XOPEN_REALTIME,
+
+    _SC_XOPEN_REALTIME_THREADS,
+
+
+    _SC_ADVISORY_INFO,
+
+    _SC_BARRIERS,
+
+    _SC_BASE,
+
+    _SC_C_LANG_SUPPORT,
+
+    _SC_C_LANG_SUPPORT_R,
+
+    _SC_CLOCK_SELECTION,
+
+    _SC_CPUTIME,
+
+    _SC_THREAD_CPUTIME,
+
+    _SC_DEVICE_IO,
+
+    _SC_DEVICE_SPECIFIC,
+
+    _SC_DEVICE_SPECIFIC_R,
+
+    _SC_FD_MGMT,
+
+    _SC_FIFO,
+
+    _SC_PIPE,
+
+    _SC_FILE_ATTRIBUTES,
+
+    _SC_FILE_LOCKING,
+
+    _SC_FILE_SYSTEM,
+
+    _SC_MONOTONIC_CLOCK,
+
+    _SC_MULTI_PROCESS,
+
+    _SC_SINGLE_PROCESS,
+
+    _SC_NETWORKING,
+
+    _SC_READER_WRITER_LOCKS,
+
+    _SC_SPIN_LOCKS,
+
+    _SC_REGEXP,
+
+    _SC_REGEX_VERSION,
+
+    _SC_SHELL,
+
+    _SC_SIGNALS,
+
+    _SC_SPAWN,
+
+    _SC_SPORADIC_SERVER,
+
+    _SC_THREAD_SPORADIC_SERVER,
+
+    _SC_SYSTEM_DATABASE,
+
+    _SC_SYSTEM_DATABASE_R,
+
+    _SC_TIMEOUTS,
+
+    _SC_TYPED_MEMORY_OBJECTS,
+
+    _SC_USER_GROUPS,
+
+    _SC_USER_GROUPS_R,
+
+    _SC_2_PBS,
+
+    _SC_2_PBS_ACCOUNTING,
+
+    _SC_2_PBS_LOCATE,
+
+    _SC_2_PBS_MESSAGE,
+
+    _SC_2_PBS_TRACK,
+
+    _SC_SYMLOOP_MAX,
+
+    _SC_STREAMS,
+
+    _SC_2_PBS_CHECKPOINT,
+
+
+    _SC_V6_ILP32_OFF32,
+
+    _SC_V6_ILP32_OFFBIG,
+
+    _SC_V6_LP64_OFF64,
+
+    _SC_V6_LPBIG_OFFBIG,
+
+
+    _SC_HOST_NAME_MAX,
+
+    _SC_TRACE,
+
+    _SC_TRACE_EVENT_FILTER,
+
+    _SC_TRACE_INHERIT,
+
+    _SC_TRACE_LOG,
+
+
+    _SC_LEVEL1_ICACHE_SIZE,
+
+    _SC_LEVEL1_ICACHE_ASSOC,
+
+    _SC_LEVEL1_ICACHE_LINESIZE,
+
+    _SC_LEVEL1_DCACHE_SIZE,
+
+    _SC_LEVEL1_DCACHE_ASSOC,
+
+    _SC_LEVEL1_DCACHE_LINESIZE,
+
+    _SC_LEVEL2_CACHE_SIZE,
+
+    _SC_LEVEL2_CACHE_ASSOC,
+
+    _SC_LEVEL2_CACHE_LINESIZE,
+
+    _SC_LEVEL3_CACHE_SIZE,
+
+    _SC_LEVEL3_CACHE_ASSOC,
+
+    _SC_LEVEL3_CACHE_LINESIZE,
+
+    _SC_LEVEL4_CACHE_SIZE,
+
+    _SC_LEVEL4_CACHE_ASSOC,
+
+    _SC_LEVEL4_CACHE_LINESIZE,
+
+
+
+    _SC_IPV6 = _SC_LEVEL1_ICACHE_SIZE + 50,
+
+    _SC_RAW_SOCKETS,
+
+
+    _SC_V7_ILP32_OFF32,
+
+    _SC_V7_ILP32_OFFBIG,
+
+    _SC_V7_LP64_OFF64,
+
+    _SC_V7_LPBIG_OFFBIG,
+
+
+    _SC_SS_REPL_MAX,
+
+
+    _SC_TRACE_EVENT_NAME_MAX,
+
+    _SC_TRACE_NAME_MAX,
+
+    _SC_TRACE_SYS_MAX,
+
+    _SC_TRACE_USER_EVENT_MAX,
+
+
+    _SC_XOPEN_STREAMS,
+
+
+    _SC_THREAD_ROBUST_PRIO_INHERIT,
+
+    _SC_THREAD_ROBUST_PRIO_PROTECT,
+
+
+    _SC_MINSIGSTKSZ,
+
+
+    _SC_SIGSTKSZ
+
+  };
+
+
+enum
+  {
+    _CS_PATH,
+
+
+    _CS_V6_WIDTH_RESTRICTED_ENVS,
+
+
+
+    _CS_GNU_LIBC_VERSION,
+
+    _CS_GNU_LIBPTHREAD_VERSION,
+
+
+    _CS_V5_WIDTH_RESTRICTED_ENVS,
+
+
+
+    _CS_V7_WIDTH_RESTRICTED_ENVS,
+
+
+
+    _CS_LFS_CFLAGS = 1000,
+
+    _CS_LFS_LDFLAGS,
+
+    _CS_LFS_LIBS,
+
+    _CS_LFS_LINTFLAGS,
+
+    _CS_LFS64_CFLAGS,
+
+    _CS_LFS64_LDFLAGS,
+
+    _CS_LFS64_LIBS,
+
+    _CS_LFS64_LINTFLAGS,
+
+
+    _CS_XBS5_ILP32_OFF32_CFLAGS = 1100,
+
+    _CS_XBS5_ILP32_OFF32_LDFLAGS,
+
+    _CS_XBS5_ILP32_OFF32_LIBS,
+
+    _CS_XBS5_ILP32_OFF32_LINTFLAGS,
+
+    _CS_XBS5_ILP32_OFFBIG_CFLAGS,
+
+    _CS_XBS5_ILP32_OFFBIG_LDFLAGS,
+
+    _CS_XBS5_ILP32_OFFBIG_LIBS,
+
+    _CS_XBS5_ILP32_OFFBIG_LINTFLAGS,
+
+    _CS_XBS5_LP64_OFF64_CFLAGS,
+
+    _CS_XBS5_LP64_OFF64_LDFLAGS,
+
+    _CS_XBS5_LP64_OFF64_LIBS,
+
+    _CS_XBS5_LP64_OFF64_LINTFLAGS,
+
+    _CS_XBS5_LPBIG_OFFBIG_CFLAGS,
+
+    _CS_XBS5_LPBIG_OFFBIG_LDFLAGS,
+
+    _CS_XBS5_LPBIG_OFFBIG_LIBS,
+
+    _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS,
+
+
+    _CS_POSIX_V6_ILP32_OFF32_CFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFF32_LDFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFF32_LIBS,
+
+    _CS_POSIX_V6_ILP32_OFF32_LINTFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_LIBS,
+
+    _CS_POSIX_V6_ILP32_OFFBIG_LINTFLAGS,
+
+    _CS_POSIX_V6_LP64_OFF64_CFLAGS,
+
+    _CS_POSIX_V6_LP64_OFF64_LDFLAGS,
+
+    _CS_POSIX_V6_LP64_OFF64_LIBS,
+
+    _CS_POSIX_V6_LP64_OFF64_LINTFLAGS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_LIBS,
+
+    _CS_POSIX_V6_LPBIG_OFFBIG_LINTFLAGS,
+
+
+    _CS_POSIX_V7_ILP32_OFF32_CFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFF32_LDFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFF32_LIBS,
+
+    _CS_POSIX_V7_ILP32_OFF32_LINTFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_LIBS,
+
+    _CS_POSIX_V7_ILP32_OFFBIG_LINTFLAGS,
+
+    _CS_POSIX_V7_LP64_OFF64_CFLAGS,
+
+    _CS_POSIX_V7_LP64_OFF64_LDFLAGS,
+
+    _CS_POSIX_V7_LP64_OFF64_LIBS,
+
+    _CS_POSIX_V7_LP64_OFF64_LINTFLAGS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_CFLAGS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_LDFLAGS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_LIBS,
+
+    _CS_POSIX_V7_LPBIG_OFFBIG_LINTFLAGS,
+
+
+    _CS_V6_ENV,
+
+    _CS_V7_ENV
+
+  };
+# 631 "/usr/include/unistd.h" 2 3 4
+
+
+extern long int pathconf (const char *__path, int __name)
+     noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int fpathconf (int __fd, int __name) noexcept (true);
+
+
+extern long int sysconf (int __name) noexcept (true);
+
+
+
+extern size_t confstr (int __name, char *__buf, size_t __len) noexcept (true)
+                                                  ;
+
+
+
+
+extern __pid_t getpid (void) noexcept (true);
+
+
+extern __pid_t getppid (void) noexcept (true);
+
+
+extern __pid_t getpgrp (void) noexcept (true);
+
+
+extern __pid_t __getpgid (__pid_t __pid) noexcept (true);
+
+extern __pid_t getpgid (__pid_t __pid) noexcept (true);
+
+
+
+
+
+
+extern int setpgid (__pid_t __pid, __pid_t __pgid) noexcept (true);
+# 682 "/usr/include/unistd.h" 3 4
+extern int setpgrp (void) noexcept (true);
+
+
+
+
+
+
+extern __pid_t setsid (void) noexcept (true);
+
+
+
+extern __pid_t getsid (__pid_t __pid) noexcept (true);
+
+
+
+extern __uid_t getuid (void) noexcept (true);
+
+
+extern __uid_t geteuid (void) noexcept (true);
+
+
+extern __gid_t getgid (void) noexcept (true);
+
+
+extern __gid_t getegid (void) noexcept (true);
+
+
+
+
+extern int getgroups (int __size, __gid_t __list[]) noexcept (true)
+                                                  ;
+
+
+extern int group_member (__gid_t __gid) noexcept (true);
+
+
+
+
+
+
+extern int setuid (__uid_t __uid) noexcept (true) ;
+
+
+
+
+extern int setreuid (__uid_t __ruid, __uid_t __euid) noexcept (true) ;
+
+
+
+
+extern int seteuid (__uid_t __uid) noexcept (true) ;
+
+
+
+
+
+
+extern int setgid (__gid_t __gid) noexcept (true) ;
+
+
+
+
+extern int setregid (__gid_t __rgid, __gid_t __egid) noexcept (true) ;
+
+
+
+
+extern int setegid (__gid_t __gid) noexcept (true) ;
+
+
+
+
+
+extern int getresuid (__uid_t *__ruid, __uid_t *__euid, __uid_t *__suid)
+     noexcept (true);
+
+
+
+extern int getresgid (__gid_t *__rgid, __gid_t *__egid, __gid_t *__sgid)
+     noexcept (true);
+
+
+
+extern int setresuid (__uid_t __ruid, __uid_t __euid, __uid_t __suid)
+     noexcept (true) ;
+
+
+
+extern int setresgid (__gid_t __rgid, __gid_t __egid, __gid_t __sgid)
+     noexcept (true) ;
+
+
+
+
+
+
+extern __pid_t fork (void) noexcept (true);
+
+
+
+
+
+
+
+extern __pid_t vfork (void) noexcept (true);
+
+
+
+
+
+
+extern __pid_t _Fork (void) noexcept (true);
+
+
+
+
+
+extern char *ttyname (int __fd) noexcept (true);
+
+
+
+extern int ttyname_r (int __fd, char *__buf, size_t __buflen)
+     noexcept (true) __attribute__ ((__nonnull__ (2)))
+                                                   ;
+
+
+
+extern int isatty (int __fd) noexcept (true);
+
+
+
+
+extern int ttyslot (void) noexcept (true);
+
+
+
+
+extern int link (const char *__from, const char *__to)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2))) ;
+
+
+
+
+extern int linkat (int __fromfd, const char *__from, int __tofd,
+     const char *__to, int __flags)
+     noexcept (true) __attribute__ ((__nonnull__ (2, 4))) ;
+
+
+
+
+extern int symlink (const char *__from, const char *__to)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2))) ;
+
+
+
+
+extern ssize_t readlink (const char *__restrict __path,
+    char *__restrict __buf, size_t __len)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)))
+                                                   ;
+
+
+
+
+
+extern int symlinkat (const char *__from, int __tofd,
+        const char *__to) noexcept (true) __attribute__ ((__nonnull__ (1, 3))) ;
+
+
+extern ssize_t readlinkat (int __fd, const char *__restrict __path,
+      char *__restrict __buf, size_t __len)
+     noexcept (true) __attribute__ ((__nonnull__ (2, 3)))
+                                                   ;
+
+
+
+extern int unlink (const char *__name) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern int unlinkat (int __fd, const char *__name, int __flag)
+     noexcept (true) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern int rmdir (const char *__path) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+
+extern __pid_t tcgetpgrp (int __fd) noexcept (true);
+
+
+extern int tcsetpgrp (int __fd, __pid_t __pgrp_id) noexcept (true);
+
+
+
+
+
+
+extern char *getlogin (void);
+
+
+
+
+
+
+
+extern int getlogin_r (char *__name, size_t __name_len) __attribute__ ((__nonnull__ (1)))
+                                                  ;
+
+
+
+
+extern int setlogin (const char *__name) noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3 4
+extern "C" {
+
+
+
+
+
+
+
+extern char *optarg;
+# 50 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3 4
+extern int optind;
+
+
+
+
+extern int opterr;
+
+
+
+extern int optopt;
+# 91 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3 4
+extern int getopt (int ___argc, char *const *___argv, const char *__shortopts)
+       noexcept (true) __attribute__ ((__nonnull__ (2, 3)));
 
 }
+# 28 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 2 3 4
+
+extern "C" {
+# 49 "/usr/include/x86_64-linux-gnu/bits/getopt_posix.h" 3 4
+}
+# 904 "/usr/include/unistd.h" 2 3 4
+
+
+
+
+
+
+
+extern int gethostname (char *__name, size_t __len) noexcept (true) __attribute__ ((__nonnull__ (1)))
+                                                  ;
+
+
+
+
+
+
+extern int sethostname (const char *__name, size_t __len)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern int sethostid (long int __id) noexcept (true) ;
+
+
+
+
+
+extern int getdomainname (char *__name, size_t __len)
+     noexcept (true) __attribute__ ((__nonnull__ (1)))
+                                                   ;
+extern int setdomainname (const char *__name, size_t __len)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+extern int vhangup (void) noexcept (true);
+
+
+extern int revoke (const char *__file) noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+
+
+extern int profil (unsigned short int *__sample_buffer, size_t __size,
+     size_t __offset, unsigned int __scale)
+     noexcept (true) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int acct (const char *__name) noexcept (true);
+
+
+
+extern char *getusershell (void) noexcept (true);
+extern void endusershell (void) noexcept (true);
+extern void setusershell (void) noexcept (true);
+
+
+
+
+
+extern int daemon (int __nochdir, int __noclose) noexcept (true) ;
+
+
+
+
+
+
+extern int chroot (const char *__path) noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+extern char *getpass (const char *__prompt) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+extern int fsync (int __fd);
+
+
+
+
+
+extern int syncfs (int __fd) noexcept (true);
+
+
+
+
+
+
+extern long int gethostid (void);
+
+
+extern void sync (void) noexcept (true);
+
+
+
+
+
+extern int getpagesize (void) noexcept (true) __attribute__ ((__const__));
+
+
+
+
+extern int getdtablesize (void) noexcept (true);
+# 1026 "/usr/include/unistd.h" 3 4
+extern int truncate (const char *__file, __off_t __length)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+# 1038 "/usr/include/unistd.h" 3 4
+extern int truncate64 (const char *__file, __off64_t __length)
+     noexcept (true) __attribute__ ((__nonnull__ (1))) ;
+# 1049 "/usr/include/unistd.h" 3 4
+extern int ftruncate (int __fd, __off_t __length) noexcept (true) ;
+# 1059 "/usr/include/unistd.h" 3 4
+extern int ftruncate64 (int __fd, __off64_t __length) noexcept (true) ;
+# 1070 "/usr/include/unistd.h" 3 4
+extern int brk (void *__addr) noexcept (true) ;
+
+
+
+
+
+extern void *sbrk (intptr_t __delta) noexcept (true);
+# 1091 "/usr/include/unistd.h" 3 4
+extern long int syscall (long int __sysno, ...) noexcept (true);
+# 1114 "/usr/include/unistd.h" 3 4
+extern int lockf (int __fd, int __cmd, __off_t __len) ;
+# 1124 "/usr/include/unistd.h" 3 4
+extern int lockf64 (int __fd, int __cmd, __off64_t __len) ;
+# 1142 "/usr/include/unistd.h" 3 4
+ssize_t copy_file_range (int __infd, __off64_t *__pinoff,
+    int __outfd, __off64_t *__poutoff,
+    size_t __length, unsigned int __flags);
+
+
+
+
+
+extern int fdatasync (int __fildes);
+# 1162 "/usr/include/unistd.h" 3 4
+extern char *crypt (const char *__key, const char *__salt)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+
+extern void swab (const void *__restrict __from, void *__restrict __to,
+    ssize_t __n) noexcept (true) __attribute__ ((__nonnull__ (1, 2)))
+
+                                          ;
+# 1201 "/usr/include/unistd.h" 3 4
+int getentropy (void *__buffer, size_t __length)
+                                          ;
+# 1211 "/usr/include/unistd.h" 3 4
+extern int close_range (unsigned int __fd, unsigned int __max_fd,
+   int __flags) noexcept (true);
+# 1221 "/usr/include/unistd.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/unistd_ext.h" 1 3 4
+# 34 "/usr/include/x86_64-linux-gnu/bits/unistd_ext.h" 3 4
+extern __pid_t gettid (void) noexcept (true);
+
+
+
+# 1 "/usr/include/linux/close_range.h" 1 3 4
+# 39 "/usr/include/x86_64-linux-gnu/bits/unistd_ext.h" 2 3 4
+# 1222 "/usr/include/unistd.h" 2 3 4
+
+}
+# 72 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc" 2
+
+
+
+#ifndef HLS_FASTSIM
+# 74 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
+int main(void) {
+  char cwd[4096];
+  getcwd(cwd, sizeof(cwd));
+  printf("CSIM CWD = %s\n", cwd);
+
+  run(1, 1, 1);
+  run(1, 2, 2);
+  run(10, 10, 100);
+  run(2,20,40);
+  return 0;
+}
 #endif
-# 38 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
+# 84 "/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc"
 

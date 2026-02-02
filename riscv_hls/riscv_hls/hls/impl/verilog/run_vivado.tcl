@@ -48,8 +48,8 @@ dict set report_options language $language
 dict set report_options clock_name $clock
 dict set report_options error_if_impl_timing_fails false
 dict set report_options topmodule "cpu"
-dict set report_options funcmodules {cpu_cpu_Pipeline_VITIS_LOOP_22_1 cpu_cpu_Pipeline_PROGRAM_LOOP}
-dict set report_options bindmodules {cpu_flow_control_loop_pipe_sequential_init cpu_reg_file_RAM_1WNR_AUTO_1R1W}
+dict set report_options funcmodules {cpu_cpu_Pipeline_VITIS_LOOP_27_1 cpu_cpu_Pipeline_PROGRAM_LOOP}
+dict set report_options bindmodules {cpu_flow_control_loop_pipe_sequential_init cpu_mul_32s_32s_32_2_1 cpu_reg_file_RAM_1WNR_AUTO_1R1W}
 dict set report_options max_module_depth 6
 
 

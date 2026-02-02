@@ -7220,16 +7220,11 @@ extern int __overflow (FILE *, int);
 # 983 "/usr/include/stdio.h" 3 4
 }
 # 8 "../hls_riscv/RISCV-RV32I-H1/riscv32i.cc" 2
-
-
-
-
-
+# 19 "../hls_riscv/RISCV-RV32I-H1/riscv32i.cc"
 __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 10)], volatile strb_t* pstrb) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=cpu
-# 13 "../hls_riscv/RISCV-RV32I-H1/riscv32i.cc"
-
+# 19 "../hls_riscv/RISCV-RV32I-H1/riscv32i.cc"
 
 #pragma HLS INTERFACE ap_none port=pstrb
 #pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
@@ -7238,8 +7233,8 @@ __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 10)], volatile s
  arch_t reg_file[(1 << 5)];
 
 
-  VITIS_LOOP_22_1: for (int i = 0; i < (1 << 5); i++)
-   reg_file[i] = 0;
+  VITIS_LOOP_27_1: for (int i = 0; i < (1 << 5); i++)
+    reg_file[i] = 0;
 
 
   arch_t pc = 0;
@@ -7250,243 +7245,217 @@ __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 10)], volatile s
 
 
 
- arch_t insn = mem[pc >> 2];
+
+    {
+      arch_t pc_idx = pc >> 2;
+      if (pc_idx >= (1 << 10)) {
+        printf("PC out of bounds: PC = %08x\n", (uint32_t)pc);
+        return;
+      }
+    }
+    arch_t insn = mem[pc >> 2];
 
 
 
 
+    opcode_t opcode = insn(6,0);
+    rfi_t rd = insn(11,7);
+    rfi_t rs1 = insn(19,15);
+    rfi_t rs2 = insn(24,20);
+    func3_t func3 = insn(14,12);
+    func7_t func7 = insn(31,25);
 
 
- opcode_t opcode = insn(6,0);
- rfi_t rd = insn(11,7);
- rfi_t rs1 = insn(19,15);
- rfi_t rs2 = insn(24,20);
- func3_t func3 = insn(14,12);
- func7_t func7 = insn(31,25);
- func7 = (opcode == 0x33) ? (func7) : ((func7_t) 0x0);
- funcx_t funcx = (((funcx_t) func7) << 3) | ((funcx_t) func3);
+    func7 = (opcode == 0x33) ? func7 : (func7_t)0x0;
+    funcx_t funcx = (((funcx_t) func7) << 3) | ((funcx_t) func3);
 
 
- arch_t imm, immI, immS, immB, immJ, immU;
+    arch_t imm, immI, immS, immB, immJ, immU;
 
- immI = (((ap_int<32>) insn) >> 20);
+    immI = (((ap_int<32>) insn) >> 20);
+    immS = ( immI(31,5), insn(11,8), insn(7,7) );
+    immB = ( immS(31,12), insn(7,7), immS(10,1), ((ap_uint<1>) 0) );
+    immJ = (
+      insn(31,31), insn(31,31), insn(31,31), insn(31,31),
+      insn(31,31), insn(31,31), insn(31,31), insn(31,31),
+      insn(31,31), insn(31,31), insn(31,31), insn(31,31),
+      insn(19,12), insn(20,20), insn(30,21), ((ap_uint<1>) 0)
+    );
+    immU = ( insn(31,12), ((ap_uint<12>) 0) );
 
- immS = ( immI(31,5),insn(11,8), insn(7,7));
-
- immB = ( immS(31,12), insn(7,7), immS(10,1), ((ap_uint<1>) 0) );
-
- immJ = ( insn(31,31), insn(31,31), insn(31,31), insn(31,31),
-   insn(31,31), insn(31,31), insn(31,31), insn(31,31),
-   insn(31,31), insn(31,31), insn(31,31), insn(31,31),
-    insn(19,12), insn(20,20), insn(30,21), ((ap_uint<1>) 0) );
-
- immU = ( insn(31,12), ((ap_uint<12>) 0) );
-
- imm = 0;
- switch (opcode) {
-  case 0x13:
-  case 0x03:
-  case 0x67:
-      imm = immI;
-      break;
-
-  case 0x23:
-      imm = immS;
-      break;
-
-  case 0x63:
-      imm = immB;
-      break;
-
-  case 0x6F:
-      imm = immJ;
-      break;
-
-  case 0x37:
-  case 0x17:
-      imm = immU;
-      break;
- }
+    imm = 0;
+    switch (opcode) {
+      case 0x13:
+      case 0x03:
+      case 0x67:
+        imm = immI;
+        break;
+      case 0x23:
+        imm = immS;
+        break;
+      case 0x63:
+        imm = immB;
+        break;
+      case 0x6F:
+        imm = immJ;
+        break;
+      case 0x37:
+      case 0x17:
+        imm = immU;
+        break;
+    }
 
 
-
- arch_t src1 = reg_file[rs1];
- arch_t src2 = ((opcode != 0x33) & (opcode != 0x23)) ? imm : reg_file[rs2];
- arch_t res = 0;
-
-
- arch_t addr = src1 + imm;
- arch_t val = 0;
+    arch_t src1 = reg_file[rs1];
+    arch_t src2 = ((opcode != 0x33) & (opcode != 0x23)) ? imm : reg_file[rs2];
+    arch_t res = 0;
 
 
- arch_t res_j = 0;
- arch_t res_b = pc + imm;
- arch_t res_n = pc + 4;
+    arch_t addr = src1 + imm;
+    arch_t val = 0;
 
 
- arch_t imm12 = imm << 12;
+    arch_t res_j = 0;
+    arch_t res_b = pc + imm;
+    arch_t res_n = pc + 4;
+
+
+    arch_t imm12 = imm << 12;
 
 
 
 
     switch (opcode) {
-  case 0x73:
-      printf("ECALL at PC = %08x\n", (uint32_t) pc);
-      return;
+      case 0x73:
+        printf("ECALL at PC = %08x\n", (uint32_t) pc);
+        return;
 
-  case 0x33:
-  case 0x13:
-      switch(funcx) {
-       case ((0x00) << 3) + (0x00):
-           res = src1 + src2;
-           break;
-       case ((0x20) << 3) + (0x00):
-           res = src1 - src2;
-           break;
-       case ((0x00) << 3) + (0x40):
-           res = src1 ^ src2;
-           break;
-       case ((0x00) << 3) + (0x60):
-           res = src1 | src2;
-           break;
-       case ((0x00) << 3) + (0x70):
-           res = src1 & src2;
-           break;
-       case ((0x00) << 3) + (0x01):
-           res = src1 << src2;
-           break;
-       case ((0x00) << 3) + (0x05):
-           res = src1 >> src2;
-           break;
-       case ((0x20) << 3) + (0x05):
-           res = ((ap_int<32>) src1) >> src2;
-           break;
-       case ((0x00) << 3) + (0x02):
-           res = (((ap_int<32>) src1) < ((ap_int<32>) src2)) ? 1 : 0;
-           break;
-       case ((0x00) << 3) + (0x03):
-           res = (((ap_uint<32>) src1) < ((ap_uint<32>) src2)) ? 1 : 0;
-           break;
-      }
-      break;
+      case 0x33:
+      case 0x13:
+        switch (funcx) {
+          case ((0x00) << 3) + (0x00): res = src1 + src2; break;
+          case ((0x20) << 3) + (0x00): res = src1 - src2; break;
+          case ((0x00) << 3) + (0x40): res = src1 ^ src2; break;
+          case ((0x00) << 3) + (0x60): res = src1 | src2; break;
+          case ((0x00) << 3) + (0x70): res = src1 & src2; break;
+          case ((0x00) << 3) + (0x01): res = src1 << src2; break;
+          case ((0x00) << 3) + (0x05): res = src1 >> src2; break;
+          case ((0x20) << 3) + (0x05): res = ((ap_int<32>) src1) >> src2; break;
+          case ((0x00) << 3) + (0x02): res = (((ap_int<32>) src1) < ((ap_int<32>) src2)) ? 1 : 0; break;
+          case ((0x00) << 3) + (0x03): res = (((ap_uint<32>) src1) < ((ap_uint<32>) src2)) ? 1 : 0; break;
 
-  case 0x03:
-      if (addr & 0x3) {
-       printf("Address fault at PC = %08x\n", (uint32_t) pc);
-       return;
-      }
-      val = mem[addr >> 2];
-      switch (func3) {
-       case 0x00:
-           res = (ap_int<32>) ((ap_int<8>) ( val(7,0) ));
-           break;
-       case 0x01:
-           res = (ap_int<32>) ((ap_int<16>) ( val(15,0) ));
-           break;
-       case 0x04:
-           res = val(7,0);
-           break;
-       case 0x05:
-           res = val(15,0);
-           break;
-       case 0x02:
-           res = val;
-           break;
-      }
-      break;
+          default:
 
-  case 0x23:
-      switch (func3) {
-       case 0x00:
-           (*pstrb)=0x1;
-           break;
-       case 0x01:
-           (*pstrb)=0x3;
-           break;
-       case 0x02:
-           (*pstrb)=0xf;
-           break;
 
-      }
-      res = src2;
-      break;
+            if ((opcode == 0x33) && (func7 == ((func7_t)0x01)) && (func3 == ((func3_t)0x0))) {
 
-  case 0x63:
-      switch (func3) {
-       case 0x00:
-           res_j = (src1 == src2) ? res_b : res_n;
-           break;
-       case 0x01:
-           res_j = (src1 != src2) ? res_b : res_n;
-           break;
-       case 0x04:
-           res_j = (((ap_int<32>) src1) < ((ap_int<32>) src2)) ? res_b : res_n;
-           break;
-       case 0x05:
-           res_j = (((ap_int<32>) src1) >= ((ap_int<32>) src2)) ? res_b : res_n;
-           break;
-       case 0x06:
-           res_j = (((ap_uint<32>) src1) < ((ap_uint<32>) src2)) ? res_b : res_n;
-           break;
-       case 0x07:
-           res_j = (((ap_uint<32>) src1) >= ((ap_uint<32>) src2)) ? res_b : res_n;
-           break;
+              res = (ap_int<32>)src1 * (ap_int<32>)reg_file[rs2];
+            } else {
+              printf("Illegal R-type at PC = %08x (funct7=%02x funct3=%x)\n",
+                     (uint32_t)pc, (unsigned)func7, (unsigned)func3);
+              return;
+            }
+            break;
+        }
+        break;
 
-      }
-      break;
+      case 0x03:
+        if (addr & 0x3) {
+          printf("Address fault at PC = %08x\n", (uint32_t) pc);
+          return;
+        }
+        {
+          arch_t idx = addr >> 2;
+          if (idx >= (1 << 10)) {
+            printf("MEM out of bounds at PC = %08x (addr=%08x)\n", (uint32_t)pc, (uint32_t)addr);
+            return;
+          }
+          val = mem[idx];
+        }
+        switch (func3) {
+          case 0x00: res = (ap_int<32>) ((ap_int<8>) (val(7,0))); break;
+          case 0x01: res = (ap_int<32>) ((ap_int<16>) (val(15,0))); break;
+          case 0x04: res = val(7,0); break;
+          case 0x05: res = val(15,0); break;
+          case 0x02: res = val; break;
+        }
+        break;
 
-  case 0x6F:
-      res = res_n;
-      res_j = res_b;
-      break;
+      case 0x23:
+        switch (func3) {
+          case 0x00: (*pstrb) = 0x1; break;
+          case 0x01: (*pstrb) = 0x3; break;
+          case 0x02: (*pstrb) = 0xf; break;
+        }
+        res = src2;
+        break;
 
-  case 0x67:
-      res = res_n;
-      res_j = src1 + imm;
-      break;
+      case 0x63:
+        switch (func3) {
+          case 0x00: res_j = (src1 == src2) ? res_b : res_n; break;
+          case 0x01: res_j = (src1 != src2) ? res_b : res_n; break;
+          case 0x04: res_j = (((ap_int<32>) src1) < ((ap_int<32>) src2)) ? res_b : res_n; break;
+          case 0x05: res_j = (((ap_int<32>) src1) >= ((ap_int<32>) src2)) ? res_b : res_n; break;
+          case 0x06: res_j = (((ap_uint<32>) src1) < ((ap_uint<32>) src2)) ? res_b : res_n; break;
+          case 0x07: res_j = (((ap_uint<32>) src1) >= ((ap_uint<32>) src2)) ? res_b : res_n; break;
+        }
+        break;
 
-  case 0x37:
-      res = imm12;
-      break;
+      case 0x6F:
+        res = res_n;
+        res_j = res_b;
+        break;
 
-  case 0x17:
-      res = pc + imm12;
-      break;
+      case 0x67:
+        res = res_n;
+        res_j = src1 + imm;
+        break;
 
-  default:
-      printf("Illegal instruction at PC = %08x\n", (uint32_t) pc);
-      return;
+      case 0x37:
+        res = imm12;
+        break;
+
+      case 0x17:
+        res = pc + imm12;
+        break;
+
+      default:
+        printf("Illegal instruction at PC = %08x\n", (uint32_t) pc);
+        return;
     }
 
 
     if (opcode == 0x23) {
-  if (addr(1,0)) {
-   printf("Address fault at PC = %08x\n", (uint32_t) pc);
-  }
-  else {
-   mem[addr >> 2] = res;
-  }
+      if (addr(1,0)) {
+        printf("Address fault at PC = %08x\n", (uint32_t) pc);
+      } else {
+        arch_t idx = addr >> 2;
+        if (idx >= (1 << 10)) {
+          printf("MEM out of bounds on store at PC = %08x (addr=%08x)\n", (uint32_t)pc, (uint32_t)addr);
+          return;
+        }
+        mem[idx] = res;
+      }
+    } else if ((opcode != 0x63) && (rd != 0)) {
+      reg_file[rd] = res;
     }
-    else if ((opcode != 0x63) && (rd != 0))
-     reg_file[rd] = res;
 
 
-    if ((opcode == 0x63) || (opcode == 0x6F) || (opcode == 0x67)){
-     if (pc(1,0)) {
-      printf("Address fault at PC = %08x\n", (uint32_t) pc);
-      return;
-     }
-     else
-      pc = res_j;
+    if ((opcode == 0x63) || (opcode == 0x6F) || (opcode == 0x67)) {
+      if (pc(1,0)) {
+        printf("Address fault at PC = %08x\n", (uint32_t) pc);
+        return;
+      } else {
+        pc = res_j;
+      }
+    } else {
+      pc = res_n;
     }
-    else
-     pc = res_n;
   }
 
 
   printf("PC = %08x\n", (uint32_t) pc);
-  VITIS_LOOP_269_2: for (int i = 0; i < (1 << 5); i++)
-   printf("R[%02d] = %08x\n", i, (uint32_t) reg_file[i]);
-
+  VITIS_LOOP_249_2: for (int i = 0; i < (1 << 5); i++)
+    printf("R[%02d] = %08x\n", i, (uint32_t) reg_file[i]);
 
 }

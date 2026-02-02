@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="cpu_cpu,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.667000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=681,HLS_SYN_LUT=1658,HLS_VERSION=2025_1}" *)
+(* CORE_GENERATION_INFO="cpu_cpu,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.912000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=956,HLS_SYN_LUT=1855,HLS_VERSION=2025_1}" *)
 
 module cpu (
         ap_clk,
@@ -55,31 +55,31 @@ reg   [31:0] reg_file_d0;
 wire   [31:0] reg_file_q0;
 reg    reg_file_ce1;
 wire   [31:0] reg_file_q1;
-wire    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start;
-wire    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_done;
-wire    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_idle;
-wire    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_ready;
-wire   [4:0] grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_address0;
-wire    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_ce0;
-wire    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_we0;
-wire   [31:0] grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_d0;
+wire    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start;
+wire    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_done;
+wire    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_idle;
+wire    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_ready;
+wire   [4:0] grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_address0;
+wire    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_ce0;
+wire    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_we0;
+wire   [31:0] grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_d0;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_start;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_done;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_idle;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_ready;
-wire   [9:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_address0;
-wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_ce0;
-wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_we0;
-wire   [31:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_d0;
 wire   [4:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_address0;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_ce0;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_we0;
 wire   [31:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_d0;
 wire   [4:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_address1;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_ce1;
+wire   [9:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_address0;
+wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_ce0;
+wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_we0;
+wire   [31:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_d0;
 wire   [3:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_pstrb;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_pstrb_ap_vld;
-reg    grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg;
+reg    grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg;
 wire    ap_CS_fsm_state2;
 reg    grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_start_reg;
 wire    ap_CS_fsm_state3;
@@ -95,7 +95,7 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 4'd1;
-#0 grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg = 1'b0;
+#0 grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg = 1'b0;
 #0 grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_start_reg = 1'b0;
 end
 
@@ -116,17 +116,17 @@ reg_file_U(
     .q1(reg_file_q1)
 );
 
-cpu_cpu_Pipeline_VITIS_LOOP_22_1 grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32(
+cpu_cpu_Pipeline_VITIS_LOOP_27_1 grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start),
-    .ap_done(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_done),
-    .ap_idle(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_idle),
-    .ap_ready(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_ready),
-    .reg_file_address0(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_address0),
-    .reg_file_ce0(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_ce0),
-    .reg_file_we0(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_we0),
-    .reg_file_d0(grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_d0)
+    .ap_start(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start),
+    .ap_done(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_done),
+    .ap_idle(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_idle),
+    .ap_ready(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_ready),
+    .reg_file_address0(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_address0),
+    .reg_file_ce0(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_ce0),
+    .reg_file_we0(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_we0),
+    .reg_file_d0(grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_d0)
 );
 
 cpu_cpu_Pipeline_PROGRAM_LOOP grp_cpu_Pipeline_PROGRAM_LOOP_fu_38(
@@ -136,11 +136,6 @@ cpu_cpu_Pipeline_PROGRAM_LOOP grp_cpu_Pipeline_PROGRAM_LOOP_fu_38(
     .ap_done(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_done),
     .ap_idle(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_idle),
     .ap_ready(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_ready),
-    .mem_address0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_address0),
-    .mem_ce0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_ce0),
-    .mem_we0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_we0),
-    .mem_d0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_d0),
-    .mem_q0(mem_q0),
     .reg_file_address0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_address0),
     .reg_file_ce0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_ce0),
     .reg_file_we0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_we0),
@@ -149,6 +144,11 @@ cpu_cpu_Pipeline_PROGRAM_LOOP grp_cpu_Pipeline_PROGRAM_LOOP_fu_38(
     .reg_file_address1(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_address1),
     .reg_file_ce1(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_ce1),
     .reg_file_q1(reg_file_q1),
+    .mem_address0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_address0),
+    .mem_ce0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_ce0),
+    .mem_we0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_we0),
+    .mem_d0(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_d0),
+    .mem_q0(mem_q0),
     .pstrb(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_pstrb),
     .pstrb_ap_vld(grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_pstrb_ap_vld)
 );
@@ -175,12 +175,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg <= 1'b0;
+        grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg <= 1'b0;
     end else begin
         if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg <= 1'b1;
-        end else if ((grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_ready == 1'b1)) begin
-            grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg <= 1'b0;
+            grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg <= 1'b1;
+        end else if ((grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_ready == 1'b1)) begin
+            grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -200,7 +200,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_done == 1'b0)) begin
+    if ((grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -253,7 +253,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
         reg_file_address0 = grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        reg_file_address0 = grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_address0;
+        reg_file_address0 = grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_address0;
     end else begin
         reg_file_address0 = 'bx;
     end
@@ -263,7 +263,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
         reg_file_ce0 = grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        reg_file_ce0 = grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_ce0;
+        reg_file_ce0 = grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_ce0;
     end else begin
         reg_file_ce0 = 1'b0;
     end
@@ -281,7 +281,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
         reg_file_d0 = grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_d0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        reg_file_d0 = grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_d0;
+        reg_file_d0 = grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_d0;
     end else begin
         reg_file_d0 = 'bx;
     end
@@ -291,7 +291,7 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
         reg_file_we0 = grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_reg_file_we0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        reg_file_we0 = grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_reg_file_we0;
+        reg_file_we0 = grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_reg_file_we0;
     end else begin
         reg_file_we0 = 1'b0;
     end
@@ -307,7 +307,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -339,7 +339,7 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 assign grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_start = grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_ap_start_reg;
 
-assign grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start = grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_ap_start_reg;
+assign grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start = grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_ap_start_reg;
 
 assign mem_address0 = grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_mem_address0;
 

@@ -1,1 +1,9 @@
-ECALL at PC = 00000014
+CSIM CWD = /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/wrapc
+ECALL at PC = 00000010
+PASS: 1 * 1 = 1
+ECALL at PC = 00000010
+PASS: 1 * 2 = 2
+ECALL at PC = 00000010
+PASS: 10 * 10 = 100
+ECALL at PC = 00000010
+PASS: 2 * 20 = 40

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'cpu'
 ================================================================
-* Date:           Tue Jan 20 09:42:56 2026
+* Date:           Sat Jan 31 20:47:18 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        riscv_hls
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.667 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -38,7 +38,7 @@
         |                                        |                              |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
         |                Instance                |            Module            |   min   |   max   |    min   |    max   | min | max |                      Type                      |
         +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
-        |grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32  |cpu_Pipeline_VITIS_LOOP_22_1  |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32  |cpu_Pipeline_VITIS_LOOP_27_1  |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
         |grp_cpu_Pipeline_PROGRAM_LOOP_fu_38     |cpu_Pipeline_PROGRAM_LOOP     |        ?|        ?|         ?|         ?|    ?|    ?|                                              no|
         +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
@@ -84,23 +84,23 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.25>
-ST_1 : Operation 5 [1/1] (3.25ns)   --->   "%reg_file = alloca i64 1" [../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19]   --->   Operation 5 'alloca' 'reg_file' <Predicate = true> <Delay = 3.25>
-ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_22_1, i32 %reg_file"   --->   Operation 6 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 5 [1/1] (3.25ns)   --->   "%reg_file = alloca i64 1" [../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:24]   --->   Operation 5 'alloca' 'reg_file' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_27_1, i32 %reg_file"   --->   Operation 6 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 2 <SV = 1> <Delay = 5.00>
-ST_2 : Operation 7 [1/2] (5.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_22_1, i32 %reg_file"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 5.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 7 [1/2] (5.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_27_1, i32 %reg_file"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 5.00> <CoreType = "Generic">   --->   Generic Core
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %mem, i32 %reg_file, i4 %pstrb"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file, i32 %mem, i4 %pstrb"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 4 <SV = 3> <Delay = 1.65>
-ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%spectopmodule_ln13 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13]   --->   Operation 9 'spectopmodule' 'spectopmodule_ln13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%spectopmodule_ln19 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19]   --->   Operation 9 'spectopmodule' 'spectopmodule_ln19' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mem, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %mem"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %pstrb"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %pstrb, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 14 [1/2] (1.65ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %mem, i32 %reg_file, i4 %pstrb"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
-ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln273 = ret" [../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:273]   --->   Operation 15 'ret' 'ret_ln273' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/2] (1.65ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file, i32 %mem, i4 %pstrb"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln252 = ret" [../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:252]   --->   Operation 15 'ret' 'ret_ln252' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -124,13 +124,13 @@ Port [ pstrb]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; exte
 <method=bitvector/>
 reg_file           (alloca       ) [ 00111]
 call_ln0           (call         ) [ 00000]
-spectopmodule_ln13 (spectopmodule) [ 00000]
+spectopmodule_ln19 (spectopmodule) [ 00000]
 specinterface_ln0  (specinterface) [ 00000]
 specbitsmap_ln0    (specbitsmap  ) [ 00000]
 specbitsmap_ln0    (specbitsmap  ) [ 00000]
 specinterface_ln0  (specinterface) [ 00000]
 call_ln0           (call         ) [ 00000]
-ret_ln273          (ret          ) [ 00000]
+ret_ln252          (ret          ) [ 00000]
 </LifeTime>
 
 <model>
@@ -169,7 +169,7 @@ ret_ln273          (ret          ) [ 00000]
 <pin id="7" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="cpu_Pipeline_VITIS_LOOP_22_1"/></StgValue>
+<StgValue><ssdm name="cpu_Pipeline_VITIS_LOOP_27_1"/></StgValue>
 </bind>
 </comp>
 
@@ -274,7 +274,7 @@ ret_ln273          (ret          ) [ 00000]
 </bind>
 </comp>
 
-<comp id="32" class="1004" name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32">
+<comp id="32" class="1004" name="grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32">
 <pin_list>
 <pin id="33" dir="0" index="0" bw="0" slack="0"/>
 <pin id="34" dir="0" index="1" bw="32" slack="0"/>
@@ -289,8 +289,8 @@ ret_ln273          (ret          ) [ 00000]
 <comp id="38" class="1004" name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_38">
 <pin_list>
 <pin id="39" dir="0" index="0" bw="0" slack="0"/>
-<pin id="40" dir="0" index="1" bw="32" slack="0"/>
-<pin id="41" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="40" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="41" dir="0" index="2" bw="32" slack="0"/>
 <pin id="42" dir="0" index="3" bw="4" slack="0"/>
 <pin id="43" dir="1" index="4" bw="0" slack="2147483647"/>
 </pin_list>
@@ -311,7 +311,7 @@ ret_ln273          (ret          ) [ 00000]
 
 <net id="44"><net_src comp="8" pin="0"/><net_sink comp="38" pin=0"/></net>
 
-<net id="45"><net_src comp="0" pin="0"/><net_sink comp="38" pin=1"/></net>
+<net id="45"><net_src comp="0" pin="0"/><net_sink comp="38" pin=2"/></net>
 
 <net id="46"><net_src comp="2" pin="0"/><net_sink comp="38" pin=3"/></net>
 
@@ -339,14 +339,14 @@ ret_ln273          (ret          ) [ 00000]
 ============================================================
 
 * Functional unit list:
-|----------|----------------------------------------|---------|---------|---------|
-| Operation|             Functional Unit            |  Delay  |    FF   |   LUT   |
-|----------|----------------------------------------|---------|---------|---------|
-|   call   | grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32 |    0    |    6    |    28   |
-|          |   grp_cpu_Pipeline_PROGRAM_LOOP_fu_38  |  6.9485 |   1307  |   1186  |
-|----------|----------------------------------------|---------|---------|---------|
-|   Total  |                                        |  6.9485 |   1313  |   1214  |
-|----------|----------------------------------------|---------|---------|---------|
+|----------|----------------------------------------|---------|---------|---------|---------|
+| Operation|             Functional Unit            |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|----------------------------------------|---------|---------|---------|---------|
+|   call   | grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32 |    0    |    0    |    6    |    28   |
+|          |   grp_cpu_Pipeline_PROGRAM_LOOP_fu_38  |    3    |  7.1871 |   1584  |   1318  |
+|----------|----------------------------------------|---------|---------|---------|---------|
+|   Total  |                                        |    3    |  7.1871 |   1590  |   1346  |
+|----------|----------------------------------------|---------|---------|---------|---------|
 
 Memories:
 +--------+--------+--------+--------+--------+
@@ -370,13 +370,13 @@ N/A
 
 
 * Summary:
-+-----------+--------+--------+--------+--------+--------+
-|           |  BRAM  |  Delay |   FF   |   LUT  |  URAM  |
-+-----------+--------+--------+--------+--------+--------+
-|  Function |    -   |    6   |  1313  |  1214  |    -   |
-|   Memory  |    2   |    -   |    0   |    0   |    0   |
-|Multiplexer|    -   |    -   |    -   |    -   |    -   |
-|  Register |    -   |    -   |    -   |    -   |    -   |
-+-----------+--------+--------+--------+--------+--------+
-|   Total   |    2   |    6   |  1313  |  1214  |    0   |
-+-----------+--------+--------+--------+--------+--------+
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |    3   |    7   |  1590  |  1346  |    -   |
+|   Memory  |    2   |    -   |    -   |    0   |    0   |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |    2   |    3   |    7   |  1590  |  1346  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Jan 20 16:35:09 2026
-# Process ID         : 402993
+# Start of session at: Sun Feb  1 11:29:18 2026
+# Process ID         : 1991621
 # Current directory  : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog
 # Command line       : vivado -source open_wave.tcl
 # Log file           : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/vivado.log
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5661.279 MHz
+# CPU Frequency      : 5678.303 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64919 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73509 MB
-# Available Virtual  : 64859 MB
+# Available Virtual  : 58943 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /home/elfo/Documents/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
@@ -81,11 +81,9 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/elfo/Documents/2025.1
 # open_wave_database cpu.wdb
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cpu_top/AESL_inst_cpu/AESL_inst_cpu_activity
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cpu_top/AESL_inst_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cpu_top/AESL_inst_cpu/grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32/grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_cpu_top/AESL_inst_cpu/grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32/grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32_activity
 open_wave_config /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu.wcfg
-save_wave_config {/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu.wcfg}
-save_wave_config {/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu.wcfg}
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 18:45:42 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  1 20:28:18 2026...

@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Jan 20 09:47:03 2026
-# Process ID         : 256879
+# Start of session at: Sat Jan 31 20:49:58 2026
+# Process ID         : 1317905
 # Current directory  : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip
 # Command line       : vivado -notrace -mode batch -source run_ippack.tcl
 # Log file           : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/vivado.log
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5607.510 MHz
+# CPU Frequency      : 5597.787 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64919 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73509 MB
-# Available Virtual  : 65575 MB
+# Available Virtual  : 58193 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace

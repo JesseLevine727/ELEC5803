@@ -61,14 +61,14 @@ set NewPortList {[
 
 set ArgLastReadFirstWriteLatency {
 	cpu {
-		mem {Type IO LastRead 4 FirstWrite 6}
-		pstrb {Type O LastRead -1 FirstWrite 4}}
-	cpu_Pipeline_VITIS_LOOP_22_1 {
+		mem {Type IO LastRead 4 FirstWrite 7}
+		pstrb {Type O LastRead -1 FirstWrite 3}}
+	cpu_Pipeline_VITIS_LOOP_27_1 {
 		reg_file {Type O LastRead -1 FirstWrite 0}}
 	cpu_Pipeline_PROGRAM_LOOP {
-		mem {Type IO LastRead 4 FirstWrite 6}
-		reg_file {Type IO LastRead 3 FirstWrite 6}
-		pstrb {Type O LastRead -1 FirstWrite 4}}}
+		reg_file {Type IO LastRead 4 FirstWrite 7}
+		mem {Type IO LastRead 4 FirstWrite 7}
+		pstrb {Type O LastRead -1 FirstWrite 3}}}
 
 set hasDtUnsupportedChannel 0
 

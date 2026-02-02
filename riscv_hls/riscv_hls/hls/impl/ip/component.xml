@@ -168,7 +168,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3012e5d3</spirit:value>
+            <spirit:value>e5f134ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -184,7 +184,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>56e6b1ac</spirit:value>
+            <spirit:value>fb337d63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -200,7 +200,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>77cb5b95</spirit:value>
+            <spirit:value>566ca359</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -216,7 +216,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>029e5c54</spirit:value>
+            <spirit:value>a0207d67</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -459,11 +459,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_22_1.v</spirit:name>
+        <spirit:name>hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_27_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/cpu_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/cpu_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -487,12 +491,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_22_1.v</spirit:name>
+        <spirit:name>hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_27_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/cpu_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/cpu_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -523,11 +532,15 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/cpu_cpu_Pipeline_VITIS_LOOP_22_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/cpu_cpu_Pipeline_VITIS_LOOP_27_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/cpu_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/cpu_mul_32s_32s_32_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -537,7 +550,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/cpu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_cdc491d2</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ba73c05d</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -548,12 +561,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/cpu_cpu_Pipeline_VITIS_LOOP_22_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/cpu_cpu_Pipeline_VITIS_LOOP_27_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/cpu_flow_control_loop_pipe_sequential_init.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/cpu_mul_32s_32s_32_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -637,8 +655,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Cpu</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114444147</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-01-20T14:47:05Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114460649</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-02-01T01:50:00Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -647,7 +665,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="8646c8f4"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0a21ca55"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="abcbdcea"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="6e68ed02"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="2030ee45"/>
     </xilinx:packagingInfo>

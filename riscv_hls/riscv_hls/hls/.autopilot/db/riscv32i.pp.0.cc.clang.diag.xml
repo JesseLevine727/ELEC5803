@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</string>
       <key>line</key>
-      <integer>15</integer>
+      <integer>20</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +41,7 @@
       <key>filename</key>
       <string>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</string>
       <key>line</key>
-      <integer>16</integer>
+      <integer>21</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +57,7 @@
       <key>filename</key>
       <string>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc</string>
       <key>line</key>
-      <integer>16</integer>
+      <integer>21</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Tue Jan 20 09:49:38 2026
+| Date         : Sat Jan 31 20:52:31 2026
 | Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_timing_summary -file ./report/cpu_timing_routed.rpt
 | Design       : bd_0_wrapper
@@ -58,7 +58,7 @@ Table of Contents
 3. checking pulse_width_clock (0)
 4. checking unconstrained_internal_endpoints (0)
 5. checking no_input_delay (34)
-6. checking no_output_delay (51)
+6. checking no_output_delay (50)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -95,9 +95,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (51)
+6. checking no_output_delay (50)
 --------------------------------
- There are 51 ports with no output delay specified. (HIGH)
+ There are 50 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -142,7 +142,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      2.308        0.000                      0                 1053        0.110        0.000                      0                 1053        4.500        0.000                       0                   482  
+      1.741        0.000                      0                 1404        0.110        0.000                      0                 1404        4.500        0.000                       0                   602  
 
 
 All user specified timing constraints are met.
@@ -165,7 +165,7 @@ ap_clk  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk              2.308        0.000                      0                 1053        0.110        0.000                      0                 1053        4.500        0.000                       0                   482  
+ap_clk              1.741        0.000                      0                 1404        0.110        0.000                      0                 1404        4.500        0.000                       0                   602  
 
 
 ------------------------------------------------------------------------------------------------
@@ -196,7 +196,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        2.308ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        1.741ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.110ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -204,16 +204,16 @@ PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             2.308ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred431_state6_reg/C
+Slack (MET) :             1.741ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/funcx_reg_1226_reg[9]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[24]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.084ns  (logic 1.446ns (20.411%)  route 5.638ns (79.589%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.746ns  (logic 1.430ns (18.462%)  route 6.316ns (81.538%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -228,34 +228,38 @@ Slack (MET) :             2.308ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-    SLICE_X42Y64         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred431_state6_reg/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+    SLICE_X39Y95         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/funcx_reg_1226_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y64         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred431_state6_reg/Q
-                         net (fo=34, routed)          1.313     2.804    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred431_state6
-    SLICE_X29Y76         LUT2 (Prop_lut2_I0_O)        0.118     2.922 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_19/O
-                         net (fo=33, routed)          1.833     4.755    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_19_n_0
-    SLICE_X38Y66         LUT6 (Prop_lut6_I0_O)        0.326     5.081 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, routed)           0.615     5.696    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-    SLICE_X42Y66         LUT4 (Prop_lut4_I0_O)        0.153     5.849 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, routed)           0.552     6.401    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-    SLICE_X45Y66         LUT6 (Prop_lut6_I0_O)        0.331     6.732 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, routed)          1.325     8.057    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-    SLICE_X30Y75         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[24]/R
+    SLICE_X39Y95         FDRE (Prop_fdre_C_Q)         0.456     1.429 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/funcx_reg_1226_reg[9]/Q
+                         net (fo=6, routed)           0.996     2.425    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/funcx_reg_1226[9]
+    SLICE_X40Y95         LUT6 (Prop_lut6_I1_O)        0.124     2.549 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred334_state8_i_8/O
+                         net (fo=13, routed)          0.599     3.148    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred334_state8_i_8_n_0
+    SLICE_X40Y93         LUT5 (Prop_lut5_I0_O)        0.124     3.272 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred388_state6_i_2/O
+                         net (fo=4, routed)           0.869     4.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_predicate_pred388_state6_i_2_n_0
+    SLICE_X41Y93         LUT4 (Prop_lut4_I0_O)        0.152     4.293 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_10/O
+                         net (fo=1, routed)           0.941     5.234    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_10_n_0
+    SLICE_X37Y93         LUT6 (Prop_lut6_I2_O)        0.326     5.560 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, routed)           0.608     6.168    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+    SLICE_X35Y90         LUT5 (Prop_lut5_I0_O)        0.124     6.292 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, routed)          1.095     7.388    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+    SLICE_X31Y75         LUT5 (Prop_lut5_I4_O)        0.124     7.512 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, routed)          1.207     8.719    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+    SLICE_X33Y88         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-    SLICE_X30Y75         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[24]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+    SLICE_X33Y88         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-    SLICE_X30Y75         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[24]
+    SLICE_X33Y88         FDRE (Setup_fdre_C_R)       -0.429    10.460    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]
   -------------------------------------------------------------------
-                         required time                         10.365    
-                         arrival time                          -8.057    
+                         required time                         10.460    
+                         arrival time                          -8.719    
   -------------------------------------------------------------------
-                         slack                                  2.308    
+                         slack                                  1.741    
 
 
 
@@ -264,9 +268,9 @@ Slack (MET) :             2.308ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.110ns  (arrival time - required time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_1_reg_1130_reg[14]/C
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_2_reg_1315_reg[18]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_166_reg[14]/D
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]/D
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
@@ -282,22 +286,22 @@ Slack (MET) :             0.110ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.410     0.410    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-    SLICE_X31Y71         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_1_reg_1130_reg[14]/C
+                         net (fo=602, unset)          0.410     0.410    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+    SLICE_X31Y81         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_2_reg_1315_reg[18]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y71         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_1_reg_1130_reg[14]/Q
-                         net (fo=4, routed)           0.066     0.617    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_1_reg_1130[14]
-    SLICE_X30Y71         LUT6 (Prop_lut6_I2_O)        0.045     0.662 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_166[14]_i_1/O
-                         net (fo=1, routed)           0.000     0.662    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_166[14]_i_1_n_0
-    SLICE_X30Y71         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_166_reg[14]/D
+    SLICE_X31Y81         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_2_reg_1315_reg[18]/Q
+                         net (fo=7, routed)           0.066     0.617    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_2_reg_1315[18]
+    SLICE_X30Y81         LUT6 (Prop_lut6_I5_O)        0.045     0.662 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[18]_i_1/O
+                         net (fo=1, routed)           0.000     0.662    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/p_2_in__0[18]
+    SLICE_X30Y81         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.432     0.432    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-    SLICE_X30Y71         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_166_reg[14]/C
+                         net (fo=602, unset)          0.432     0.432    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+    SLICE_X30Y81         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]/C
                          clock pessimism              0.000     0.432    
-    SLICE_X30Y71         FDRE (Hold_fdre_C_D)         0.121     0.553    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_166_reg[14]
+    SLICE_X30Y81         FDRE (Hold_fdre_C_D)         0.121     0.553    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]
   -------------------------------------------------------------------
                          required time                         -0.553    
                          arrival time                           0.662    
@@ -315,10 +319,10 @@ Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
 Sources:            { ap_clk }
 
-Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.944         10.000      7.056      RAMB36_X2Y13  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/CLKARDCLK
-Low Pulse Width   Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X38Y65  bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
-High Pulse Width  Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X38Y65  bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         10.000      6.116      DSP48_X2Y32   bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mul_32s_32s_32_2_1_U2/buff0_reg/CLK
+Low Pulse Width   Slow    FDSE/C       n/a            0.500         5.000       4.500      SLICE_X28Y74  bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
+High Pulse Width  Slow    FDSE/C       n/a            0.500         5.000       4.500      SLICE_X28Y74  bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C
 
 
 

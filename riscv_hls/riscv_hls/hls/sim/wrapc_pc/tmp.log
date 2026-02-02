@@ -1,0 +1,5 @@
+CSIM CWD = /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/wrapc_pc
+PASS: 1 * 1 = 1
+PASS: 1 * 2 = 2
+PASS: 10 * 10 = 100
+PASS: 2 * 20 = 40

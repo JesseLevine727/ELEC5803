@@ -39,25 +39,25 @@ Diagnostics:
         ReplacementText: 'VITIS_LOOP_1248_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      16
+    FileOffset:      21
     FilePath:        /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc
     Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_22_1:  '
-    FileOffset:      22
+    Message:         'Added loop label VITIS_LOOP_27_1:  '
+    FileOffset:      27
     FilePath:        /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          977899
+        Offset:          977940
         Length:          0
-        ReplacementText: 'VITIS_LOOP_22_1: '
+        ReplacementText: 'VITIS_LOOP_27_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_269_2:  '
-    FileOffset:      269
+    Message:         'Added loop label VITIS_LOOP_249_2:  '
+    FileOffset:      249
     FilePath:        /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          982859
+        Offset:          983716
         Length:          0
-        ReplacementText: 'VITIS_LOOP_269_2: '
+        ReplacementText: 'VITIS_LOOP_249_2: '
 ...

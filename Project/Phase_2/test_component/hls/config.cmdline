@@ -1,0 +1,3 @@
+relativeroot=/home/elfo/Documents/ELEC5803/Project/Phase_2
+original_argv=--mode hls --csim --config /home/elfo/Documents/ELEC5803/test_component/hls_config.cfg --work_dir test_component 
+

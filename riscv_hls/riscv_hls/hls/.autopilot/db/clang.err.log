@@ -1,4 +1,4 @@
-../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:21:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
         ^
 1 warning generated.

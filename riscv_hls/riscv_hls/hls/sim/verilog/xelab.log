@@ -8,12 +8,14 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_flow_control_loop_pipe_sequential_init
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu_cpu_Pipeline_VITIS_LOOP_22_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpu_cpu_Pipeline_VITIS_LOOP_22_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_mul_32s_32s_32_2_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu_cpu_Pipeline_PROGRAM_LOOP.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_cpu_Pipeline_PROGRAM_LOOP
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu_cpu_Pipeline_VITIS_LOOP_27_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_cpu_Pipeline_VITIS_LOOP_27_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu_reg_file_RAM_1WNR_AUTO_1R1W.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_reg_file_RAM_1WNR_AUTO_1R1W
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/sim/verilog/cpu.autotb.v" into library xil_defaultlib
@@ -31,12 +33,13 @@ Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
 Compiling module xil_defaultlib.cpu_reg_file_RAM_1WNR_AUTO_1R1W
 Compiling module xil_defaultlib.cpu_flow_control_loop_pipe_seque...
-Compiling module xil_defaultlib.cpu_cpu_Pipeline_VITIS_LOOP_22_1
+Compiling module xil_defaultlib.cpu_cpu_Pipeline_VITIS_LOOP_27_1
+Compiling module xil_defaultlib.cpu_mul_32s_32s_32_2_1(NUM_STAGE...
 Compiling module xil_defaultlib.cpu_cpu_Pipeline_PROGRAM_LOOP
 Compiling module xil_defaultlib.cpu
 Compiling module xil_defaultlib.AESL_automem_mem
 Compiling module xil_defaultlib.nodf_module_intf_default
-Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=9)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=11)
 Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
 Compiling module xil_defaultlib.dataflow_monitor_1
 Compiling module xil_defaultlib.apatb_cpu_top

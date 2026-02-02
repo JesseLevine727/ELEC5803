@@ -23,8 +23,8 @@ set RtlHierarchyInfo {[
 				"SubConnect" : [
 					{"ID" : "4", "SubInstance" : "grp_cpu_Pipeline_PROGRAM_LOOP_fu_38", "Port" : "pstrb", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.reg_file_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32", "Parent" : "0", "Child" : ["3"],
-		"CDFG" : "cpu_Pipeline_VITIS_LOOP_22_1",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32", "Parent" : "0", "Child" : ["3"],
+		"CDFG" : "cpu_Pipeline_VITIS_LOOP_27_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -40,10 +40,10 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "reg_file", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_22_1", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_27_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_38", "Parent" : "0",
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_38", "Parent" : "0", "Child" : ["5"],
 		"CDFG" : "cpu_Pipeline_PROGRAM_LOOP",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -58,9 +58,10 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "mem", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "reg_file", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "mem", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "pstrb", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "PROGRAM_LOOP", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "9", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state7"], "QuitState" : ["ap_ST_fsm_state7"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state8", "ap_ST_fsm_state9"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]}]}
+				"LoopDec" : {"FSMBitwidth" : "11", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state8"], "QuitState" : ["ap_ST_fsm_state8"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state9", "ap_ST_fsm_state10"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_38.mul_32s_32s_32_2_1_U2", "Parent" : "4"}]}

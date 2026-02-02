@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Tue Jan 20 09:48:55 2026
+| Date         : Sat Jan 31 20:51:47 2026
 | Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_timing -max_paths 10 -file ./report/cpu_timing_paths_synth.rpt
 | Design       : bd_0_wrapper
@@ -12,16 +12,16 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanc
 
 Timing Report
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[0]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -36,45 +36,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[0]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[0]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[0]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[10]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[10]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -89,45 +93,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[10]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[10]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[10]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[10]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[10]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[10]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[11]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[11]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -142,45 +150,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[11]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[11]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[11]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[11]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[11]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[11]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[12]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[12]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -195,45 +207,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[12]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[12]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[12]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[12]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[12]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[12]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[13]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[13]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -248,45 +264,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[13]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[13]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[13]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[13]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[13]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[13]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[14]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[14]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -301,45 +321,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[14]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[14]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[14]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[14]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[14]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[14]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[15]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[15]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -354,45 +378,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[15]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[15]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[15]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[15]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[15]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[15]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[16]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[16]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -407,45 +435,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[16]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[16]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[16]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[16]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[16]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[16]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[17]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[17]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -460,45 +492,49 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[17]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[17]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[17]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[17]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[17]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[17]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
-Slack (MET) :             4.302ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+Slack (MET) :             2.224ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[18]/R
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]/R
                             (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        5.090ns  (logic 1.185ns (23.281%)  route 3.905ns (76.719%))
-  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Data Path Delay:        7.168ns  (logic 1.433ns (19.992%)  route 5.735ns (80.008%))
+  Logic Levels:           6  (LUT4=1 LUT5=3 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
     Source Clock Delay      (SCD):    0.973ns
@@ -513,34 +549,38 @@ Slack (MET) :             4.302ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C
+                         net (fo=602, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/Q
-                         net (fo=72, unplaced)        0.561     2.052    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep_n_0
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.347 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20/O
-                         net (fo=1, unplaced)         1.111     3.458    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20_n_0
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.582 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9/O
-                         net (fo=7, unplaced)         0.484     4.066    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9_n_0
-                         LUT4 (Prop_lut4_I0_O)        0.124     4.190 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4/O
-                         net (fo=1, unplaced)         0.902     5.092    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.124     5.216 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1/O
-                         net (fo=32, unplaced)        0.847     6.063    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[18]/R
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/Q
+                         net (fo=2, unplaced)         0.752     2.243    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292[13]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.538 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3/O
+                         net (fo=1, unplaced)         1.111     3.649    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     3.773 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1/O
+                         net (fo=4, unplaced)         0.926     4.699    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/grp_fu_474_p2
+                         LUT6 (Prop_lut6_I3_O)        0.124     4.823 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9/O
+                         net (fo=1, unplaced)         1.111     5.934    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.058 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5/O
+                         net (fo=3, unplaced)         0.467     6.525    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124     6.649 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4/O
+                         net (fo=33, unplaced)        0.521     7.170    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     7.294 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     8.141    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock ap_clk rise edge)    10.000    10.000 r  
                                                       0.000    10.000 r  ap_clk (IN)
-                         net (fo=481, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[18]/C
+                         net (fo=602, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]/C
                          clock pessimism              0.000    10.924    
                          clock uncertainty           -0.035    10.889    
-                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[18]
+                         FDRE (Setup_fdre_C_R)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[18]
   -------------------------------------------------------------------
                          required time                         10.365    
-                         arrival time                          -6.063    
+                         arrival time                          -8.141    
   -------------------------------------------------------------------
-                         slack                                  4.302    
+                         slack                                  2.224    
 
 
 

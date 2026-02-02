@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Jan 20 09:47:55 2026
+-- Date        : Sat Jan 31 20:50:47 2026
 -- Host        : gondor running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/bd_0_hls_inst_0_stub.vhdl
@@ -32,7 +32,7 @@ entity bd_0_hls_inst_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of bd_0_hls_inst_0 : entity is "bd_0_hls_inst_0,cpu,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of bd_0_hls_inst_0 : entity is "bd_0_hls_inst_0,cpu,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=cpu,x_ipVersion=1.0,x_ipCoreRevision=2114444147,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}";
+  attribute CORE_GENERATION_INFO of bd_0_hls_inst_0 : entity is "bd_0_hls_inst_0,cpu,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=cpu,x_ipVersion=1.0,x_ipCoreRevision=2114460649,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_0_hls_inst_0 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;

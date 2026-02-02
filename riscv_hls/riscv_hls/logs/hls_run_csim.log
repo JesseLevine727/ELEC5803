@@ -6,26 +6,37 @@ INFO: [HLS 200-10] Creating and opening component '/home/elfo/Documents/ELEC5803
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6)
 INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
 INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
 INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
 INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
-INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/mem.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
-INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
 INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(13)
-INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12)
-INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
 INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
-INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
-INFO: [SIM 211-210] Code Analyzer finished
-INFO: [HLS 200-112] Total CPU user time: 1.81 seconds. Total CPU system time: 0.19 seconds. Total elapsed time: 2.14 seconds; peak allocated memory: 251.359 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 5s
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc in debug mode
+   Generating csim.exe
+CSIM CWD = /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/csim/build
+ECALL at PC = 00000010
+PASS: 1 * 1 = 1
+ECALL at PC = 00000010
+PASS: 1 * 2 = 2
+ECALL at PC = 00000010
+PASS: 10 * 10 = 100
+ECALL at PC = 00000010
+PASS: 2 * 20 = 40
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 1.33 seconds. Total CPU system time: 0.27 seconds. Total elapsed time: 1.59 seconds; peak allocated memory: 251.414 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 4s

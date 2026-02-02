@@ -15,7 +15,7 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>6.667</EstimatedClockPeriod>
+            <EstimatedClockPeriod>6.912</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
@@ -32,16 +32,16 @@
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13</SourceLocation>
+            <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19</SourceLocation>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>2</BRAM_18K>
-            <FF>681</FF>
-            <LUT>1658</LUT>
+            <DSP>3</DSP>
+            <FF>956</FF>
+            <LUT>1855</LUT>
             <URAM>0</URAM>
-            <DSP>0</DSP>
         </Resources>
         <AvailableResources>
             <BRAM_18K>280</BRAM_18K>
@@ -196,18 +196,18 @@
             <ModuleName>cpu</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32</InstName>
-                    <ModuleName>cpu_Pipeline_VITIS_LOOP_22_1</ModuleName>
+                    <InstName>grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32</InstName>
+                    <ModuleName>cpu_Pipeline_VITIS_LOOP_27_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>32</ID>
-                    <BindInstances>icmp_ln22_fu_54_p2 add_ln22_fu_60_p2</BindInstances>
+                    <BindInstances>icmp_ln27_fu_54_p2 add_ln27_fu_60_p2</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>grp_cpu_Pipeline_PROGRAM_LOOP_fu_38</InstName>
                     <ModuleName>cpu_Pipeline_PROGRAM_LOOP</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>38</ID>
-                    <BindInstances>icmp_ln47_fu_510_p2 func7_1_fu_516_p3 icmp_ln95_fu_755_p2 addr_fu_766_p2 res_b_fu_775_p2 pc_2_fu_780_p2 grp_fu_433_p2 xor_ln213_fu_895_p2 res_j_8_fu_901_p3 grp_fu_433_p2 res_j_7_fu_907_p3 grp_fu_438_p2 xor_ln207_fu_913_p2 res_j_6_fu_919_p3 grp_fu_438_p2 res_j_5_fu_925_p3 icmp_ln201_fu_931_p2 res_j_4_fu_936_p3 icmp_ln198_fu_942_p2 res_j_3_fu_947_p3 icmp_ln155_fu_836_p2 grp_fu_433_p2 grp_fu_438_p2 res_10_fu_880_p2 res_9_fu_885_p2 res_8_fu_890_p2 res_7_fu_1006_p2 res_6_fu_1011_p2 res_5_fu_1016_p2 res_4_fu_1021_p2 res_3_fu_1026_p2 res_fu_1031_p2 icmp_ln244_fu_1042_p2 icmp_ln251_fu_1061_p2 icmp_ln13_fu_1070_p2 icmp_ln13_1_fu_1075_p2 or_ln13_fu_1080_p2 icmp_ln13_2_fu_1086_p2 or_ln13_1_fu_1091_p2 icmp_ln256_fu_1104_p2 select_ln256_fu_1110_p3</BindInstances>
+                    <BindInstances>icmp_ln42_fu_508_p2 icmp_ln60_fu_573_p2 func7_1_fu_579_p3 icmp_ln101_fu_818_p2 addr_fu_829_p2 res_b_fu_839_p2 pc_2_fu_844_p2 grp_fu_480_p2 xor_ln191_fu_959_p2 res_j_8_fu_965_p3 grp_fu_480_p2 res_j_7_fu_971_p3 grp_fu_485_p2 xor_ln189_fu_977_p2 res_j_6_fu_983_p3 grp_fu_485_p2 res_j_5_fu_989_p3 icmp_ln187_fu_995_p2 res_j_4_fu_1000_p3 icmp_ln186_fu_1006_p2 res_j_3_fu_1011_p3 grp_fu_451_p2 grp_fu_474_p2 grp_fu_480_p2 grp_fu_485_p2 res_10_fu_944_p2 res_9_fu_949_p2 res_8_fu_954_p2 res_7_fu_1053_p2 res_6_fu_1058_p2 res_5_fu_1063_p2 res_4_fu_1068_p2 res_3_fu_1073_p2 icmp_ln141_fu_923_p2 icmp_ln141_1_fu_928_p2 and_ln141_fu_933_p2 mul_32s_32s_32_2_1_U2 res_fu_1078_p2 grp_fu_451_p2 grp_fu_474_p2 icmp_ln230_fu_1107_p2 icmp_ln19_fu_1116_p2 icmp_ln19_1_fu_1121_p2 or_ln19_fu_1126_p2 icmp_ln19_2_fu_1132_p2 or_ln19_1_fu_1137_p2 icmp_ln236_fu_1150_p2 spec_select_fu_1156_p3</BindInstances>
                 </Instance>
             </InstancesList>
             <BindInstances>reg_file_U</BindInstances>
@@ -215,9 +215,9 @@
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>cpu_Pipeline_VITIS_LOOP_22_1</Name>
+            <Name>cpu_Pipeline_VITIS_LOOP_27_1</Name>
             <Loops>
-                <VITIS_LOOP_22_1/>
+                <VITIS_LOOP_27_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -237,8 +237,8 @@
                     <PerformancePragma>-</PerformancePragma>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_22_1>
-                        <Name>VITIS_LOOP_22_1</Name>
+                    <VITIS_LOOP_27_1>
+                        <Name>VITIS_LOOP_27_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>32</TripCount>
                         <isPerfectNested>0</isPerfectNested>
@@ -249,19 +249,19 @@
                         <PipelineType>yes</PipelineType>
                         <PerformancePragma>-</PerformancePragma>
                         <InstanceList/>
-                    </VITIS_LOOP_22_1>
+                    </VITIS_LOOP_27_1>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:22</SourceLocation>
+                    <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:27</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <VITIS_LOOP_22_1>
-                            <Name>VITIS_LOOP_22_1</Name>
+                        <VITIS_LOOP_27_1>
+                            <Name>VITIS_LOOP_27_1</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:22</SourceLocation>
-                        </VITIS_LOOP_22_1>
+                            <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:27</SourceLocation>
+                        </VITIS_LOOP_27_1>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
@@ -285,8 +285,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln22_fu_54_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:22" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln22" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_60_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:22" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln22" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln27_fu_54_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:27" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln27" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_60_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27" VISIBLE="true"/>
             </BindNodes>
         </Module>
         <Module>
@@ -298,7 +298,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.912</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -319,8 +319,8 @@
                         <isPerfectNested>0</isPerfectNested>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                        <PipelineII>6</PipelineII>
-                        <PipelineDepth>6</PipelineDepth>
+                        <PipelineII>7</PipelineII>
+                        <PipelineDepth>7</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <PerformancePragma>-</PerformancePragma>
                         <InstanceList/>
@@ -329,79 +329,86 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:26</SourceLocation>
+                    <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:31</SourceLocation>
                     <SummaryOfLoopViolations>
                         <PROGRAM_LOOP>
                             <Name>PROGRAM_LOOP</Name>
                             <IssueType>II Violation</IssueType>
                             <ViolationType>Memory Dependency</ViolationType>
                             <IterationDistance>1</IterationDistance>
-                            <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:234</SourceLocation>
+                            <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:210</SourceLocation>
                         </PROGRAM_LOOP>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>663</FF>
+                    <DSP>3</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>938</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1504</LUT>
+                    <LUT>1701</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>2</UTIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln47_fu_510_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:47" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln47" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="func7_1_fu_516_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:47" STORAGESUBTYPE="" URAM="0" VARIABLE="func7_1" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln95_fu_755_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:95" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln95" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="addr_fu_766_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:99" STORAGESUBTYPE="" URAM="0" VARIABLE="addr" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="res_b_fu_775_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:104" STORAGESUBTYPE="" URAM="0" VARIABLE="res_b" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="pc_2_fu_780_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:105" STORAGESUBTYPE="" URAM="0" VARIABLE="pc_2" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_433_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:213" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln213" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln213_fu_895_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:213" STORAGESUBTYPE="" URAM="0" VARIABLE="xor_ln213" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_8_fu_901_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:213" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_8" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_433_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:210" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln210" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_7_fu_907_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:210" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_7" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_438_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:207" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln207" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln207_fu_913_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:207" STORAGESUBTYPE="" URAM="0" VARIABLE="xor_ln207" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_6_fu_919_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:207" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_6" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_438_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:204" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln204" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_5_fu_925_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:204" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_5" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln201_fu_931_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:201" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln201" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_4_fu_936_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:201" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_4" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln198_fu_942_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:198" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln198" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_3_fu_947_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:198" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_3" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln155_fu_836_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:155" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln155" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_433_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:149" STORAGESUBTYPE="" URAM="0" VARIABLE="res_12" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_438_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:146" STORAGESUBTYPE="" URAM="0" VARIABLE="res_11" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ashr" DSP="0" ID="" IMPL="auto_pipe" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="ashr" PRAGMA="" RTLNAME="res_10_fu_880_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:143" STORAGESUBTYPE="" URAM="0" VARIABLE="res_10" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op lshr" DSP="0" ID="" IMPL="auto_pipe" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="lshr" PRAGMA="" RTLNAME="res_9_fu_885_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:140" STORAGESUBTYPE="" URAM="0" VARIABLE="res_9" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op shl" DSP="0" ID="" IMPL="auto_pipe" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="shl" PRAGMA="" RTLNAME="res_8_fu_890_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:137" STORAGESUBTYPE="" URAM="0" VARIABLE="res_8" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="and" PRAGMA="" RTLNAME="res_7_fu_1006_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:134" STORAGESUBTYPE="" URAM="0" VARIABLE="res_7" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="or" PRAGMA="" RTLNAME="res_6_fu_1011_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:131" STORAGESUBTYPE="" URAM="0" VARIABLE="res_6" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="res_5_fu_1016_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:128" STORAGESUBTYPE="" URAM="0" VARIABLE="res_5" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="sub" PRAGMA="" RTLNAME="res_4_fu_1021_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:125" STORAGESUBTYPE="" URAM="0" VARIABLE="res_4" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="res_3_fu_1026_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:122" STORAGESUBTYPE="" URAM="0" VARIABLE="res_3" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="res_fu_1031_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:234" STORAGESUBTYPE="" URAM="0" VARIABLE="res" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln244_fu_1042_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:244" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln244" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln251_fu_1061_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:251" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln251" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln13_fu_1070_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln13" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln13_1_fu_1075_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln13_1" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="or" PRAGMA="" RTLNAME="or_ln13_fu_1080_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln13" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln13_2_fu_1086_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln13_2" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="or" PRAGMA="" RTLNAME="or_ln13_1_fu_1091_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln13_1" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln256_fu_1104_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:256" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln256" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="select_ln256_fu_1110_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:256" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln256" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln42_fu_508_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:42" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln42" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln60_fu_573_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:60" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln60" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="func7_1_fu_579_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:60" STORAGESUBTYPE="" URAM="0" VARIABLE="func7_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln101_fu_818_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:101" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln101" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="addr_fu_829_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:105" STORAGESUBTYPE="" URAM="0" VARIABLE="addr" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="res_b_fu_839_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:110" STORAGESUBTYPE="" URAM="0" VARIABLE="res_b" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="pc_2_fu_844_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:111" STORAGESUBTYPE="" URAM="0" VARIABLE="pc_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_480_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:191" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln191" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln191_fu_959_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:191" STORAGESUBTYPE="" URAM="0" VARIABLE="xor_ln191" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_8_fu_965_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:191" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_480_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:190" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln190" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_7_fu_971_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:190" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_485_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:189" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln189" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln189_fu_977_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:189" STORAGESUBTYPE="" URAM="0" VARIABLE="xor_ln189" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_6_fu_983_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:189" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_485_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:188" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln188" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_5_fu_989_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:188" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln187_fu_995_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:187" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln187" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_4_fu_1000_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:187" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln186_fu_1006_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:186" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln186" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="res_j_3_fu_1011_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:186" STORAGESUBTYPE="" URAM="0" VARIABLE="res_j_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="grp_fu_451_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:154" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln154" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="grp_fu_474_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:160" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln160" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_480_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:136" STORAGESUBTYPE="" URAM="0" VARIABLE="res_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setlt" PRAGMA="" RTLNAME="grp_fu_485_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:135" STORAGESUBTYPE="" URAM="0" VARIABLE="res_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op ashr" DSP="0" ID="" IMPL="auto_pipe" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="ashr" PRAGMA="" RTLNAME="res_10_fu_944_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:134" STORAGESUBTYPE="" URAM="0" VARIABLE="res_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op lshr" DSP="0" ID="" IMPL="auto_pipe" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="lshr" PRAGMA="" RTLNAME="res_9_fu_949_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:133" STORAGESUBTYPE="" URAM="0" VARIABLE="res_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op shl" DSP="0" ID="" IMPL="auto_pipe" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="shl" PRAGMA="" RTLNAME="res_8_fu_954_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:132" STORAGESUBTYPE="" URAM="0" VARIABLE="res_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="and" PRAGMA="" RTLNAME="res_7_fu_1053_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:131" STORAGESUBTYPE="" URAM="0" VARIABLE="res_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="or" PRAGMA="" RTLNAME="res_6_fu_1058_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:130" STORAGESUBTYPE="" URAM="0" VARIABLE="res_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="xor" PRAGMA="" RTLNAME="res_5_fu_1063_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:129" STORAGESUBTYPE="" URAM="0" VARIABLE="res_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="sub" PRAGMA="" RTLNAME="res_4_fu_1068_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:128" STORAGESUBTYPE="" URAM="0" VARIABLE="res_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="res_3_fu_1073_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:127" STORAGESUBTYPE="" URAM="0" VARIABLE="res_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln141_fu_923_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:141" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln141" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln141_1_fu_928_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:141" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln141_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="and" PRAGMA="" RTLNAME="and_ln141_fu_933_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:141" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln141" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="1" LOOP="PROGRAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_2_1_U2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:143" STORAGESUBTYPE="" URAM="0" VARIABLE="res_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="add" PRAGMA="" RTLNAME="res_fu_1078_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:210" STORAGESUBTYPE="" URAM="0" VARIABLE="res" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="grp_fu_451_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:220" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln220" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="grp_fu_474_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:224" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln224" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln230_fu_1107_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:230" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln230" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln19_fu_1116_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln19_1_fu_1121_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln19_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="or" PRAGMA="" RTLNAME="or_ln19_fu_1126_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln19_2_fu_1132_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln19_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="or" PRAGMA="" RTLNAME="or_ln19_1_fu_1137_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln19_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln236_fu_1150_p2" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:236" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln236" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="PROGRAM_LOOP" OPTYPE="select" PRAGMA="" RTLNAME="spec_select_fu_1156_p3" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:236" STORAGESUBTYPE="" URAM="0" VARIABLE="spec_select" VISIBLE="false"/>
             </BindNodes>
         </Module>
         <Module>
@@ -410,7 +417,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.667</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.912</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -426,7 +433,7 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:13</SourceLocation>
+                    <SourceLocation>../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19</SourceLocation>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
@@ -434,30 +441,27 @@
                     <BRAM_18K>2</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>681</FF>
+                    <DSP>3</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>956</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1658</LUT>
+                    <LUT>1855</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>3</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="reg_file_U" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:19" STORAGESIZE="32 32 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_np array" URAM="0" VARIABLE="reg_file" VISIBLE="true"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="" RTLNAME="reg_file_U" SOURCE="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:24" STORAGESIZE="32 32 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_np array" URAM="0" VARIABLE="reg_file" VISIBLE="true"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands>
-        <config_cosim trace_level="all" wave_debug="1"/>
-        <config_csim code_analyzer="1"/>
-    </UserConfigCommands>
+    <UserConfigCommands/>
     <Args>
         <Arg ArgName="mem" index="0" direction="inout" srcType="ap_uint&lt;32&gt;*" srcSize="32">
             <hwRefs>
@@ -606,8 +610,8 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:15" status="valid" parentFunction="cpu" variable="pstrb" isDirective="0" options="ap_none port=pstrb"/>
-        <Pragma type="resource" location="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16" status="warning" parentFunction="cpu" variable="mem" isDirective="0" options="variable=mem core=RAM_1P_BRAM">
+        <Pragma type="interface" location="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:20" status="valid" parentFunction="cpu" variable="pstrb" isDirective="0" options="ap_none port=pstrb"/>
+        <Pragma type="resource" location="../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:21" status="warning" parentFunction="cpu" variable="mem" isDirective="0" options="variable=mem core=RAM_1P_BRAM">
             <Msg msg_id="207-5539" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
             <Msg msg_id="214-340" msg_severity="WARNING" msg_body="The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead"/>
         </Pragma>

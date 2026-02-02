@@ -1,21 +1,27 @@
-# Ignore build output directory
-/build
-/export
+# Ignore build output directories
+/build/
+/export/
 
-# Ignore object files and dependent files
-.o
-.d
+# Ignore external / large subprojects
+/graphcore/
 
-#Ignore logs folder and log files
-/logs
-.log
+# Ignore object files and dependency files
+*.o
+*.d
 
-#Ignore lock files
-.lock
+# Ignore logs folder and log files
+/logs/
+*.log
 
-.bin
-.pdi
+# Ignore lock files
+*.lock
+
+# Ignore binary / tool-generated files
+*.bin
+*.pdi
 .vitisWorkspace.json
 
-_ide/logs
-_ide/.wsdata
+# Ignore IDE metadata
+_ide/logs/
+_ide/.wsdata/
+

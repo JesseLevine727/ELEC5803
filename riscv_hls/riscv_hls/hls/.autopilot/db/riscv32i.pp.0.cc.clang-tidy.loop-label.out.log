@@ -18,16 +18,16 @@
       ^~~
       VITIS_LOOP_1248_1: 
 /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:4498:7: note: FIX-IT applied suggested code changes
-/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7235:9: error: Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7230:9: error: Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
         ^
-/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7241:3: warning: Added loop label VITIS_LOOP_22_1:   [xilinx-label-all-loops]
+/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7236:3: warning: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
   for (int i = 0; i < (1 << 5); i++)
   ^~~
-  VITIS_LOOP_22_1: 
-/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7241:3: note: FIX-IT applied suggested code changes
-/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7488:3: warning: Added loop label VITIS_LOOP_269_2:   [xilinx-label-all-loops]
+  VITIS_LOOP_27_1: 
+/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7236:3: note: FIX-IT applied suggested code changes
+/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7458:3: warning: Added loop label VITIS_LOOP_249_2:   [xilinx-label-all-loops]
   for (int i = 0; i < (1 << 5); i++)
   ^~~
-  VITIS_LOOP_269_2: 
-/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7488:3: note: FIX-IT applied suggested code changes
+  VITIS_LOOP_249_2: 
+/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/riscv32i.pp.0.cc:7458:3: note: FIX-IT applied suggested code changes

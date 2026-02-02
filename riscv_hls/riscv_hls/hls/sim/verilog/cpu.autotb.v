@@ -28,7 +28,7 @@
 `define AUTOTB_TVOUT_pstrb_out_wrapc  "../tv/rtldatafile/rtl.cpu.autotvout_pstrb.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 1;
+parameter AUTOTB_TRANSACTION_NUM = 4;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = -1;
 parameter LENGTH_mem = 1024;

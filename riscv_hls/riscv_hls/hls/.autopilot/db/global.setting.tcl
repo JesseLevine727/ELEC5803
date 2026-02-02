@@ -46,7 +46,7 @@ set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../../hls_riscv/RISCV-RV32I-H1/riscv32i.cc}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog {/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} bc {/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} sc {/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} vhdl {/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} c {} cas {/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/mem.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc}}
+set TBFiles {verilog {/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} bc {/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} sc {/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} vhdl {/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc} c {} cas {/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -1,4 +1,4 @@
-/home/elfo/Documents/ELEC5803/riscv_hls/../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
-#pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
-        ^
-/home/elfo/Documents/ELEC5803/riscv_hls/../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:16:9: error: Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn't exist at all 
+/home/elfo/Documents/ELEC5803/riscv_hls/../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:21:11: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+  #pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
+          ^
+/home/elfo/Documents/ELEC5803/riscv_hls/../hls_riscv/RISCV-RV32I-H1/riscv32i.cc:21:11: error: Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn't exist at all 

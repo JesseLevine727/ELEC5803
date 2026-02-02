@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Jan 20 09:47:03 2026
-# Process ID         : 256879
+# Start of session at: Sat Jan 31 20:49:58 2026
+# Process ID         : 1317905
 # Current directory  : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip
 # Command line       : vivado -notrace -mode batch -source run_ippack.tcl
 # Log file           : /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/vivado.log
@@ -13,19 +13,19 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5607.510 MHz
+# CPU Frequency      : 5597.787 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64919 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73509 MB
-# Available Virtual  : 65575 MB
+# Available Virtual  : 58193 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
 INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/hls_data.json outdir=/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip srcdir=/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls ippack_options_dict= ippack_options_dict=
 INFO: Copied 1 ipmisc file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/misc
-INFO: Copied 6 verilog file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/verilog
-INFO: Copied 5 vhdl file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/vhdl
+INFO: Copied 7 verilog file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/verilog
+INFO: Copied 6 vhdl file(s) to /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/vhdl
 INFO: Import ports from HDL: /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/hdl/vhdl/cpu.vhd (cpu)
 INFO: Add clock interface ap_clk
 INFO: Add reset interface ap_rst
@@ -42,4 +42,4 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/component.xml
 INFO: Created IP archive /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/ip/xilinx_com_hls_cpu_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 09:47:05 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 31 20:50:00 2026...

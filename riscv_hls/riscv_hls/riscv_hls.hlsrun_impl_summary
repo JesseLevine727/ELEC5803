@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Tue Jan 20 09:47:01 2026",
- "timestampMillis": "1768920421339",
+ "dateTimestamp": "Sat Jan 31 20:49:56 2026",
+ "timestampMillis": "1769910596515",
  "buildStep": {
-  "cmdId": "c0b16958-87ff-4098-8620-297c64f26e75",
+  "cmdId": "b3a90196-4b03-4e10-9b37-2b3617346a87",
   "name": "vitis-run",
   "logFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/logs/riscv_hls.steps.log",
   "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg --work_dir riscv_hls ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Jan 20 09:47:01 2026",
- "timestampMillis": "1768920421339",
+ "dateTimestamp": "Sat Jan 31 20:49:56 2026",
+ "timestampMillis": "1769910596515",
  "status": {
-  "cmdId": "c0b16958-87ff-4098-8620-297c64f26e75",
+  "cmdId": "b3a90196-4b03-4e10-9b37-2b3617346a87",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422962",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598196",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598196",
  "buildStep": {
-  "cmdId": "b2342ec3-092d-4cd9-afc2-c79deb2e040a",
+  "cmdId": "22ae95cb-6290-4bc8-aac0-ef42a7df673e",
   "name": "",
   "logFile": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/hls.log",
   "commandLine": "",
@@ -97,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598196",
  "status": {
-  "cmdId": "b2342ec3-092d-4cd9-afc2-c79deb2e040a",
+  "cmdId": "22ae95cb-6290-4bc8-aac0-ef42a7df673e",
   "state": "CS_RUNNING"
  }
 }
@@ -108,8 +108,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598197",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/verilog",
   "name": "",
@@ -122,8 +122,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598197",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_syn.rpt",
   "name": "",
@@ -136,8 +136,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598197",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_syn.xml",
   "name": "",
@@ -150,8 +150,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598197",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/verilog",
   "name": "",
@@ -164,8 +164,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598197",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_impl.rpt",
   "name": "",
@@ -178,8 +178,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:47:02 2026",
- "timestampMillis": "1768920422963",
+ "dateTimestamp": "Sat Jan 31 20:49:58 2026",
+ "timestampMillis": "1769910598197",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/impl/report/verilog/export_impl.xml",
   "name": "",
@@ -192,8 +192,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:49:59 2026",
- "timestampMillis": "1768920599405",
+ "dateTimestamp": "Sat Jan 31 20:52:52 2026",
+ "timestampMillis": "1769910772913",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
   "name": "",
@@ -206,8 +206,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:49:59 2026",
- "timestampMillis": "1768920599406",
+ "dateTimestamp": "Sat Jan 31 20:52:52 2026",
+ "timestampMillis": "1769910772913",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls",
   "name": "",
@@ -220,10 +220,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Jan 20 09:49:59 2026",
- "timestampMillis": "1768920599406",
+ "dateTimestamp": "Sat Jan 31 20:52:52 2026",
+ "timestampMillis": "1769910772914",
  "status": {
-  "cmdId": "b2342ec3-092d-4cd9-afc2-c79deb2e040a",
+  "cmdId": "22ae95cb-6290-4bc8-aac0-ef42a7df673e",
   "state": "CS_PASSED"
  }
 }
@@ -231,10 +231,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Tue Jan 20 09:49:59 2026",
- "timestampMillis": "1768920599463",
+ "dateTimestamp": "Sat Jan 31 20:52:52 2026",
+ "timestampMillis": "1769910772976",
  "status": {
-  "cmdId": "c0b16958-87ff-4098-8620-297c64f26e75",
+  "cmdId": "b3a90196-4b03-4e10-9b37-2b3617346a87",
   "state": "CS_PASSED"
  }
 }
@@ -242,8 +242,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:49:59 2026",
- "timestampMillis": "1768920599463",
+ "dateTimestamp": "Sat Jan 31 20:52:52 2026",
+ "timestampMillis": "1769910772976",
  "report": {
   "path": "",
   "name": "",
@@ -256,8 +256,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Tue Jan 20 09:49:59 2026",
- "timestampMillis": "1768920599463",
+ "dateTimestamp": "Sat Jan 31 20:52:52 2026",
+ "timestampMillis": "1769910772976",
  "report": {
   "path": "",
   "name": "",

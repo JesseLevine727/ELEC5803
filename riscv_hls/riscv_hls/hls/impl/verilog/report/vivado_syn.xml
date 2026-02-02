@@ -6,31 +6,31 @@
 </RunData>
 <TimingReport>
   <TargetClockPeriod>10.000</TargetClockPeriod>
-  <AchievedClockPeriod>5.698</AchievedClockPeriod>
+  <AchievedClockPeriod>7.776</AchievedClockPeriod>
   <CLOCK_NAME>ap_clk</CLOCK_NAME>
-  <CP_FINAL>5.698</CP_FINAL>
+  <CP_FINAL>7.776</CP_FINAL>
   <CP_ROUTE>NA</CP_ROUTE>
-  <CP_SYNTH>5.698</CP_SYNTH>
+  <CP_SYNTH>7.776</CP_SYNTH>
   <CP_TARGET>10.000</CP_TARGET>
-  <SLACK_FINAL>4.302</SLACK_FINAL>
+  <SLACK_FINAL>2.224</SLACK_FINAL>
   <SLACK_ROUTE></SLACK_ROUTE>
-  <SLACK_SYNTH>4.302</SLACK_SYNTH>
+  <SLACK_SYNTH>2.224</SLACK_SYNTH>
   <TIMING_MET>TRUE</TIMING_MET>
   <TNS_FINAL>0.000</TNS_FINAL>
   <TNS_ROUTE>NA</TNS_ROUTE>
   <TNS_SYNTH>0.000</TNS_SYNTH>
-  <WNS_FINAL>4.302</WNS_FINAL>
+  <WNS_FINAL>2.224</WNS_FINAL>
   <WNS_ROUTE>NA</WNS_ROUTE>
-  <WNS_SYNTH>4.302</WNS_SYNTH>
+  <WNS_SYNTH>2.224</WNS_SYNTH>
 </TimingReport>
 <AreaReport>
   <Resources>
     <BRAM>2</BRAM>
     <CLB>0</CLB>
-    <DSP>0</DSP>
-    <FF>480</FF>
+    <DSP>3</DSP>
+    <FF>598</FF>
     <LATCH>0</LATCH>
-    <LUT>1280</LUT>
+    <LUT>1344</LUT>
     <SRL>0</SRL>
     <URAM>0</URAM>
   </Resources>
@@ -45,61 +45,74 @@
 </AreaReport>
 <RtlModules>
   <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="cpu" TOP_CELL="bd_0_i/hls_inst/inst">
-    <SubModules count="3">grp_cpu_Pipeline_PROGRAM_LOOP_fu_38 grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32 reg_file_U</SubModules>
-    <Resources BRAM="2" FF="480" LUT="1280" LogicLUT="1280" RAMB36="1"/>
+    <SubModules count="3">grp_cpu_Pipeline_PROGRAM_LOOP_fu_38 grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32 reg_file_U</SubModules>
+    <Resources BRAM="2" DSP="3" FF="598" LUT="1344" LogicLUT="1344" RAMB36="1"/>
   </RtlModule>
   <RtlModule CELL="inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38" DEPTH="1" FILE_NAME="cpu.v" ORIG_REF_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP">
-    <Resources FF="463" LUT="1112" LogicLUT="1112"/>
+    <SubModules count="1">mul_32s_32s_32_2_1_U2</SubModules>
+    <Resources DSP="3" FF="581" LUT="1296" LogicLUT="1296"/>
+    <LocalResources FF="564" LUT="1281" LogicLUT="1281"/>
   </RtlModule>
-  <RtlModule CELL="inst/grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32" DEPTH="1" FILE_NAME="cpu.v" ORIG_REF_NAME="cpu_cpu_Pipeline_VITIS_LOOP_22_1">
+  <RtlModule CELL="inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mul_32s_32s_32_2_1_U2" DEPTH="2" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" ORIG_REF_NAME="cpu_mul_32s_32s_32_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32" DEPTH="1" FILE_NAME="cpu.v" ORIG_REF_NAME="cpu_cpu_Pipeline_VITIS_LOOP_27_1">
     <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
   </RtlModule>
-  <RtlModule CELL="inst/grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_32/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="cpu_cpu_Pipeline_VITIS_LOOP_22_1.v" ORIG_REF_NAME="cpu_flow_control_loop_pipe_sequential_init">
+  <RtlModule CELL="inst/grp_cpu_Pipeline_VITIS_LOOP_27_1_fu_32/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="cpu_cpu_Pipeline_VITIS_LOOP_27_1.v" ORIG_REF_NAME="cpu_flow_control_loop_pipe_sequential_init">
   </RtlModule>
   <RtlModule CELL="inst/reg_file_U" DEPTH="1" FILE_NAME="cpu.v" ORIG_REF_NAME="cpu_reg_file_RAM_1WNR_AUTO_1R1W">
-    <Resources BRAM="2" LUT="176" LogicLUT="176" RAMB36="1"/>
   </RtlModule>
 </RtlModules>
 <TimingPaths>
-  <TPATH DATAPATH_DELAY="5.090" DATAPATH_LOGIC_DELAY="1.185" DATAPATH_NET_DELAY="3.905" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[0]/R" LOGIC_LEVELS="4" MAX_FANOUT="72" SLACK="4.302" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="251"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="329"/>
+  <TPATH DATAPATH_DELAY="7.168" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.735" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]/R" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.224" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="408"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="312"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="5.090" DATAPATH_LOGIC_DELAY="1.185" DATAPATH_NET_DELAY="3.905" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[10]/R" LOGIC_LEVELS="4" MAX_FANOUT="72" SLACK="4.302" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="251"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="329"/>
+  <TPATH DATAPATH_DELAY="7.168" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.735" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[10]/R" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.224" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="408"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="312"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="5.090" DATAPATH_LOGIC_DELAY="1.185" DATAPATH_NET_DELAY="3.905" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[11]/R" LOGIC_LEVELS="4" MAX_FANOUT="72" SLACK="4.302" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="251"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="329"/>
+  <TPATH DATAPATH_DELAY="7.168" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.735" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[11]/R" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.224" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="408"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="312"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="5.090" DATAPATH_LOGIC_DELAY="1.185" DATAPATH_NET_DELAY="3.905" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[12]/R" LOGIC_LEVELS="4" MAX_FANOUT="72" SLACK="4.302" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="251"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="329"/>
+  <TPATH DATAPATH_DELAY="7.168" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.735" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[12]/R" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.224" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="408"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="312"/>
   </TPATH>
-  <TPATH DATAPATH_DELAY="5.090" DATAPATH_LOGIC_DELAY="1.185" DATAPATH_NET_DELAY="3.905" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[13]/R" LOGIC_LEVELS="4" MAX_FANOUT="72" SLACK="4.302" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep/C">
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/ap_CS_fsm_reg[5]_rep" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="251"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_20" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="258"/>
-    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/res_j_1_reg_348_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="329"/>
+  <TPATH DATAPATH_DELAY="7.168" DATAPATH_LOGIC_DELAY="1.433" DATAPATH_NET_DELAY="5.735" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[13]/R" LOGIC_LEVELS="6" MAX_FANOUT="33" SLACK="2.224" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/addr_reg_1292_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="408"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/mem_we0_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_4" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="295"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_38/pc_fu_172_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="312"/>
   </TPATH>
 </TimingPaths>
 <VivadoReportFiles>

@@ -20,6 +20,18 @@
       "-fhls-tb",
       "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
       "-c",
+      "/home/elfo/Documents/ELEC5803/loop_component/./tb_loop_increment.cc"
+    ],
+    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_loop_increment.cc"
+  },
+  {
+    "directory": "/home/elfo/Documents/ELEC5803/loop_component",
+    "arguments": [
+      "/home/elfo/Documents/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
+      "-c",
       "/home/elfo/Documents/ELEC5803/loop_component/./tb_mult_int.cc"
     ],
     "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_mult_int.cc"

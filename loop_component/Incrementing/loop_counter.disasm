@@ -6,14 +6,12 @@ Disassembly of section .text:
 
 00000000 <main>:
    0:	10002683          	lw	a3,256(zero) # 100 <main+0x100>
-   4:	02d05263          	blez	a3,28 <main+0x28>
-   8:	00000793          	li	a5,0
-   c:	00000713          	li	a4,0
-  10:	00f70733          	add	a4,a4,a5
+   4:	00100793          	li	a5,1
+   8:	00100713          	li	a4,1
+   c:	00d7d863          	bge	a5,a3,1c <main+0x1c>
+  10:	02f70733          	mul	a4,a4,a5
   14:	00178793          	addi	a5,a5,1
   18:	fef69ce3          	bne	a3,a5,10 <main+0x10>
   1c:	10e02623          	sw	a4,268(zero) # 10c <main+0x10c>
   20:	00000073          	ecall
   24:	0000006f          	j	24 <main+0x24>
-  28:	00000713          	li	a4,0
-  2c:	ff1ff06f          	j	1c <main+0x1c>

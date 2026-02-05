@@ -20,9 +20,9 @@
       "-fhls-tb",
       "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
       "-c",
-      "/home/elfo/Documents/ELEC5803/loop_component/./tb_loop_increment.cc"
+      "/home/elfo/Documents/ELEC5803/loop_component/./tb_mat_mul.cc"
     ],
-    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_loop_increment.cc"
+    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_mat_mul.cc"
   },
   {
     "directory": "/home/elfo/Documents/ELEC5803/loop_component",

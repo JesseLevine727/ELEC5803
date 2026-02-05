@@ -27,7 +27,8 @@ INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-make: 'csim.exe' is up to date.
+   Compiling ../../../../../hls_riscv/RISCV-RV32I-H1/riscv32i.cc in debug mode
+   Generating csim.exe
 CSIM CWD = /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/csim/build
 ECALL at PC = 00000010
 PASS: 1 * 1 = 1
@@ -39,5 +40,5 @@ ECALL at PC = 00000010
 PASS: 2 * 20 = 40
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 0.85 seconds. Total CPU system time: 0.16 seconds. Total elapsed time: 1.01 seconds; peak allocated memory: 251.449 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 4s
+INFO: [HLS 200-112] Total CPU user time: 2.05 seconds. Total CPU system time: 0.26 seconds. Total elapsed time: 2.28 seconds; peak allocated memory: 251.449 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 5s

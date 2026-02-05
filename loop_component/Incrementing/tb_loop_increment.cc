@@ -42,7 +42,7 @@ static void init_loop_inputs(arch_t mem[MEM_SIZE]) {
 
   // Memory mapped inputs
   // 0x100 → limit → mem[0x40]
-  mem[0x40] = 10;
+  mem[0x40] = 6;
 
   // Output location (optional clear)
   // 0x10C → mem[0x43]
@@ -100,7 +100,7 @@ static void run_loop_counter(uint32_t expected) {
 int main(void) {
 
   // sum(0..9) = 45
-  run_loop_counter(45);
+  run_loop_counter(120);
 
   return 0;
 }

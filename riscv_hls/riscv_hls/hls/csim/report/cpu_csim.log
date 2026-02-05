@@ -1,6 +1,7 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-make: 'csim.exe' is up to date.
+   Compiling ../../../../../hls_riscv/RISCV-RV32I-H1/riscv32i.cc in debug mode
+   Generating csim.exe
 CSIM CWD = /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/csim/build
 ECALL at PC = 00000010
 PASS: 1 * 1 = 1

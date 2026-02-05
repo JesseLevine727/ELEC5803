@@ -1571,3 +1571,373 @@ Execute   close_project
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
+Execute       source -notrace -encoding utf-8 /home/elfo/Documents/2025.1/Vitis/tps/tcl/tcl8.6/clock.tcl 
+Execute         source -encoding utf-8 /home/elfo/Documents/2025.1/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
+INFO-FLOW: Workspace /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls opened at Thu Feb 05 14:52:05 EST 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-2174@%s%s component /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
+Execute       apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+Execute         set_top cpu 
+Execute         send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
+Execute         send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute         send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
+Execute         set_part xc7z020clg400-1 
+Execute           create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/elfo/Documents/2025.1/Vitis/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/elfo/Documents/2025.1/Vivado/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command           create_platform done; 0.27 sec.
+Execute           source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/util.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfir.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_compile -quiet -complex-mul-dsp=0 
+Command         set_part done; 0.33 sec.
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12)
+Execute         config_cosim -trace_level=all 
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+Execute         config_cosim -wave_debug=1 
+Execute         send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
+Execute         config_export -format=ip_catalog 
+Command       apply_ini done; 0.34 sec.
+Execute       write_component -config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-2176@%s /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+Command     open_solution done; 0.35 sec.
+Command   open_component done; 0.35 sec.
+Execute   apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/config.cmdline -iscmdline 
+Execute   ::AP::init_summary_file csim 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute   csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 1.1 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+Execute       source -notrace -encoding utf-8 /home/elfo/Documents/2025.1/Vitis/tps/tcl/tcl8.6/clock.tcl 
+Execute         source -encoding utf-8 /home/elfo/Documents/2025.1/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
+INFO-FLOW: Workspace /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls opened at Thu Feb 05 14:52:41 EST 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-2174@%s%s component /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
+Execute       apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+Execute         set_top cpu 
+Execute         send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
+Execute         send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute         send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
+Execute         set_part xc7z020clg400-1 
+Execute           create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/elfo/Documents/2025.1/Vitis/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/elfo/Documents/2025.1/Vivado/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command           create_platform done; 0.27 sec.
+Execute           source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/util.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfir.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_compile -quiet -complex-mul-dsp=0 
+Command         set_part done; 0.33 sec.
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12)
+Execute         config_cosim -trace_level=all 
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+Execute         config_cosim -wave_debug=1 
+Execute         send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
+Execute         config_export -format=ip_catalog 
+Command       apply_ini done; 0.34 sec.
+Execute       write_component -config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-2176@%s /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+Command     open_solution done; 0.35 sec.
+Command   open_component done; 0.36 sec.
+Execute   apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/config.cmdline -iscmdline 
+Execute   ::AP::init_summary_file csim 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute   csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 1.42 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+Execute       source -notrace -encoding utf-8 /home/elfo/Documents/2025.1/Vitis/tps/tcl/tcl8.6/clock.tcl 
+Execute         source -encoding utf-8 /home/elfo/Documents/2025.1/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
+INFO-FLOW: Workspace /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls opened at Thu Feb 05 14:53:07 EST 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-2174@%s%s component /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
+Execute       apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+Execute         set_top cpu 
+Execute         send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
+Execute         send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute         send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
+Execute         set_part xc7z020clg400-1 
+Execute           create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/elfo/Documents/2025.1/Vitis/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/elfo/Documents/2025.1/Vivado/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command           create_platform done; 0.27 sec.
+Execute           source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/util.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfir.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_compile -quiet -complex-mul-dsp=0 
+Command         set_part done; 0.33 sec.
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12)
+Execute         config_cosim -trace_level=all 
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+Execute         config_cosim -wave_debug=1 
+Execute         send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
+Execute         config_export -format=ip_catalog 
+Command       apply_ini done; 0.34 sec.
+Execute       write_component -config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-2176@%s /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+Command     open_solution done; 0.35 sec.
+Command   open_component done; 0.35 sec.
+Execute   apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/config.cmdline -iscmdline 
+Execute   ::AP::init_summary_file csim 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute   csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 1.03 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+Execute       source -notrace -encoding utf-8 /home/elfo/Documents/2025.1/Vitis/tps/tcl/tcl8.6/clock.tcl 
+Execute         source -encoding utf-8 /home/elfo/Documents/2025.1/tps/tcl/tcl8/8.5/msgcat-1.6.1.tm 
+INFO-FLOW: Workspace /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls opened at Thu Feb 05 14:53:26 EST 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-2174@%s%s component /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+INFO: [HLS 200-2174] Applying component config ini file /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg
+Execute       apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.h' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(6)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.h' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_riscv/RISCV-RV32I-H1/riscv32i.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(7)
+Execute         add_files /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc 
+INFO: [HLS 200-10] Adding design file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(9)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/hls_riscv/RISCV-RV32I-H1/riscv32i_tb.cc' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../graphcore/kernels/mult_int/mult_int.txt' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(10)
+Execute         add_files -tb /home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt 
+INFO: [HLS 200-10] Adding test bench file '/home/elfo/Documents/ELEC5803/graphcore/kernels/mult_int/mult_int.txt' to the project
+Execute         send_msg_by_id INFO @200-1465@%s 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying config ini 'syn.top=cpu' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(8)
+Execute         set_top cpu 
+Execute         send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(4)
+Execute         send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute         send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(1)
+Execute         set_part xc7z020clg400-1 
+Execute           create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/elfo/Documents/2025.1/Vitis/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/elfo/Documents/2025.1/Vivado/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command           create_platform done; 0.26 sec.
+Execute           source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/util.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/xfir.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/elfo/Documents/2025.1/Vitis/common/technology/xilinx/DSP48/dsp48.gen 
+Execute           ap_part_info -name xc7z020-clg400-1 -data info 
+Execute           config_compile -quiet -complex-mul-dsp=0 
+Command         set_part done; 0.33 sec.
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(12)
+Execute         config_cosim -trace_level=all 
+Execute         send_msg_by_id INFO @200-1465@%s 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(11)
+Execute         config_cosim -wave_debug=1 
+Execute         send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg(5)
+Execute         config_export -format=ip_catalog 
+Command       apply_ini done; 0.33 sec.
+Execute       write_component -config /home/elfo/Documents/ELEC5803/riscv_hls/hls_config.cfg 
+Execute         send_msg_by_id INFO @200-2176@%s /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/vitis-comp.json
+Command     open_solution done; 0.36 sec.
+Command   open_component done; 0.36 sec.
+Execute   apply_ini /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/config.cmdline -iscmdline 
+Execute   ::AP::init_summary_file csim 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute   csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+Execute     source /home/elfo/Documents/ELEC5803/riscv_hls/riscv_hls/hls/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source run_sim.tcl 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 1.4 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

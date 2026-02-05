@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../tb_loop_increment.cc ../../../../riscv32i.cc
+HLS_SOURCES = ../../../../tb_mat_mul.cc ../../../../riscv32i.cc
 
 override TARGET := csim.exe
 
@@ -83,11 +83,11 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/tb_loop_increment.o: ../../../../tb_loop_increment.cc $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../tb_loop_increment.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/tb_mat_mul.o: ../../../../tb_mat_mul.cc $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../tb_mat_mul.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/tb_loop_increment.d
+-include $(ObjDir)/tb_mat_mul.d
 
 $(ObjDir)/riscv32i.o: ../../../../riscv32i.cc $(ObjDir)/.dir csim.mk
 	$(Echo) "   Compiling ../../../../riscv32i.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)

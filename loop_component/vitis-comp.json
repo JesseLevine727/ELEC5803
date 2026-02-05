@@ -1,0 +1,13 @@
+{
+  "name": "loop_component",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "loop_component"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}

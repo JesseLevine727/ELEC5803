@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/mult_component/mult_component/mult_component.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Feb  5 08:18:24 2026",
+ "timestampMillis": "1770297504680",
+ "buildStep": {
+  "cmdId": "59243290-c7f3-4321-8fdd-088d2e56f059",
+  "name": "vitis-run",
+  "logFile": "/home/elfo/Documents/ELEC5803/mult_component/mult_component/logs/mult_component.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/elfo/Documents/ELEC5803/mult_component/hls_config.cfg --work_dir mult_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/mult_component/hls_config.cfg",
+   "--work_dir",
+   "mult_component"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/mult_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 08:18:24 2026",
+ "timestampMillis": "1770297504680",
+ "status": {
+  "cmdId": "59243290-c7f3-4321-8fdd-088d2e56f059",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Feb  5 08:18:26 2026",
+ "timestampMillis": "1770297506260",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cpu",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/Project/Phase_2/src/riscv32i.cc",
+     "/home/elfo/Documents/ELEC5803/Project/Phase_2/src/riscv32i.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Feb  5 08:18:26 2026",
+ "timestampMillis": "1770297506260",
+ "buildStep": {
+  "cmdId": "ae7134e3-0e5f-4f25-a0d7-b7c1ad13b2f9",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/mult_component/mult_component/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/mult_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 08:18:26 2026",
+ "timestampMillis": "1770297506260",
+ "status": {
+  "cmdId": "ae7134e3-0e5f-4f25-a0d7-b7c1ad13b2f9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 08:18:26 2026",
+ "timestampMillis": "1770297506990",
+ "status": {
+  "cmdId": "ae7134e3-0e5f-4f25-a0d7-b7c1ad13b2f9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Feb  5 08:18:27 2026",
+ "timestampMillis": "1770297507038",
+ "status": {
+  "cmdId": "59243290-c7f3-4321-8fdd-088d2e56f059",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 08:18:27 2026",
+ "timestampMillis": "1770297507038",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Feb  5 08:18:27 2026",
+ "timestampMillis": "1770297507038",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

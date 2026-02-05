@@ -1,0 +1,3 @@
+relativeroot=/home/elfo/Documents/ELEC5803/loop_component
+original_argv=--mode hls --csim --config /home/elfo/Documents/ELEC5803/loop_component/hls_config.cfg --work_dir loop_component 
+

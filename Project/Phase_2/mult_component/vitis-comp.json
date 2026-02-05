@@ -1,0 +1,13 @@
+{
+  "name": "mult_component",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "mult_component"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}

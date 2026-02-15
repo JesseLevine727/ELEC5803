@@ -32,8 +32,8 @@
       "-fhls-tb",
       "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
       "-c",
-      "/home/elfo/Documents/ELEC5803/loop_component/./tb_mult_int.cc"
+      "/home/elfo/Documents/ELEC5803/loop_component/./tb_accumulation_test.cc"
     ],
-    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_mult_int.cc"
+    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_accumulation_test.cc"
   }
 ]

@@ -1,0 +1,18 @@
+
+accumulation_test.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	10002703          	lw	a4,256(zero) # 100 <main+0x100>
+   4:	10402783          	lw	a5,260(zero) # 104 <main+0x104>
+   8:	10802683          	lw	a3,264(zero) # 108 <main+0x108>
+   c:	00e05c63          	blez	a4,24 <main+0x24>
+  10:	02d787b3          	mul	a5,a5,a3
+  14:	02e787b3          	mul	a5,a5,a4
+  18:	10f02623          	sw	a5,268(zero) # 10c <main+0x10c>
+  1c:	00000073          	ecall
+  20:	0000006f          	j	20 <main+0x20>
+  24:	00000793          	li	a5,0
+  28:	ff1ff06f          	j	18 <main+0x18>

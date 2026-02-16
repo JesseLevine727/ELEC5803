@@ -1,0 +1,50 @@
+
+tiny_NN.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	ff010113          	addi	sp,sp,-16
+   4:	00112623          	sw	ra,12(sp)
+   8:	00812423          	sw	s0,8(sp)
+   c:	10002403          	lw	s0,256(zero) # 100 <main+0x100>
+  10:	10402083          	lw	ra,260(zero) # 104 <main+0x104>
+  14:	10802e83          	lw	t4,264(zero) # 108 <main+0x108>
+  18:	10c02303          	lw	t1,268(zero) # 10c <main+0x10c>
+  1c:	11002783          	lw	a5,272(zero) # 110 <main+0x110>
+  20:	11402883          	lw	a7,276(zero) # 114 <main+0x114>
+  24:	11802503          	lw	a0,280(zero) # 118 <main+0x118>
+  28:	11c02603          	lw	a2,284(zero) # 11c <main+0x11c>
+  2c:	13002383          	lw	t2,304(zero) # 130 <main+0x130>
+  30:	12002703          	lw	a4,288(zero) # 120 <main+0x120>
+  34:	12402803          	lw	a6,292(zero) # 124 <main+0x124>
+  38:	12802583          	lw	a1,296(zero) # 128 <main+0x128>
+  3c:	12c02683          	lw	a3,300(zero) # 12c <main+0x12c>
+  40:	028787b3          	mul	a5,a5,s0
+  44:	13402283          	lw	t0,308(zero) # 134 <main+0x134>
+  48:	14002f83          	lw	t6,320(zero) # 140 <main+0x140>
+  4c:	14402f03          	lw	t5,324(zero) # 144 <main+0x144>
+  50:	15002e03          	lw	t3,336(zero) # 150 <main+0x150>
+  54:	021888b3          	mul	a7,a7,ra
+  58:	02870733          	mul	a4,a4,s0
+  5c:	011787b3          	add	a5,a5,a7
+  60:	02180833          	mul	a6,a6,ra
+  64:	03d50533          	mul	a0,a0,t4
+  68:	01070733          	add	a4,a4,a6
+  6c:	03d585b3          	mul	a1,a1,t4
+  70:	00a787b3          	add	a5,a5,a0
+  74:	02660633          	mul	a2,a2,t1
+  78:	00b70733          	add	a4,a4,a1
+  7c:	026686b3          	mul	a3,a3,t1
+  80:	00c787b3          	add	a5,a5,a2
+  84:	007787b3          	add	a5,a5,t2
+  88:	00d70733          	add	a4,a4,a3
+  8c:	00570733          	add	a4,a4,t0
+  90:	03f787b3          	mul	a5,a5,t6
+  94:	03e70733          	mul	a4,a4,t5
+  98:	00e787b3          	add	a5,a5,a4
+  9c:	01c787b3          	add	a5,a5,t3
+  a0:	16f02023          	sw	a5,352(zero) # 160 <main+0x160>
+  a4:	00000073          	ecall
+  a8:	0000006f          	j	a8 <main+0xa8>

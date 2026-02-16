@@ -1,0 +1,22 @@
+
+strided_access_test.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	10002783          	lw	a5,256(zero) # 100 <main+0x100>
+   4:	10402583          	lw	a1,260(zero) # 104 <main+0x104>
+   8:	02f05663          	blez	a5,34 <main+0x34>
+   c:	08078793          	addi	a5,a5,128
+  10:	00279613          	slli	a2,a5,0x2
+  14:	00259593          	slli	a1,a1,0x2
+  18:	20000793          	li	a5,512
+  1c:	11000713          	li	a4,272
+  20:	00072683          	lw	a3,0(a4)
+  24:	00478793          	addi	a5,a5,4
+  28:	00b70733          	add	a4,a4,a1
+  2c:	fed7ae23          	sw	a3,-4(a5)
+  30:	fec798e3          	bne	a5,a2,20 <main+0x20>
+  34:	00000073          	ecall
+  38:	0000006f          	j	38 <main+0x38>

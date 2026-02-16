@@ -1,4 +1,4 @@
-// RISCV-32IM design in HLS (RV32I + MUL from M-extension)
+// RISCV-32IM design in HLS (RV32I + RV32M)
 
 #define HLS_DEBUG 1
 
@@ -10,7 +10,6 @@
 
 // RV32M encodings
 #define FUNCT7_M   ((func7_t)0x01)
-#define FUNC3_MUL  ((func3_t)0x0)
 
 void cpu(arch_t mem[MEM_SIZE], volatile strb_t* pstrb) {
 
@@ -38,8 +37,12 @@ PROGRAM_LOOP:
 #endif
 
     // ================= FETCH =================
+    if (pc & 0x3) {
+      printf("PC misaligned: %08x\n", (uint32_t)pc);
+      return;
+    }
     if ((pc >> 2) >= MEM_SIZE) {
-      printf("PC out of bounds: PC = %08x\n", (uint32_t)pc);
+      printf("PC out of bounds: %08x\n", (uint32_t)pc);
       return;
     }
 
@@ -57,88 +60,48 @@ PROGRAM_LOOP:
     func3_t func3 = insn(14,12);
     func7_t func7 = insn(31,25);
 
-    // Keep func7 for R-type and shift-immediate (OPCODE_IA with func3==1 or 5)
-    if (!((opcode == OPCODE_R) ||
-          (opcode == OPCODE_IA && (func3 == FUNC3_SLL || func3 == FUNC3_SRL)))) {
-      func7 = (func7_t)0x0;
-    }
-
-    funcx_t funcx = (((funcx_t) func7) << 3) | ((funcx_t) func3);
-
 #if HLS_DEBUG
     printf("opcode=%02x rd=%d rs1=%d rs2=%d f3=%x f7=%x\n",
-           (unsigned)opcode, (int)rd, (int)rs1, (int)rs2, (unsigned)func3, (unsigned)func7);
+           (unsigned)opcode, (int)rd, (int)rs1, (int)rs2,
+           (unsigned)func3, (unsigned)func7);
 #endif
 
-    // ================= IMMEDIATE GENERATION =================
+    // ================= IMMEDIATES =================
     ap_int<ARCH> immI = ((ap_int<ARCH>)insn) >> 20;
 
     ap_int<12> simm = (insn(31,25), insn(11,7));
     ap_int<ARCH> immS = simm;
 
     ap_int<13> bimm =
-        (insn[31],
-         insn[7],
-         insn(30,25),
-         insn(11,8),
-         (ap_uint<1>)0);
+      (insn[31], insn[7], insn(30,25), insn(11,8), (ap_uint<1>)0);
     ap_int<ARCH> immB = bimm;
 
     ap_int<21> jimm =
-        (insn[31],
-         insn(19,12),
-         insn[20],
-         insn(30,21),
-         (ap_uint<1>)0);
+      (insn[31], insn(19,12), insn[20], insn(30,21), (ap_uint<1>)0);
     ap_int<ARCH> immJ = jimm;
 
     arch_t immU = ((arch_t)insn(31,12)) << 12;
 
     ap_int<ARCH> imm = 0;
-
     switch (opcode) {
       case OPCODE_IA:
       case OPCODE_IM:
-      case OPCODE_IJ:
-        imm = immI;
-        break;
-
-      case OPCODE_S:
-        imm = immS;
-        break;
-
-      case OPCODE_B:
-        imm = immB;
-        break;
-
-      case OPCODE_J:
-        imm = immJ;
-        break;
-
+      case OPCODE_IJ: imm = immI; break;
+      case OPCODE_S:  imm = immS; break;
+      case OPCODE_B:  imm = immB; break;
+      case OPCODE_J:  imm = immJ; break;
       case OPCODE_U1:
-      case OPCODE_U2:
-        imm = (ap_int<ARCH>)immU;
-        break;
-
-      default:
-        imm = 0;
-        break;
+      case OPCODE_U2: imm = (ap_int<ARCH>)immU; break;
+      default: imm = 0; break;
     }
 
 #if HLS_DEBUG
     printf("IMM = %08x\n", (uint32_t)imm);
 #endif
 
-    // ================= EXECUTE SETUP =================
+    // ================= OPERANDS =================
     arch_t src1 = reg_file[rs1];
-
-    // Default src2 selection (imm for I-type ops, reg for R/S/B)
-    arch_t src2 =
-        ((opcode != OPCODE_R) &&
-         (opcode != OPCODE_S) &&
-         (opcode != OPCODE_B))
-        ? (arch_t)imm
-        : reg_file[rs2];
+    arch_t src2 = reg_file[rs2]; // for R/S/B. (I-type uses imm directly)
 
 #if HLS_DEBUG
     printf("src1=%08x src2=%08x\n",
@@ -146,193 +109,197 @@ PROGRAM_LOOP:
 #endif
 
     arch_t res = 0;
-    arch_t addr = src1 + (arch_t)imm;
-    arch_t val  = 0;
-
-    arch_t res_j = 0;
-    arch_t res_b = pc + (arch_t)imm;
-    arch_t res_n = pc + 4;
-
-    arch_t imm12 = ((arch_t)imm) << 12;
+    arch_t next_pc = pc + 4;
 
     // ================= EXECUTE =================
     switch (opcode) {
 
-      case OPCODE_E:
+      case OPCODE_E:  // ECALL/EBREAK group (we treat as exit)
         printf("ECALL at PC = %08x\n", (uint32_t)pc);
         return;
 
+      // ---------------- R-type + I-type ALU ----------------
       case OPCODE_R:
       case OPCODE_IA: {
 
-        // ---------- FIX: proper I-type shift-immediate handling ----------
-        // For SLLI/SRLI/SRAI, shift amount is insn[24:20] (5 bits),
-        // and func7 distinguishes SRLI (0x00) vs SRAI (0x20).
-        if (opcode == OPCODE_IA && (func3 == FUNC3_SLL || func3 == FUNC3_SRL)) {
-          arch_t shamt = (arch_t)insn(24,20); // 0..31
+        // ---- I-type shift immediate ----
+        if (opcode == OPCODE_IA && ((uint32_t)func3 == 0x1 || (uint32_t)func3 == 0x5)) {
+          arch_t shamt = (arch_t)insn(24,20);
 
-          if (func3 == FUNC3_SLL) {
+          if ((uint32_t)func3 == 0x1) {
             // SLLI
             res = src1 << shamt;
-          } else { // func3 == 5
-            if (func7 == (func7_t)0x20) {
-              // SRAI
-              res = ((ap_int<ARCH>)src1) >> shamt;
+          } else {
+            // SRLI/SRAI distinguished by func7 (0x00 vs 0x20)
+            if ((uint32_t)func7 == 0x20) {
+              res = ((ap_int<ARCH>)src1) >> shamt; // SRAI
             } else {
-              // SRLI (treat any non-0x20 as logical shift)
-              res = src1 >> shamt;
+              res = src1 >> shamt;                 // SRLI
             }
           }
-          break; // done with this instruction
+          break;
         }
-        // ----------------------------------------------------------------
 
-        switch (funcx) {
+        // RV32M: funct7=0x01
+        if (opcode == OPCODE_R && func7 == FUNCT7_M) {
+          // decode funct3 by literal values to avoid ap_uint switch-case issues
+          ap_int<32>  a_s = (ap_int<32>)src1;
+          ap_int<32>  b_s = (ap_int<32>)src2;
+          ap_uint<32> a_u = (ap_uint<32>)src1;
+          ap_uint<32> b_u = (ap_uint<32>)src2;
 
-          case FUNCX_ADD: res = src1 + src2; break;
-          case FUNCX_SUB: res = src1 - src2; break;
-          case FUNCX_XOR: res = src1 ^ src2; break;
-          case FUNCX_OR:  res = src1 | src2; break;
-          case FUNCX_AND: res = src1 & src2; break;
-          case FUNCX_SLL: res = src1 << src2; break;
-          case FUNCX_SRL: res = src1 >> src2; break;
-          case FUNCX_SRA: res = ((ap_int<ARCH>)src1) >> src2; break;
+          ap_int<64>  prod_ss = (ap_int<64>)a_s * (ap_int<64>)b_s;
+          ap_uint<64> prod_uu = (ap_uint<64>)a_u * (ap_uint<64>)b_u;
 
-          case FUNCX_SLT:
-            res = ((ap_int<ARCH>)src1 < (ap_int<ARCH>)src2) ? 1 : 0;
-            break;
+          uint32_t f3 = (uint32_t)func3;
 
-          case FUNCX_SLTU:
-            res = ((ap_uint<ARCH>)src1 < (ap_uint<ARCH>)src2) ? 1 : 0;
-            break;
+          if (f3 == 0x0) {                 // MUL
+            res = (arch_t)(ap_int<32>)prod_ss;
+          } else if (f3 == 0x1) {          // MULH
+            res = (arch_t)(ap_int<32>)(prod_ss >> 32);
+          } else if (f3 == 0x2) {          // MULHSU
+            ap_int<64> prod_su = (ap_int<64>)a_s * (ap_uint<64>)b_u;
+            res = (arch_t)(ap_int<32>)(prod_su >> 32);
+          } else if (f3 == 0x3) {          // MULHU
+            res = (arch_t)(ap_uint<32>)(prod_uu >> 32);
+          } else {
+            printf("Illegal M op at PC=%08x\n", (uint32_t)pc);
+            return;
+          }
+          break;
+        }
 
-          default:
-            // RV32M MUL (R-type only)
-            if ((opcode == OPCODE_R) &&
-                (func7 == FUNCT7_M) &&
-                (func3 == FUNC3_MUL)) {
+        // regular RV32I ALU ops
+        arch_t op2 = (opcode == OPCODE_IA) ? (arch_t)imm : src2;
 
-              res = (ap_int<ARCH>)src1 *
-                    (ap_int<ARCH>)reg_file[rs2];
+        uint32_t f3 = (uint32_t)func3;
+        uint32_t f7 = (uint32_t)func7;
 
-            } else {
-              printf("Illegal R-type at PC = %08x\n", (uint32_t)pc);
-              return;
-            }
-            break;
+        // ADD/SUB share f3=0
+        if (f3 == 0x0) {
+          if (opcode == OPCODE_R && f7 == 0x20) res = src1 - op2; // SUB
+          else                                  res = src1 + op2; // ADD/ADDI
+        }
+        else if (f3 == 0x4) res = src1 ^ op2;                    // XOR/XORI
+        else if (f3 == 0x6) res = src1 | op2;                    // OR/ORI
+        else if (f3 == 0x7) res = src1 & op2;                    // AND/ANDI
+        else if (f3 == 0x1) res = src1 << (op2 & 0x1F);          // SLL/SLLI (non-imm path)
+        else if (f3 == 0x5) {
+          if (opcode == OPCODE_R && f7 == 0x20) res = ((ap_int<ARCH>)src1) >> (op2 & 0x1F); // SRA
+          else                                  res = src1 >> (op2 & 0x1F);                 // SRL
+        }
+        else if (f3 == 0x2) res = ((ap_int<ARCH>)src1 <  (ap_int<ARCH>)op2) ? 1 : 0;        // SLT/SLTI
+        else if (f3 == 0x3) res = ((ap_uint<ARCH>)src1 < (ap_uint<ARCH>)op2) ? 1 : 0;       // SLTU/SLTIU
+        else {
+          printf("Illegal ALU op at PC=%08x\n", (uint32_t)pc);
+          return;
         }
         break;
       }
 
-      // ================= LOAD =================
-      case OPCODE_IM:
-
-        if (addr & 0x3) {
-          printf("LOAD address fault PC=%08x\n", (uint32_t)pc);
+      // ---------------- LOAD ----------------
+      case OPCODE_IM: {
+        // only support LW (funct3=010) for now
+        if ((uint32_t)func3 != 0x2) {
+          printf("Unsupported LOAD f3=%x at PC=%08x\n", (unsigned)func3, (uint32_t)pc);
           return;
         }
 
+        arch_t addr = src1 + (arch_t)imm;
+
+        if (addr & 0x3) {
+          printf("LOAD misaligned addr=%08x\n", (uint32_t)addr);
+          return;
+        }
         if ((addr >> 2) >= MEM_SIZE) {
           printf("LOAD OOB addr=%08x\n", (uint32_t)addr);
           return;
         }
 
-        val = mem[addr >> 2];
-
-#if HLS_DEBUG
-        printf("LOAD addr=%08x val=%08x\n",
-               (uint32_t)addr, (uint32_t)val);
-#endif
-
-        switch (func3) {
-          case FUNC3_XW: res = val; break;
-          default:       res = val; break; // (you can add LB/LH/LBU/LHU later)
-        }
+        res = mem[addr >> 2];
         break;
+      }
 
-      // ================= STORE =================
-      case OPCODE_S:
+      // ---------------- STORE ----------------
+      case OPCODE_S: {
+        // only support SW (funct3=010) for now
+        if ((uint32_t)func3 != 0x2) {
+          printf("Unsupported STORE f3=%x at PC=%08x\n", (unsigned)func3, (uint32_t)pc);
+          return;
+        }
 
+        arch_t addr = src1 + (arch_t)imm;
+
+        if (addr & 0x3) {
+          printf("STORE misaligned addr=%08x\n", (uint32_t)addr);
+          return;
+        }
         if ((addr >> 2) >= MEM_SIZE) {
           printf("STORE OOB addr=%08x\n", (uint32_t)addr);
           return;
         }
 
         mem[addr >> 2] = src2;
-
-#if HLS_DEBUG
-        printf("STORE addr=%08x val=%08x\n",
-               (uint32_t)addr, (uint32_t)src2);
-#endif
         break;
+      }
 
-      // ================= BRANCH =================
-      case OPCODE_B:
+      // ---------------- BRANCH ----------------
+      case OPCODE_B: {
+        // decode funct3 by literal RV32 values (do NOT rely on header macros)
+        uint32_t f3 = (uint32_t)func3;
 
-#if HLS_DEBUG
-        printf("BRANCH compare %08x vs %08x\n",
-               (uint32_t)src1, (uint32_t)src2);
-#endif
-
-        switch (func3) {
-          case FUNC_BEQ:  res_j = (src1 == src2) ? res_b : res_n; break;
-          case FUNC_BNE:  res_j = (src1 != src2) ? res_b : res_n; break;
-          case FUNC_BLT:  res_j = ((ap_int<ARCH>)src1 <  (ap_int<ARCH>)src2) ? res_b : res_n; break;
-          case FUNC_BGE:  res_j = ((ap_int<ARCH>)src1 >= (ap_int<ARCH>)src2) ? res_b : res_n; break;
-          case FUNC_BLTU: res_j = ((ap_uint<ARCH>)src1 <  (ap_uint<ARCH>)src2) ? res_b : res_n; break;
-          case FUNC_BGEU: res_j = ((ap_uint<ARCH>)src1 >= (ap_uint<ARCH>)src2) ? res_b : res_n; break;
-          default:
-            printf("Illegal branch at PC = %08x\n", (uint32_t)pc);
-            return;
+        bool take = false;
+        if      (f3 == 0x0) take = (src1 == src2);                                        // BEQ
+        else if (f3 == 0x1) take = (src1 != src2);                                        // BNE
+        else if (f3 == 0x4) take = ((ap_int<ARCH>)src1 <  (ap_int<ARCH>)src2);            // BLT  (signed)
+        else if (f3 == 0x5) take = ((ap_int<ARCH>)src1 >= (ap_int<ARCH>)src2);            // BGE  (signed)
+        else if (f3 == 0x6) take = ((ap_uint<ARCH>)src1 <  (ap_uint<ARCH>)src2);          // BLTU (unsigned)
+        else if (f3 == 0x7) take = ((ap_uint<ARCH>)src1 >= (ap_uint<ARCH>)src2);          // BGEU (unsigned)
+        else {
+          printf("Illegal BRANCH f3=%x at PC=%08x\n", f3, (uint32_t)pc);
+          return;
         }
 
-#if HLS_DEBUG
-        printf("BRANCH target=%08x\n", (uint32_t)res_j);
-#endif
+        if (take) next_pc = pc + (arch_t)imm;
         break;
+      }
 
+      // ---------------- JAL ----------------
       case OPCODE_J:
-        res   = res_n;
-        res_j = res_b;
+        res = next_pc;
+        next_pc = pc + (arch_t)imm;
         break;
 
+      // ---------------- JALR ----------------
       case OPCODE_IJ:
-        res   = res_n;
-        res_j = src1 + (arch_t)imm;
+        res = next_pc;
+        next_pc = (src1 + (arch_t)imm) & (arch_t)~1;
         break;
 
+      // ---------------- LUI ----------------
       case OPCODE_U1:
-        res = imm12;
+        res = (arch_t)imm;
         break;
 
+      // ---------------- AUIPC ----------------
       case OPCODE_U2:
-        res = pc + imm12;
+        res = pc + (arch_t)imm;
         break;
 
       default:
-        printf("Illegal instruction at PC = %08x\n", (uint32_t)pc);
+        printf("Illegal instruction at PC=%08x (opcode=%02x)\n",
+               (uint32_t)pc, (unsigned)opcode);
         return;
     }
 
     // ================= WRITEBACK =================
-    if (opcode == OPCODE_S) {
-      // already stored
-    }
-    else if ((opcode != OPCODE_B) && (rd != 0)) {
+    if ((opcode != OPCODE_S) && (opcode != OPCODE_B) && (rd != 0)) {
       reg_file[rd] = res;
-
 #if HLS_DEBUG
       printf("WRITE R[%d] = %08x\n", (int)rd, (uint32_t)res);
 #endif
     }
 
-    // ================= PC UPDATE =================
-    if ((opcode == OPCODE_B) ||
-        (opcode == OPCODE_J) ||
-        (opcode == OPCODE_IJ)) {
-      pc = res_j;
-    } else {
-      pc = res_n;
-    }
+    pc = next_pc;
   }
 }

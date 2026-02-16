@@ -57,20 +57,23 @@ PROGRAM_LOOP:
     func3_t func3 = insn(14,12);
     func7_t func7 = insn(31,25);
 
-    func7 = (opcode == OPCODE_R) ? func7 : (func7_t)0x0;
+    // Keep func7 for R-type and shift-immediate (OPCODE_IA with func3==1 or 5)
+    if (!((opcode == OPCODE_R) ||
+          (opcode == OPCODE_IA && (func3 == FUNC3_SLL || func3 == FUNC3_SRL)))) {
+      func7 = (func7_t)0x0;
+    }
+
     funcx_t funcx = (((funcx_t) func7) << 3) | ((funcx_t) func3);
 
 #if HLS_DEBUG
     printf("opcode=%02x rd=%d rs1=%d rs2=%d f3=%x f7=%x\n",
-           opcode, rd, rs1, rs2, func3, func7);
+           (unsigned)opcode, (int)rd, (int)rs1, (int)rs2, (unsigned)func3, (unsigned)func7);
 #endif
 
     // ================= IMMEDIATE GENERATION =================
-
     ap_int<ARCH> immI = ((ap_int<ARCH>)insn) >> 20;
 
-    ap_int<12> simm =
-        (insn(31,25), insn(11,7));
+    ap_int<12> simm = (insn(31,25), insn(11,7));
     ap_int<ARCH> immS = simm;
 
     ap_int<13> bimm =
@@ -129,6 +132,7 @@ PROGRAM_LOOP:
     // ================= EXECUTE SETUP =================
     arch_t src1 = reg_file[rs1];
 
+    // Default src2 selection (imm for I-type ops, reg for R/S/B)
     arch_t src2 =
         ((opcode != OPCODE_R) &&
          (opcode != OPCODE_S) &&
@@ -159,8 +163,30 @@ PROGRAM_LOOP:
         return;
 
       case OPCODE_R:
-      case OPCODE_IA:
-        
+      case OPCODE_IA: {
+
+        // ---------- FIX: proper I-type shift-immediate handling ----------
+        // For SLLI/SRLI/SRAI, shift amount is insn[24:20] (5 bits),
+        // and func7 distinguishes SRLI (0x00) vs SRAI (0x20).
+        if (opcode == OPCODE_IA && (func3 == FUNC3_SLL || func3 == FUNC3_SRL)) {
+          arch_t shamt = (arch_t)insn(24,20); // 0..31
+
+          if (func3 == FUNC3_SLL) {
+            // SLLI
+            res = src1 << shamt;
+          } else { // func3 == 5
+            if (func7 == (func7_t)0x20) {
+              // SRAI
+              res = ((ap_int<ARCH>)src1) >> shamt;
+            } else {
+              // SRLI (treat any non-0x20 as logical shift)
+              res = src1 >> shamt;
+            }
+          }
+          break; // done with this instruction
+        }
+        // ----------------------------------------------------------------
+
         switch (funcx) {
 
           case FUNCX_ADD: res = src1 + src2; break;
@@ -168,9 +194,10 @@ PROGRAM_LOOP:
           case FUNCX_XOR: res = src1 ^ src2; break;
           case FUNCX_OR:  res = src1 | src2; break;
           case FUNCX_AND: res = src1 & src2; break;
-          case FUNCX_SLL: res = src1 << src2; break;
-          case FUNCX_SRL: res = src1 >> src2; break;
-          case FUNCX_SRA: res = ((ap_int<ARCH>)src1) >> src2; break;
+          case FUNCX_SLL: res = src1 << (src2 & 0x1F); break;
+          case FUNCX_SRL: res = src1 >> (src2 & 0x1F); break;
+          case FUNCX_SRA: res = ((ap_int<ARCH>)src1) >> (src2 & 0x1F); break;
+
 
           case FUNCX_SLT:
             res = ((ap_int<ARCH>)src1 < (ap_int<ARCH>)src2) ? 1 : 0;
@@ -181,6 +208,7 @@ PROGRAM_LOOP:
             break;
 
           default:
+            // RV32M MUL (R-type only)
             if ((opcode == OPCODE_R) &&
                 (func7 == FUNCT7_M) &&
                 (func3 == FUNC3_MUL)) {
@@ -195,6 +223,7 @@ PROGRAM_LOOP:
             break;
         }
         break;
+      }
 
       // ================= LOAD =================
       case OPCODE_IM:
@@ -218,7 +247,7 @@ PROGRAM_LOOP:
 
         switch (func3) {
           case FUNC3_XW: res = val; break;
-          default: res = val; break;
+          default:       res = val; break; // (you can add LB/LH/LBU/LHU later)
         }
         break;
 
@@ -253,6 +282,9 @@ PROGRAM_LOOP:
           case FUNC_BGE:  res_j = ((ap_int<ARCH>)src1 >= (ap_int<ARCH>)src2) ? res_b : res_n; break;
           case FUNC_BLTU: res_j = ((ap_uint<ARCH>)src1 <  (ap_uint<ARCH>)src2) ? res_b : res_n; break;
           case FUNC_BGEU: res_j = ((ap_uint<ARCH>)src1 >= (ap_uint<ARCH>)src2) ? res_b : res_n; break;
+          default:
+            printf("Illegal branch at PC = %08x\n", (uint32_t)pc);
+            return;
         }
 
 #if HLS_DEBUG
@@ -291,7 +323,7 @@ PROGRAM_LOOP:
       reg_file[rd] = res;
 
 #if HLS_DEBUG
-      printf("WRITE R[%d] = %08x\n", rd, (uint32_t)res);
+      printf("WRITE R[%d] = %08x\n", (int)rd, (uint32_t)res);
 #endif
     }
 
@@ -299,10 +331,8 @@ PROGRAM_LOOP:
     if ((opcode == OPCODE_B) ||
         (opcode == OPCODE_J) ||
         (opcode == OPCODE_IJ)) {
-
       pc = res_j;
-    }
-    else {
+    } else {
       pc = res_n;
     }
   }

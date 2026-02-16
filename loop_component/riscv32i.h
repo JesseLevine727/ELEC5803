@@ -11,7 +11,7 @@
 #define ARCH 	32
 
 // Memory depth
-#define LOG_MEM_SIZE 		10
+#define LOG_MEM_SIZE 		13
 #define MEM_SIZE 			(1 << LOG_MEM_SIZE)
 
 // Register file depth

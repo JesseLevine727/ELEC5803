@@ -23,7 +23,7 @@ __USE_VCXX_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../tb_softmax_test.cc ../../../../riscv32i.cc
+HLS_SOURCES = ../../../../tb_mlp_infer.cc ../../../../riscv32i.cc
 
 override TARGET := csim.exe
 
@@ -83,11 +83,11 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/tb_softmax_test.o: ../../../../tb_softmax_test.cc $(ObjDir)/.dir csim.mk
-	$(Echo) "   Compiling ../../../../tb_softmax_test.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/tb_mlp_infer.o: ../../../../tb_mlp_infer.cc $(ObjDir)/.dir csim.mk
+	$(Echo) "   Compiling ../../../../tb_mlp_infer.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/tb_softmax_test.d
+-include $(ObjDir)/tb_mlp_infer.d
 
 $(ObjDir)/riscv32i.o: ../../../../riscv32i.cc $(ObjDir)/.dir csim.mk
 	$(Echo) "   Compiling ../../../../riscv32i.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)

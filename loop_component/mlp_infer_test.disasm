@@ -1,0 +1,107 @@
+
+mlp_infer_test.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	00004837          	lui	a6,0x4
+   4:	00001f37          	lui	t5,0x1
+   8:	00003eb7          	lui	t4,0x3
+   c:	00000e13          	li	t3,0
+  10:	00003337          	lui	t1,0x3
+  14:	ffffefb7          	lui	t6,0xffffe
+  18:	000088b7          	lui	a7,0x8
+  1c:	10080813          	addi	a6,a6,256 # 4100 <__global_pointer$+0x2770>
+  20:	200f0f13          	addi	t5,t5,512 # 1200 <__BSS_END__+0x70>
+  24:	040e8e93          	addi	t4,t4,64 # 3040 <__global_pointer$+0x16b0>
+  28:	00032583          	lw	a1,0(t1) # 3000 <__global_pointer$+0x1670>
+  2c:	000046b7          	lui	a3,0x4
+  30:	01fe0533          	add	a0,t3,t6
+  34:	00d507b3          	add	a5,a0,a3
+  38:	0007a703          	lw	a4,0(a5)
+  3c:	0006a603          	lw	a2,0(a3) # 4000 <__global_pointer$+0x2670>
+  40:	00468693          	addi	a3,a3,4
+  44:	02c707b3          	mul	a5,a4,a2
+  48:	02c71633          	mulh	a2,a4,a2
+  4c:	01178733          	add	a4,a5,a7
+  50:	00f737b3          	sltu	a5,a4,a5
+  54:	01075713          	srli	a4,a4,0x10
+  58:	00c787b3          	add	a5,a5,a2
+  5c:	01079793          	slli	a5,a5,0x10
+  60:	00e7e733          	or	a4,a5,a4
+  64:	00e585b3          	add	a1,a1,a4
+  68:	fd0696e3          	bne	a3,a6,34 <main+0x34>
+  6c:	fff5c793          	not	a5,a1
+  70:	41f7d793          	srai	a5,a5,0x1f
+  74:	01e30733          	add	a4,t1,t5
+  78:	00f5f5b3          	and	a1,a1,a5
+  7c:	00b72023          	sw	a1,0(a4)
+  80:	00430313          	addi	t1,t1,4
+  84:	100e0e13          	addi	t3,t3,256
+  88:	fbd310e3          	bne	t1,t4,28 <main+0x28>
+  8c:	00003337          	lui	t1,0x3
+  90:	ffffffb7          	lui	t6,0xfffff
+  94:	00004837          	lui	a6,0x4
+  98:	00001f37          	lui	t5,0x1
+  9c:	00003eb7          	lui	t4,0x3
+  a0:	00000e13          	li	t3,0
+  a4:	40030313          	addi	t1,t1,1024 # 3400 <__global_pointer$+0x1a70>
+  a8:	e40f8f93          	addi	t6,t6,-448 # ffffee40 <__global_pointer$+0xffffd4b0>
+  ac:	000088b7          	lui	a7,0x8
+  b0:	24080813          	addi	a6,a6,576 # 4240 <__global_pointer$+0x28b0>
+  b4:	f00f0f13          	addi	t5,t5,-256 # f00 <main+0xf00>
+  b8:	428e8e93          	addi	t4,t4,1064 # 3428 <__global_pointer$+0x1a98>
+  bc:	00032583          	lw	a1,0(t1)
+  c0:	000046b7          	lui	a3,0x4
+  c4:	20068693          	addi	a3,a3,512 # 4200 <__global_pointer$+0x2870>
+  c8:	01fe0533          	add	a0,t3,t6
+  cc:	00d507b3          	add	a5,a0,a3
+  d0:	0007a703          	lw	a4,0(a5)
+  d4:	0006a603          	lw	a2,0(a3)
+  d8:	00468693          	addi	a3,a3,4
+  dc:	02c707b3          	mul	a5,a4,a2
+  e0:	02c71633          	mulh	a2,a4,a2
+  e4:	01178733          	add	a4,a5,a7
+  e8:	00f737b3          	sltu	a5,a4,a5
+  ec:	01075713          	srli	a4,a4,0x10
+  f0:	00c787b3          	add	a5,a5,a2
+  f4:	01079793          	slli	a5,a5,0x10
+  f8:	00e7e733          	or	a4,a5,a4
+  fc:	00e585b3          	add	a1,a1,a4
+ 100:	fd0696e3          	bne	a3,a6,cc <main+0xcc>
+ 104:	01e307b3          	add	a5,t1,t5
+ 108:	00b7a023          	sw	a1,0(a5)
+ 10c:	00430313          	addi	t1,t1,4
+ 110:	040e0e13          	addi	t3,t3,64
+ 114:	fbd314e3          	bne	t1,t4,bc <main+0xbc>
+ 118:	000047b7          	lui	a5,0x4
+ 11c:	00004737          	lui	a4,0x4
+ 120:	3007a603          	lw	a2,768(a5) # 4300 <__global_pointer$+0x2970>
+ 124:	30470713          	addi	a4,a4,772 # 4304 <__global_pointer$+0x2974>
+ 128:	00100793          	li	a5,1
+ 12c:	00000513          	li	a0,0
+ 130:	00a00593          	li	a1,10
+ 134:	00072683          	lw	a3,0(a4)
+ 138:	00470713          	addi	a4,a4,4
+ 13c:	00d65663          	bge	a2,a3,148 <main+0x148>
+ 140:	00078513          	mv	a0,a5
+ 144:	00068613          	mv	a2,a3
+ 148:	00178793          	addi	a5,a5,1
+ 14c:	feb794e3          	bne	a5,a1,134 <main+0x134>
+ 150:	00004837          	lui	a6,0x4
+ 154:	34a82023          	sw	a0,832(a6) # 4340 <__global_pointer$+0x29b0>
+ 158:	000045b7          	lui	a1,0x4
+ 15c:	00004737          	lui	a4,0x4
+ 160:	000047b7          	lui	a5,0x4
+ 164:	000046b7          	lui	a3,0x4
+ 168:	40a5a023          	sw	a0,1024(a1) # 4400 <__global_pointer$+0x2a70>
+ 16c:	40c72223          	sw	a2,1028(a4) # 4404 <__global_pointer$+0x2a74>
+ 170:	30078793          	addi	a5,a5,768 # 4300 <__global_pointer$+0x2970>
+ 174:	32868693          	addi	a3,a3,808 # 4328 <__global_pointer$+0x2998>
+ 178:	0007a703          	lw	a4,0(a5)
+ 17c:	00478793          	addi	a5,a5,4
+ 180:	10e7a223          	sw	a4,260(a5)
+ 184:	fed79ae3          	bne	a5,a3,178 <main+0x178>
+ 188:	00000073          	ecall
+ 18c:	00008067          	ret

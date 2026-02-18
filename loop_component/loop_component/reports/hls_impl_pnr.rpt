@@ -1,0 +1,264 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Tue Feb 17 20:53:49 EST 2026
+    * Version:         2025.1 (Build 6135595 on May 21 2025)
+    * Project:         loop_component
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              1325
+FF:               687
+DSP:              8
+BRAM:             2
+URAM:             0
+SRL:              0
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 6.594       |
+| Post-Route     | 7.453       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++----------------------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                         | LUT  | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++----------------------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                         | 1325 | 687 | 8   | 2    |      |     |        |      |         |          |        |
+|   grp_cpu_Pipeline_PROGRAM_LOOP_fu_58        | 1310 | 672 | 8   |      |      |     |        |      |         |          |        |
+|     (grp_cpu_Pipeline_PROGRAM_LOOP_fu_58)    | 1169 | 621 |     |      |      |     |        |      |         |          |        |
+|     mul_32ns_32ns_64_2_1_U2                  |      |     |     |      |      |     |        |      |         |          |        |
+|     mul_32ns_32s_64_2_1_U3                   | 94   |     | 2   |      |      |     |        |      |         |          |        |
+|     mul_32s_32s_64_2_1_U4                    |      |     |     |      |      |     |        |      |         |          |        |
+|   grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52     |      |     |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U |      |     |     |      |      |     |        |      |         |          |        |
+|   reg_file_U                                 |      |     |     |      |      |     |        |      |         |          |        |
++----------------------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 2.49%  | OK     |
+| FD                                                        | 50%       | 0.65%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.00%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 3.64%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.71%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 2.17%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 17     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 3.24   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+--------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                 | ENDPOINT PIN                                                                  | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                |                                                                               |              |            |                |          DELAY |        DELAY |
++-------+-------+--------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.547 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C                   | reg_file_U/ram0_reg/DIADI[27]                                                 |            5 |         31 |          7.128 |          1.746 |        5.382 |
+| Path2 | 2.550 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C                   | reg_file_U/ram0_reg/DIADI[17]                                                 |            5 |         31 |          7.125 |          1.545 |        5.580 |
+| Path3 | 2.560 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[46]   |            0 |         36 |          5.655 |          4.009 |        1.646 |
+| Path4 | 2.560 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[47]   |            0 |         36 |          5.655 |          4.009 |        1.646 |
+| Path5 | 2.560 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/C[46] |            0 |         36 |          5.655 |          4.009 |        1.646 |
++-------+-------+--------------------------------------------------------------------------------+-------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +----------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_12                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_22                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0    | MULT.dsp.DSP48E1     |
+    +----------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_12                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_22                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0    | MULT.dsp.DSP48E1     |
+    +----------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_12                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_22                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0    | MULT.dsp.DSP48E1     |
+    +----------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_12                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_22                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0    | MULT.dsp.DSP48E1     |
+    +----------------------------------------------------------------------------+----------------------+
+
+    +----------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                | Primitive Type       |
+    +----------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_12                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]                 | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2              | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2        | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135                         | LUT.others.LUT5      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91                          | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_22                          | LUT.others.LUT6      |
+    | reg_file_U/ram0_reg                                                        | BMEM.bram.RAMB36E1   |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0 | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0    | MULT.dsp.DSP48E1     |
+    +----------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------+
+| Report Type              | Report Location                                             |
++--------------------------+-------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/cpu_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/cpu_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/cpu_power_routed.rpt                    |
+| status                   | impl/verilog/report/cpu_status_routed.rpt                   |
+| timing                   | impl/verilog/report/cpu_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/cpu_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/cpu_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/cpu_utilization_hierarchical_routed.rpt |
++--------------------------+-------------------------------------------------------------+
+
+

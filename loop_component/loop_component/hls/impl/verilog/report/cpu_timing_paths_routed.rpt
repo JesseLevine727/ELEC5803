@@ -1,0 +1,514 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Tue Feb 17 20:53:28 2026
+| Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_timing -max_paths 10 -file ./report/cpu_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.547ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/DIADI[27]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.128ns  (logic 1.746ns (24.494%)  route 5.382ns (75.506%))
+  Logic Levels:           5  (LUT3=2 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_clk
+    SLICE_X3Y11          FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y11          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/Q
+                         net (fo=9, routed)           0.994     2.423    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199[0]
+    SLICE_X3Y13          LUT3 (Prop_lut3_I0_O)        0.152     2.575 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2/O
+                         net (fo=6, routed)           0.496     3.070    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2_n_0
+    SLICE_X4Y12          LUT6 (Prop_lut6_I1_O)        0.332     3.402 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2/O
+                         net (fo=22, routed)          1.409     4.812    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2_n_0
+    SLICE_X19Y13         LUT5 (Prop_lut5_I4_O)        0.149     4.961 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135/O
+                         net (fo=31, routed)          0.962     5.923    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135_n_0
+    SLICE_X11Y17         LUT3 (Prop_lut3_I2_O)        0.325     6.248 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61/O
+                         net (fo=1, routed)           0.923     7.171    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_61_n_0
+    SLICE_X11Y11         LUT6 (Prop_lut6_I2_O)        0.332     7.503 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_12/O
+                         net (fo=1, routed)           0.598     8.101    bd_0_i/hls_inst/inst/reg_file_U/DIADI[27]
+    RAMB36_X0Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/DIADI[27]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/reg_file_U/ap_clk
+    RAMB36_X0Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    RAMB36_X0Y1          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[27])
+                                                     -0.241    10.648    bd_0_i/hls_inst/inst/reg_file_U/ram0_reg
+  -------------------------------------------------------------------
+                         required time                         10.648    
+                         arrival time                          -8.101    
+  -------------------------------------------------------------------
+                         slack                                  2.547    
+
+Slack (MET) :             2.550ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/DIADI[17]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.125ns  (logic 1.545ns (21.684%)  route 5.580ns (78.316%))
+  Logic Levels:           5  (LUT3=2 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_clk
+    SLICE_X3Y11          FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y11          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/Q
+                         net (fo=9, routed)           0.994     2.423    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199[0]
+    SLICE_X3Y13          LUT3 (Prop_lut3_I0_O)        0.152     2.575 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2/O
+                         net (fo=6, routed)           0.496     3.070    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2_n_0
+    SLICE_X4Y12          LUT6 (Prop_lut6_I1_O)        0.332     3.402 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2/O
+                         net (fo=22, routed)          1.409     4.812    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2_n_0
+    SLICE_X19Y13         LUT5 (Prop_lut5_I4_O)        0.149     4.961 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135/O
+                         net (fo=31, routed)          0.941     5.902    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135_n_0
+    SLICE_X11Y16         LUT3 (Prop_lut3_I2_O)        0.332     6.234 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91/O
+                         net (fo=1, routed)           1.126     7.360    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_91_n_0
+    SLICE_X13Y8          LUT6 (Prop_lut6_I2_O)        0.124     7.484 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_22/O
+                         net (fo=1, routed)           0.614     8.098    bd_0_i/hls_inst/inst/reg_file_U/DIADI[17]
+    RAMB36_X0Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/DIADI[17]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/reg_file_U/ap_clk
+    RAMB36_X0Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    RAMB36_X0Y1          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[17])
+                                                     -0.241    10.648    bd_0_i/hls_inst/inst/reg_file_U/ram0_reg
+  -------------------------------------------------------------------
+                         required time                         10.648    
+                         arrival time                          -8.098    
+  -------------------------------------------------------------------
+                         slack                                  2.550    
+
+Slack (MET) :             2.560ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[46]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.655ns  (logic 4.009ns (70.887%)  route 1.646ns (29.113%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X1Y2           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/P[47]
+                         net (fo=36, routed)          1.646     6.628    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0_0[30]
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[46]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X1Y4           DSP48E1 (Setup_dsp48e1_CLK_C[46])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.628    
+  -------------------------------------------------------------------
+                         slack                                  2.560    
+
+Slack (MET) :             2.560ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[47]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.655ns  (logic 4.009ns (70.887%)  route 1.646ns (29.113%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X1Y2           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/P[47]
+                         net (fo=36, routed)          1.646     6.628    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0_0[30]
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[47]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X1Y4           DSP48E1 (Setup_dsp48e1_CLK_C[47])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.628    
+  -------------------------------------------------------------------
+                         slack                                  2.560    
+
+Slack (MET) :             2.560ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/C[46]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.655ns  (logic 4.009ns (70.887%)  route 1.646ns (29.113%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X1Y2           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/P[47]
+                         net (fo=36, routed)          1.646     6.628    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0_0[30]
+    DSP48_X1Y5           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/C[46]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/ap_clk
+    DSP48_X1Y5           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X1Y5           DSP48E1 (Setup_dsp48e1_CLK_C[46])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.628    
+  -------------------------------------------------------------------
+                         slack                                  2.560    
+
+Slack (MET) :             2.560ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/C[47]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.655ns  (logic 4.009ns (70.887%)  route 1.646ns (29.113%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X1Y2           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/P[47]
+                         net (fo=36, routed)          1.646     6.628    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0_0[30]
+    DSP48_X1Y5           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/C[47]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/ap_clk
+    DSP48_X1Y5           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X1Y5           DSP48E1 (Setup_dsp48e1_CLK_C[47])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32s_64_2_1_U3/buff0_reg__0
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.628    
+  -------------------------------------------------------------------
+                         slack                                  2.560    
+
+Slack (MET) :             2.572ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/DIADI[22]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.103ns  (logic 1.746ns (24.580%)  route 5.357ns (75.420%))
+  Logic Levels:           5  (LUT3=2 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_clk
+    SLICE_X3Y11          FDRE                                         r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y11          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199_reg[0]/Q
+                         net (fo=9, routed)           0.994     2.423    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1199[0]
+    SLICE_X3Y13          LUT3 (Prop_lut3_I0_O)        0.152     2.575 f  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2/O
+                         net (fo=6, routed)           0.496     3.070    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/and_ln188_reg_1467[0]_i_2_n_0
+    SLICE_X4Y12          LUT6 (Prop_lut6_I1_O)        0.332     3.402 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2/O
+                         net (fo=22, routed)          1.409     4.812    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ap_predicate_pred492_state6_i_2_n_0
+    SLICE_X19Y13         LUT5 (Prop_lut5_I4_O)        0.149     4.961 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135/O
+                         net (fo=31, routed)          1.018     5.979    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_135_n_0
+    SLICE_X15Y17         LUT3 (Prop_lut3_I2_O)        0.325     6.304 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_76/O
+                         net (fo=1, routed)           0.782     7.086    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_76_n_0
+    SLICE_X13Y10         LUT6 (Prop_lut6_I2_O)        0.332     7.418 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/ram0_reg_i_17/O
+                         net (fo=1, routed)           0.659     8.076    bd_0_i/hls_inst/inst/reg_file_U/DIADI[22]
+    RAMB36_X0Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/DIADI[22]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/reg_file_U/ap_clk
+    RAMB36_X0Y1          RAMB36E1                                     r  bd_0_i/hls_inst/inst/reg_file_U/ram0_reg/CLKARDCLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    RAMB36_X0Y1          RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[22])
+                                                     -0.241    10.648    bd_0_i/hls_inst/inst/reg_file_U/ram0_reg
+  -------------------------------------------------------------------
+                         required time                         10.648    
+                         arrival time                          -8.076    
+  -------------------------------------------------------------------
+                         slack                                  2.572    
+
+Slack (MET) :             2.575ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg__0/C[42]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.640ns  (logic 4.009ns (71.088%)  route 1.631ns (28.912%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X0Y3           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y3           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product/P[47]
+                         net (fo=36, routed)          1.631     6.613    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/P[30]
+    DSP48_X0Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg__0/C[42]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X0Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg__0/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X0Y2           DSP48E1 (Setup_dsp48e1_CLK_C[42])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg__0
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.612    
+  -------------------------------------------------------------------
+                         slack                                  2.575    
+
+Slack (MET) :             2.582ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[34]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.633ns  (logic 4.009ns (71.176%)  route 1.624ns (28.824%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X1Y2           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/P[47]
+                         net (fo=36, routed)          1.624     6.606    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0_0[30]
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[34]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X1Y4           DSP48E1 (Setup_dsp48e1_CLK_C[34])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.606    
+  -------------------------------------------------------------------
+                         slack                                  2.582    
+
+Slack (MET) :             2.582ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[45]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.633ns  (logic 4.009ns (71.176%)  route 1.624ns (28.824%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.973     0.973    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y2           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X1Y2           DSP48E1 (Prop_dsp48e1_CLK_P[47])
+                                                      4.009     4.982 r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0/P[47]
+                         net (fo=36, routed)          1.624     6.606    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/tmp_product__0_0[30]
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/C[45]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=696, unset)          0.924    10.924    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/ap_clk
+    DSP48_X1Y4           DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg/CLK
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    DSP48_X1Y4           DSP48E1 (Setup_dsp48e1_CLK_C[45])
+                                                     -1.701     9.188    bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/mul_32ns_32ns_64_2_1_U2/buff0_reg
+  -------------------------------------------------------------------
+                         required time                          9.188    
+                         arrival time                          -6.606    
+  -------------------------------------------------------------------
+                         slack                                  2.582    
+
+
+
+

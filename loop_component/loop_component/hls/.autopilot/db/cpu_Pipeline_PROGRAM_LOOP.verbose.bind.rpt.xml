@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'cpu_Pipeline_PROGRAM_LOOP'" level="0">
-<item name = "Date">Tue Feb 17 20:48:41 2026
+<item name = "Date">Wed Feb 18 13:34:11 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">loop_component</item>

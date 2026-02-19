@@ -6,17 +6,17 @@
     "def_use_depth": 7,
     "file": "riscv32i.cc",
     "fileloc": 14,
-    "instructions": 1388,
+    "instructions": 1339,
     "loads": {
       "L": 46,
       "T": 2
     },
-    "memory_accesses": 318,
+    "memory_accesses": 297,
     "name": "cpu",
     "stores": {
       "L": 47,
       "T": 1
     },
-    "total_instructions": 8562
+    "total_instructions": 8448
   }
 }

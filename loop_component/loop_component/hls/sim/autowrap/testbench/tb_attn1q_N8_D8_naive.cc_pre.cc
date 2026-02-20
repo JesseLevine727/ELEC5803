@@ -1,10 +1,10 @@
-# 1 "/home/elfo/Documents/ELEC5803/loop_component/tb_softmax_test_NEW.cc"
+# 1 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 401 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "/home/elfo/Documents/ELEC5803/loop_component/tb_softmax_test_NEW.cc" 2
+# 1 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
 
 # 1 "/home/elfo/Documents/ELEC5803/loop_component/riscv32i.h" 1
 
@@ -59864,14 +59864,12 @@ typedef ap_uint<4> strb_t;
 
 
 void cpu(arch_t*, volatile strb_t*);
-# 3 "/home/elfo/Documents/ELEC5803/loop_component/tb_softmax_test_NEW.cc" 2
+# 3 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
 
 
 # 1 "/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/stdlib.h" 1 3
-# 6 "/home/elfo/Documents/ELEC5803/loop_component/tb_softmax_test_NEW.cc" 2
-# 1 "/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/math.h" 1 3
-# 7 "/home/elfo/Documents/ELEC5803/loop_component/tb_softmax_test_NEW.cc" 2
-# 17 "/home/elfo/Documents/ELEC5803/loop_component/tb_softmax_test_NEW.cc"
+# 6 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
+# 18 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc"
 static void load_hex_words(const char *path, arch_t mem[(1 << 13)]) {
     FILE *f = fopen(path, "r");
     if (!f) { perror("fopen program"); exit(1); }
@@ -59885,61 +59883,34 @@ static void load_hex_words(const char *path, arch_t mem[(1 << 13)]) {
     for (; i < (1 << 13); i++) mem[i] = 0;
 }
 
-
-static void init_exp_lut(arch_t mem[(1 << 13)]) {
-    const double step = 1.0 / 64.0;
-    const double xmin = -8.0;
-    const int N = 512;
-
-    int base = 0x2000 >> 2;
-    for (int i = 0; i <= N; i++) {
-        double x = xmin + i * step;
-        double e = exp(x);
-        mem[base + i] = (arch_t)((int32_t)(e * 65536.0));
-    }
-}
-
-
-
-static void init_inv_lut(arch_t mem[(1 << 13)]) {
-    const int N = 512;
-    int base = 0x3000 >> 2;
-
-    mem[base + 0] = (arch_t)(1 << 16);
-    for (int i = 1; i <= N; i++) {
-        double sum = (double)i / 64.0;
-        double inv = 1.0 / sum;
-        mem[base + i] = (arch_t)((int32_t)(inv * 65536.0));
-    }
-}
-
-
 static int32_t q16(double x) {
-
     double scaled = x * 65536.0;
     if (scaled >= 0) return (int32_t)(scaled + 0.5);
     else return (int32_t)(scaled - 0.5);
 }
 
-static void init_logits_from_given(arch_t mem[(1 << 13)]) {
-    int base = 0x4000 >> 2;
+static void init_qkv_simple(arch_t mem[(1 << 13)]) {
 
 
-    double y[10] = {
-        -2.510498,
-        -1.071716,
-        -5.273148,
-        -3.689667,
-        -1.699692,
-         3.010178,
-         0.760391,
-        -3.505569,
-         0.229645,
-        -1.893997
-    };
 
-    for (int k = 0; k < 10; k++)
-        mem[base + k] = (arch_t)q16(y[k]);
+
+    int qb = 0x4000 >> 2;
+    int kb = 0x4100 >> 2;
+    int vb = 0x4300 >> 2;
+
+    for (int j = 0; j < 8; j++) {
+        double q = 0.05 * (j + 1);
+        mem[qb + j] = (arch_t)q16(q);
+    }
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            double k = 0.02 * (i + 1) * (j + 1);
+            double v = 0.01 * (i + 1) + 0.005 * (j + 1);
+            mem[kb + i * 8 + j] = (arch_t)q16(k);
+            mem[vb + i * 8 + j] = (arch_t)q16(v);
+        }
+    }
 }
 
 int main(void) {
@@ -59948,36 +59919,46 @@ int main(void) {
     ap_uint<4> wstrb = 0;
     strb_t *pstrb = &wstrb;
 
-    load_hex_words("softmax_test_NEW.txt", mem);
+    load_hex_words("attn1q_N8_D8_naive.txt", mem);
 
-    init_logits_from_given(mem);
-    init_exp_lut(mem);
-    init_inv_lut(mem);
+    init_qkv_simple(mem);
 
     cpu(mem, pstrb);
 
-    int cls = (int32_t)mem[0x4070 >> 2];
-    printf("\nPredicted class (softmax-only) = %d\n", cls);
 
-    printf("Softmax probs:\n");
-    int pb = 0x4040 >> 2;
-    double sum = 0.0;
-    for (int k = 0; k < 10; k++) {
-        int32_t q = (int32_t)mem[pb + k];
-        double p = q / 65536.0;
-        sum += p;
-        printf("  p[%d] = %f\n", k, p);
+    printf("\nScores (Q·K):\n");
+    int sb = 0x4500 >> 2;
+    for (int i = 0; i < 8; i++) {
+        double s = ((int32_t)mem[sb + i]) / 65536.0;
+        printf("  s[%d] = %f\n", i, s);
     }
-    printf("Probability sum = %f\n", sum);
 
 
-    int db = 0x4400 >> 2;
-    printf("\nDBG: m=%f sum=%f sidx=%d inv=%f cls=%d\n",
+    printf("\nSoftmax probs (naive):\n");
+    int pb = 0x4540 >> 2;
+    double psum = 0.0;
+    for (int i = 0; i < 8; i++) {
+        double p = ((int32_t)mem[pb + i]) / 65536.0;
+        psum += p;
+        printf("  p[%d] = %f\n", i, p);
+    }
+    printf("Prob sum = %f\n", psum);
+
+
+    printf("\nAttention output vector out[j]:\n");
+    int ob = 0x4600 >> 2;
+    for (int j = 0; j < 8; j++) {
+        double x = ((int32_t)mem[ob + j]) / 65536.0;
+        printf("  out[%d] = %f\n", j, x);
+    }
+
+
+
+    int db = 0x4700 >> 2;
+    printf("\nDBG: max_s=%f sum=%f inv_sum=%f\n",
         ((int32_t)mem[db+0]) / 65536.0,
         ((int32_t)mem[db+1]) / 65536.0,
-        (int32_t)mem[db+2],
-        ((int32_t)mem[db+3]) / 65536.0,
-        (int32_t)mem[db+4]
+        ((int32_t)mem[db+2]) / 65536.0
     );
 
     return 0;

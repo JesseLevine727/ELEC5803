@@ -85,8 +85,8 @@ $(ObjDir)/$(APATB_UTIL).o: $(APATB_UTIL).cpp
 	$(Echo) "   Compiling $<" $(AVE_DIR_DLOG)
 	$(Verb) $(CXX) -fno-builtin-isinf -fno-builtin-isnan -c $(TOOLCHAIN) $(IFLAG) $(WFLAG) $< -o $@
 
-$(ObjDir)/tb_softmax_test_NEW.cc_pre.cc.tb.o : tb_softmax_test_NEW.cc_pre.cc.tb.cc $(ObjDir)/.dir
-	$(Echo) "   Compiling tb_softmax_test_NEW.cc_pre.cc.tb.cc" $(AVE_DIR_DLOG)
+$(ObjDir)/tb_attn1q_N8_D8_naive.cc_pre.cc.tb.o : tb_attn1q_N8_D8_naive.cc_pre.cc.tb.cc $(ObjDir)/.dir
+	$(Echo) "   Compiling tb_attn1q_N8_D8_naive.cc_pre.cc.tb.cc" $(AVE_DIR_DLOG)
 	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++14 -fno-builtin-isinf -fno-builtin-isnan -c -Wno-unknown-pragmas -Wno-unknown-pragmas $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/riscv32i.cc_pre.cc.tb.o : riscv32i.cc_pre.cc.tb.cc $(ObjDir)/.dir

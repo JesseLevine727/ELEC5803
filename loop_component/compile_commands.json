@@ -20,8 +20,20 @@
       "-fhls-tb",
       "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
       "-c",
-      "/home/elfo/Documents/ELEC5803/loop_component/./tb_softmax_test_NEW.cc"
+      "/home/elfo/Documents/ELEC5803/loop_component/./tb_add_kernel.cpp"
     ],
-    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_softmax_test_NEW.cc"
+    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_add_kernel.cpp"
+  },
+  {
+    "directory": "/home/elfo/Documents/ELEC5803/loop_component",
+    "arguments": [
+      "/home/elfo/Documents/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
+      "-c",
+      "/home/elfo/Documents/ELEC5803/loop_component/./tb_attn1q_N8_D8_naive.cc"
+    ],
+    "file": "/home/elfo/Documents/ELEC5803/loop_component/./tb_attn1q_N8_D8_naive.cc"
   }
 ]

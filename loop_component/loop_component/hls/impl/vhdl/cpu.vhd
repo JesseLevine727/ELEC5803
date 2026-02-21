@@ -16,7 +16,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    mem_address0 : OUT STD_LOGIC_VECTOR (12 downto 0);
+    mem_address0 : OUT STD_LOGIC_VECTOR (15 downto 0);
     mem_ce0 : OUT STD_LOGIC;
     mem_we0 : OUT STD_LOGIC;
     mem_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -28,7 +28,7 @@ end;
 architecture behav of cpu is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "cpu_cpu,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.988000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=1201,HLS_SYN_LUT=2255,HLS_VERSION=2025_1}";
+    "cpu_cpu,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.988000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=1201,HLS_SYN_LUT=2234,HLS_VERSION=2025_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (4 downto 0) := "00001";
@@ -43,7 +43,7 @@ architecture behav of cpu is
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv64_2 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000010";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv32_7FFC : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000111111111111100";
+    constant ap_const_lv32_3FFFC : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000111111111111111100";
 
     signal ap_CS_fsm : STD_LOGIC_VECTOR (4 downto 0) := "00001";
     attribute fsm_encoding : string;
@@ -75,7 +75,7 @@ architecture behav of cpu is
     signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_d0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_address1 : STD_LOGIC_VECTOR (4 downto 0);
     signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_ce1 : STD_LOGIC;
-    signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_address0 : STD_LOGIC_VECTOR (12 downto 0);
+    signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_address0 : STD_LOGIC_VECTOR (15 downto 0);
     signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_ce0 : STD_LOGIC;
     signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_we0 : STD_LOGIC;
     signal grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_d0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -131,7 +131,7 @@ architecture behav of cpu is
         reg_file_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
         reg_file_ce1 : OUT STD_LOGIC;
         reg_file_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
-        mem_address0 : OUT STD_LOGIC_VECTOR (12 downto 0);
+        mem_address0 : OUT STD_LOGIC_VECTOR (15 downto 0);
         mem_ce0 : OUT STD_LOGIC;
         mem_we0 : OUT STD_LOGIC;
         mem_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -414,7 +414,7 @@ begin
         elsif ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
             reg_file_d0 <= grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52_reg_file_d0;
         else 
-            reg_file_d0 <= ap_const_lv32_7FFC;
+            reg_file_d0 <= ap_const_lv32_3FFFC;
         end if; 
     end process;
 

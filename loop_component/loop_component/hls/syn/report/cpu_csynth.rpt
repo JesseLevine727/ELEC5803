@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'cpu'
 ================================================================
-* Date:           Thu Feb 19 20:03:55 2026
+* Date:           Fri Feb 20 20:36:06 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        loop_component
@@ -57,12 +57,12 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|      2|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|   12|    1194|   2157|    -|
+|Instance         |        -|   12|    1194|   2136|    -|
 |Memory           |        2|    -|       0|      0|    0|
 |Multiplexer      |        -|    -|       0|     96|    -|
 |Register         |        -|    -|       7|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        2|   12|    1201|   2255|    0|
+|Total            |        2|   12|    1201|   2234|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -74,10 +74,10 @@
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
     |                Instance                |            Module            | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
-    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_58     |cpu_Pipeline_PROGRAM_LOOP     |        0|  12|  1186|  2102|    0|
+    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_58     |cpu_Pipeline_PROGRAM_LOOP     |        0|  12|  1186|  2081|    0|
     |grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52  |cpu_Pipeline_VITIS_LOOP_22_1  |        0|   0|     8|    55|    0|
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
-    |Total                                   |                              |        0|  12|  1194|  2157|    0|
+    |Total                                   |                              |        0|  12|  1194|  2136|    0|
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -144,7 +144,7 @@
 |ap_done       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
 |ap_idle       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
 |ap_ready      |  out|    1|  ap_ctrl_hs|           cpu|  return value|
-|mem_address0  |  out|   13|   ap_memory|           mem|         array|
+|mem_address0  |  out|   16|   ap_memory|           mem|         array|
 |mem_ce0       |  out|    1|   ap_memory|           mem|         array|
 |mem_we0       |  out|    1|   ap_memory|           mem|         array|
 |mem_d0        |  out|   32|   ap_memory|           mem|         array|

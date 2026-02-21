@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'cpu'" level="0">
-<item name = "Date">Thu Feb 19 20:03:55 2026
+<item name = "Date">Fri Feb 20 20:36:06 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">loop_component</item>
@@ -51,7 +51,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 12, 1194, 2157, -</column>
+<column name="Instance">-, 12, 1194, 2136, -</column>
 <column name="Memory">2, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, 0, 96, -</column>
 <column name="Register">-, -, 7, -, -</column>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_58">cpu_Pipeline_PROGRAM_LOOP, 0, 12, 1186, 2102, 0</column>
+<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_58">cpu_Pipeline_PROGRAM_LOOP, 0, 12, 1186, 2081, 0</column>
 <column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52">cpu_Pipeline_VITIS_LOOP_22_1, 0, 0, 8, 55, 0</column>
 </table>
 </item>
@@ -115,7 +115,7 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, cpu, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, cpu, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, cpu, return value</column>
-<column name="mem_address0">out, 13, ap_memory, mem, array</column>
+<column name="mem_address0">out, 16, ap_memory, mem, array</column>
 <column name="mem_ce0">out, 1, ap_memory, mem, array</column>
 <column name="mem_we0">out, 1, ap_memory, mem, array</column>
 <column name="mem_d0">out, 32, ap_memory, mem, array</column>

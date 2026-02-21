@@ -1,30 +1,32 @@
-// attn1q_N8_D8_naive_shift.c
-// Minimal attention head (single query) on RV32IM baseline core
-// Naive baseline: Taylor exp approx + SHIFT-based normalization (NO DIV)
-// Q16.16 throughout
-//
-// Computes:
-//   scores[i] = dot(Q, K[i])
-//   probs ≈ softmax(scores)   (naive exp via Taylor3, normalize via shifting by msb(sum))
-//   out[j] = sum_i probs[i] * V[i][j]
+// attn_full_naive_shift_scalable.c
+// FULL self-attention (N queries)
+// 7th-order Taylor exp + SHIFT normalization
+// Q16.16 fixed-point, RV32 safe
 
-#define Q_BASE        0x4000
-#define K_BASE        0x4100
-#define V_BASE        0x4300
+#define Q_BASE        0x4000   // N*D
+#define K_BASE        0x6000   // N*D
+#define V_BASE        0x8000   // N*D
 
-#define SCORES_BASE   0x4500
-#define PROBS_BASE    0x4540
-#define OUT_BASE      0x4600
+#ifndef N
+#define N 2
+#endif
 
-#define DBG_BASE      0x4700
-
-#define N 8
+#ifndef D
 #define D 8
+#endif
+
+// ---- scalable memory layout ----
+#define SCORES_BASE   0xA000                 // N*N
+#define PROBS_BASE    (SCORES_BASE + N*N*4)  // N*N
+#define OUT_BASE      (PROBS_BASE  + N*N*4)  // N*D
+#define DBG_BASE      (OUT_BASE    + N*D*4)
+
+// ------------------------------------------------
 
 static inline int qmul_q16_round(int a, int b) {
-    long long prod = (long long)a * (long long)b; // Q32.32
-    prod += (1LL << 15);
-    return (int)(prod >> 16);                     // Q16.16
+    long long p = (long long)a * (long long)b;
+    p += (1LL << 15);
+    return (int)(p >> 16);
 }
 
 static inline int qsat32(long long x) {
@@ -33,100 +35,109 @@ static inline int qsat32(long long x) {
     return (int)x;
 }
 
-// 3rd-order Taylor: exp(x) ≈ 1 + x + x^2/2 + x^3/6  (very naive)
-static inline int exp_taylor3_q16(int x_q16) {
+// 7th-order exp
+static inline int exp_taylor7_q16(int x)
+{
     const int ONE = 1 << 16;
 
-    int x  = x_q16;
     int x2 = qmul_q16_round(x, x);
     int x3 = qmul_q16_round(x2, x);
+    int x4 = qmul_q16_round(x3, x);
+    int x5 = qmul_q16_round(x4, x);
+    int x6 = qmul_q16_round(x5, x);
+    int x7 = qmul_q16_round(x6, x);
 
-    int term2 = (x2 >> 1);
-    int term3 = qmul_q16_round(x3, 10923);   // 1/6 in Q16.16
+    const int C2=32768, C3=10923, C4=2731, C5=546, C6=91, C7=13;
 
-    int y = ONE + x + term2 + term3;
+    int y = ONE + x
+          + qmul_q16_round(x2,C2)
+          + qmul_q16_round(x3,C3)
+          + qmul_q16_round(x4,C4)
+          + qmul_q16_round(x5,C5)
+          + qmul_q16_round(x6,C6)
+          + qmul_q16_round(x7,C7);
+
     if (y < 0) y = 0;
     return y;
 }
 
 void main(void)
 {
-    volatile int *Q      = (volatile int *)Q_BASE;
-    volatile int *K      = (volatile int *)K_BASE;
-    volatile int *V      = (volatile int *)V_BASE;
+    volatile int *Q = (volatile int *)Q_BASE;
+    volatile int *K = (volatile int *)K_BASE;
+    volatile int *V = (volatile int *)V_BASE;
 
-    volatile int *scores = (volatile int *)SCORES_BASE;
-    volatile int *probs  = (volatile int *)PROBS_BASE;
-    volatile int *out    = (volatile int *)OUT_BASE;
-
-    volatile int *dbg    = (volatile int *)DBG_BASE;
+    volatile int *S = (volatile int *)SCORES_BASE;
+    volatile int *P = (volatile int *)PROBS_BASE;
+    volatile int *O = (volatile int *)OUT_BASE;
+    volatile int *dbg = (volatile int *)DBG_BASE;
 
     const int X_MIN = -8 << 16;
-    const int X_MAX = 0;
 
-    // ---------------- 1) scores[i] = dot(Q, K[i]) ----------------
-    int max_s = 0;
+    // =====================================================
+    // 1) Compute ALL QK^T  (N^2 dot products)
+    // =====================================================
+    for (int q = 0; q < N; q++) {
+        for (int k = 0; k < N; k++) {
 
-    for (int i = 0; i < N; i++) {
-        long long acc = 0;
-        int krow = i * D;
+            long long acc = 0;
+
+            for (int j = 0; j < D; j++)
+                acc += (long long)Q[q*D+j] * (long long)K[k*D+j];
+
+            acc += (1LL << 15);
+            S[q*N + k] = qsat32(acc >> 16);
+        }
+    }
+
+    // =====================================================
+    // 2) Softmax PER QUERY
+    // =====================================================
+    for (int q = 0; q < N; q++) {
+
+        int max_s = S[q*N];
+
+        for (int k = 1; k < N; k++)
+            if (S[q*N+k] > max_s) max_s = S[q*N+k];
+
+        int sum = 0;
+
+        for (int k = 0; k < N; k++) {
+            int x = S[q*N+k] - max_s;
+            if (x < X_MIN) x = X_MIN;
+
+            int e = exp_taylor7_q16(x);
+            P[q*N+k] = e;
+            sum += e;
+        }
+
+        if (sum <= 0) sum = 1;
+
+        int tmp=sum, shift=0;
+        while (tmp > (1<<16)) { tmp >>=1; shift++; }
+
+        for (int k = 0; k < N; k++)
+            P[q*N+k] >>= shift;
+    }
+
+    // =====================================================
+    // 3) PV  (N outputs)
+    // =====================================================
+    for (int q = 0; q < N; q++) {
         for (int j = 0; j < D; j++) {
-            long long prod = (long long)Q[j] * (long long)K[krow + j];
-            acc += prod;
+
+            long long acc = 0;
+
+            for (int k = 0; k < N; k++)
+                acc += (long long)P[q*N+k] * (long long)V[k*D+j];
+
+            acc += (1LL << 15);
+            O[q*D+j] = qsat32(acc >> 16);
         }
-        acc += (1LL << 15);
-        int s = qsat32(acc >> 16);
-        scores[i] = s;
-
-        if (i == 0 || s > max_s) max_s = s;
     }
 
-    // ---------------- 2) probs ≈ softmax(scores) ----------------
-    int e[N];
-    int sum = 0;
-
-    for (int i = 0; i < N; i++) {
-        int x = scores[i] - max_s;
-        if (x < X_MIN) x = X_MIN;
-        if (x > X_MAX) x = X_MAX;
-
-        int ei = exp_taylor3_q16(x);
-        e[i] = ei;
-        sum += ei;
-    }
-    if (sum <= 0) sum = 1;
-
-    // SHIFT-based "reciprocal": find how many bits above ~1.0 (Q16.16) the sum is
-    int tmp = sum;
-    int shift = 0;
-    while (tmp > (1 << 16)) {
-        tmp >>= 1;
-        shift++;
-    }
-    if (shift > 30) shift = 30;
-
-    for (int i = 0; i < N; i++) {
-        int pi = e[i] >> shift;
-        if (pi == 0 && e[i] != 0) pi = 1; // crude floor to avoid all-zero probs
-        probs[i] = pi;
-    }
-
-    // ---------------- 3) out[j] = sum_i probs[i] * V[i][j] ----------------
-    for (int j = 0; j < D; j++) {
-        long long acc = 0;
-        for (int i = 0; i < N; i++) {
-            int vij = V[i * D + j];
-            long long prod = (long long)probs[i] * (long long)vij;
-            acc += prod;
-        }
-        acc += (1LL << 15);
-        out[j] = qsat32(acc >> 16);
-    }
-
-    // ---------------- debug ----------------
-    dbg[0] = max_s;
-    dbg[1] = sum;
-    dbg[2] = shift;
+    dbg[0] = N;
+    dbg[1] = D;
 
     asm volatile("ecall");
 }

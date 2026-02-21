@@ -24,7 +24,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename mem \
     op interface \
-    ports { mem_address0 { O 13 vector } mem_ce0 { O 1 bit } mem_we0 { O 1 bit } mem_d0 { O 32 vector } mem_q0 { I 32 vector } } \
+    ports { mem_address0 { O 16 vector } mem_ce0 { O 1 bit } mem_we0 { O 1 bit } mem_d0 { O 32 vector } mem_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'mem'"

@@ -1,19 +1,29 @@
-// tb_attn1q_N8_D8_naive.cc
+// tb_attn_full_scalable.cc
+
 #include "riscv32i.h"
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-#define Q_BASE        0x4000
-#define K_BASE        0x4100
-#define V_BASE        0x4300
-#define SCORES_BASE   0x4500
-#define PROBS_BASE    0x4540
-#define OUT_BASE      0x4600
-#define DBG_BASE      0x4700
+#define Q_BASE 0x4000
+#define K_BASE 0x6000
+#define V_BASE 0x8000
 
-#define N 8
+#ifndef N
+#define N 2
+#endif
+
+#ifndef D
 #define D 8
+#endif
+
+// ---- MUST match kernel layout ----
+#define SCORES_BASE 0xA000
+#define PROBS_BASE  (SCORES_BASE + N*N*4)
+#define OUT_BASE    (PROBS_BASE  + N*N*4)
+#define DBG_BASE    (OUT_BASE    + N*D*4)
+
+// ------------------------------------------------
 
 static void load_hex_words(const char *path, arch_t mem[MEM_SIZE]) {
     FILE *f = fopen(path, "r");
@@ -30,35 +40,32 @@ static void load_hex_words(const char *path, arch_t mem[MEM_SIZE]) {
 
 static int32_t q16(double x) {
     double scaled = x * 65536.0;
-    if (scaled >= 0) return (int32_t)(scaled + 0.5);
-    else             return (int32_t)(scaled - 0.5);
+    return (int32_t)((scaled >= 0) ? scaled + 0.5 : scaled - 0.5);
 }
 
+// deterministic Q/K/V so scaling experiments are comparable
 static void init_qkv_simple(arch_t mem[MEM_SIZE]) {
-    // Deterministic values for easy debugging:
-    // Q[j]      = 0.05*(j+1)
-    // K[i,j]    = 0.02*(i+1)*(j+1)
-    // V[i,j]    = 0.01*(i+1) + 0.005*(j+1)
+
     int qb = Q_BASE >> 2;
     int kb = K_BASE >> 2;
     int vb = V_BASE >> 2;
 
-    for (int j = 0; j < D; j++) {
-        double q = 0.05 * (j + 1);
-        mem[qb + j] = (arch_t)q16(q);
-    }
-
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < D; j++) {
-            double k = 0.02 * (i + 1) * (j + 1);
-            double v = 0.01 * (i + 1) + 0.005 * (j + 1);
-            mem[kb + i * D + j] = (arch_t)q16(k);
-            mem[vb + i * D + j] = (arch_t)q16(v);
+
+            double q = 0.05 * (i+1) * (j+1);
+            double k = 0.02 * (i+1) * (j+1);
+            double v = 0.01 * (i+1) + 0.005 * (j+1);
+
+            mem[qb + i*D + j] = q16(q);
+            mem[kb + i*D + j] = q16(k);
+            mem[vb + i*D + j] = q16(v);
         }
     }
 }
 
-int main(void) {
+int main(void)
+{
     arch_t mem[MEM_SIZE] = {0};
 
     ap_uint<4> wstrb = 0;
@@ -70,40 +77,43 @@ int main(void) {
 
     cpu(mem, pstrb);
 
-    // Print scores
-    printf("\nScores (Q·K):\n");
+    // ---------- scores ----------
+    printf("\nScores (first row only):\n");
     int sb = SCORES_BASE >> 2;
-    for (int i = 0; i < N; i++) {
-        double s = ((int32_t)mem[sb + i]) / 65536.0;
-        printf("  s[%d] = %f\n", i, s);
-    }
 
-    // Print probs
-    printf("\nSoftmax probs (naive):\n");
+    int printN = (N < 8) ? N : 8;
+    for (int k = 0; k < printN; k++) {
+        double s = ((int32_t)mem[sb + k]) / 65536.0;
+        printf("  s[0,%d] = %f\n", k, s);
+    }
+    if (N > printN) printf("  ... (%d more)\n", N-printN);
+
+    // ---------- probs ----------
+    printf("\nSoftmax (first row):\n");
     int pb = PROBS_BASE >> 2;
     double psum = 0.0;
-    for (int i = 0; i < N; i++) {
-        double p = ((int32_t)mem[pb + i]) / 65536.0;
-        psum += p;
-        printf("  p[%d] = %f\n", i, p);
-    }
-    printf("Prob sum = %f\n", psum);
 
-    // Print output vector
-    printf("\nAttention output vector out[j]:\n");
+    for (int k = 0; k < printN; k++) {
+        double p = ((int32_t)mem[pb + k]) / 65536.0;
+        psum += p;
+        printf("  p[0,%d] = %f\n", k, p);
+    }
+    printf("Partial sum = %f\n", psum);
+
+    // ---------- outputs ----------
+    printf("\nOutput vector (query 0):\n");
     int ob = OUT_BASE >> 2;
+
     for (int j = 0; j < D; j++) {
         double x = ((int32_t)mem[ob + j]) / 65536.0;
-        printf("  out[%d] = %f\n", j, x);
+        printf("  out[0,%d] = %f\n", j, x);
     }
 
-    // Debug
-    // Debug
+    // ---------- debug ----------
     int db = DBG_BASE >> 2;
-    printf("\nDBG: max_s=%f sum=%f inv_sum=%f\n",
-        ((int32_t)mem[db+0]) / 65536.0,
-        ((int32_t)mem[db+1]) / 65536.0,
-        ((int32_t)mem[db+2]) / 65536.0
+    printf("\nDBG: N=%d D=%d\n",
+        (int32_t)mem[db+0],
+        (int32_t)mem[db+1]
     );
 
     return 0;

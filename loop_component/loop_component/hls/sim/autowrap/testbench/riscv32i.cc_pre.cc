@@ -59855,7 +59855,7 @@ typedef ap_uint<7 +3> funcx_t;
 # 109 "/home/elfo/Documents/ELEC5803/loop_component/riscv32i.h"
 typedef ap_uint<32> arch_t;
 
-typedef ap_uint<13> addr_t;
+typedef ap_uint<16> addr_t;
 
 typedef ap_uint<5> rfi_t;
 
@@ -59876,7 +59876,7 @@ void cpu(arch_t*, volatile strb_t*);
 
 
 
-void cpu(arch_t mem[(1 << 13)], volatile strb_t* pstrb) {
+void cpu(arch_t mem[(1 << 16)], volatile strb_t* pstrb) {
 
 #pragma HLS INTERFACE ap_none port=pstrb
 #pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
@@ -59887,7 +59887,7 @@ void cpu(arch_t mem[(1 << 13)], volatile strb_t* pstrb) {
   for (int i = 0; i < (1 << 5); i++)
     reg_file[i] = 0;
 
-  reg_file[2] = ((1 << 13) - 1) * 4;
+  reg_file[2] = ((1 << 16) - 1) * 4;
 
   arch_t pc = 0;
   uint32_t cycle = 0;
@@ -59906,7 +59906,7 @@ PROGRAM_LOOP:
       printf("PC misaligned: %08x\n", (uint32_t)pc);
       return;
     }
-    if ((pc >> 2) >= (1 << 13)) {
+    if ((pc >> 2) >= (1 << 16)) {
       printf("PC out of bounds: %08x\n", (uint32_t)pc);
       return;
     }
@@ -60076,7 +60076,7 @@ PROGRAM_LOOP:
           printf("LOAD misaligned addr=%08x\n", (uint32_t)addr);
           return;
         }
-        if ((addr >> 2) >= (1 << 13)) {
+        if ((addr >> 2) >= (1 << 16)) {
           printf("LOAD OOB addr=%08x\n", (uint32_t)addr);
           return;
         }
@@ -60099,7 +60099,7 @@ PROGRAM_LOOP:
           printf("STORE misaligned addr=%08x\n", (uint32_t)addr);
           return;
         }
-        if ((addr >> 2) >= (1 << 13)) {
+        if ((addr >> 2) >= (1 << 16)) {
           printf("STORE OOB addr=%08x\n", (uint32_t)addr);
           return;
         }

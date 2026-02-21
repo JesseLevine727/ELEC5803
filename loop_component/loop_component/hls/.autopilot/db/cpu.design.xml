@@ -266,7 +266,7 @@
 <FF>1186</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
-<LUT>2102</LUT>
+<LUT>2081</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>3</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
@@ -440,7 +440,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>13</Bits>
+<Bits>16</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -525,7 +525,7 @@
 <FF>1201</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>1</UTIL_FF>
-<LUT>2255</LUT>
+<LUT>2234</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>4</UTIL_LUT>
 <URAM>0</URAM>
@@ -608,7 +608,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>13</Bits>
+<Bits>16</Bits>
 <Attribute>address</Attribute>
 <CType>int</CType>
 </RtlPorts>

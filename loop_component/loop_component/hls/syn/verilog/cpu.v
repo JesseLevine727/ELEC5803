@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="cpu_cpu,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.988000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=1201,HLS_SYN_LUT=2255,HLS_VERSION=2025_1}" *)
+(* CORE_GENERATION_INFO="cpu_cpu,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.988000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=1201,HLS_SYN_LUT=2234,HLS_VERSION=2025_1}" *)
 
 module cpu (
         ap_clk,
@@ -35,7 +35,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [12:0] mem_address0;
+output  [15:0] mem_address0;
 output   mem_ce0;
 output   mem_we0;
 output  [31:0] mem_d0;
@@ -73,7 +73,7 @@ wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_we0;
 wire   [31:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_d0;
 wire   [4:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_address1;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_reg_file_ce1;
-wire   [12:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_address0;
+wire   [15:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_address0;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_ce0;
 wire    grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_we0;
 wire   [31:0] grp_cpu_Pipeline_PROGRAM_LOOP_fu_58_mem_d0;
@@ -279,7 +279,7 @@ always @ (*) begin
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         reg_file_d0 = grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52_reg_file_d0;
     end else begin
-        reg_file_d0 = 32'd32764;
+        reg_file_d0 = 32'd262140;
     end
 end
 

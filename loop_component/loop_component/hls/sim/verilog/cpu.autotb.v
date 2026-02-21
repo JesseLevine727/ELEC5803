@@ -29,7 +29,7 @@ module `AUTOTB_TOP;
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = -1;
-parameter LENGTH_mem = 8192;
+parameter LENGTH_mem = 65536;
 parameter LENGTH_pstrb = 1;
 
 reg AESL_clock;
@@ -54,7 +54,7 @@ wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
-wire [12 : 0] mem_address0;
+wire [15 : 0] mem_address0;
 wire  mem_ce0;
 wire  mem_we0;
 wire [31 : 0] mem_d0;
@@ -124,7 +124,7 @@ end
 // The input and output of arraymem
 wire    arraymem_ce0, arraymem_ce1;
 wire [4 - 1 : 0]    arraymem_we0, arraymem_we1;
-wire    [12 : 0]    arraymem_address0, arraymem_address1;
+wire    [15 : 0]    arraymem_address0, arraymem_address1;
 wire    [31 : 0]    arraymem_din0, arraymem_din1;
 wire    [31 : 0]    arraymem_dout0, arraymem_dout1;
 wire    arraymem_ready;

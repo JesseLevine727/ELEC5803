@@ -182,8 +182,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject type="array" fp_name="/apatb_cpu_top/AESL_inst_cpu/mem_address0">
-               <obj_property name="ElementShortName">mem_address0[12:0]</obj_property>
-               <obj_property name="ObjectShortName">mem_address0[12:0]</obj_property>
+               <obj_property name="ElementShortName">mem_address0[15:0]</obj_property>
+               <obj_property name="ObjectShortName">mem_address0[15:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
@@ -307,8 +307,8 @@
                <obj_property name="UseCustomSignalColor">true</obj_property>
             </wvobject>
             <wvobject type="array" fp_name="/apatb_cpu_top/mem_address0">
-               <obj_property name="ElementShortName">mem_address0[12:0]</obj_property>
-               <obj_property name="ObjectShortName">mem_address0[12:0]</obj_property>
+               <obj_property name="ElementShortName">mem_address0[15:0]</obj_property>
+               <obj_property name="ObjectShortName">mem_address0[15:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>

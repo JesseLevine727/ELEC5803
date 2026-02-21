@@ -19,10 +19,10 @@ set C_modelName {cpu_Pipeline_PROGRAM_LOOP}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 dict set ap_memory_interface_dict reg_file { MEM_WIDTH 32 MEM_SIZE 128 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
-dict set ap_memory_interface_dict mem { MEM_WIDTH 32 MEM_SIZE 32768 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict mem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
 	{ reg_file int 32 regular {array 32 { 2 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 } 1 1 }  }
-	{ mem int 32 regular {array 8192 { 2 3 } 1 1 }  }
+	{ mem int 32 regular {array 65536 { 2 3 } 1 1 }  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
@@ -47,7 +47,7 @@ set portList {
 	{ reg_file_address1 sc_out sc_lv 5 signal 0 } 
 	{ reg_file_ce1 sc_out sc_logic 1 signal 0 } 
 	{ reg_file_q1 sc_in sc_lv 32 signal 0 } 
-	{ mem_address0 sc_out sc_lv 13 signal 1 } 
+	{ mem_address0 sc_out sc_lv 16 signal 1 } 
 	{ mem_ce0 sc_out sc_logic 1 signal 1 } 
 	{ mem_we0 sc_out sc_logic 1 signal 1 } 
 	{ mem_d0 sc_out sc_lv 32 signal 1 } 
@@ -68,7 +68,7 @@ set NewPortList {[
  	{ "name": "reg_file_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "reg_file", "role": "address1" }} , 
  	{ "name": "reg_file_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "reg_file", "role": "ce1" }} , 
  	{ "name": "reg_file_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "reg_file", "role": "q1" }} , 
- 	{ "name": "mem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "mem", "role": "address0" }} , 
+ 	{ "name": "mem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "mem", "role": "address0" }} , 
  	{ "name": "mem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mem", "role": "ce0" }} , 
  	{ "name": "mem_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mem", "role": "we0" }} , 
  	{ "name": "mem_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mem", "role": "d0" }} , 
@@ -92,5 +92,5 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	reg_file { ap_memory {  { reg_file_address0 mem_address 1 5 }  { reg_file_ce0 mem_ce 1 1 }  { reg_file_we0 mem_we 1 1 }  { reg_file_d0 mem_din 1 32 }  { reg_file_q0 mem_dout 0 32 }  { reg_file_address1 MemPortADDR2 1 5 }  { reg_file_ce1 MemPortCE2 1 1 }  { reg_file_q1 MemPortDOUT2 0 32 } } }
-	mem { ap_memory {  { mem_address0 mem_address 1 13 }  { mem_ce0 mem_ce 1 1 }  { mem_we0 mem_we 1 1 }  { mem_d0 mem_din 1 32 }  { mem_q0 mem_dout 0 32 } } }
+	mem { ap_memory {  { mem_address0 mem_address 1 16 }  { mem_ce0 mem_ce 1 1 }  { mem_we0 mem_we 1 1 }  { mem_d0 mem_din 1 32 }  { mem_q0 mem_dout 0 32 } } }
 }

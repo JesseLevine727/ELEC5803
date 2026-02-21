@@ -110,7 +110,7 @@ entry:7 %reg_file_addr = getelementptr i32 %reg_file, i64 0, i64 2
 
 <Node id="11" bw="0" op_0_bw="32" op_1_bw="5" op_2_bw="0">
 <![CDATA[
-entry:8 %store_ln25 = store i32 32764, i5 %reg_file_addr
+entry:8 %store_ln25 = store i32 262140, i5 %reg_file_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln25"/></StgValue>

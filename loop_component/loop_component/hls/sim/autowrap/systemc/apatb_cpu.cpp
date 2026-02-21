@@ -1280,7 +1280,7 @@ void apatb_cpu_hw(void* __xlx_apatb_param_mem, void* __xlx_apatb_param_pstrb)
   };
   port1.param = { __xlx_apatb_param_mem };
   port1.mname = { "mem" };
-  port1.nbytes = { 32768 };
+  port1.nbytes = { 262144 };
 
   try {
 #ifdef POST_CHECK

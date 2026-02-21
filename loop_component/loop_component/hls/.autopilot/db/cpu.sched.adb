@@ -41,7 +41,7 @@
 				</Value>
 				<direction>2</direction>
 				<if_type>1</if_type>
-				<array_size>8192</array_size>
+				<array_size>65536</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -560,7 +560,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>32764</content>
+				<content>262140</content>
 			</item>
 			<item class_id_reference="16" object_id="_14">
 				<Value>

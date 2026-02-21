@@ -66,7 +66,7 @@
 <Resources>
 <DSP>12</DSP>
 <FF>1186</FF>
-<LUT>2102</LUT>
+<LUT>2081</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -242,7 +242,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>13</Bits>
+<Bits>16</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

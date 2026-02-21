@@ -30,8 +30,8 @@ localparam
     TV_OUT = "../tv/rtldatafile/rtl.cpu.autotvout_mem.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 32;
-parameter ADDR_WIDTH = 32'd 13;
-parameter DEPTH = 32'd 8192;
+parameter ADDR_WIDTH = 32'd 16;
+parameter DEPTH = 32'd 65536;
 parameter DLY = 0.1;
 
 // Input and Output

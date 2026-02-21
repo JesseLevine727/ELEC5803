@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'cpu'
 ================================================================
-* Date:           Thu Feb 19 20:03:55 2026
+* Date:           Fri Feb 20 20:36:06 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        loop_component
@@ -57,12 +57,12 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|      2|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|   12|    1194|   2157|    -|
+|Instance         |        -|   12|    1194|   2136|    -|
 |Memory           |        2|    -|       0|      0|    0|
 |Multiplexer      |        -|    -|       0|     96|    -|
 |Register         |        -|    -|       7|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        2|   12|    1201|   2255|    0|
+|Total            |        2|   12|    1201|   2234|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -74,10 +74,10 @@
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
     |                Instance                |            Module            | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
-    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_58     |cpu_Pipeline_PROGRAM_LOOP     |        0|  12|  1186|  2102|    0|
+    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_58     |cpu_Pipeline_PROGRAM_LOOP     |        0|  12|  1186|  2081|    0|
     |grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52  |cpu_Pipeline_VITIS_LOOP_22_1  |        0|   0|     8|    55|    0|
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
-    |Total                                   |                              |        0|  12|  1194|  2157|    0|
+    |Total                                   |                              |        0|  12|  1194|  2136|    0|
     +----------------------------------------+------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -144,7 +144,7 @@
 |ap_done       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
 |ap_idle       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
 |ap_ready      |  out|    1|  ap_ctrl_hs|           cpu|  return value|
-|mem_address0  |  out|   13|   ap_memory|           mem|         array|
+|mem_address0  |  out|   16|   ap_memory|           mem|         array|
 |mem_ce0       |  out|    1|   ap_memory|           mem|         array|
 |mem_we0       |  out|    1|   ap_memory|           mem|         array|
 |mem_d0        |  out|   32|   ap_memory|           mem|         array|
@@ -200,7 +200,7 @@ ST_2 : Operation 8 [1/2] (5.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_
 
 State 3 <SV = 2> <Delay = 3.25>
 ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%reg_file_addr = getelementptr i32 %reg_file, i64 0, i64 2" [riscv32i.cc:25]   --->   Operation 9 'getelementptr' 'reg_file_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 10 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln25 = store i32 32764, i5 %reg_file_addr" [riscv32i.cc:25]   --->   Operation 10 'store' 'store_ln25' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 10 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln25 = store i32 262140, i5 %reg_file_addr" [riscv32i.cc:25]   --->   Operation 10 'store' 'store_ln25' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 32> <RAM>
 
 State 4 <SV = 3> <Delay = 0.00>
 ST_4 : Operation 11 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file, i32 %mem"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
@@ -516,9 +516,9 @@ ret_ln305          (ret          ) [ 000000]
 | Operation|             Functional Unit            |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|----------------------------------------|---------|---------|---------|---------|
 |   call   | grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_52 |    0    |    0    |    6    |    28   |
-|          |   grp_cpu_Pipeline_PROGRAM_LOOP_fu_58  |    12   | 14.7692 |   1576  |   1794  |
+|          |   grp_cpu_Pipeline_PROGRAM_LOOP_fu_58  |    12   | 14.7692 |   1582  |   1773  |
 |----------|----------------------------------------|---------|---------|---------|---------|
-|   Total  |                                        |    12   | 14.7692 |   1582  |   1822  |
+|   Total  |                                        |    12   | 14.7692 |   1588  |   1801  |
 |----------|----------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -546,10 +546,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |   12   |   14   |  1582  |  1822  |    -   |
+|  Function |    -   |   12   |   14   |  1588  |  1801  |    -   |
 |   Memory  |    2   |    -   |    -   |    0   |    0   |    0   |
 |Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
 |  Register |    -   |    -   |    -   |    -   |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |    2   |   12   |   14   |  1582  |  1822  |    0   |
+|   Total   |    2   |   12   |   14   |  1588  |  1801  |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

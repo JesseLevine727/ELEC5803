@@ -6,6 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
 
+
 # 1 "/home/elfo/Documents/ELEC5803/loop_component/riscv32i.h" 1
 
 
@@ -59852,7 +59853,7 @@ typedef ap_uint<7 +3> funcx_t;
 # 109 "/home/elfo/Documents/ELEC5803/loop_component/riscv32i.h"
 typedef ap_uint<32> arch_t;
 
-typedef ap_uint<13> addr_t;
+typedef ap_uint<16> addr_t;
 
 typedef ap_uint<5> rfi_t;
 
@@ -59864,57 +59865,54 @@ typedef ap_uint<4> strb_t;
 
 
 void cpu(arch_t*, volatile strb_t*);
-# 3 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
+# 4 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
 
 
 # 1 "/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/stdlib.h" 1 3
-# 6 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
-# 18 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc"
-static void load_hex_words(const char *path, arch_t mem[(1 << 13)]) {
+# 7 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc" 2
+# 28 "/home/elfo/Documents/ELEC5803/loop_component/tb_attn1q_N8_D8_naive.cc"
+static void load_hex_words(const char *path, arch_t mem[(1 << 16)]) {
     FILE *f = fopen(path, "r");
     if (!f) { perror("fopen program"); exit(1); }
 
     unsigned tmp;
     int i = 0;
-    while (i < (1 << 13) && fscanf(f, "%x", &tmp) == 1)
+    while (i < (1 << 16) && fscanf(f, "%x", &tmp) == 1)
         mem[i++] = (arch_t)tmp;
 
     fclose(f);
-    for (; i < (1 << 13); i++) mem[i] = 0;
+    for (; i < (1 << 16); i++) mem[i] = 0;
 }
 
 static int32_t q16(double x) {
     double scaled = x * 65536.0;
-    if (scaled >= 0) return (int32_t)(scaled + 0.5);
-    else return (int32_t)(scaled - 0.5);
+    return (int32_t)((scaled >= 0) ? scaled + 0.5 : scaled - 0.5);
 }
 
-static void init_qkv_simple(arch_t mem[(1 << 13)]) {
 
-
-
+static void init_qkv_simple(arch_t mem[(1 << 16)]) {
 
     int qb = 0x4000 >> 2;
-    int kb = 0x4100 >> 2;
-    int vb = 0x4300 >> 2;
+    int kb = 0x6000 >> 2;
+    int vb = 0x8000 >> 2;
 
-    for (int j = 0; j < 8; j++) {
-        double q = 0.05 * (j + 1);
-        mem[qb + j] = (arch_t)q16(q);
-    }
-
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 8; j++) {
-            double k = 0.02 * (i + 1) * (j + 1);
-            double v = 0.01 * (i + 1) + 0.005 * (j + 1);
-            mem[kb + i * 8 + j] = (arch_t)q16(k);
-            mem[vb + i * 8 + j] = (arch_t)q16(v);
+
+            double q = 0.05 * (i+1) * (j+1);
+            double k = 0.02 * (i+1) * (j+1);
+            double v = 0.01 * (i+1) + 0.005 * (j+1);
+
+            mem[qb + i*8 + j] = q16(q);
+            mem[kb + i*8 + j] = q16(k);
+            mem[vb + i*8 + j] = q16(v);
         }
     }
 }
 
-int main(void) {
-    arch_t mem[(1 << 13)] = {0};
+int main(void)
+{
+    arch_t mem[(1 << 16)] = {0};
 
     ap_uint<4> wstrb = 0;
     strb_t *pstrb = &wstrb;
@@ -59926,39 +59924,42 @@ int main(void) {
     cpu(mem, pstrb);
 
 
-    printf("\nScores (Q·K):\n");
-    int sb = 0x4500 >> 2;
-    for (int i = 0; i < 8; i++) {
-        double s = ((int32_t)mem[sb + i]) / 65536.0;
-        printf("  s[%d] = %f\n", i, s);
+    printf("\nScores (first row only):\n");
+    int sb = 0xA000 >> 2;
+
+    int printN = (4 < 8) ? 4 : 8;
+    for (int k = 0; k < printN; k++) {
+        double s = ((int32_t)mem[sb + k]) / 65536.0;
+        printf("  s[0,%d] = %f\n", k, s);
     }
+    if (4 > printN) printf("  ... (%d more)\n", 4 -printN);
 
 
-    printf("\nSoftmax probs (naive):\n");
-    int pb = 0x4540 >> 2;
+    printf("\nSoftmax (first row):\n");
+    int pb = (0xA000 + 4*4*4) >> 2;
     double psum = 0.0;
-    for (int i = 0; i < 8; i++) {
-        double p = ((int32_t)mem[pb + i]) / 65536.0;
+
+    for (int k = 0; k < printN; k++) {
+        double p = ((int32_t)mem[pb + k]) / 65536.0;
         psum += p;
-        printf("  p[%d] = %f\n", i, p);
+        printf("  p[0,%d] = %f\n", k, p);
     }
-    printf("Prob sum = %f\n", psum);
+    printf("Partial sum = %f\n", psum);
 
 
-    printf("\nAttention output vector out[j]:\n");
-    int ob = 0x4600 >> 2;
+    printf("\nOutput vector (query 0):\n");
+    int ob = ((0xA000 + 4*4*4) + 4*4*4) >> 2;
+
     for (int j = 0; j < 8; j++) {
         double x = ((int32_t)mem[ob + j]) / 65536.0;
-        printf("  out[%d] = %f\n", j, x);
+        printf("  out[0,%d] = %f\n", j, x);
     }
 
 
-
-    int db = 0x4700 >> 2;
-    printf("\nDBG: max_s=%f sum=%f inv_sum=%f\n",
-        ((int32_t)mem[db+0]) / 65536.0,
-        ((int32_t)mem[db+1]) / 65536.0,
-        ((int32_t)mem[db+2]) / 65536.0
+    int db = (((0xA000 + 4*4*4) + 4*4*4) + 4*8*4) >> 2;
+    printf("\nDBG: N=%d D=%d\n",
+        (int32_t)mem[db+0],
+        (int32_t)mem[db+1]
     );
 
     return 0;

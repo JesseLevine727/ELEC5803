@@ -248,10 +248,10 @@ extern "C" void apatb_cpu_hw(volatile void * __xlx_apatb_param_mem, volatile voi
 using hls::sim::createStream;
   // Collect __xlx_mem__tmp_vec
 std::vector<Byte<4>> __xlx_mem__tmp_vec;
-for (size_t i = 0; i < 8192; ++i){
+for (size_t i = 0; i < 65536; ++i){
 __xlx_mem__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_mem)[i]);
 }
-  int __xlx_size_param_mem = 8192;
+  int __xlx_size_param_mem = 65536;
   int __xlx_offset_param_mem = 0;
   int __xlx_offset_byte_param_mem = 0*4;
   // DUT call

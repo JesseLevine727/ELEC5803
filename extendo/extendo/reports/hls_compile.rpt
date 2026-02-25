@@ -1,0 +1,189 @@
+
+
+================================================================
+== Synthesis Summary Report of 'cpu'
+================================================================
++ General Information: 
+    * Date:           Wed Feb 25 12:20:59 2026
+    * Version:        2025.1 (Build 6135595 on May 21 2025)
+    * Project:        extendo
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+---------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |             Modules             |  Issue  |       |      Latency      | Iteration|         | Trip |          |      |         |           |           |     |
+    |             & Loops             |   Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +---------------------------------+---------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ cpu                            |   Timing|  -8.68|        -|        -|         -|        -|     -|        no|     -|  12 (5%)|  1989 (1%)|  2993 (5%)|    -|
+    | + cpu_Pipeline_VITIS_LOOP_24_1  |        -|   2.30|       34|  340.000|         -|       33|     -|    rewind|     -|        -|    8 (~0%)|   55 (~0%)|    -|
+    |  o VITIS_LOOP_24_1              |        -|   7.30|       32|  320.000|         1|        1|    32|       yes|     -|        -|          -|          -|    -|
+    | + cpu_Pipeline_PROGRAM_LOOP     |   Timing|  -8.68|        -|        -|         -|        -|     -|        no|     -|  12 (5%)|  1975 (1%)|  2913 (5%)|    -|
+    |  o PROGRAM_LOOP                 |       II|   7.30|        -|        -|         3|        2|     -|       yes|     -|        -|          -|          -|    -|
+    +---------------------------------+---------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------+-----------+----------+
+| Port         | Direction | Bitwidth |
++--------------+-----------+----------+
+| mem_address0 | out       | 16       |
+| mem_d0       | out       | 32       |
+| mem_q0       | in        | 32       |
++--------------+-----------+----------+
+
+* Other Ports
++-------+---------+-----------+----------+
+| Port  | Mode    | Direction | Bitwidth |
++-------+---------+-----------+----------+
+| pstrb | ap_none | in        | 4        |
++-------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------+
+| Argument | Direction | Datatype     |
++----------+-----------+--------------+
+| mem      | inout     | ap_uint<32>* |
+| pstrb    | unused    | pointer      |
++----------+-----------+--------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| mem      | mem_address0 | port    | offset   |
+| mem      | mem_ce0      | port    |          |
+| mem      | mem_we0      | port    |          |
+| mem      | mem_d0       | port    |          |
+| mem      | mem_q0       | port    |          |
+| pstrb    | pstrb        | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------+-----+--------+--------------+-----------+--------------------------+---------+
+| Name                            | DSP | Pragma | Variable     | Op        | Impl                     | Latency |
++---------------------------------+-----+--------+--------------+-----------+--------------------------+---------+
+| + cpu                           | 12  |        |              |           |                          |         |
+|  + cpu_Pipeline_VITIS_LOOP_24_1 | 0   |        |              |           |                          |         |
+|    icmp_ln24_fu_503_p2          |     |        | icmp_ln24    | seteq     | auto                     | 0       |
+|    add_ln24_fu_509_p2           |     |        | add_ln24     | add       | fabric                   | 0       |
+|  + cpu_Pipeline_PROGRAM_LOOP    | 12  |        |              |           |                          |         |
+|    icmp_ln43_fu_4266_p2         |     |        | icmp_ln43    | setne     | auto                     | 0       |
+|    icmp_ln47_fu_4282_p2         |     |        | icmp_ln47    | setne     | auto                     | 0       |
+|    or_ln43_fu_4288_p2           |     |        | or_ln43      | or        | auto                     | 0       |
+|    sparsemux_65_5_32_1_1_U35    |     |        | src1         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_65_5_32_1_1_U36    |     |        | src2         | sparsemux | compactencoding_dontcare | 0       |
+|    next_pc_4_fu_4802_p2         |     |        | next_pc_4    | add       | fabric                   | 0       |
+|    grp_fu_4193_p2               |     |        | add_ln279    | add       | fabric                   | 0       |
+|    grp_fu_4198_p2               |     |        | next_pc      | add       | fabric                   | 0       |
+|    grp_fu_4203_p2               |     |        | icmp_ln260   | setlt     | auto                     | 0       |
+|    take_6_fu_4878_p2            |     |        | take_6       | xor       | auto                     | 0       |
+|    grp_fu_4203_p2               |     |        | take_5       | setlt     | auto                     | 0       |
+|    grp_fu_4208_p2               |     |        | icmp_ln258   | setlt     | auto                     | 0       |
+|    take_3_fu_4885_p2            |     |        | take_3       | xor       | auto                     | 0       |
+|    grp_fu_4208_p2               |     |        | take_2       | setlt     | auto                     | 0       |
+|    take_1_fu_4892_p2            |     |        | take_1       | setne     | auto                     | 0       |
+|    take_fu_4899_p2              |     |        | take         | seteq     | auto                     | 0       |
+|    grp_fu_4198_p2               |     |        | add_ln266    | add       | fabric                   | 0       |
+|    next_pc_3_fu_4906_p3         |     |        | next_pc_3    | select    | auto_sel                 | 0       |
+|    grp_fu_4213_p2               |     |        | icmp_ln229   | seteq     | auto                     | 0       |
+|    grp_fu_4193_p2               |     |        | addr_1       | add       | fabric                   | 0       |
+|    icmp_ln236_fu_4923_p2        |     |        | icmp_ln236   | setne     | auto                     | 0       |
+|    grp_fu_4238_p2               |     |        | icmp_ln240   | setne     | auto                     | 0       |
+|    or_ln236_fu_4929_p2          |     |        | or_ln236     | or        | auto                     | 0       |
+|    grp_fu_4213_p2               |     |        | icmp_ln206   | seteq     | auto                     | 0       |
+|    grp_fu_4193_p2               |     |        | addr         | add       | fabric                   | 0       |
+|    icmp_ln213_fu_4949_p2        |     |        | icmp_ln213   | setne     | auto                     | 0       |
+|    grp_fu_4238_p2               |     |        | icmp_ln217   | setne     | auto                     | 0       |
+|    or_ln213_fu_4955_p2          |     |        | or_ln213     | or        | auto                     | 0       |
+|    icmp_ln147_fu_4979_p2        |     |        | icmp_ln147   | seteq     | auto                     | 0       |
+|    mul_32s_32s_64_2_1_U34       | 4   |        | prod_ss      | mul       | auto                     | 1       |
+|    mul_32ns_32ns_64_2_1_U32     | 4   |        | prod_uu      | mul       | auto                     | 1       |
+|    mul_32ns_32s_64_2_1_U33      | 4   |        | prod_su      | mul       | auto                     | 1       |
+|    grp_fu_4244_p2               |     |        | icmp_ln137   | seteq     | auto                     | 0       |
+|    res_3_fu_5035_p2             |     |        | res_3        | ashr      | auto_pipe                | 0       |
+|    res_4_fu_5041_p2             |     |        | res_4        | lshr      | auto_pipe                | 0       |
+|    res_5_fu_5230_p3             |     |        | res_5        | select    | auto_sel                 | 0       |
+|    res_2_fu_5052_p2             |     |        | res_2        | shl       | auto_pipe                | 0       |
+|    icmp_ln176_fu_5063_p2        |     |        | icmp_ln176   | seteq     | auto                     | 0       |
+|    op2_1_fu_5069_p3             |     |        | op2_1        | select    | auto_sel                 | 0       |
+|    res_15_fu_5236_p2            |     |        | res_15       | setlt     | auto                     | 0       |
+|    grp_fu_4249_p2               |     |        | icmp_ln191   | seteq     | auto                     | 0       |
+|    grp_fu_4244_p2               |     |        | icmp_ln191_1 | seteq     | auto                     | 0       |
+|    and_ln191_fu_5104_p2         |     |        | and_ln191    | and       | auto                     | 0       |
+|    res_21_fu_5114_p2            |     |        | res_21       | lshr      | auto_pipe                | 0       |
+|    res_20_fu_5125_p2            |     |        | res_20       | ashr      | auto_pipe                | 0       |
+|    res_14_fu_5140_p2            |     |        | res_14       | shl       | auto_pipe                | 0       |
+|    res_13_fu_5245_p2            |     |        | res_13       | and       | auto                     | 0       |
+|    res_12_fu_5250_p2            |     |        | res_12       | or        | auto                     | 0       |
+|    res_11_fu_5255_p2            |     |        | res_11       | xor       | auto                     | 0       |
+|    grp_fu_4249_p2               |     |        | icmp_ln183   | seteq     | auto                     | 0       |
+|    grp_fu_4244_p2               |     |        | icmp_ln183_1 | seteq     | auto                     | 0       |
+|    and_ln183_fu_5260_p2         |     |        | and_ln183    | and       | auto                     | 0       |
+|    res_8_fu_5264_p2             |     |        | res_8        | sub       | fabric                   | 0       |
+|    res_9_fu_5268_p2             |     |        | res_9        | add       | fabric                   | 0       |
+|    res_10_fu_5272_p3            |     |        | res_10       | select    | auto_sel                 | 0       |
+|    res_7_fu_5281_p2             |     |        | res_7        | setlt     | auto                     | 0       |
+|    grp_fu_4198_p2               |     |        | res          | add       | fabric                   | 0       |
+|    icmp_ln16_fu_5290_p2         |     |        | icmp_ln16    | seteq     | auto                     | 0       |
+|    icmp_ln16_1_fu_5295_p2       |     |        | icmp_ln16_1  | seteq     | auto                     | 0       |
+|    or_ln16_fu_5300_p2           |     |        | or_ln16      | or        | auto                     | 0       |
+|    icmp_ln299_fu_5306_p2        |     |        | icmp_ln299   | seteq     | auto                     | 0       |
++---------------------------------+-----+--------+--------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+-------------------------------+----------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options                       | Location                   | Messages                                                                                                                         |
++----------+-------------------------------+----------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| RESOURCE | variable=mem core=RAM_1P_BRAM | riscv32i.cc:19 in cpu, mem | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                       |
+|          |                               |                            | The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead |
++----------+-------------------------------+----------------------------+----------------------------------------------------------------------------------------------------------------------------------+
+
+* Inferred Pragmas
++-----------------+---------------------------------------+-----------------------------------------+-------------------------+
+| Type            | Options                               | Location                                | Inferred From           |
++-----------------+---------------------------------------+-----------------------------------------+-------------------------+
+| ARRAY_PARTITION | dim=1 type=complete variable=reg_file | variable reg_file in cpu riscv32i.cc:21 | pipeline riscv32i.cc:34 |
++-----------------+---------------------------------------+-----------------------------------------+-------------------------+
+
+* Valid Pragma Syntax
++-----------+--------------------+------------------------------+
+| Type      | Options            | Location                     |
++-----------+--------------------+------------------------------+
+| INTERFACE | ap_none port=pstrb | riscv32i.cc:18 in cpu, pstrb |
+| PIPELINE  | ii=1               | riscv32i.cc:34 in cpu        |
++-----------+--------------------+------------------------------+
+
+

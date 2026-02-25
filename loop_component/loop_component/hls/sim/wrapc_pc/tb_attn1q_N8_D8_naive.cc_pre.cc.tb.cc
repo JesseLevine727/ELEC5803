@@ -59911,7 +59911,7 @@ static void init_qkv_simple(arch_t mem[(1 << 16)]) {
     int kb = 0x6000 >> 2;
     int vb = 0x8000 >> 2;
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 8; j++) {
 
             double q = 0.05 * (i+1) * (j+1);
@@ -59956,16 +59956,16 @@ cpu
     printf("\nScores (first row only):\n");
     int sb = 0xA000 >> 2;
 
-    int printN = (4 < 8) ? 4 : 8;
+    int printN = (2 < 8) ? 2 : 8;
     for (int k = 0; k < printN; k++) {
         double s = ((int32_t)mem[sb + k]) / 65536.0;
         printf("  s[0,%d] = %f\n", k, s);
     }
-    if (4 > printN) printf("  ... (%d more)\n", 4 -printN);
+    if (2 > printN) printf("  ... (%d more)\n", 2 -printN);
 
 
     printf("\nSoftmax (first row):\n");
-    int pb = (0xA000 + 4*4*4) >> 2;
+    int pb = (0xA000 + 2*2*4) >> 2;
     double psum = 0.0;
 
     for (int k = 0; k < printN; k++) {
@@ -59977,7 +59977,7 @@ cpu
 
 
     printf("\nOutput vector (query 0):\n");
-    int ob = ((0xA000 + 4*4*4) + 4*4*4) >> 2;
+    int ob = ((0xA000 + 2*2*4) + 2*2*4) >> 2;
 
     for (int j = 0; j < 8; j++) {
         double x = ((int32_t)mem[ob + j]) / 65536.0;
@@ -59985,7 +59985,7 @@ cpu
     }
 
 
-    int db = (((0xA000 + 4*4*4) + 4*4*4) + 4*8*4) >> 2;
+    int db = (((0xA000 + 2*2*4) + 2*2*4) + 2*8*4) >> 2;
     printf("\nDBG: N=%d D=%d\n",
         (int32_t)mem[db+0],
         (int32_t)mem[db+1]

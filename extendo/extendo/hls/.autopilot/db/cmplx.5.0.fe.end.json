@@ -1,0 +1,61 @@
+{
+    "0": {
+        "name": "cpu",
+        "file": "riscv32i.cc",
+        "fileloc": "16",
+        "instructions": "70",
+        "total_instructions": "568",
+        "calls": "1 2",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "31"
+        }
+    },
+    "1": {
+        "name": "cpu_Pipeline_VITIS_LOOP_24_1",
+        "file": "riscv32i.cc",
+        "fileloc": "21",
+        "instructions": "170",
+        "total_instructions": "170",
+        "calls": "",
+        "basicblocks": "36",
+        "memory_accesses": "33",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "32"
+        },
+        "stores": {
+            "L": "33"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "cpu_Pipeline_PROGRAM_LOOP",
+        "file": "riscv32i.cc",
+        "fileloc": "16",
+        "instructions": "328",
+        "total_instructions": "328",
+        "calls": "",
+        "basicblocks": "85",
+        "memory_accesses": "26",
+        "control_depth": "12",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "1",
+            "T": "2"
+        },
+        "stores": {
+            "L": "23",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

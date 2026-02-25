@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/extendo/extendo/extendo.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Feb 25 12:20:47 2026",
+ "timestampMillis": "1772040047793",
+ "buildStep": {
+  "cmdId": "691c8901-0bea-4c15-9c69-14c48016e972",
+  "name": "v++",
+  "logFile": "/home/elfo/Documents/ELEC5803/extendo/extendo/logs/extendo.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/elfo/Documents/ELEC5803/extendo/hls_config.cfg --work_dir extendo ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/extendo/hls_config.cfg",
+   "--work_dir",
+   "extendo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/elfo/Documents/ELEC5803/extendo/hls_config.cfg",
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.file=./riscv32i.cc\nsyn.file=./riscv32i.h\ntb.file=./attn1q_N8_D8_naive.txt\ntb.file=./tb_attn1q_N8_D8_naive.cc\nsyn.top=cpu\ncosim.wave_debug=1\ncosim.trace_level=all"
+   }
+  ],
+  "cwd": "/home/elfo/Documents/ELEC5803/extendo"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 12:20:47 2026",
+ "timestampMillis": "1772040047794",
+ "status": {
+  "cmdId": "691c8901-0bea-4c15-9c69-14c48016e972",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Feb 25 12:20:49 2026",
+ "timestampMillis": "1772040049364",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cpu",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/extendo/riscv32i.cc",
+     "/home/elfo/Documents/ELEC5803/extendo/riscv32i.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Feb 25 12:20:49 2026",
+ "timestampMillis": "1772040049364",
+ "buildStep": {
+  "cmdId": "8e2b8b40-800a-4822-8c80-9f847bb60f50",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/extendo"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 12:20:49 2026",
+ "timestampMillis": "1772040049364",
+ "status": {
+  "cmdId": "8e2b8b40-800a-4822-8c80-9f847bb60f50",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:20:49 2026",
+ "timestampMillis": "1772040049364",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:20:49 2026",
+ "timestampMillis": "1772040049365",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:20:49 2026",
+ "timestampMillis": "1772040049365",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:20:59 2026",
+ "timestampMillis": "1772040059990",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:20:59 2026",
+ "timestampMillis": "1772040059990",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:20:59 2026",
+ "timestampMillis": "1772040059990",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 12:20:59 2026",
+ "timestampMillis": "1772040059990",
+ "status": {
+  "cmdId": "8e2b8b40-800a-4822-8c80-9f847bb60f50",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 12:21:00 2026",
+ "timestampMillis": "1772040060056",
+ "status": {
+  "cmdId": "691c8901-0bea-4c15-9c69-14c48016e972",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:21:00 2026",
+ "timestampMillis": "1772040060068",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/reports/v++_compile_extendo_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 12:21:00 2026",
+ "timestampMillis": "1772040060068",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/extendo/extendo/reports/.db/v++_compile_extendo_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -66,16 +66,19 @@ static void init_qkv_simple(arch_t mem[MEM_SIZE]) {
 
 int main(void)
 {
-    arch_t mem[MEM_SIZE] = {0};
+    arch_t imem[MEM_SIZE] = {0};
+    arch_t dmem[MEM_SIZE] = {0};
 
     ap_uint<4> wstrb = 0;
     strb_t *pstrb = &wstrb;
 
-    load_hex_words("attn1q_N8_D8_naive.txt", mem);
+    // program goes to instruction memory
+    load_hex_words("attn1q_N8_D8_naive.txt", imem);
 
-    init_qkv_simple(mem);
+    // data goes to data memory
+    init_qkv_simple(dmem);
 
-    cpu(mem, pstrb);
+    cpu(imem, dmem, pstrb);
 
     // ---------- scores ----------
     printf("\nScores (first row only):\n");
@@ -83,10 +86,9 @@ int main(void)
 
     int printN = (N < 8) ? N : 8;
     for (int k = 0; k < printN; k++) {
-        double s = ((int32_t)mem[sb + k]) / 65536.0;
+        double s = ((int32_t)dmem[sb + k]) / 65536.0;
         printf("  s[0,%d] = %f\n", k, s);
     }
-    if (N > printN) printf("  ... (%d more)\n", N-printN);
 
     // ---------- probs ----------
     printf("\nSoftmax (first row):\n");
@@ -94,7 +96,7 @@ int main(void)
     double psum = 0.0;
 
     for (int k = 0; k < printN; k++) {
-        double p = ((int32_t)mem[pb + k]) / 65536.0;
+        double p = ((int32_t)dmem[pb + k]) / 65536.0;
         psum += p;
         printf("  p[0,%d] = %f\n", k, p);
     }
@@ -105,15 +107,15 @@ int main(void)
     int ob = OUT_BASE >> 2;
 
     for (int j = 0; j < D; j++) {
-        double x = ((int32_t)mem[ob + j]) / 65536.0;
+        double x = ((int32_t)dmem[ob + j]) / 65536.0;
         printf("  out[0,%d] = %f\n", j, x);
     }
 
     // ---------- debug ----------
     int db = DBG_BASE >> 2;
     printf("\nDBG: N=%d D=%d\n",
-        (int32_t)mem[db+0],
-        (int32_t)mem[db+1]
+        (int32_t)dmem[db+0],
+        (int32_t)dmem[db+1]
     );
 
     return 0;

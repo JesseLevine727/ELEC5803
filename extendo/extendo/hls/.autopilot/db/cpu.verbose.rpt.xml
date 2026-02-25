@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'cpu'" level="0">
-<item name = "Date">Wed Feb 25 12:20:59 2026
+<item name = "Date">Wed Feb 25 14:02:22 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">extendo</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 15.980 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 14.698 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152">cpu_Pipeline_VITIS_LOOP_24_1, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187">cpu_Pipeline_PROGRAM_LOOP, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154">cpu_Pipeline_VITIS_LOOP_22_1, 34, 34, 0.340 us, 0.340 us, 33, 33, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_189">cpu_Pipeline_PROGRAM_LOOP, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,7 +51,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 12, 1983, 2968, -</column>
+<column name="Instance">-, 12, 2031, 2962, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 25, -</column>
 <column name="Register">-, -, 6, -, -</column>
@@ -63,8 +63,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187">cpu_Pipeline_PROGRAM_LOOP, 0, 12, 1975, 2913, 0</column>
-<column name="grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152">cpu_Pipeline_VITIS_LOOP_24_1, 0, 0, 8, 55, 0</column>
+<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_189">cpu_Pipeline_PROGRAM_LOOP, 0, 12, 2023, 2907, 0</column>
+<column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154">cpu_Pipeline_VITIS_LOOP_22_1, 0, 0, 8, 55, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -91,8 +91,8 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">4, 0, 4, 0</column>
-<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_cpu_Pipeline_PROGRAM_LOOP_fu_189_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -108,11 +108,14 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, cpu, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, cpu, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, cpu, return value</column>
-<column name="mem_address0">out, 16, ap_memory, mem, array</column>
-<column name="mem_ce0">out, 1, ap_memory, mem, array</column>
-<column name="mem_we0">out, 1, ap_memory, mem, array</column>
-<column name="mem_d0">out, 32, ap_memory, mem, array</column>
-<column name="mem_q0">in, 32, ap_memory, mem, array</column>
+<column name="imem_address0">out, 16, ap_memory, imem, array</column>
+<column name="imem_ce0">out, 1, ap_memory, imem, array</column>
+<column name="imem_q0">in, 32, ap_memory, imem, array</column>
+<column name="dmem_address0">out, 16, ap_memory, dmem, array</column>
+<column name="dmem_ce0">out, 1, ap_memory, dmem, array</column>
+<column name="dmem_we0">out, 1, ap_memory, dmem, array</column>
+<column name="dmem_d0">out, 32, ap_memory, dmem, array</column>
+<column name="dmem_q0">in, 32, ap_memory, dmem, array</column>
 <column name="pstrb">in, 4, ap_none, pstrb, pointer</column>
 </table>
 </item>

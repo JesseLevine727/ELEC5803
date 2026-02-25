@@ -5,8 +5,8 @@
     "control_depth": 12,
     "def_use_depth": 16,
     "file": "riscv32i.cc",
-    "fileloc": 16,
-    "instructions": 407,
+    "fileloc": 14,
+    "instructions": 409,
     "loads": {
       "T": 2
     },
@@ -15,6 +15,6 @@
     "stores": {
       "T": 1
     },
-    "total_instructions": 407
+    "total_instructions": 409
   }
 }

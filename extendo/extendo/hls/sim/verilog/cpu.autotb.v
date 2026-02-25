@@ -17,19 +17,24 @@
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
 `define AUTOTB_CLOCK_PERIOD_DIV2 5.00
 
-`define AESL_MEM_mem AESL_automem_mem
-`define AESL_MEM_INST_mem mem_inst_mem
+`define AESL_MEM_imem AESL_automem_imem
+`define AESL_MEM_INST_imem mem_inst_imem
+`define AESL_MEM_dmem AESL_automem_dmem
+`define AESL_MEM_INST_dmem mem_inst_dmem
 `define AESL_DEPTH_pstrb 1
-`define AUTOTB_TVIN_mem  "../tv/cdatafile/c.cpu.autotvin_mem.dat"
-`define AUTOTB_TVIN_mem_out_wrapc  "../tv/rtldatafile/rtl.cpu.autotvin_mem.dat"
-`define AUTOTB_TVOUT_mem  "../tv/cdatafile/c.cpu.autotvout_mem.dat"
-`define AUTOTB_TVOUT_mem_out_wrapc  "../tv/rtldatafile/rtl.cpu.autotvout_mem.dat"
+`define AUTOTB_TVIN_imem  "../tv/cdatafile/c.cpu.autotvin_imem.dat"
+`define AUTOTB_TVIN_dmem  "../tv/cdatafile/c.cpu.autotvin_dmem.dat"
+`define AUTOTB_TVIN_imem_out_wrapc  "../tv/rtldatafile/rtl.cpu.autotvin_imem.dat"
+`define AUTOTB_TVIN_dmem_out_wrapc  "../tv/rtldatafile/rtl.cpu.autotvin_dmem.dat"
+`define AUTOTB_TVOUT_dmem  "../tv/cdatafile/c.cpu.autotvout_dmem.dat"
+`define AUTOTB_TVOUT_dmem_out_wrapc  "../tv/rtldatafile/rtl.cpu.autotvout_dmem.dat"
 module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = -1;
-parameter LENGTH_mem = 65536;
+parameter LENGTH_dmem = 65536;
+parameter LENGTH_imem = 65536;
 parameter LENGTH_pstrb = 1;
 
 reg AESL_clock;
@@ -54,11 +59,14 @@ wire ap_start;
 wire ap_done;
 wire ap_idle;
 wire ap_ready;
-wire [15 : 0] mem_address0;
-wire  mem_ce0;
-wire  mem_we0;
-wire [31 : 0] mem_d0;
-wire [31 : 0] mem_q0;
+wire [15 : 0] imem_address0;
+wire  imem_ce0;
+wire [31 : 0] imem_q0;
+wire [15 : 0] dmem_address0;
+wire  dmem_ce0;
+wire  dmem_we0;
+wire [31 : 0] dmem_d0;
+wire [31 : 0] dmem_q0;
 wire [3 : 0] pstrb;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
@@ -83,11 +91,14 @@ wire ap_rst_n;
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
-    .mem_address0(mem_address0),
-    .mem_ce0(mem_ce0),
-    .mem_we0(mem_we0),
-    .mem_d0(mem_d0),
-    .mem_q0(mem_q0),
+    .imem_address0(imem_address0),
+    .imem_ce0(imem_ce0),
+    .imem_q0(imem_q0),
+    .dmem_address0(dmem_address0),
+    .dmem_ce0(dmem_ce0),
+    .dmem_we0(dmem_we0),
+    .dmem_d0(dmem_d0),
+    .dmem_q0(dmem_q0),
     .pstrb(pstrb));
 assign ap_clk = AESL_clock;
 assign ap_rst = AESL_reset;
@@ -119,55 +130,102 @@ initial begin
 end
 
     sv_module_top svtb_top();
-//------------------------arraymem Instantiation--------------
+//------------------------arrayimem Instantiation--------------
 
-// The input and output of arraymem
-wire    arraymem_ce0, arraymem_ce1;
-wire [4 - 1 : 0]    arraymem_we0, arraymem_we1;
-wire    [15 : 0]    arraymem_address0, arraymem_address1;
-wire    [31 : 0]    arraymem_din0, arraymem_din1;
-wire    [31 : 0]    arraymem_dout0, arraymem_dout1;
-wire    arraymem_ready;
-wire    arraymem_done;
+// The input and output of arrayimem
+wire    arrayimem_ce0, arrayimem_ce1;
+wire [4 - 1 : 0]    arrayimem_we0, arrayimem_we1;
+wire    [15 : 0]    arrayimem_address0, arrayimem_address1;
+wire    [31 : 0]    arrayimem_din0, arrayimem_din1;
+wire    [31 : 0]    arrayimem_dout0, arrayimem_dout1;
+wire    arrayimem_ready;
+wire    arrayimem_done;
 
-`AESL_MEM_mem `AESL_MEM_INST_mem(
+`AESL_MEM_imem `AESL_MEM_INST_imem(
     .clk        (AESL_clock),
     .rst        (AESL_reset),
-    .ce0        (arraymem_ce0),
-    .we0        (arraymem_we0),
-    .address0   (arraymem_address0),
-    .din0       (arraymem_din0),
-    .dout0      (arraymem_dout0),
-    .ce1        (arraymem_ce1),
-    .we1        (arraymem_we1),
-    .address1   (arraymem_address1),
-    .din1       (arraymem_din1),
-    .dout1      (arraymem_dout1),
-    .ready      (arraymem_ready),
-    .done    (arraymem_done)
+    .ce0        (arrayimem_ce0),
+    .we0        (arrayimem_we0),
+    .address0   (arrayimem_address0),
+    .din0       (arrayimem_din0),
+    .dout0      (arrayimem_dout0),
+    .ce1        (arrayimem_ce1),
+    .we1        (arrayimem_we1),
+    .address1   (arrayimem_address1),
+    .din1       (arrayimem_din1),
+    .dout1      (arrayimem_dout1),
+    .ready      (arrayimem_ready),
+    .done    (arrayimem_done)
 );
 
-// Assignment between dut and arraymem
-assign arraymem_address0 = mem_address0;
-assign arraymem_ce0 = mem_ce0;
-assign mem_q0 = arraymem_dout0;
-assign arraymem_we0[0] = mem_we0;
-assign arraymem_we0[1] = mem_we0;
-assign arraymem_we0[2] = mem_we0;
-assign arraymem_we0[3] = mem_we0;
-assign arraymem_din0 = mem_d0;
-assign arraymem_we1 = 0;
-assign arraymem_din1 = 0;
-assign arraymem_ready= ready;
-assign arraymem_done = interface_done;
+// Assignment between dut and arrayimem
+assign arrayimem_address0 = imem_address0;
+assign arrayimem_ce0 = imem_ce0;
+assign imem_q0 = arrayimem_dout0;
+assign arrayimem_we0 = 0;
+assign arrayimem_din0 = 0;
+assign arrayimem_we1 = 0;
+assign arrayimem_din1 = 0;
+assign arrayimem_ready=    ready;
+assign arrayimem_done = 0;
 
-event mem_reshape_ap_done_evt;
-event mem_reshape_ap_ready_evt;
+event imem_reshape_ap_done_evt;
+event imem_reshape_ap_ready_evt;
 initial begin
-     `AESL_MEM_INST_mem.initialed       = svtb_top.misc_if.initialed_evt  ;
-     `AESL_MEM_INST_mem.finished        = svtb_top.misc_if.finished_evt   ;
-     `AESL_MEM_INST_mem.dut2tb_ap_done  = svtb_top.misc_if.dut2tb_ap_done_evt;
-     `AESL_MEM_INST_mem.dut2tb_ap_ready = svtb_top.misc_if.dut2tb_ap_ready_evt;
+     `AESL_MEM_INST_imem.initialed       = svtb_top.misc_if.initialed_evt  ;
+     `AESL_MEM_INST_imem.finished        = svtb_top.misc_if.finished_evt   ;
+     `AESL_MEM_INST_imem.dut2tb_ap_ready = svtb_top.misc_if.dut2tb_ap_ready_evt;
+     `AESL_MEM_INST_imem.dut2tb_ap_done = svtb_top.misc_if.dut2tb_ap_ready_evt;
+end
+//------------------------arraydmem Instantiation--------------
+
+// The input and output of arraydmem
+wire    arraydmem_ce0, arraydmem_ce1;
+wire [4 - 1 : 0]    arraydmem_we0, arraydmem_we1;
+wire    [15 : 0]    arraydmem_address0, arraydmem_address1;
+wire    [31 : 0]    arraydmem_din0, arraydmem_din1;
+wire    [31 : 0]    arraydmem_dout0, arraydmem_dout1;
+wire    arraydmem_ready;
+wire    arraydmem_done;
+
+`AESL_MEM_dmem `AESL_MEM_INST_dmem(
+    .clk        (AESL_clock),
+    .rst        (AESL_reset),
+    .ce0        (arraydmem_ce0),
+    .we0        (arraydmem_we0),
+    .address0   (arraydmem_address0),
+    .din0       (arraydmem_din0),
+    .dout0      (arraydmem_dout0),
+    .ce1        (arraydmem_ce1),
+    .we1        (arraydmem_we1),
+    .address1   (arraydmem_address1),
+    .din1       (arraydmem_din1),
+    .dout1      (arraydmem_dout1),
+    .ready      (arraydmem_ready),
+    .done    (arraydmem_done)
+);
+
+// Assignment between dut and arraydmem
+assign arraydmem_address0 = dmem_address0;
+assign arraydmem_ce0 = dmem_ce0;
+assign dmem_q0 = arraydmem_dout0;
+assign arraydmem_we0[0] = dmem_we0;
+assign arraydmem_we0[1] = dmem_we0;
+assign arraydmem_we0[2] = dmem_we0;
+assign arraydmem_we0[3] = dmem_we0;
+assign arraydmem_din0 = dmem_d0;
+assign arraydmem_we1 = 0;
+assign arraydmem_din1 = 0;
+assign arraydmem_ready= ready;
+assign arraydmem_done = interface_done;
+
+event dmem_reshape_ap_done_evt;
+event dmem_reshape_ap_ready_evt;
+initial begin
+     `AESL_MEM_INST_dmem.initialed       = svtb_top.misc_if.initialed_evt  ;
+     `AESL_MEM_INST_dmem.finished        = svtb_top.misc_if.finished_evt   ;
+     `AESL_MEM_INST_dmem.dut2tb_ap_done  = svtb_top.misc_if.dut2tb_ap_done_evt;
+     `AESL_MEM_INST_dmem.dut2tb_ap_ready = svtb_top.misc_if.dut2tb_ap_ready_evt;
 end
 
 ////////////////////////////////////////////

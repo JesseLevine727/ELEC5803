@@ -12,17 +12,36 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 73 \
-    name mem \
+    id 74 \
+    name imem \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename imem \
+    op interface \
+    ports { imem_address0 { O 16 vector } imem_ce0 { O 1 bit } imem_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'imem'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 75 \
+    name dmem \
     reset_level 1 \
     sync_rst true \
     dir IO \
-    corename mem \
+    corename dmem \
     op interface \
-    ports { mem_address0 { O 16 vector } mem_ce0 { O 1 bit } mem_we0 { O 1 bit } mem_d0 { O 32 vector } mem_q0 { I 32 vector } } \
+    ports { dmem_address0 { O 16 vector } dmem_ce0 { O 1 bit } dmem_we0 { O 1 bit } dmem_d0 { O 32 vector } dmem_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'mem'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'dmem'"
 }
 }
 

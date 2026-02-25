@@ -6,7 +6,7 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             | 8,448        | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             | 8,449        | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
 |               | (1) unroll                  |   417        | user unroll pragmas are applied                                                        |
@@ -28,15 +28,15 @@
 |               | (4) simplification          |   404        | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                |   407        | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           |   415        | high level synthesis optimizations                                                     |
+|               | (1) lowering                |   409        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   417        | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------+----------------+--------------+---------------+--------------+-------------+---------------+
 | Function | Location       | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------+----------------+--------------+---------------+--------------+-------------+---------------+
-|   cpu    | riscv32i.cc:16 | 8,448        | 242           | 224          | 404         | 415           |
+|   cpu    | riscv32i.cc:14 | 8,449        | 242           | 224          | 404         | 417           |
 +----------+----------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings

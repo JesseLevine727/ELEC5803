@@ -1,9 +1,11 @@
 set depth_list {
-  {mem 65536}
+  {dmem 65536}
+  {imem 65536}
   {pstrb 1}
 }
 set trans_depth {
-  {mem { 65536 } mem}
+  {dmem { 65536 } dmem}
+  {imem { 65536 } imem}
 }
 set containsVLA 0
 set trans_num 1

@@ -6472,7 +6472,8 @@ typedef ap_uint<7> opcode_t;
 typedef ap_uint<4> strb_t;
 
 
-__attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t*, volatile strb_t*);
+
+__attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t imem[(1 << 16)], arch_t dmem[(1 << 16)], volatile strb_t* pstrb);
 # 8 "riscv32i.cc" 2
 # 1 "/usr/include/stdio.h" 1 3 4
 # 28 "/usr/include/stdio.h" 3 4
@@ -7226,21 +7227,19 @@ extern int __overflow (FILE *, int);
 
 
 
-
-
-__attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 16)], volatile strb_t* pstrb) {
+__attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t imem[(1 << 16)], arch_t dmem[(1 << 16)], volatile strb_t* pstrb) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=cpu
-# 16 "riscv32i.cc"
+# 14 "riscv32i.cc"
 
 
 #pragma HLS INTERFACE ap_none port=pstrb
-#pragma HLS RESOURCE variable=mem core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=imem core=RAM_1P_BRAM
+#pragma HLS RESOURCE variable=dmem core=RAM_1P_BRAM
 
  arch_t reg_file[(1 << 5)];
 
-
-  VITIS_LOOP_24_1: for (int i = 0; i < (1 << 5); i++)
+  VITIS_LOOP_22_1: for (int i = 0; i < (1 << 5); i++)
     reg_file[i] = 0;
 
   reg_file[2] = ((1 << 16) - 1) * 4;
@@ -7268,7 +7267,7 @@ PROGRAM_LOOP:
       return;
     }
 
-    arch_t insn = mem[pc >> 2];
+    arch_t insn = imem[pc >> 2];
 
 
 
@@ -7281,7 +7280,7 @@ PROGRAM_LOOP:
     rfi_t rs2 = insn(24,20);
     func3_t func3 = insn(14,12);
     func7_t func7 = insn(31,25);
-# 73 "riscv32i.cc"
+# 71 "riscv32i.cc"
     ap_int<32> immI = ((ap_int<32>)insn) >> 20;
 
     ap_int<12> simm = (insn(31,25), insn(11,7));
@@ -7333,31 +7332,21 @@ PROGRAM_LOOP:
         printf("ECALL at PC = %08x\n", (uint32_t)pc);
         return;
 
-
       case 0x33:
       case 0x13: {
-
 
         if (opcode == 0x13 && ((uint32_t)func3 == 0x1 || (uint32_t)func3 == 0x5)) {
           arch_t shamt = (arch_t)insn(24,20);
 
-          if ((uint32_t)func3 == 0x1) {
-
-            res = src1 << shamt;
-          } else {
-
-            if ((uint32_t)func7 == 0x20) {
-              res = ((ap_int<32>)src1) >> shamt;
-            } else {
-              res = src1 >> shamt;
-            }
+          if ((uint32_t)func3 == 0x1) res = src1 << shamt;
+          else {
+            if ((uint32_t)func7 == 0x20) res = ((ap_int<32>)src1) >> shamt;
+            else res = src1 >> shamt;
           }
           break;
         }
 
-
         if (opcode == 0x33 && func7 == ((func7_t)0x01)) {
-
           ap_int<32> a_s = (ap_int<32>)src1;
           ap_int<32> b_s = (ap_int<32>)src2;
           ap_uint<32> a_u = (ap_uint<32>)src1;
@@ -7368,28 +7357,23 @@ PROGRAM_LOOP:
 
           uint32_t f3 = (uint32_t)func3;
 
-          if (f3 == 0x0) {
-            res = (arch_t)(ap_int<32>)prod_ss;
-          } else if (f3 == 0x1) {
-            res = (arch_t)(ap_int<32>)(prod_ss >> 32);
-          } else if (f3 == 0x2) {
+          if (f3 == 0x0) res = (arch_t)(ap_int<32>)prod_ss;
+          else if (f3 == 0x1) res = (arch_t)(ap_int<32>)(prod_ss >> 32);
+          else if (f3 == 0x2) {
             ap_int<64> prod_su = (ap_int<64>)a_s * (ap_uint<64>)b_u;
             res = (arch_t)(ap_int<32>)(prod_su >> 32);
-          } else if (f3 == 0x3) {
-            res = (arch_t)(ap_uint<32>)(prod_uu >> 32);
-          } else {
+          } else if (f3 == 0x3) res = (arch_t)(ap_uint<32>)(prod_uu >> 32);
+          else {
             printf("Illegal M op at PC=%08x\n", (uint32_t)pc);
             return;
           }
           break;
         }
 
-
         arch_t op2 = (opcode == 0x13) ? (arch_t)imm : src2;
 
         uint32_t f3 = (uint32_t)func3;
         uint32_t f7 = (uint32_t)func7;
-
 
         if (f3 == 0x0) {
           if (opcode == 0x33 && f7 == 0x20) res = src1 - op2;
@@ -7412,107 +7396,76 @@ PROGRAM_LOOP:
         break;
       }
 
-
       case 0x03: {
-
         if ((uint32_t)func3 != 0x2) {
           printf("Unsupported LOAD f3=%x at PC=%08x\n", (unsigned)func3, (uint32_t)pc);
           return;
         }
 
         arch_t addr = src1 + (arch_t)imm;
+        if (addr & 0x3) { printf("LOAD misaligned addr=%08x\n", (uint32_t)addr); return; }
+        if ((addr >> 2) >= (1 << 16)) { printf("LOAD OOB addr=%08x\n", (uint32_t)addr); return; }
 
-        if (addr & 0x3) {
-          printf("LOAD misaligned addr=%08x\n", (uint32_t)addr);
-          return;
-        }
-        if ((addr >> 2) >= (1 << 16)) {
-          printf("LOAD OOB addr=%08x\n", (uint32_t)addr);
-          return;
-        }
-
-        res = mem[addr >> 2];
+        res = dmem[addr >> 2];
         break;
       }
 
-
       case 0x23: {
-
         if ((uint32_t)func3 != 0x2) {
           printf("Unsupported STORE f3=%x at PC=%08x\n", (unsigned)func3, (uint32_t)pc);
           return;
         }
 
         arch_t addr = src1 + (arch_t)imm;
+        if (addr & 0x3) { printf("STORE misaligned addr=%08x\n", (uint32_t)addr); return; }
+        if ((addr >> 2) >= (1 << 16)) { printf("STORE OOB addr=%08x\n", (uint32_t)addr); return; }
 
-        if (addr & 0x3) {
-          printf("STORE misaligned addr=%08x\n", (uint32_t)addr);
-          return;
-        }
-        if ((addr >> 2) >= (1 << 16)) {
-          printf("STORE OOB addr=%08x\n", (uint32_t)addr);
-          return;
-        }
-
-        mem[addr >> 2] = src2;
+        dmem[addr >> 2] = src2;
         break;
       }
 
-
       case 0x63: {
-
         uint32_t f3 = (uint32_t)func3;
-
         bool take = false;
+
         if (f3 == 0x0) take = (src1 == src2);
         else if (f3 == 0x1) take = (src1 != src2);
         else if (f3 == 0x4) take = ((ap_int<32>)src1 < (ap_int<32>)src2);
         else if (f3 == 0x5) take = ((ap_int<32>)src1 >= (ap_int<32>)src2);
         else if (f3 == 0x6) take = ((ap_uint<32>)src1 < (ap_uint<32>)src2);
         else if (f3 == 0x7) take = ((ap_uint<32>)src1 >= (ap_uint<32>)src2);
-        else {
-          printf("Illegal BRANCH f3=%x at PC=%08x\n", f3, (uint32_t)pc);
-          return;
-        }
+        else { printf("Illegal BRANCH f3=%x at PC=%08x\n", f3, (uint32_t)pc); return; }
 
         if (take) next_pc = pc + (arch_t)imm;
         break;
       }
-
 
       case 0x6F:
         res = next_pc;
         next_pc = pc + (arch_t)imm;
         break;
 
-
       case 0x67:
         res = next_pc;
         next_pc = (src1 + (arch_t)imm) & (arch_t)~1;
         break;
 
-
       case 0x37:
         res = (arch_t)imm;
         break;
-
 
       case 0x17:
         res = pc + (arch_t)imm;
         break;
 
       default:
-        printf("Illegal instruction at PC=%08x (opcode=%02x)\n",
-               (uint32_t)pc, (unsigned)opcode);
+        printf("Illegal instruction at PC=%08x (opcode=%02x)\n", (uint32_t)pc, (unsigned)opcode);
         return;
     }
 
 
     if ((opcode != 0x23) && (opcode != 0x63) && (rd != 0)) {
       reg_file[rd] = res;
-
-
-
     }
 
     pc = next_pc;

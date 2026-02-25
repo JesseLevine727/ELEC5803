@@ -1,12 +1,23 @@
 --- !Passed
 Pass:            reflow-pragma-preprocess
 Name:            PragmaResourceTopArg
-DebugLoc:        { File: riscv32i.cc, Line: 19, Column: 9 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 17, Column: 9 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          'The resource pragma (bind_storage) on top-level function argument, in '''
   - Pragma:          call
-    DebugLoc:        { File: riscv32i.cc, Line: 19, Column: 9 }
+    DebugLoc:        { File: riscv32i.cc, Line: 17, Column: 9 }
+  - String:          ''' is unsupported, please use INTERFACE pragma instead'
+...
+--- !Passed
+Pass:            reflow-pragma-preprocess
+Name:            PragmaResourceTopArg
+DebugLoc:        { File: riscv32i.cc, Line: 18, Column: 9 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
+Args:            
+  - String:          'The resource pragma (bind_storage) on top-level function argument, in '''
+  - Pragma:          call
+    DebugLoc:        { File: riscv32i.cc, Line: 18, Column: 9 }
   - String:          ''' is unsupported, please use INTERFACE pragma instead'
 ...
 --- !Missed
@@ -14,8 +25,8 @@ Pass:            inline
 Name:            NeverInline
 Function:        apatb_cpu_ir
 Args:            
-  - Callee:          'cpu(ap_uint<32>*, ap_uint<4> volatile*)'
-    DebugLoc:        { File: riscv32i.cc, Line: 16, Column: 0 }
+  - Callee:          'cpu(ap_uint<32>*, ap_uint<32>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 14, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_cpu_ir
   - String:          ' because it should never be inlined (cost=never)'
@@ -23,13 +34,13 @@ Args:
 --- !Failure
 Pass:            reflow-occurrence-inference
 Name:            NonComputableLoopForm
-DebugLoc:        { File: riscv32i.cc, Line: 33, Column: 3 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 31, Column: 3 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          'Could not analyze occurrence information within '''
   - LoopName:        PROGRAM_LOOP
   - String:          '''('
-  - LoopLoc:         'riscv32i.cc:33:3'
+  - LoopLoc:         'riscv32i.cc:31:3'
   - String:          ') . Requires loop in simplify form and with single exit.'
 ...
 --- !HLSReportInfo
@@ -37,16 +48,16 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_24_1
+  - LoopName:        VITIS_LOOP_22_1
   - String:          '> at '
-  - LoopLoc:         'riscv32i.cc:24:20'
+  - LoopLoc:         'riscv32i.cc:22:20'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: riscv32i.cc, Line: 21, Column: 9 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 20, Column: 9 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
@@ -56,18 +67,18 @@ Args:
   - String:          ' '
   - PragmaFunction:  cpu
   - String:          ' '
-  - varLoc:          'riscv32i.cc:21:9'
+  - varLoc:          'riscv32i.cc:20:9'
   - String:          ' '
-  - PragmaSrcLoc:    'riscv32i.cc:34:9'
-    DebugLoc:        { File: riscv32i.cc, Line: 34, Column: 9 }
+  - PragmaSrcLoc:    'riscv32i.cc:32:9'
+    DebugLoc:        { File: riscv32i.cc, Line: 32, Column: 9 }
   - VarName:         reg_file
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: riscv32i.cc, Line: 34, Column: 9 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 32, Column: 9 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -85,8 +96,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: riscv32i.cc, Line: 21, Column: 9 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 20, Column: 9 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -103,24 +114,24 @@ Args:
 --- !Failure
 Pass:            reflow-array-partition
 Name:            WarnArrayXFORMOnIndexCast
-DebugLoc:        { File: riscv32i.cc, Line: 106, Column: 19 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 104, Column: 19 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
 ...
 --- !Failure
 Pass:            reflow-array-partition
 Name:            WarnArrayXFORMOnIndexCast
-DebugLoc:        { File: riscv32i.cc, Line: 107, Column: 19 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 105, Column: 19 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
 ...
 --- !Failure
 Pass:            reflow-array-partition
 Name:            WarnArrayXFORMOnIndexCast
-DebugLoc:        { File: riscv32i.cc, Line: 300, Column: 7 }
-Function:        _Z3cpuP7ap_uintILi32EEPVS_ILi4EE
+DebugLoc:        { File: riscv32i.cc, Line: 255, Column: 7 }
+Function:        _Z3cpuP7ap_uintILi32EES1_PVS_ILi4EE
 Args:            
   - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
 ...

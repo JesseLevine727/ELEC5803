@@ -59864,7 +59864,8 @@ typedef ap_uint<7> opcode_t;
 typedef ap_uint<4> strb_t;
 
 
-void cpu(arch_t*, volatile strb_t*);
+
+void cpu(arch_t imem[(1 << 16)], arch_t dmem[(1 << 16)], volatile strb_t* pstrb);
 # 4 "/home/elfo/Documents/ELEC5803/extendo/tb_attn1q_N8_D8_naive.cc" 2
 
 
@@ -59912,16 +59913,19 @@ static void init_qkv_simple(arch_t mem[(1 << 16)]) {
 
 int main(void)
 {
-    arch_t mem[(1 << 16)] = {0};
+    arch_t imem[(1 << 16)] = {0};
+    arch_t dmem[(1 << 16)] = {0};
 
     ap_uint<4> wstrb = 0;
     strb_t *pstrb = &wstrb;
 
-    load_hex_words("attn1q_N8_D8_naive.txt", mem);
 
-    init_qkv_simple(mem);
+    load_hex_words("attn1q_N8_D8_naive.txt", imem);
 
-    cpu(mem, pstrb);
+
+    init_qkv_simple(dmem);
+
+    cpu(imem, dmem, pstrb);
 
 
     printf("\nScores (first row only):\n");
@@ -59929,10 +59933,9 @@ int main(void)
 
     int printN = (2 < 8) ? 2 : 8;
     for (int k = 0; k < printN; k++) {
-        double s = ((int32_t)mem[sb + k]) / 65536.0;
+        double s = ((int32_t)dmem[sb + k]) / 65536.0;
         printf("  s[0,%d] = %f\n", k, s);
     }
-    if (2 > printN) printf("  ... (%d more)\n", 2 -printN);
 
 
     printf("\nSoftmax (first row):\n");
@@ -59940,7 +59943,7 @@ int main(void)
     double psum = 0.0;
 
     for (int k = 0; k < printN; k++) {
-        double p = ((int32_t)mem[pb + k]) / 65536.0;
+        double p = ((int32_t)dmem[pb + k]) / 65536.0;
         psum += p;
         printf("  p[0,%d] = %f\n", k, p);
     }
@@ -59951,15 +59954,15 @@ int main(void)
     int ob = ((0xA000 + 2*2*4) + 2*2*4) >> 2;
 
     for (int j = 0; j < 8; j++) {
-        double x = ((int32_t)mem[ob + j]) / 65536.0;
+        double x = ((int32_t)dmem[ob + j]) / 65536.0;
         printf("  out[0,%d] = %f\n", j, x);
     }
 
 
     int db = (((0xA000 + 2*2*4) + 2*2*4) + 2*8*4) >> 2;
     printf("\nDBG: N=%d D=%d\n",
-        (int32_t)mem[db+0],
-        (int32_t)mem[db+1]
+        (int32_t)dmem[db+0],
+        (int32_t)dmem[db+1]
     );
 
     return 0;

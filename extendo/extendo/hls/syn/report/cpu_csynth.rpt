@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'cpu'
 ================================================================
-* Date:           Wed Feb 25 12:20:59 2026
+* Date:           Wed Feb 25 14:02:22 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        extendo
@@ -20,7 +20,7 @@
     +--------+----------+-----------+------------+
     |  Clock |  Target  | Estimated | Uncertainty|
     +--------+----------+-----------+------------+
-    |ap_clk  |  10.00 ns|  15.980 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  14.698 ns|     2.70 ns|
     +--------+----------+-----------+------------+
 
 + Latency: 
@@ -38,8 +38,8 @@
         |                                         |                              |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
         |                 Instance                |            Module            |   min   |   max   |    min   |    max   | min | max |                      Type                      |
         +-----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
-        |grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152  |cpu_Pipeline_VITIS_LOOP_24_1  |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_cpu_Pipeline_PROGRAM_LOOP_fu_187     |cpu_Pipeline_PROGRAM_LOOP     |        ?|        ?|         ?|         ?|    ?|    ?|                                              no|
+        |grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154  |cpu_Pipeline_VITIS_LOOP_22_1  |       34|       34|  0.340 us|  0.340 us|   33|   33|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_cpu_Pipeline_PROGRAM_LOOP_fu_189     |cpu_Pipeline_PROGRAM_LOOP     |        ?|        ?|         ?|         ?|    ?|    ?|                                              no|
         +-----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
         * Loop: 
@@ -57,12 +57,12 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       -|      -|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|   12|    1983|   2968|    -|
+|Instance         |        -|   12|    2031|   2962|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|     25|    -|
 |Register         |        -|    -|       6|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|   12|    1989|   2993|    0|
+|Total            |        0|   12|    2037|   2987|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -74,10 +74,10 @@
     +-----------------------------------------+------------------------------+---------+----+------+------+-----+
     |                 Instance                |            Module            | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +-----------------------------------------+------------------------------+---------+----+------+------+-----+
-    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_187     |cpu_Pipeline_PROGRAM_LOOP     |        0|  12|  1975|  2913|    0|
-    |grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152  |cpu_Pipeline_VITIS_LOOP_24_1  |        0|   0|     8|    55|    0|
+    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_189     |cpu_Pipeline_PROGRAM_LOOP     |        0|  12|  2023|  2907|    0|
+    |grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154  |cpu_Pipeline_VITIS_LOOP_22_1  |        0|   0|     8|    55|    0|
     +-----------------------------------------+------------------------------+---------+----+------+------+-----+
-    |Total                                    |                              |        0|  12|  1983|  2968|    0|
+    |Total                                    |                              |        0|  12|  2031|  2962|    0|
     +-----------------------------------------+------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -106,8 +106,8 @@
     |                         Name                         | FF| LUT| Bits| Const Bits|
     +------------------------------------------------------+---+----+-----+-----------+
     |ap_CS_fsm                                             |  4|   0|    4|          0|
-    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_187_ap_start_reg     |  1|   0|    1|          0|
-    |grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152_ap_start_reg  |  1|   0|    1|          0|
+    |grp_cpu_Pipeline_PROGRAM_LOOP_fu_189_ap_start_reg     |  1|   0|    1|          0|
+    |grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154_ap_start_reg  |  1|   0|    1|          0|
     +------------------------------------------------------+---+----+-----+-----------+
     |Total                                                 |  6|   0|    6|          0|
     +------------------------------------------------------+---+----+-----+-----------+
@@ -118,20 +118,23 @@
 == Interface
 ================================================================
 * Summary: 
-+--------------+-----+-----+------------+--------------+--------------+
-|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+--------------+-----+-----+------------+--------------+--------------+
-|ap_clk        |   in|    1|  ap_ctrl_hs|           cpu|  return value|
-|ap_rst        |   in|    1|  ap_ctrl_hs|           cpu|  return value|
-|ap_start      |   in|    1|  ap_ctrl_hs|           cpu|  return value|
-|ap_done       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
-|ap_idle       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
-|ap_ready      |  out|    1|  ap_ctrl_hs|           cpu|  return value|
-|mem_address0  |  out|   16|   ap_memory|           mem|         array|
-|mem_ce0       |  out|    1|   ap_memory|           mem|         array|
-|mem_we0       |  out|    1|   ap_memory|           mem|         array|
-|mem_d0        |  out|   32|   ap_memory|           mem|         array|
-|mem_q0        |   in|   32|   ap_memory|           mem|         array|
-|pstrb         |   in|    4|     ap_none|         pstrb|       pointer|
-+--------------+-----+-----+------------+--------------+--------------+
++---------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------+-----+-----+------------+--------------+--------------+
+|ap_clk         |   in|    1|  ap_ctrl_hs|           cpu|  return value|
+|ap_rst         |   in|    1|  ap_ctrl_hs|           cpu|  return value|
+|ap_start       |   in|    1|  ap_ctrl_hs|           cpu|  return value|
+|ap_done        |  out|    1|  ap_ctrl_hs|           cpu|  return value|
+|ap_idle        |  out|    1|  ap_ctrl_hs|           cpu|  return value|
+|ap_ready       |  out|    1|  ap_ctrl_hs|           cpu|  return value|
+|imem_address0  |  out|   16|   ap_memory|          imem|         array|
+|imem_ce0       |  out|    1|   ap_memory|          imem|         array|
+|imem_q0        |   in|   32|   ap_memory|          imem|         array|
+|dmem_address0  |  out|   16|   ap_memory|          dmem|         array|
+|dmem_ce0       |  out|    1|   ap_memory|          dmem|         array|
+|dmem_we0       |  out|    1|   ap_memory|          dmem|         array|
+|dmem_d0        |  out|   32|   ap_memory|          dmem|         array|
+|dmem_q0        |   in|   32|   ap_memory|          dmem|         array|
+|pstrb          |   in|    4|     ap_none|         pstrb|       pointer|
++---------------+-----+-----+------------+--------------+--------------+
 

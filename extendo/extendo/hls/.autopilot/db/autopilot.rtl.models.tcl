@@ -1,5 +1,5 @@
 set SynModuleInfo {
-  {SRCNAME cpu_Pipeline_VITIS_LOOP_24_1 MODELNAME cpu_Pipeline_VITIS_LOOP_24_1 RTLNAME cpu_cpu_Pipeline_VITIS_LOOP_24_1
+  {SRCNAME cpu_Pipeline_VITIS_LOOP_22_1 MODELNAME cpu_Pipeline_VITIS_LOOP_22_1 RTLNAME cpu_cpu_Pipeline_VITIS_LOOP_22_1
     SUBMODULES {
       {MODELNAME cpu_flow_control_loop_pipe_sequential_init RTLNAME cpu_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME cpu_flow_control_loop_pipe_sequential_init_U}
     }

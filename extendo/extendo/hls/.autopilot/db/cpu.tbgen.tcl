@@ -18,19 +18,22 @@ set cdfgNum 5
 set C_modelName {cpu}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict mem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict imem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict dmem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
-	{ mem int 32 regular {array 65536 { 2 3 } 1 1 }  }
+	{ imem int 32 regular {array 65536 { 1 3 } 1 1 }  }
+	{ dmem int 32 regular {array 65536 { 2 3 } 1 1 }  }
 	{ pstrb int 4 unused {pointer 0}  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "mem", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE"} , 
+	{ "Name" : "imem", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "dmem", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE"} , 
  	{ "Name" : "pstrb", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
-set portNum 12
+set portNum 15
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -38,12 +41,15 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ mem_address0 sc_out sc_lv 16 signal 0 } 
-	{ mem_ce0 sc_out sc_logic 1 signal 0 } 
-	{ mem_we0 sc_out sc_logic 1 signal 0 } 
-	{ mem_d0 sc_out sc_lv 32 signal 0 } 
-	{ mem_q0 sc_in sc_lv 32 signal 0 } 
-	{ pstrb sc_in sc_lv 4 signal 1 } 
+	{ imem_address0 sc_out sc_lv 16 signal 0 } 
+	{ imem_ce0 sc_out sc_logic 1 signal 0 } 
+	{ imem_q0 sc_in sc_lv 32 signal 0 } 
+	{ dmem_address0 sc_out sc_lv 16 signal 1 } 
+	{ dmem_ce0 sc_out sc_logic 1 signal 1 } 
+	{ dmem_we0 sc_out sc_logic 1 signal 1 } 
+	{ dmem_d0 sc_out sc_lv 32 signal 1 } 
+	{ dmem_q0 sc_in sc_lv 32 signal 1 } 
+	{ pstrb sc_in sc_lv 4 signal 2 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -52,18 +58,22 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "mem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "mem", "role": "address0" }} , 
- 	{ "name": "mem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mem", "role": "ce0" }} , 
- 	{ "name": "mem_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mem", "role": "we0" }} , 
- 	{ "name": "mem_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mem", "role": "d0" }} , 
- 	{ "name": "mem_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mem", "role": "q0" }} , 
+ 	{ "name": "imem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "imem", "role": "address0" }} , 
+ 	{ "name": "imem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "imem", "role": "ce0" }} , 
+ 	{ "name": "imem_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "imem", "role": "q0" }} , 
+ 	{ "name": "dmem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "dmem", "role": "address0" }} , 
+ 	{ "name": "dmem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dmem", "role": "ce0" }} , 
+ 	{ "name": "dmem_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dmem", "role": "we0" }} , 
+ 	{ "name": "dmem_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "dmem", "role": "d0" }} , 
+ 	{ "name": "dmem_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "dmem", "role": "q0" }} , 
  	{ "name": "pstrb", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "pstrb", "role": "default" }}  ]}
 
 set ArgLastReadFirstWriteLatency {
 	cpu {
-		mem {Type IO LastRead 2 FirstWrite 2}
+		imem {Type I LastRead 1 FirstWrite -1}
+		dmem {Type IO LastRead 2 FirstWrite 3}
 		pstrb {Type I LastRead -1 FirstWrite -1}}
-	cpu_Pipeline_VITIS_LOOP_24_1 {
+	cpu_Pipeline_VITIS_LOOP_22_1 {
 		reg_file_30_out {Type O LastRead -1 FirstWrite 0}
 		reg_file_29_out {Type O LastRead -1 FirstWrite 0}
 		reg_file_28_out {Type O LastRead -1 FirstWrite 0}
@@ -127,7 +137,8 @@ set ArgLastReadFirstWriteLatency {
 		reg_file_2_reload {Type I LastRead 0 FirstWrite -1}
 		reg_file_1_reload {Type I LastRead 0 FirstWrite -1}
 		reg_file_reload {Type I LastRead 0 FirstWrite -1}
-		mem {Type IO LastRead 2 FirstWrite 2}}}
+		imem {Type I LastRead 1 FirstWrite -1}
+		dmem {Type IO LastRead 2 FirstWrite 3}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -140,7 +151,8 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	mem { ap_memory {  { mem_address0 mem_address 1 16 }  { mem_ce0 mem_ce 1 1 }  { mem_we0 mem_we 1 1 }  { mem_d0 mem_din 1 32 }  { mem_q0 mem_dout 0 32 } } }
+	imem { ap_memory {  { imem_address0 mem_address 1 16 }  { imem_ce0 mem_ce 1 1 }  { imem_q0 mem_dout 0 32 } } }
+	dmem { ap_memory {  { dmem_address0 mem_address 1 16 }  { dmem_ce0 mem_ce 1 1 }  { dmem_we0 mem_we 1 1 }  { dmem_d0 mem_din 1 32 }  { dmem_q0 mem_dout 0 32 } } }
 	pstrb { ap_none {  { pstrb in_data 0 4 } } }
 }
 

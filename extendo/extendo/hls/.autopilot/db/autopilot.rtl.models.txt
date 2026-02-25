@@ -3,6 +3,6 @@ cpu_mul_32ns_32ns_64_2_1
 cpu_mul_32ns_32s_64_2_1
 cpu_mul_32s_32s_64_2_1
 cpu_sparsemux_65_5_32_1_1
-cpu_Pipeline_VITIS_LOOP_24_1
+cpu_Pipeline_VITIS_LOOP_22_1
 cpu_Pipeline_PROGRAM_LOOP
 cpu

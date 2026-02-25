@@ -16,12 +16,15 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "mem", "Type" : "Memory", "Direction" : "IO",
+			{"Name" : "imem", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_cpu_Pipeline_PROGRAM_LOOP_fu_187", "Port" : "mem", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_cpu_Pipeline_PROGRAM_LOOP_fu_189", "Port" : "imem", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "dmem", "Type" : "Memory", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "grp_cpu_Pipeline_PROGRAM_LOOP_fu_189", "Port" : "dmem", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "pstrb", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "cpu_Pipeline_VITIS_LOOP_24_1",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "cpu_Pipeline_VITIS_LOOP_22_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -67,10 +70,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "reg_file_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "reg_file_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_24_1", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_22_1", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_187", "Parent" : "0", "Child" : ["4", "5", "6", "7", "8"],
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_VITIS_LOOP_22_1_fu_154.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_189", "Parent" : "0", "Child" : ["4", "5", "6", "7", "8"],
 		"CDFG" : "cpu_Pipeline_PROGRAM_LOOP",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -116,12 +119,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "reg_file_2_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "reg_file_1_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "reg_file_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "mem", "Type" : "Memory", "Direction" : "IO"}],
+			{"Name" : "imem", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "dmem", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "PROGRAM_LOOP", "PipelineType" : "pipeline",
 				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "PreState" : ["ap_ST_fsm_state1"], "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "PostState" : ["ap_ST_fsm_state5", "ap_ST_fsm_state6"]}}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_187.mul_32ns_32ns_64_2_1_U32", "Parent" : "3"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_187.mul_32ns_32s_64_2_1_U33", "Parent" : "3"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_187.mul_32s_32s_64_2_1_U34", "Parent" : "3"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_187.sparsemux_65_5_32_1_1_U35", "Parent" : "3"},
-	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_187.sparsemux_65_5_32_1_1_U36", "Parent" : "3"}]}
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_189.mul_32ns_32ns_64_2_1_U32", "Parent" : "3"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_189.mul_32ns_32s_64_2_1_U33", "Parent" : "3"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_189.mul_32s_32s_64_2_1_U34", "Parent" : "3"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_189.sparsemux_65_5_32_1_1_U35", "Parent" : "3"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_cpu_Pipeline_PROGRAM_LOOP_fu_189.sparsemux_65_5_32_1_1_U36", "Parent" : "3"}]}

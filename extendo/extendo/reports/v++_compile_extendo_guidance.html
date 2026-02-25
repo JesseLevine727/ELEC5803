@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2025.1 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Wed Feb 25 12:21:00 2026</td></tr>
+<tr><td><b>Date</b></td><td>Wed Feb 25 14:02:22 2026</td></tr>
 <tr><td><b>Host</b></td><td>gondor running 64-bit Ubuntu 24.04.3 LTS</td></tr>
 <tr><td><b>Command</b></td><td>/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/elfo/Documents/ELEC5803/extendo/hls_config.cfg --work_dir extendo </td></tr>
 </table></center><br>
@@ -3434,13 +3434,13 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">6</td>
+<td align="left">4</td>
 <td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
+<td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.cpu.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+<td align="left">Estimated clock period (14.698 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3451,29 +3451,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.cpu.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_24_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.cpu.Kernel</td>
-<td align="left">Estimated clock period (15.980 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.cpu.Kernel</td>
-<td align="left">Cannot meet target clock period from 'load' operation 32 bit ('insn', riscv32i.cc:52) on array 'mem' to 'store' operation 0 bit ('mem_addr_2_write_ln245', riscv32i.cc:245) of variable 'src2', riscv32i.cc:107 on array 'mem' (combination delay: 15.9804 ns) to honor II or Latency constraint in region 'PROGRAM_LOOP'.
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_22_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3484,7 +3462,18 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.cpu.Kernel</td>
-<td align="left">**** Estimated Fmax: 62.58 MHz
+<td align="left">**** Estimated Fmax: 68.04 MHz
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Kernel</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.cpu.Kernel</td>
+<td align="left">Cannot meet target clock period from 'load' operation 32 bit ('insn', riscv32i.cc:50) on array 'imem' to 'store' operation 0 bit ('pc_write_ln27', riscv32i.cc:27) of variable 'next_pc', riscv32i.cc:226 on local variable 'pc', riscv32i.cc:27 (combination delay: 14.6981 ns) to honor II or Latency constraint in region 'PROGRAM_LOOP'.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3496,15 +3485,26 @@ window.onload = function () { addSorting(); }
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.cpu.Kernel</td>
 <td align="left">The critical path in module 'cpu_Pipeline_PROGRAM_LOOP' consists of the following:
-	'load' operation 32 bit ('insn', riscv32i.cc:52) on array 'mem' [113]  (3.254 ns)
-	multiplexor before 'phi' operation 32 bit ('imm') with incoming values : ('sext_ln73', riscv32i.cc:73) ('sext_ln76', riscv32i.cc:76) ('sext_ln80', riscv32i.cc:80) ('sext_ln84', riscv32i.cc:84) ('immU', riscv32i.cc:86) [150]  (2.065 ns)
-	multiplexor before 'phi' operation 32 bit ('imm') with incoming values : ('sext_ln73', riscv32i.cc:73) ('sext_ln76', riscv32i.cc:76) ('sext_ln80', riscv32i.cc:80) ('sext_ln84', riscv32i.cc:84) ('immU', riscv32i.cc:86) [150]  (2.065 ns)
-	'phi' operation 32 bit ('imm') with incoming values : ('sext_ln73', riscv32i.cc:73) ('sext_ln76', riscv32i.cc:76) ('sext_ln80', riscv32i.cc:80) ('sext_ln84', riscv32i.cc:84) ('immU', riscv32i.cc:86) [150]  (0.000 ns)
-	'add' operation 32 bit ('addr', riscv32i.cc:234) [201]  (2.552 ns)
-	'icmp' operation 1 bit ('icmp_ln240', riscv32i.cc:240) [206]  (1.812 ns)
-	'or' operation 1 bit ('or_ln236', riscv32i.cc:236) [207]  (0.978 ns)
-	'store' operation 0 bit ('mem_addr_2_write_ln245', riscv32i.cc:245) of variable 'src2', riscv32i.cc:107 on array 'mem' [212]  (3.254 ns)
+	'load' operation 32 bit ('insn', riscv32i.cc:50) on array 'imem' [115]  (3.254 ns)
+	'sparsemux' operation 32 bit ('src2', riscv32i.cc:105) [155]  (3.205 ns)
+	'icmp' operation 1 bit ('icmp_ln223', riscv32i.cc:223) [174]  (2.552 ns)
+	'xor' operation 1 bit ('take', riscv32i.cc:223) [175]  (0.978 ns)
+	multiplexor before 'phi' operation 1 bit ('take') with incoming values : ('take', riscv32i.cc:223) ('take', riscv32i.cc:222) ('take', riscv32i.cc:221) ('take', riscv32i.cc:220) ('take', riscv32i.cc:219) ('take', riscv32i.cc:218) [194]  (2.065 ns)
+	'phi' operation 1 bit ('take') with incoming values : ('take', riscv32i.cc:223) ('take', riscv32i.cc:222) ('take', riscv32i.cc:221) ('take', riscv32i.cc:220) ('take', riscv32i.cc:219) ('take', riscv32i.cc:218) [194]  (0.000 ns)
+	'select' operation 32 bit ('next_pc', riscv32i.cc:226) [196]  (0.698 ns)
+	'store' operation 0 bit ('pc_write_ln27', riscv32i.cc:27) of variable 'next_pc', riscv32i.cc:226 on local variable 'pc', riscv32i.cc:27 [197]  (1.946 ns)
 
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.cpu.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

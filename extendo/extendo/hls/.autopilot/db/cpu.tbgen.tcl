@@ -18,22 +18,19 @@ set cdfgNum 5
 set C_modelName {cpu}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict imem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
-dict set ap_memory_interface_dict dmem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict mem { MEM_WIDTH 32 MEM_SIZE 262144 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
-	{ imem int 32 regular {array 65536 { 1 3 } 1 1 }  }
-	{ dmem int 32 regular {array 65536 { 2 3 } 1 1 }  }
+	{ mem int 32 regular {array 65536 { 2 3 } 1 1 }  }
 	{ pstrb int 4 unused {pointer 0}  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "imem", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "dmem", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE"} , 
+	{ "Name" : "mem", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE"} , 
  	{ "Name" : "pstrb", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
-set portNum 15
+set portNum 12
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -41,15 +38,12 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ imem_address0 sc_out sc_lv 16 signal 0 } 
-	{ imem_ce0 sc_out sc_logic 1 signal 0 } 
-	{ imem_q0 sc_in sc_lv 32 signal 0 } 
-	{ dmem_address0 sc_out sc_lv 16 signal 1 } 
-	{ dmem_ce0 sc_out sc_logic 1 signal 1 } 
-	{ dmem_we0 sc_out sc_logic 1 signal 1 } 
-	{ dmem_d0 sc_out sc_lv 32 signal 1 } 
-	{ dmem_q0 sc_in sc_lv 32 signal 1 } 
-	{ pstrb sc_in sc_lv 4 signal 2 } 
+	{ mem_address0 sc_out sc_lv 16 signal 0 } 
+	{ mem_ce0 sc_out sc_logic 1 signal 0 } 
+	{ mem_we0 sc_out sc_logic 1 signal 0 } 
+	{ mem_d0 sc_out sc_lv 32 signal 0 } 
+	{ mem_q0 sc_in sc_lv 32 signal 0 } 
+	{ pstrb sc_in sc_lv 4 signal 1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -58,87 +52,22 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "imem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "imem", "role": "address0" }} , 
- 	{ "name": "imem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "imem", "role": "ce0" }} , 
- 	{ "name": "imem_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "imem", "role": "q0" }} , 
- 	{ "name": "dmem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "dmem", "role": "address0" }} , 
- 	{ "name": "dmem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dmem", "role": "ce0" }} , 
- 	{ "name": "dmem_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "dmem", "role": "we0" }} , 
- 	{ "name": "dmem_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "dmem", "role": "d0" }} , 
- 	{ "name": "dmem_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "dmem", "role": "q0" }} , 
+ 	{ "name": "mem_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "mem", "role": "address0" }} , 
+ 	{ "name": "mem_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mem", "role": "ce0" }} , 
+ 	{ "name": "mem_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "mem", "role": "we0" }} , 
+ 	{ "name": "mem_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mem", "role": "d0" }} , 
+ 	{ "name": "mem_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mem", "role": "q0" }} , 
  	{ "name": "pstrb", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "pstrb", "role": "default" }}  ]}
 
 set ArgLastReadFirstWriteLatency {
 	cpu {
-		imem {Type I LastRead 1 FirstWrite -1}
-		dmem {Type IO LastRead 2 FirstWrite 3}
+		mem {Type IO LastRead 3 FirstWrite 3}
 		pstrb {Type I LastRead -1 FirstWrite -1}}
-	cpu_Pipeline_VITIS_LOOP_22_1 {
-		reg_file_30_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_29_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_28_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_27_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_26_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_25_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_24_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_23_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_22_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_21_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_20_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_19_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_18_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_17_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_16_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_15_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_14_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_13_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_12_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_11_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_10_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_9_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_8_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_7_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_6_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_5_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_4_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_3_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_2_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_1_out {Type O LastRead -1 FirstWrite 0}
-		reg_file_out {Type O LastRead -1 FirstWrite 0}}
+	cpu_Pipeline_VITIS_LOOP_24_1 {
+		reg_file {Type O LastRead -1 FirstWrite 0}}
 	cpu_Pipeline_PROGRAM_LOOP {
-		reg_file_30_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_29_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_28_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_27_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_26_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_25_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_24_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_23_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_22_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_21_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_20_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_19_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_18_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_17_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_16_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_15_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_14_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_13_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_12_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_11_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_10_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_9_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_8_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_7_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_6_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_5_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_4_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_3_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_2_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_1_reload {Type I LastRead 0 FirstWrite -1}
-		reg_file_reload {Type I LastRead 0 FirstWrite -1}
-		imem {Type I LastRead 1 FirstWrite -1}
-		dmem {Type IO LastRead 2 FirstWrite 3}}}
+		reg_file {Type IO LastRead 3 FirstWrite 4}
+		mem {Type IO LastRead 3 FirstWrite 3}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -151,8 +80,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	imem { ap_memory {  { imem_address0 mem_address 1 16 }  { imem_ce0 mem_ce 1 1 }  { imem_q0 mem_dout 0 32 } } }
-	dmem { ap_memory {  { dmem_address0 mem_address 1 16 }  { dmem_ce0 mem_ce 1 1 }  { dmem_we0 mem_we 1 1 }  { dmem_d0 mem_din 1 32 }  { dmem_q0 mem_dout 0 32 } } }
+	mem { ap_memory {  { mem_address0 mem_address 1 16 }  { mem_ce0 mem_ce 1 1 }  { mem_we0 mem_we 1 1 }  { mem_d0 mem_din 1 32 }  { mem_q0 mem_dout 0 32 } } }
 	pstrb { ap_none {  { pstrb in_data 0 4 } } }
 }
 

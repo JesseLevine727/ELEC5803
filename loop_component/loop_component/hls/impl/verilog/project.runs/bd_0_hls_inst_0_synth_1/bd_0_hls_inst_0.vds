@@ -1,0 +1,491 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Feb 25 17:31:24 2026
+# Process ID         : 899818
+# Current directory  : /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line       : vivado -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file           : /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file       : /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
+# Running On         : gondor
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
+# CPU Frequency      : 5598.695 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 64918 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 73508 MB
+# Available Virtual  : 55670 MB
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 39619
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/elfo/Documents/2025.1/Vivado/data/ip'.
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z020clg400-1 -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 899870
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2157.852 ; gain = 440.742 ; free physical = 28851 ; free virtual = 51772
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu.v:9]
+INFO: [Synth 8-6157] synthesizing module 'cpu_cpu_Pipeline_VITIS_LOOP_24_1' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_24_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'cpu_flow_control_loop_pipe_sequential_init' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_flow_control_loop_pipe_sequential_init' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_cpu_Pipeline_VITIS_LOOP_24_1' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_cpu_Pipeline_VITIS_LOOP_24_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'cpu_cpu_Pipeline_PROGRAM_LOOP' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_cpu_Pipeline_PROGRAM_LOOP.v:9]
+INFO: [Synth 8-6157] synthesizing module 'cpu_mul_32ns_32ns_64_2_1' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32ns_32ns_64_2_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_mul_32ns_32ns_64_2_1' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32ns_32ns_64_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpu_mul_32ns_32s_64_2_1' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32ns_32s_64_2_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_mul_32ns_32s_64_2_1' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32ns_32s_64_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpu_mul_32s_32s_64_2_1' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32s_32s_64_2_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_mul_32s_32s_64_2_1' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32s_32s_64_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpu_sparsemux_65_5_32_1_1' [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_sparsemux_65_5_32_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_sparsemux_65_5_32_1_1.v:222]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_sparsemux_65_5_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_sparsemux_65_5_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_cpu_Pipeline_PROGRAM_LOOP' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_cpu_Pipeline_PROGRAM_LOOP.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port reset in module cpu_mul_32s_32s_64_2_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module cpu_mul_32ns_32s_64_2_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module cpu_mul_32ns_32ns_64_2_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[3] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[2] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[1] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[0] in module cpu is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2511.344 ; gain = 794.234 ; free physical = 28467 ; free virtual = 51398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2511.344 ; gain = 794.234 ; free physical = 28467 ; free virtual = 51398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2511.344 ; gain = 794.234 ; free physical = 28467 ; free virtual = 51398
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2511.344 ; gain = 0.000 ; free physical = 28468 ; free virtual = 51398
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/cpu_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/cpu_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2551.363 ; gain = 0.000 ; free physical = 28504 ; free virtual = 51434
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2551.398 ; gain = 0.000 ; free physical = 28503 ; free virtual = 51434
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2551.398 ; gain = 834.289 ; free physical = 28544 ; free virtual = 51478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2559.367 ; gain = 842.258 ; free physical = 28544 ; free virtual = 51478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2559.367 ; gain = 842.258 ; free physical = 28544 ; free virtual = 51478
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2559.367 ; gain = 842.258 ; free physical = 28507 ; free virtual = 51460
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 45    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Multipliers : 
+	              33x33  Multipliers := 1     
+	              32x33  Multipliers := 1     
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 37    
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 47    
+	   3 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6014] Unused sequential element mul_32ns_32s_64_2_1_U33/buff0_reg was removed.  [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32ns_32s_64_2_1.v:60]
+WARNING: [Synth 8-6014] Unused sequential element mul_32ns_32s_64_2_1_U33/buff0_reg was removed.  [/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/1c37/hdl/verilog/cpu_mul_32ns_32s_64_2_1.v:60]
+DSP Report: Generating DSP mul_32s_32s_64_2_1_U34/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/tmp_product.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/tmp_product.
+DSP Report: Generating DSP mul_32s_32s_64_2_1_U34/buff0_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_32s_64_2_1_U34/buff0_reg is absorbed into DSP mul_32s_32s_64_2_1_U34/buff0_reg.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/buff0_reg.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/buff0_reg.
+DSP Report: Generating DSP mul_32s_32s_64_2_1_U34/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/tmp_product.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/tmp_product.
+DSP Report: Generating DSP mul_32s_32s_64_2_1_U34/buff0_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_32s_64_2_1_U34/buff0_reg is absorbed into DSP mul_32s_32s_64_2_1_U34/buff0_reg.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/buff0_reg.
+DSP Report: operator mul_32s_32s_64_2_1_U34/tmp_product is absorbed into DSP mul_32s_32s_64_2_1_U34/buff0_reg.
+DSP Report: Generating DSP mul_32ns_32ns_64_2_1_U32/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/tmp_product.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/tmp_product.
+DSP Report: Generating DSP mul_32ns_32s_64_2_1_U33/buff0_reg, operation Mode is: (C+A*B)'.
+DSP Report: register mul_32ns_32s_64_2_1_U33/buff0_reg is absorbed into DSP mul_32ns_32s_64_2_1_U33/buff0_reg.
+DSP Report: operator mul_32ns_32s_64_2_1_U33/tmp_product is absorbed into DSP mul_32ns_32s_64_2_1_U33/buff0_reg.
+DSP Report: operator mul_32ns_32s_64_2_1_U33/tmp_product is absorbed into DSP mul_32ns_32s_64_2_1_U33/buff0_reg.
+DSP Report: Generating DSP mul_32ns_32ns_64_2_1_U32/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/tmp_product.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/tmp_product.
+DSP Report: Generating DSP mul_32ns_32s_64_2_1_U33/buff0_reg, operation Mode is: (C+A*B)'.
+DSP Report: register mul_32ns_32s_64_2_1_U33/buff0_reg is absorbed into DSP mul_32ns_32s_64_2_1_U33/buff0_reg.
+DSP Report: operator mul_32ns_32s_64_2_1_U33/tmp_product is absorbed into DSP mul_32ns_32s_64_2_1_U33/buff0_reg.
+DSP Report: operator mul_32ns_32s_64_2_1_U33/tmp_product is absorbed into DSP mul_32ns_32s_64_2_1_U33/buff0_reg.
+DSP Report: Generating DSP mul_32ns_32ns_64_2_1_U32/buff0_reg, operation Mode is: (C+A*B)'.
+DSP Report: register mul_32ns_32ns_64_2_1_U32/buff0_reg is absorbed into DSP mul_32ns_32ns_64_2_1_U32/buff0_reg.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/buff0_reg.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/buff0_reg.
+DSP Report: Generating DSP mul_32ns_32ns_64_2_1_U32/buff0_reg, operation Mode is: (C+A*B)'.
+DSP Report: register mul_32ns_32ns_64_2_1_U32/buff0_reg is absorbed into DSP mul_32ns_32ns_64_2_1_U32/buff0_reg.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/buff0_reg.
+DSP Report: operator mul_32ns_32ns_64_2_1_U32/tmp_product is absorbed into DSP mul_32ns_32ns_64_2_1_U32/buff0_reg.
+WARNING: [Synth 8-7129] Port pstrb[3] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[2] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[1] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pstrb[0] in module cpu is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[47]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[46]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[45]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[44]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[43]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[42]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[41]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[40]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[39]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[38]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[37]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[36]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[35]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[34]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[33]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[32]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[31]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[30]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[29]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[28]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[27]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[26]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[25]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[24]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[23]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[22]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[21]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[20]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[19]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[18]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[17]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[47]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[46]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[45]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[44]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[43]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[42]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[41]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[40]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[39]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[38]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[37]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[36]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[35]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[34]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[33]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[32]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[31]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[30]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[29]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[28]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[27]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[26]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[25]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[24]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[23]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[22]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[21]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[20]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[19]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[18]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32s_32s_64_2_1_U34/buff0_reg[17]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[47]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[46]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[45]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[44]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[43]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[42]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[41]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[40]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[39]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[38]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[37]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[36]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[35]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[34]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[33]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[32]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[31]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[30]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[29]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[28]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[27]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[26]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[25]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[24]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[23]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[22]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[21]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[20]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[19]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[18]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[17]) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[47]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[46]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[45]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[44]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[43]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[42]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+WARNING: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U32/buff0_reg[41]__0) is unused and will be removed from module cpu_cpu_Pipeline_PROGRAM_LOOP.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2622.883 ; gain = 905.773 ; free physical = 28487 ; free virtual = 51425
+---------------------------------------------------------------------------------
+ Sort Area is  mul_32s_32s_64_2_1_U34/tmp_product_c : 0 0 : 3101 5312 : Used 1 time 0
+ Sort Area is  mul_32s_32s_64_2_1_U34/tmp_product_c : 0 1 : 2211 5312 : Used 1 time 0
+ Sort Area is  mul_32s_32s_64_2_1_U34/tmp_product_e : 0 0 : 2158 4062 : Used 1 time 0
+ Sort Area is  mul_32s_32s_64_2_1_U34/tmp_product_e : 0 1 : 1904 4062 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U32/tmp_product_0 : 0 0 : 3101 3101 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U32/buff0_reg_2 : 0 0 : 2807 2807 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U32/tmp_product_4 : 0 0 : 2759 2759 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U32/buff0_reg_6 : 0 0 : 2688 2688 : Used 1 time 0
+ Sort Area is  mul_32ns_32s_64_2_1_U33/buff0_reg_8 : 0 0 : 2682 2682 : Used 1 time 0
+ Sort Area is  mul_32ns_32s_64_2_1_U33/buff0_reg_a : 0 0 : 2572 2572 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                   | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'       | 16     | 15     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'       | 18     | 15     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'       | 16     | 16     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'       | 18     | 16     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
++------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2622.883 ; gain = 905.773 ; free physical = 28484 ; free virtual = 51432
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2646.828 ; gain = 929.719 ; free physical = 28481 ; free virtual = 51433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2654.836 ; gain = 937.727 ; free physical = 28497 ; free virtual = 51433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28429 ; free virtual = 51365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28429 ; free virtual = 51365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28428 ; free virtual = 51365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28428 ; free virtual = 51365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28428 ; free virtual = 51365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28428 ; free virtual = 51365
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                   | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B             | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'        | 15     | 15     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'        | 17     | 15     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'        | 15     | 18     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (C+A*B)'        | 17     | 18     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B             | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (PCIN>>17+A*B)' | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cpu_cpu_Pipeline_PROGRAM_LOOP | (PCIN>>17+A*B)' | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    86|
+|2     |DSP48E1 |    10|
+|5     |LUT1    |    12|
+|6     |LUT2    |   236|
+|7     |LUT3    |   195|
+|8     |LUT4    |   297|
+|9     |LUT5    |   375|
+|10    |LUT6    |  1106|
+|11    |MUXF7   |   247|
+|12    |FDRE    |  1458|
+|13    |FDSE    |    42|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.648 ; gain = 1016.539 ; free physical = 28428 ; free virtual = 51365
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 147 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 2733.648 ; gain = 976.484 ; free physical = 28429 ; free virtual = 51365
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 2733.656 ; gain = 1016.539 ; free physical = 28429 ; free virtual = 51365
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2733.656 ; gain = 0.000 ; free physical = 28596 ; free virtual = 51532
+INFO: [Netlist 29-17] Analyzing 343 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.676 ; gain = 0.000 ; free physical = 28609 ; free virtual = 51543
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: bc66c2ec
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 2789.711 ; gain = 1238.430 ; free physical = 28609 ; free virtual = 51543
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2034.569; main = 1917.475; forked = 272.819
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3586.938; main = 2789.680; forked = 964.051
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.688 ; gain = 0.000 ; free physical = 28609 ; free virtual = 51543
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = e621afb266b3de65
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.688 ; gain = 0.000 ; free physical = 28587 ; free virtual = 51525
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 25 17:32:07 2026...

@@ -7,6 +7,5 @@
 // ==============================================================
 
 extern "C" void AESL_WRAP_cpu (
-volatile void* imem,
-volatile void* dmem,
+volatile void* mem,
 volatile void* pstrb);

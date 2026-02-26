@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          286940
+        Offset:          286942
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          287406
+        Offset:          287408
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          287873
+        Offset:          287875
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,21 +34,21 @@ Diagnostics:
     FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_fixed_base.h
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          582703
+        Offset:          582705
         Length:          0
         ReplacementText: 'VITIS_LOOP_1248_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_BRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      17
+    FileOffset:      19
     FilePath:        riscv32i.cc
     Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_22_1:  '
-    FileOffset:      22
+    Message:         'Added loop label VITIS_LOOP_24_1:  '
+    FileOffset:      24
     FilePath:        riscv32i.cc
     Replacements:    
       - FilePath:        /home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/.autopilot/db/riscv32i.pp.0.cc
-        Offset:          977629
+        Offset:          977631
         Length:          0
-        ReplacementText: 'VITIS_LOOP_22_1: '
+        ReplacementText: 'VITIS_LOOP_24_1: '
 ...

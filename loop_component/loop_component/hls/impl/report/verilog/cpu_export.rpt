@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2025.1
+Project:             loop_component
+Solution:            hls
+Device target:       xc7z020-clg400-1
+Report date:         Wed Feb 25 17:34:13 EST 2026
+
+#=== Post-Implementation Resource usage ===
+SLICE:          850
+LUT:           1948
+FF:            1509
+DSP:             10
+BRAM:             0
+URAM:             0
+LATCH:            0
+SRL:              0
+CLB:              0
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      11.218
+CP achieved post-implementation: 10.866
+Timing not met

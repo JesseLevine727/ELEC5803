@@ -1,0 +1,210 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2025.1</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>11.218</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>11.218</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>11.218</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>-1.218</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>-1.218</SLACK_SYNTH>
+    <TIMING_MET>FALSE</TIMING_MET>
+    <TNS_FINAL>-180.934</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>-180.934</TNS_SYNTH>
+    <WNS_FINAL>-1.218</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>-1.218</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>0</BRAM>
+      <CLB>0</CLB>
+      <DSP>10</DSP>
+      <FF>1500</FF>
+      <LATCH>0</LATCH>
+      <LUT>1979</LUT>
+      <SRL>0</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>280</BRAM>
+      <CLB>0</CLB>
+      <DSP>220</DSP>
+      <FF>106400</FF>
+      <LUT>53200</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="cpu" DISPNAME="inst" RTLNAME="cpu">
+      <SubModules count="2">grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152</SubModules>
+      <Resources DSP="10" FF="1500" LUT="1979"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" DEPTH="1" TYPE="function" MODULENAME="cpu_Pipeline_PROGRAM_LOOP" DISPNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" RTLNAME="cpu_cpu_Pipeline_PROGRAM_LOOP">
+      <SubModules count="3">mul_32ns_32ns_64_2_1_U32 mul_32ns_32s_64_2_1_U33 mul_32s_32s_64_2_1_U34</SubModules>
+      <Resources DSP="10" FF="1486" LUT="1966"/>
+      <LocalResources FF="1434" LUT="1085"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32" DEPTH="2" TYPE="resource" MODULENAME="mul_32ns_32ns_64_2_1" DISPNAME="mul_32ns_32ns_64_2_1_U32" RTLNAME="cpu_mul_32ns_32ns_64_2_1">
+      <Resources DSP="4" FF="18" LUT="642"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="1" LOOP="PROGRAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32ns_32ns_64_2_1_U32" SOURCE="riscv32i.cc:155" STORAGESUBTYPE="" URAM="0" VARIABLE="prod_uu" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_2_1_U33" DEPTH="2" TYPE="resource" MODULENAME="mul_32ns_32s_64_2_1" DISPNAME="mul_32ns_32s_64_2_1_U33" RTLNAME="cpu_mul_32ns_32s_64_2_1">
+      <Resources DSP="2" LUT="86"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="1" LOOP="PROGRAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32ns_32s_64_2_1_U33" SOURCE="riscv32i.cc:164" STORAGESUBTYPE="" URAM="0" VARIABLE="prod_su" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_2_1_U34" DEPTH="2" TYPE="resource" MODULENAME="mul_32s_32s_64_2_1" DISPNAME="mul_32s_32s_64_2_1_U34" RTLNAME="cpu_mul_32s_32s_64_2_1">
+      <Resources DSP="4" FF="34" LUT="153"/>
+      <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="1" LOOP="PROGRAM_LOOP" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_64_2_1_U34" SOURCE="riscv32i.cc:154" STORAGESUBTYPE="" URAM="0" VARIABLE="prod_ss" VISIBLE="true"/>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152" DEPTH="1" TYPE="function" MODULENAME="cpu_Pipeline_VITIS_LOOP_24_1" DISPNAME="grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152" RTLNAME="cpu_cpu_Pipeline_VITIS_LOOP_24_1">
+      <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    </RtlModule>
+    <RtlModule CELL="inst/grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152/flow_control_loop_pipe_sequential_init_U" DEPTH="2" TYPE="rtl" MODULENAME="flow_control_loop_pipe_sequential_init" DISPNAME="flow_control_loop_pipe_sequential_init_U" RTLNAME="cpu_flow_control_loop_pipe_sequential_init"/>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[0]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[10]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[11]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[12]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[13]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[14]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[15]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[16]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[17]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="9.433" DATAPATH_LOGIC_DELAY="5.026" DATAPATH_NET_DELAY="4.407" ENDPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0/C[18]" LOGIC_LEVELS="5" MAX_FANOUT="6" SLACK="-1.218" STARTPOINT_PIN="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]/C">
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="591" MODULE_INSTNAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_9" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT5" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0_i_1" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/mem_d0[2]_INST_0" PRIMITIVE_TYPE="LUT.others.LUT1" FILE_NAME="cpu_cpu_Pipeline_PROGRAM_LOOP.v" LINE_NUMBER="6358" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <CELL NAME="grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_2_1_U32/buff0_reg__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="cpu_mul_32ns_32ns_64_2_1.v" LINE_NUMBER="47" MODULE_INSTNAME="mul_32ns_32ns_64_2_1_U32" IS_FUNCINST="0"/>
+      <MODULE_INSTANCES>grp_cpu_Pipeline_PROGRAM_LOOP_fu_187 mul_32ns_32ns_64_2_1_U32</MODULE_INSTANCES>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/cpu_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/cpu_failfast_synth.rpt"/>
+    <ReportFile TYPE="power" PATH="verilog/report/cpu_power_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/cpu_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/cpu_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/cpu_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/cpu_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Wed Feb 25 17:34:33 EST 2026"/>
+    <item NAME="Version" VALUE="2025.1 (Build 6135595 on May 21 2025)"/>
+    <item NAME="Project" VALUE="loop_component"/>
+    <item NAME="Solution" VALUE="hls (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="zynq"/>
+    <item NAME="Target device" VALUE="xc7z020-clg400-1"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE=""/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

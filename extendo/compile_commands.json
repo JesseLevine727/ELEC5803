@@ -20,8 +20,8 @@
       "-fhls-tb",
       "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
       "-c",
-      "/home/elfo/Documents/ELEC5803/extendo/./tb_attn1q_N8_D8_naive.cc"
+      "/home/elfo/Documents/ELEC5803/extendo/./tb_softmax_naive_scalable.cc"
     ],
-    "file": "/home/elfo/Documents/ELEC5803/extendo/./tb_attn1q_N8_D8_naive.cc"
+    "file": "/home/elfo/Documents/ELEC5803/extendo/./tb_softmax_naive_scalable.cc"
   }
 ]

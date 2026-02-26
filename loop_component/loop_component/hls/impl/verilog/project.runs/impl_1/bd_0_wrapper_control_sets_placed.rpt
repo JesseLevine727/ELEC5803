@@ -1,0 +1,120 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Feb 25 17:33:27 2026
+| Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    42 |
+|    Minimum number of control sets                        |    42 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    44 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    42 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    36 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              58 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              12 |            5 |
+| Yes          | No                    | No                     |             382 |          163 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1048 |          499 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                                Enable Signal                                               |                                      Set/Reset Signal                                     | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_CS_fsm_pp0_stage1                             | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/res_20_reg_5729[24]_i_1_n_0     |                1 |              1 |         1.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_CS_fsm_pp0_stage1                             | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/res_21_reg_5724[27]_i_1_n_0     |                3 |              4 |         1.33 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152/flow_control_loop_pipe_sequential_init_U/E[0] |                                                                                           |                2 |              6 |         3.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_condition_302                                 | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/imm_reg_805[31]_i_1_n_0         |                7 |              9 |         1.29 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_condition_302                                 | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/imm_reg_805[30]_i_1_n_0         |                4 |             11 |         2.75 |
+|  ap_clk      |                                                                                                            | ap_rst                                                                                    |                5 |             12 |         2.40 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/pc_fu_274[31]_i_1_n_0                            | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_NS_fsm1                      |               15 |             31 |         2.07 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_51_reg_583[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_51_reg_583[31]_i_1_n_0 |               15 |             32 |         2.13 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_35_reg_743[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_35_reg_743[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_52_reg_573[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_52_reg_573[31]_i_1_n_0 |               23 |             32 |         1.39 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_53_reg_563[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_53_reg_563[31]_i_1_n_0 |                9 |             32 |         3.56 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_54_reg_553[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_54_reg_553[31]_i_1_n_0 |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_55_reg_543[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_55_reg_543[31]_i_1_n_0 |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_56_reg_533[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_56_reg_533[31]_i_1_n_0 |               15 |             32 |         2.13 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_57_reg_523[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_57_reg_523[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_58_reg_513[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_58_reg_513[31]_i_1_n_0 |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_59_reg_503[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_59_reg_503[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_60_reg_493[31]_i_1_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_NS_fsm1                      |               21 |             32 |         1.52 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_reg_795[31]_i_2_n_0                     | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_reg_795[31]_i_1_n_0    |               20 |             32 |         1.60 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_33_reg_763[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_33_reg_763[31]_i_1_n_0 |               18 |             32 |         1.78 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_CS_fsm_pp0_stage0                             |                                                                                           |               10 |             32 |         3.20 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_32_reg_773[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_32_reg_773[31]_i_1_n_0 |               15 |             32 |         2.13 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_31_reg_783[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_NS_fsm1                      |               18 |             32 |         1.78 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_49_reg_603[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_49_reg_603[31]_i_1_n_0 |               15 |             32 |         2.13 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_34_reg_753[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_34_reg_753[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_36_reg_733[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_36_reg_733[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_37_reg_723[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_37_reg_723[31]_i_1_n_0 |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_38_reg_713[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_38_reg_713[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_39_reg_703[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_39_reg_703[31]_i_1_n_0 |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693[31]_i_1_n_0 |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_41_reg_683[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_41_reg_683[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_42_reg_673[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_42_reg_673[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_43_reg_663[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_43_reg_663[31]_i_1_n_0 |               19 |             32 |         1.68 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_44_reg_653[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_44_reg_653[31]_i_1_n_0 |               17 |             32 |         1.88 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_45_reg_643[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_45_reg_643[31]_i_1_n_0 |               10 |             32 |         3.20 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_46_reg_633[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_46_reg_633[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_47_reg_623[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_47_reg_623[31]_i_1_n_0 |               14 |             32 |         2.29 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_48_reg_613[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_48_reg_613[31]_i_1_n_0 |               16 |             32 |         2.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_50_reg_593[31]_i_2_n_0                  | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_50_reg_593[31]_i_1_n_0 |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_condition_302                                 |                                                                                           |               18 |             47 |         2.61 |
+|  ap_clk      |                                                                                                            |                                                                                           |               20 |             58 |         2.90 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_CS_fsm_pp0_stage1                             |                                                                                           |              133 |            297 |         2.23 |
++--------------+------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

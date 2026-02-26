@@ -243,33 +243,21 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void cpu(Byte<4>*, Byte<4>*, volatile void *);
-extern "C" void apatb_cpu_hw(volatile void * __xlx_apatb_param_imem, volatile void * __xlx_apatb_param_dmem, volatile void * __xlx_apatb_param_pstrb) {
+extern "C" void cpu(Byte<4>*, volatile void *);
+extern "C" void apatb_cpu_hw(volatile void * __xlx_apatb_param_mem, volatile void * __xlx_apatb_param_pstrb) {
 using hls::sim::createStream;
-  // Collect __xlx_imem__tmp_vec
-std::vector<Byte<4>> __xlx_imem__tmp_vec;
+  // Collect __xlx_mem__tmp_vec
+std::vector<Byte<4>> __xlx_mem__tmp_vec;
 for (size_t i = 0; i < 65536; ++i){
-__xlx_imem__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_imem)[i]);
+__xlx_mem__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_mem)[i]);
 }
-  int __xlx_size_param_imem = 65536;
-  int __xlx_offset_param_imem = 0;
-  int __xlx_offset_byte_param_imem = 0*4;
-  // Collect __xlx_dmem__tmp_vec
-std::vector<Byte<4>> __xlx_dmem__tmp_vec;
-for (size_t i = 0; i < 65536; ++i){
-__xlx_dmem__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_dmem)[i]);
-}
-  int __xlx_size_param_dmem = 65536;
-  int __xlx_offset_param_dmem = 0;
-  int __xlx_offset_byte_param_dmem = 0*4;
+  int __xlx_size_param_mem = 65536;
+  int __xlx_offset_param_mem = 0;
+  int __xlx_offset_byte_param_mem = 0*4;
   // DUT call
-  cpu(__xlx_imem__tmp_vec.data(), __xlx_dmem__tmp_vec.data(), __xlx_apatb_param_pstrb);
-// print __xlx_apatb_param_imem
-for (size_t i = 0; i < __xlx_size_param_imem; ++i) {
-((Byte<4>*)__xlx_apatb_param_imem)[i] = __xlx_imem__tmp_vec[__xlx_offset_param_imem+i];
-}
-// print __xlx_apatb_param_dmem
-for (size_t i = 0; i < __xlx_size_param_dmem; ++i) {
-((Byte<4>*)__xlx_apatb_param_dmem)[i] = __xlx_dmem__tmp_vec[__xlx_offset_param_dmem+i];
+  cpu(__xlx_mem__tmp_vec.data(), __xlx_apatb_param_pstrb);
+// print __xlx_apatb_param_mem
+for (size_t i = 0; i < __xlx_size_param_mem; ++i) {
+((Byte<4>*)__xlx_apatb_param_mem)[i] = __xlx_mem__tmp_vec[__xlx_offset_param_mem+i];
 }
 }

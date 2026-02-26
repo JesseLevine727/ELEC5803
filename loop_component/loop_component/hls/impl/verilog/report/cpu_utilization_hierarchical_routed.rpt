@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Feb 25 17:34:11 2026
+| Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/cpu_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------+-----------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                     Instance                     |                     Module                    | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------+-----------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                                     |                                         (top) |       1948 |       1948 |       0 |    0 | 1509 |      0 |      0 |         10 |
+|   bd_0_i                                         |                                          bd_0 |       1948 |       1948 |       0 |    0 | 1509 |      0 |      0 |         10 |
+|     hls_inst                                     |                               bd_0_hls_inst_0 |       1948 |       1948 |       0 |    0 | 1509 |      0 |      0 |         10 |
+|       inst                                       |                           bd_0_hls_inst_0_cpu |       1948 |       1948 |       0 |    0 | 1509 |      0 |      0 |         10 |
+|         grp_cpu_Pipeline_PROGRAM_LOOP_fu_187     | bd_0_hls_inst_0_cpu_cpu_Pipeline_PROGRAM_LOOP |       1935 |       1935 |       0 |    0 | 1495 |      0 |      0 |         10 |
+|           (grp_cpu_Pipeline_PROGRAM_LOOP_fu_187) | bd_0_hls_inst_0_cpu_cpu_Pipeline_PROGRAM_LOOP |       1053 |       1053 |       0 |    0 | 1443 |      0 |      0 |          0 |
+|           mul_32ns_32ns_64_2_1_U32               |      bd_0_hls_inst_0_cpu_mul_32ns_32ns_64_2_1 |        646 |        646 |       0 |    0 |   18 |      0 |      0 |          4 |
+|           mul_32ns_32s_64_2_1_U33                |       bd_0_hls_inst_0_cpu_mul_32ns_32s_64_2_1 |         86 |         86 |       0 |    0 |    0 |      0 |      0 |          2 |
+|           mul_32s_32s_64_2_1_U34                 |        bd_0_hls_inst_0_cpu_mul_32s_32s_64_2_1 |        153 |        153 |       0 |    0 |   34 |      0 |      0 |          4 |
++--------------------------------------------------+-----------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

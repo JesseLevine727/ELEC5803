@@ -1,43 +1,43 @@
 {
     "1": {
-        "name": "cpu_Pipeline_PROGRAM_LOOP",
+        "name": "cpu_Pipeline_VITIS_LOOP_24_1",
         "file": "riscv32i.cc",
-        "fileloc": "14",
-        "instructions": "329",
-        "total_instructions": "329",
+        "fileloc": "24",
+        "instructions": "16",
+        "total_instructions": "16",
         "calls": "",
-        "basicblocks": "85",
-        "memory_accesses": "26",
-        "control_depth": "12",
-        "def_use_depth": "5",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
         "loads": {
-            "L": "1",
-            "T": "2"
+            "L": "1"
         },
         "stores": {
-            "L": "23",
-            "T": "1"
+            "L": "3"
         },
         "loops": {
             "L": "1"
         }
     },
     "2": {
-        "name": "cpu_Pipeline_VITIS_LOOP_22_1",
+        "name": "cpu_Pipeline_PROGRAM_LOOP",
         "file": "riscv32i.cc",
-        "fileloc": "20",
-        "instructions": "170",
-        "total_instructions": "170",
+        "fileloc": "16",
+        "instructions": "216",
+        "total_instructions": "216",
         "calls": "",
-        "basicblocks": "36",
-        "memory_accesses": "33",
-        "control_depth": "2",
-        "def_use_depth": "1",
+        "basicblocks": "56",
+        "memory_accesses": "29",
+        "control_depth": "11",
+        "def_use_depth": "5",
         "loads": {
-            "L": "32"
+            "L": "3",
+            "T": "2"
         },
         "stores": {
-            "L": "33"
+            "L": "24",
+            "T": "1"
         },
         "loops": {
             "L": "1"
@@ -46,16 +46,16 @@
     "0": {
         "name": "cpu",
         "file": "riscv32i.cc",
-        "fileloc": "14",
-        "instructions": "72",
-        "total_instructions": "571",
-        "calls": "2 1",
+        "fileloc": "16",
+        "instructions": "11",
+        "total_instructions": "243",
+        "calls": "1 2",
         "basicblocks": "1",
         "memory_accesses": "0",
         "control_depth": "0",
-        "def_use_depth": "2",
-        "loads": {
-            "L": "31"
+        "def_use_depth": "1",
+        "stores": {
+            "L": "1"
         }
     }
 }

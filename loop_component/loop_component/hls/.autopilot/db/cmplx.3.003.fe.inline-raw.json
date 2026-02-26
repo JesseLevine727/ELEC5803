@@ -5,7 +5,7 @@
     "control_depth": 9,
     "def_use_depth": 16,
     "file": "riscv32i.cc",
-    "fileloc": 14,
+    "fileloc": 16,
     "instructions": 247,
     "loads": {
       "L": 2,

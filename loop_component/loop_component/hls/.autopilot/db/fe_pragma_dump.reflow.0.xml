@@ -141,8 +141,9 @@
 <pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<32, false>(ap_range_ref<32, false> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
-<pragma file="riscv32i.cc" line="16" pragmaType="interface" parentfunction="cpu" mode="ap_none" port="pstrb" name="" register="0"/>
-<pragma file="riscv32i.cc" line="17" pragmaType="bind_storage" parentfunction="cpu" op="666" impl="18" latency="-1" variable="mem"/>
+<pragma file="riscv32i.cc" line="34" pragmaType="pipeline" parentfunction="cpu" off="0" ii="1" rewind="0" style=""/>
+<pragma file="riscv32i.cc" line="18" pragmaType="interface" parentfunction="cpu" mode="ap_none" port="pstrb" name="" register="0"/>
+<pragma file="riscv32i.cc" line="19" pragmaType="bind_storage" parentfunction="cpu" op="666" impl="18" latency="-1" variable="mem"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<7, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
@@ -213,7 +214,7 @@
 <pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="_ZN8ssdm_intILi7ELb0EEC2EDq7_j" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="to_uint" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, false>& ap_int_base<33, false>::operator=<34, true>(ap_int_base<34, true> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="length" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, false>& ap_int_base<33, false>::operator=<34, true>(ap_int_base<34, true> const&)" off="0" region="0" recursive="0"/>
 </pragmas>

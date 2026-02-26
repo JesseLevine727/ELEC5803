@@ -119,7 +119,6 @@ typedef ap_uint<OPCODE_WIDTH> 		opcode_t;
 typedef ap_uint<STRB_WIDTH>			strb_t;
 
 // Simple CPU
-// Harvard CPU (instruction + data memory)
-void cpu(arch_t imem[MEM_SIZE], arch_t dmem[MEM_SIZE], volatile strb_t* pstrb);
+void cpu(arch_t*, volatile strb_t*);
 
 #endif  // RISCV32I_H_

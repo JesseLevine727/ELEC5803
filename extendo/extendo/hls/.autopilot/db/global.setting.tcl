@@ -46,7 +46,7 @@ set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../riscv32i.cc}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog {/home/elfo/Documents/ELEC5803/extendo/tb_attn1q_N8_D8_naive.cc /home/elfo/Documents/ELEC5803/extendo/attn1q_N8_D8_naive.txt} bc {/home/elfo/Documents/ELEC5803/extendo/tb_attn1q_N8_D8_naive.cc /home/elfo/Documents/ELEC5803/extendo/attn1q_N8_D8_naive.txt} sc {/home/elfo/Documents/ELEC5803/extendo/tb_attn1q_N8_D8_naive.cc /home/elfo/Documents/ELEC5803/extendo/attn1q_N8_D8_naive.txt} vhdl {/home/elfo/Documents/ELEC5803/extendo/tb_attn1q_N8_D8_naive.cc /home/elfo/Documents/ELEC5803/extendo/attn1q_N8_D8_naive.txt} c {} cas {/home/elfo/Documents/ELEC5803/extendo/tb_attn1q_N8_D8_naive.cc /home/elfo/Documents/ELEC5803/extendo/attn1q_N8_D8_naive.txt}}
+set TBFiles {verilog {/home/elfo/Documents/ELEC5803/extendo/tb_softmax_naive_scalable.cc /home/elfo/Documents/ELEC5803/extendo/softmax_naive_shift_scalable.txt} bc {/home/elfo/Documents/ELEC5803/extendo/tb_softmax_naive_scalable.cc /home/elfo/Documents/ELEC5803/extendo/softmax_naive_shift_scalable.txt} sc {/home/elfo/Documents/ELEC5803/extendo/tb_softmax_naive_scalable.cc /home/elfo/Documents/ELEC5803/extendo/softmax_naive_shift_scalable.txt} vhdl {/home/elfo/Documents/ELEC5803/extendo/tb_softmax_naive_scalable.cc /home/elfo/Documents/ELEC5803/extendo/softmax_naive_shift_scalable.txt} c {} cas {/home/elfo/Documents/ELEC5803/extendo/tb_softmax_naive_scalable.cc /home/elfo/Documents/ELEC5803/extendo/softmax_naive_shift_scalable.txt}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

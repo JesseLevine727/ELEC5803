@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'cpu'
 ================================================================
-* Date:           Wed Feb 25 14:02:20 2026
+* Date:           Thu Feb 26 11:54:29 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        extendo
@@ -20,7 +20,7 @@
     +--------+----------+-----------+------------+
     |  Clock |  Target  | Estimated | Uncertainty|
     +--------+----------+-----------+------------+
-    |ap_clk  |  10.00 ns|  14.698 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  11.850 ns|     2.70 ns|
     +--------+----------+-----------+------------+
 
 + Latency: 
@@ -65,7 +65,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 4
+* Number of FSM states : 5
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -73,91 +73,33 @@ IsGatedGlobalClock: 0
 1 --> 2 
 2 --> 3 
 3 --> 4 
-4 --> 
+4 --> 5 
+5 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%reg_file_loc = alloca i64 1"   --->   Operation 5 'alloca' 'reg_file_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%reg_file_1_loc = alloca i64 1"   --->   Operation 6 'alloca' 'reg_file_1_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%reg_file_2_loc = alloca i64 1"   --->   Operation 7 'alloca' 'reg_file_2_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%reg_file_3_loc = alloca i64 1"   --->   Operation 8 'alloca' 'reg_file_3_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%reg_file_4_loc = alloca i64 1"   --->   Operation 9 'alloca' 'reg_file_4_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%reg_file_5_loc = alloca i64 1"   --->   Operation 10 'alloca' 'reg_file_5_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%reg_file_6_loc = alloca i64 1"   --->   Operation 11 'alloca' 'reg_file_6_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%reg_file_7_loc = alloca i64 1"   --->   Operation 12 'alloca' 'reg_file_7_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%reg_file_8_loc = alloca i64 1"   --->   Operation 13 'alloca' 'reg_file_8_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%reg_file_9_loc = alloca i64 1"   --->   Operation 14 'alloca' 'reg_file_9_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%reg_file_10_loc = alloca i64 1"   --->   Operation 15 'alloca' 'reg_file_10_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%reg_file_11_loc = alloca i64 1"   --->   Operation 16 'alloca' 'reg_file_11_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%reg_file_12_loc = alloca i64 1"   --->   Operation 17 'alloca' 'reg_file_12_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%reg_file_13_loc = alloca i64 1"   --->   Operation 18 'alloca' 'reg_file_13_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%reg_file_14_loc = alloca i64 1"   --->   Operation 19 'alloca' 'reg_file_14_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%reg_file_15_loc = alloca i64 1"   --->   Operation 20 'alloca' 'reg_file_15_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%reg_file_16_loc = alloca i64 1"   --->   Operation 21 'alloca' 'reg_file_16_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%reg_file_17_loc = alloca i64 1"   --->   Operation 22 'alloca' 'reg_file_17_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%reg_file_18_loc = alloca i64 1"   --->   Operation 23 'alloca' 'reg_file_18_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%reg_file_19_loc = alloca i64 1"   --->   Operation 24 'alloca' 'reg_file_19_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%reg_file_20_loc = alloca i64 1"   --->   Operation 25 'alloca' 'reg_file_20_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%reg_file_21_loc = alloca i64 1"   --->   Operation 26 'alloca' 'reg_file_21_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%reg_file_22_loc = alloca i64 1"   --->   Operation 27 'alloca' 'reg_file_22_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%reg_file_23_loc = alloca i64 1"   --->   Operation 28 'alloca' 'reg_file_23_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%reg_file_24_loc = alloca i64 1"   --->   Operation 29 'alloca' 'reg_file_24_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%reg_file_25_loc = alloca i64 1"   --->   Operation 30 'alloca' 'reg_file_25_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%reg_file_26_loc = alloca i64 1"   --->   Operation 31 'alloca' 'reg_file_26_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%reg_file_27_loc = alloca i64 1"   --->   Operation 32 'alloca' 'reg_file_27_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%reg_file_28_loc = alloca i64 1"   --->   Operation 33 'alloca' 'reg_file_28_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%reg_file_29_loc = alloca i64 1"   --->   Operation 34 'alloca' 'reg_file_29_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%reg_file_30_loc = alloca i64 1"   --->   Operation 35 'alloca' 'reg_file_30_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_22_1, i32 %reg_file_30_loc, i32 %reg_file_29_loc, i32 %reg_file_28_loc, i32 %reg_file_27_loc, i32 %reg_file_26_loc, i32 %reg_file_25_loc, i32 %reg_file_24_loc, i32 %reg_file_23_loc, i32 %reg_file_22_loc, i32 %reg_file_21_loc, i32 %reg_file_20_loc, i32 %reg_file_19_loc, i32 %reg_file_18_loc, i32 %reg_file_17_loc, i32 %reg_file_16_loc, i32 %reg_file_15_loc, i32 %reg_file_14_loc, i32 %reg_file_13_loc, i32 %reg_file_12_loc, i32 %reg_file_11_loc, i32 %reg_file_10_loc, i32 %reg_file_9_loc, i32 %reg_file_8_loc, i32 %reg_file_7_loc, i32 %reg_file_6_loc, i32 %reg_file_5_loc, i32 %reg_file_4_loc, i32 %reg_file_3_loc, i32 %reg_file_2_loc, i32 %reg_file_1_loc, i32 %reg_file_loc"   --->   Operation 36 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%reg_file = alloca i64 1" [riscv32i.cc:21]   --->   Operation 6 'alloca' 'reg_file' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_24_1, i32 %reg_file"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 2 <SV = 1> <Delay = 5.00>
-ST_2 : Operation 37 [1/2] (5.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_22_1, i32 %reg_file_30_loc, i32 %reg_file_29_loc, i32 %reg_file_28_loc, i32 %reg_file_27_loc, i32 %reg_file_26_loc, i32 %reg_file_25_loc, i32 %reg_file_24_loc, i32 %reg_file_23_loc, i32 %reg_file_22_loc, i32 %reg_file_21_loc, i32 %reg_file_20_loc, i32 %reg_file_19_loc, i32 %reg_file_18_loc, i32 %reg_file_17_loc, i32 %reg_file_16_loc, i32 %reg_file_15_loc, i32 %reg_file_14_loc, i32 %reg_file_13_loc, i32 %reg_file_12_loc, i32 %reg_file_11_loc, i32 %reg_file_10_loc, i32 %reg_file_9_loc, i32 %reg_file_8_loc, i32 %reg_file_7_loc, i32 %reg_file_6_loc, i32 %reg_file_5_loc, i32 %reg_file_4_loc, i32 %reg_file_3_loc, i32 %reg_file_2_loc, i32 %reg_file_1_loc, i32 %reg_file_loc"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 5.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 8 [1/2] (5.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_VITIS_LOOP_24_1, i32 %reg_file"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 5.00> <CoreType = "Generic">   --->   Generic Core
 
-State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%reg_file_30_loc_load = load i32 %reg_file_30_loc"   --->   Operation 38 'load' 'reg_file_30_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%reg_file_29_loc_load = load i32 %reg_file_29_loc"   --->   Operation 39 'load' 'reg_file_29_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%reg_file_28_loc_load = load i32 %reg_file_28_loc"   --->   Operation 40 'load' 'reg_file_28_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%reg_file_27_loc_load = load i32 %reg_file_27_loc"   --->   Operation 41 'load' 'reg_file_27_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%reg_file_26_loc_load = load i32 %reg_file_26_loc"   --->   Operation 42 'load' 'reg_file_26_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%reg_file_25_loc_load = load i32 %reg_file_25_loc"   --->   Operation 43 'load' 'reg_file_25_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%reg_file_24_loc_load = load i32 %reg_file_24_loc"   --->   Operation 44 'load' 'reg_file_24_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%reg_file_23_loc_load = load i32 %reg_file_23_loc"   --->   Operation 45 'load' 'reg_file_23_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%reg_file_22_loc_load = load i32 %reg_file_22_loc"   --->   Operation 46 'load' 'reg_file_22_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%reg_file_21_loc_load = load i32 %reg_file_21_loc"   --->   Operation 47 'load' 'reg_file_21_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%reg_file_20_loc_load = load i32 %reg_file_20_loc"   --->   Operation 48 'load' 'reg_file_20_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%reg_file_19_loc_load = load i32 %reg_file_19_loc"   --->   Operation 49 'load' 'reg_file_19_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%reg_file_18_loc_load = load i32 %reg_file_18_loc"   --->   Operation 50 'load' 'reg_file_18_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%reg_file_17_loc_load = load i32 %reg_file_17_loc"   --->   Operation 51 'load' 'reg_file_17_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%reg_file_16_loc_load = load i32 %reg_file_16_loc"   --->   Operation 52 'load' 'reg_file_16_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%reg_file_15_loc_load = load i32 %reg_file_15_loc"   --->   Operation 53 'load' 'reg_file_15_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%reg_file_14_loc_load = load i32 %reg_file_14_loc"   --->   Operation 54 'load' 'reg_file_14_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%reg_file_13_loc_load = load i32 %reg_file_13_loc"   --->   Operation 55 'load' 'reg_file_13_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%reg_file_12_loc_load = load i32 %reg_file_12_loc"   --->   Operation 56 'load' 'reg_file_12_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%reg_file_11_loc_load = load i32 %reg_file_11_loc"   --->   Operation 57 'load' 'reg_file_11_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%reg_file_10_loc_load = load i32 %reg_file_10_loc"   --->   Operation 58 'load' 'reg_file_10_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%reg_file_9_loc_load = load i32 %reg_file_9_loc"   --->   Operation 59 'load' 'reg_file_9_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%reg_file_8_loc_load = load i32 %reg_file_8_loc"   --->   Operation 60 'load' 'reg_file_8_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%reg_file_7_loc_load = load i32 %reg_file_7_loc"   --->   Operation 61 'load' 'reg_file_7_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%reg_file_6_loc_load = load i32 %reg_file_6_loc"   --->   Operation 62 'load' 'reg_file_6_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%reg_file_5_loc_load = load i32 %reg_file_5_loc"   --->   Operation 63 'load' 'reg_file_5_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%reg_file_4_loc_load = load i32 %reg_file_4_loc"   --->   Operation 64 'load' 'reg_file_4_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%reg_file_3_loc_load = load i32 %reg_file_3_loc"   --->   Operation 65 'load' 'reg_file_3_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%reg_file_2_loc_load = load i32 %reg_file_2_loc"   --->   Operation 66 'load' 'reg_file_2_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%reg_file_1_loc_load = load i32 %reg_file_1_loc"   --->   Operation 67 'load' 'reg_file_1_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%reg_file_loc_load = load i32 %reg_file_loc"   --->   Operation 68 'load' 'reg_file_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 69 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file_30_loc_load, i32 %reg_file_29_loc_load, i32 %reg_file_28_loc_load, i32 %reg_file_27_loc_load, i32 %reg_file_26_loc_load, i32 %reg_file_25_loc_load, i32 %reg_file_24_loc_load, i32 %reg_file_23_loc_load, i32 %reg_file_22_loc_load, i32 %reg_file_21_loc_load, i32 %reg_file_20_loc_load, i32 %reg_file_19_loc_load, i32 %reg_file_18_loc_load, i32 %reg_file_17_loc_load, i32 %reg_file_16_loc_load, i32 %reg_file_15_loc_load, i32 %reg_file_14_loc_load, i32 %reg_file_13_loc_load, i32 %reg_file_12_loc_load, i32 %reg_file_11_loc_load, i32 %reg_file_10_loc_load, i32 %reg_file_9_loc_load, i32 %reg_file_8_loc_load, i32 %reg_file_7_loc_load, i32 %reg_file_6_loc_load, i32 %reg_file_5_loc_load, i32 %reg_file_4_loc_load, i32 %reg_file_3_loc_load, i32 %reg_file_2_loc_load, i32 %reg_file_1_loc_load, i32 %reg_file_loc_load, i32 %imem, i32 %dmem"   --->   Operation 69 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%reg_file_addr = getelementptr i32 %reg_file, i64 0, i64 2" [riscv32i.cc:27]   --->   Operation 9 'getelementptr' 'reg_file_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln27 = store i32 262140, i5 %reg_file_addr" [riscv32i.cc:27]   --->   Operation 10 'store' 'store_ln27' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 32> <RAM>
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%spectopmodule_ln14 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [riscv32i.cc:14]   --->   Operation 70 'spectopmodule' 'spectopmodule_ln14' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %imem, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %imem"   --->   Operation 72 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dmem, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dmem"   --->   Operation 74 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %pstrb"   --->   Operation 75 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %pstrb, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 77 [1/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file_30_loc_load, i32 %reg_file_29_loc_load, i32 %reg_file_28_loc_load, i32 %reg_file_27_loc_load, i32 %reg_file_26_loc_load, i32 %reg_file_25_loc_load, i32 %reg_file_24_loc_load, i32 %reg_file_23_loc_load, i32 %reg_file_22_loc_load, i32 %reg_file_21_loc_load, i32 %reg_file_20_loc_load, i32 %reg_file_19_loc_load, i32 %reg_file_18_loc_load, i32 %reg_file_17_loc_load, i32 %reg_file_16_loc_load, i32 %reg_file_15_loc_load, i32 %reg_file_14_loc_load, i32 %reg_file_13_loc_load, i32 %reg_file_12_loc_load, i32 %reg_file_11_loc_load, i32 %reg_file_10_loc_load, i32 %reg_file_9_loc_load, i32 %reg_file_8_loc_load, i32 %reg_file_7_loc_load, i32 %reg_file_6_loc_load, i32 %reg_file_5_loc_load, i32 %reg_file_4_loc_load, i32 %reg_file_3_loc_load, i32 %reg_file_2_loc_load, i32 %reg_file_1_loc_load, i32 %reg_file_loc_load, i32 %imem, i32 %dmem"   --->   Operation 77 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
-ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln260 = ret" [riscv32i.cc:260]   --->   Operation 78 'ret' 'ret_ln260' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [2/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file, i32 %mem"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 12 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [riscv32i.cc:16]   --->   Operation 12 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %mem, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %mem"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %pstrb"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %pstrb, void @empty_1, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln0 = call void @cpu_Pipeline_PROGRAM_LOOP, i32 %reg_file, i32 %mem"   --->   Operation 17 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln308 = ret" [riscv32i.cc:308]   --->   Operation 18 'ret' 'ret_ln308' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -170,12 +112,17 @@ The critical path consists of the following:
 
  <State 2>: 5.001ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln0') to 'cpu_Pipeline_VITIS_LOOP_22_1' [42]  (5.001 ns)
+	'call' operation 0 bit ('call_ln0') to 'cpu_Pipeline_VITIS_LOOP_24_1' [9]  (5.001 ns)
 
- <State 3>: 0.000ns
+ <State 3>: 3.254ns
 The critical path consists of the following:
+	'getelementptr' operation 5 bit ('reg_file_addr', riscv32i.cc:27) [10]  (0.000 ns)
+	'store' operation 0 bit ('store_ln27', riscv32i.cc:27) of constant 262140 on array 'reg_file', riscv32i.cc:21 [11]  (3.254 ns)
 
  <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 0.000ns
 The critical path consists of the following:
 
 
@@ -191,6 +138,7 @@ N/A
 	State 2
 	State 3
 	State 4
+	State 5
 
 
 ============================================================

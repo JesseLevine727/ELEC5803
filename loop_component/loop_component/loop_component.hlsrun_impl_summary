@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/loop_component.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Feb 25 17:30:53 2026",
+ "timestampMillis": "1772058653793",
+ "buildStep": {
+  "cmdId": "b503a0d6-2221-4084-bae4-6f049cafd147",
+  "name": "vitis-run",
+  "logFile": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/logs/loop_component.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/elfo/Documents/ELEC5803/loop_component/hls_config.cfg --work_dir loop_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/loop_component/hls_config.cfg",
+   "--work_dir",
+   "loop_component"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/loop_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 17:30:53 2026",
+ "timestampMillis": "1772058653793",
+ "status": {
+  "cmdId": "b503a0d6-2221-4084-bae4-6f049cafd147",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655420",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cpu",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/loop_component/riscv32i.cc",
+     "/home/elfo/Documents/ELEC5803/loop_component/riscv32i.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655420",
+ "buildStep": {
+  "cmdId": "6faea785-42af-4ab5-b955-329d8fc584f5",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/loop_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "status": {
+  "cmdId": "6faea785-42af-4ab5-b955-329d8fc584f5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:30:55 2026",
+ "timestampMillis": "1772058655421",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:34:33 2026",
+ "timestampMillis": "1772058873835",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:34:33 2026",
+ "timestampMillis": "1772058873836",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/loop_component/loop_component/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 17:34:33 2026",
+ "timestampMillis": "1772058873836",
+ "status": {
+  "cmdId": "6faea785-42af-4ab5-b955-329d8fc584f5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Feb 25 17:34:33 2026",
+ "timestampMillis": "1772058873886",
+ "status": {
+  "cmdId": "b503a0d6-2221-4084-bae4-6f049cafd147",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:34:33 2026",
+ "timestampMillis": "1772058873887",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Feb 25 17:34:33 2026",
+ "timestampMillis": "1772058873887",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

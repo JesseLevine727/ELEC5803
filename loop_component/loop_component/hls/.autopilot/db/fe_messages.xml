@@ -1,18 +1,33 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5539" msg_severity="WARNING" msg_loc="riscv32i.cc:17:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5539" msg_severity="WARNING" msg_loc="riscv32i.cc:19:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
         <args ClangWarningOption="ignored-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=cpu" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="riscv32i.cc:16:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="riscv32i.cc:18:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=pstrb" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="riscv32i.cc:17:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="riscv32i.cc:19:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=mem core=RAM_1P_BRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-340" msg_severity="WARNING" msg_loc="riscv32i.cc:17:9" msg_body="The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead">
-        <args Pragma="call" Pragma-DebugLoc="File riscv32i.cc Line 17 Column 9"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="riscv32i.cc:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cpu" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-340" msg_severity="WARNING" msg_loc="riscv32i.cc:19:9" msg_body="The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead">
+        <args Pragma="call" Pragma-DebugLoc="File riscv32i.cc Line 19 Column 9"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="riscv32i.cc:21:9" msg_body="array_partition dim=1 type=complete  variable=reg_file 1 cpu riscv32i.cc:21:9 riscv32i.cc:34:9reg_file">
+        <args PragmaFunction="cpu" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=reg_file" PragmaSrcLoc="riscv32i.cc:34:9" PragmaSrcLoc-DebugLoc="File riscv32i.cc Line 34 Column 9" PragmaType="array_partition" VarName="reg_file" varLoc="riscv32i.cc:21:9"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="riscv32i.cc:34:9" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'reg_file' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="reg_file" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="riscv32i.cc:21:9" msg_body="Applying array_partition to 'reg_file': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="reg_file"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="riscv32i.cc:106:19" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="riscv32i.cc:107:19" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="riscv32i.cc:300:7" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
 </xilinx:hls_fe_msgs>
 

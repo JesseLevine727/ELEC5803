@@ -157,6 +157,8 @@ extern "C" {
 
 
 
+
+
 # 1 "./riscv32i.h" 1
 
 
@@ -6471,7 +6473,7 @@ typedef ap_uint<4> strb_t;
 
 
 __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t*, volatile strb_t*);
-# 6 "riscv32i.cc" 2
+# 8 "riscv32i.cc" 2
 # 1 "/usr/include/stdio.h" 1 3 4
 # 28 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -7218,7 +7220,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 983 "/usr/include/stdio.h" 3 4
 }
-# 7 "riscv32i.cc" 2
+# 9 "riscv32i.cc" 2
 
 
 
@@ -7229,7 +7231,7 @@ extern int __overflow (FILE *, int);
 __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 16)], volatile strb_t* pstrb) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=cpu
-# 14 "riscv32i.cc"
+# 16 "riscv32i.cc"
 
 
 #pragma HLS INTERFACE ap_none port=pstrb
@@ -7238,7 +7240,7 @@ __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 16)], volatile s
  arch_t reg_file[(1 << 5)];
 
 
-  VITIS_LOOP_22_1: for (int i = 0; i < (1 << 5); i++)
+  VITIS_LOOP_24_1: for (int i = 0; i < (1 << 5); i++)
     reg_file[i] = 0;
 
   reg_file[2] = ((1 << 16) - 1) * 4;
@@ -7248,8 +7250,16 @@ __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 16)], volatile s
 
 PROGRAM_LOOP:
   while (true) {
-# 40 "riscv32i.cc"
-    if (pc & 0x3) {
+#pragma HLS PIPELINE II=1
+
+
+
+
+
+
+
+
+ if (pc & 0x3) {
       printf("PC misaligned: %08x\n", (uint32_t)pc);
       return;
     }
@@ -7271,7 +7281,7 @@ PROGRAM_LOOP:
     rfi_t rs2 = insn(24,20);
     func3_t func3 = insn(14,12);
     func7_t func7 = insn(31,25);
-# 70 "riscv32i.cc"
+# 73 "riscv32i.cc"
     ap_int<32> immI = ((ap_int<32>)insn) >> 20;
 
     ap_int<12> simm = (insn(31,25), insn(11,7));

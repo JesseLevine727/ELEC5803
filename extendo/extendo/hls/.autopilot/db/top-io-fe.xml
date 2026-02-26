@@ -1,17 +1,12 @@
 <root versionMajor = "1" versionMinor = "5">
   <kernel src_name="cpu" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="imem" src_type="ap_uint&lt;32&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65536">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="imem" hw_bitwidth="32" hw_size_or_depth="65536" hw_kernel_support="false">
+      <arg id="0" access_type="rw" src_name="mem" src_type="ap_uint&lt;32&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65536">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="mem" hw_bitwidth="32" hw_size_or_depth="65536" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
-      <arg id="1" access_type="rw" src_name="dmem" src_type="ap_uint&lt;32&gt;*" src_isptr="1" src_bitwidth="32" src_size_or_depth="65536">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="dmem" hw_bitwidth="32" hw_size_or_depth="65536" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
-        </hw>
-      </arg>
-      <arg id="2" access_type="" src_name="pstrb" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+      <arg id="1" access_type="" src_name="pstrb" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="Register" hw_name="pstrb" hw_bitwidth="4" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>

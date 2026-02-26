@@ -24,19 +24,19 @@
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
 |               | (1) loop simplification     |   224        | loop and instruction simplification                                                    |
 |               | (2) parallelization         |   224        | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         |   223        | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          |   223        | simplification of design after performance transformations                             |
+|               | (3) array partition         |   448        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |   404        | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                |   226        | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           |   234        | high level synthesis optimizations                                                     |
+|               | (1) lowering                |   407        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   415        | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------+----------------+--------------+---------------+--------------+-------------+---------------+
 | Function | Location       | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------+----------------+--------------+---------------+--------------+-------------+---------------+
-|   cpu    | riscv32i.cc:14 | 8,448        | 242           | 224          | 223         | 234           |
+|   cpu    | riscv32i.cc:16 | 8,448        | 242           | 224          | 404         | 415           |
 +----------+----------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings

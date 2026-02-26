@@ -61,13 +61,73 @@ set NewPortList {[
 
 set ArgLastReadFirstWriteLatency {
 	cpu {
-		mem {Type IO LastRead 4 FirstWrite 4}
+		mem {Type IO LastRead 2 FirstWrite 2}
 		pstrb {Type I LastRead -1 FirstWrite -1}}
-	cpu_Pipeline_VITIS_LOOP_22_1 {
-		reg_file {Type O LastRead -1 FirstWrite 0}}
+	cpu_Pipeline_VITIS_LOOP_24_1 {
+		reg_file_30_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_29_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_28_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_27_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_26_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_25_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_24_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_23_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_22_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_21_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_20_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_19_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_18_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_17_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_16_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_15_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_14_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_13_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_12_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_11_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_10_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_9_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_8_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_7_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_6_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_5_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_4_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_3_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_2_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_1_out {Type O LastRead -1 FirstWrite 0}
+		reg_file_out {Type O LastRead -1 FirstWrite 0}}
 	cpu_Pipeline_PROGRAM_LOOP {
-		reg_file {Type IO LastRead 3 FirstWrite 6}
-		mem {Type IO LastRead 4 FirstWrite 4}}}
+		reg_file_30_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_29_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_28_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_27_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_26_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_25_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_24_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_23_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_22_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_21_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_20_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_19_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_18_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_17_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_16_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_15_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_14_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_13_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_12_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_11_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_10_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_9_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_8_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_7_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_6_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_5_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_4_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_3_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_2_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_1_reload {Type I LastRead 0 FirstWrite -1}
+		reg_file_reload {Type I LastRead 0 FirstWrite -1}
+		mem {Type IO LastRead 2 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 

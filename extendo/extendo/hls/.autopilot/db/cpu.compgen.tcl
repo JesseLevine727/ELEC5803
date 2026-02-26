@@ -1,5 +1,10 @@
 # This script segment is generated automatically by AutoPilot
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler cpu_reg_file_RAM_1WNR_AUTO_1R1W BINDTYPE {storage} TYPE {ram_1wnr} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -12,36 +17,17 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 74 \
-    name imem \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename imem \
-    op interface \
-    ports { imem_address0 { O 16 vector } imem_ce0 { O 1 bit } imem_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'imem'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 75 \
-    name dmem \
+    id 11 \
+    name mem \
     reset_level 1 \
     sync_rst true \
     dir IO \
-    corename dmem \
+    corename mem \
     op interface \
-    ports { dmem_address0 { O 16 vector } dmem_ce0 { O 1 bit } dmem_we0 { O 1 bit } dmem_d0 { O 32 vector } dmem_q0 { I 32 vector } } \
+    ports { mem_address0 { O 16 vector } mem_ce0 { O 1 bit } mem_we0 { O 1 bit } mem_d0 { O 32 vector } mem_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'dmem'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'mem'"
 }
 }
 

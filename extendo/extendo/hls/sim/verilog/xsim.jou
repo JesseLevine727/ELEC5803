@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Feb 26 11:55:21 2026
-# Process ID         : 2067994
+# Start of session at: Fri Feb 27 13:17:23 2026
+# Process ID         : 3310175
 # Current directory  : /home/elfo/Documents/ELEC5803/extendo/extendo/hls/sim/verilog
 # Command line       : xsim -source {xsim.dir/cpu/xsim_script.tcl}
 # Log file           : /home/elfo/Documents/ELEC5803/extendo/extendo/hls/sim/verilog/xsim.log
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5579.227 MHz
+# CPU Frequency      : 5534.770 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64918 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73508 MB
-# Available Virtual  : 54552 MB
+# Available Virtual  : 51811 MB
 #-----------------------------------------------------------
 start_gui
 source xsim.dir/cpu/xsim_script.tcl

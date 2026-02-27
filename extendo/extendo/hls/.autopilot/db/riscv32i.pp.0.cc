@@ -7250,16 +7250,16 @@ __attribute__((sdx_kernel("cpu", 0))) void cpu(arch_t mem[(1 << 16)], volatile s
 
 PROGRAM_LOOP:
   while (true) {
-#pragma HLS PIPELINE II=2
+#pragma HLS PIPELINE II=1
+
+
+ printf("\n============================\n");
+    printf("Cycle %u\n", cycle++);
+    printf("PC = %08x\n", (uint32_t)pc);
 
 
 
-
-
-
-
-
- if (pc & 0x3) {
+    if (pc & 0x3) {
       printf("PC misaligned: %08x\n", (uint32_t)pc);
       return;
     }
@@ -7271,7 +7271,7 @@ PROGRAM_LOOP:
     arch_t insn = mem[pc >> 2];
 
 
-
+    printf("INSN = %08x\n", (uint32_t)insn);
 
 
 
@@ -7281,7 +7281,14 @@ PROGRAM_LOOP:
     rfi_t rs2 = insn(24,20);
     func3_t func3 = insn(14,12);
     func7_t func7 = insn(31,25);
-# 73 "riscv32i.cc"
+
+
+    printf("opcode=%02x rd=%d rs1=%d rs2=%d f3=%x f7=%x\n",
+           (unsigned)opcode, (int)rd, (int)rs1, (int)rs2,
+           (unsigned)func3, (unsigned)func7);
+
+
+
     ap_int<32> immI = ((ap_int<32>)insn) >> 20;
 
     ap_int<12> simm = (insn(31,25), insn(11,7));
@@ -7311,7 +7318,7 @@ PROGRAM_LOOP:
     }
 
 
-
+    printf("IMM = %08x\n", (uint32_t)imm);
 
 
 
@@ -7319,8 +7326,8 @@ PROGRAM_LOOP:
     arch_t src2 = reg_file[rs2];
 
 
-
-
+    printf("src1=%08x src2=%08x\n",
+           (uint32_t)src1, (uint32_t)src2);
 
 
     arch_t res = 0;
@@ -7511,7 +7518,7 @@ PROGRAM_LOOP:
     if ((opcode != 0x23) && (opcode != 0x63) && (rd != 0)) {
       reg_file[rd] = res;
 
-
+      printf("WRITE R[%d] = %08x\n", (int)rd, (uint32_t)res);
 
     }
 

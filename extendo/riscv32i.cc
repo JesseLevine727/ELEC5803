@@ -2,7 +2,7 @@
 
 // RISCV-32IM design in HLS (RV32I + RV32M)
 
-#define HLS_DEBUG 0
+#define HLS_DEBUG 1
 
 #include "riscv32i.h"
 #include <stdio.h>
@@ -31,7 +31,7 @@ void cpu(arch_t mem[MEM_SIZE], volatile strb_t* pstrb) {
 
 PROGRAM_LOOP:
   while (true) {
-    #pragma HLS PIPELINE II=2
+    #pragma HLS PIPELINE II=1
 
 #if HLS_DEBUG
     printf("\n============================\n");

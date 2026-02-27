@@ -2,19 +2,19 @@
     "1": {
         "name": "cpu_Pipeline_VITIS_LOOP_24_1",
         "file": "riscv32i.cc",
-        "fileloc": "24",
-        "instructions": "16",
-        "total_instructions": "16",
+        "fileloc": "21",
+        "instructions": "170",
+        "total_instructions": "170",
         "calls": "",
-        "basicblocks": "4",
-        "memory_accesses": "3",
-        "control_depth": "1",
+        "basicblocks": "36",
+        "memory_accesses": "33",
+        "control_depth": "2",
         "def_use_depth": "1",
         "loads": {
-            "L": "1"
+            "L": "32"
         },
         "stores": {
-            "L": "3"
+            "L": "33"
         },
         "loops": {
             "L": "1"
@@ -24,19 +24,19 @@
         "name": "cpu_Pipeline_PROGRAM_LOOP",
         "file": "riscv32i.cc",
         "fileloc": "16",
-        "instructions": "216",
-        "total_instructions": "216",
+        "instructions": "328",
+        "total_instructions": "328",
         "calls": "",
-        "basicblocks": "56",
-        "memory_accesses": "29",
-        "control_depth": "11",
+        "basicblocks": "85",
+        "memory_accesses": "26",
+        "control_depth": "12",
         "def_use_depth": "5",
         "loads": {
-            "L": "3",
+            "L": "1",
             "T": "2"
         },
         "stores": {
-            "L": "24",
+            "L": "23",
             "T": "1"
         },
         "loops": {
@@ -47,15 +47,15 @@
         "name": "cpu",
         "file": "riscv32i.cc",
         "fileloc": "16",
-        "instructions": "11",
-        "total_instructions": "243",
+        "instructions": "70",
+        "total_instructions": "568",
         "calls": "1 2",
         "basicblocks": "1",
         "memory_accesses": "0",
         "control_depth": "0",
-        "def_use_depth": "1",
-        "stores": {
-            "L": "1"
+        "def_use_depth": "2",
+        "loads": {
+            "L": "31"
         }
     }
 }

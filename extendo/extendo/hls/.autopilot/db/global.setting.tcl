@@ -1,6 +1,6 @@
 
 set TopModule "cpu"
-set ClockPeriod 10
+set ClockPeriod 11.8
 set ClockList ap_clk
 set AxiliteClockList {}
 set HasVivadoClockPeriod 0

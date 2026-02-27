@@ -1,22 +1,20 @@
 {
   "0": {
-    "basicblocks": 56,
+    "basicblocks": 118,
     "calls": "",
-    "control_depth": 11,
+    "control_depth": 12,
     "def_use_depth": 16,
     "file": "riscv32i.cc",
     "fileloc": 16,
-    "instructions": 226,
+    "instructions": 407,
     "loads": {
-      "L": 2,
       "T": 2
     },
-    "memory_accesses": 8,
+    "memory_accesses": 6,
     "name": "cpu",
     "stores": {
-      "L": 3,
       "T": 1
     },
-    "total_instructions": 226
+    "total_instructions": 407
   }
 }

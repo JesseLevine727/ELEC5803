@@ -2,7 +2,7 @@
 == Vivado RTL Synthesis Results
 ================================================================
 + General Information:
-    * Date:            Thu Feb 26 11:39:03 EST 2026
+    * Date:            Fri Feb 27 12:58:10 EST 2026
     * Version:         2025.1 (Build 6135595 on May 21 2025)
     * Project:         extendo
     * Solution:        hls (Vivado IP Flow Target)
@@ -14,8 +14,9 @@
 == Run Constraints & Options
 ================================================================
 + Design Constraints & Options:
-    * RTL Synthesis target clock:  10 ns
-    * C-Synthesis uncertainty:     27%
+    * RTL Synthesis target clock:  11.8 ns
+    * C-Synthesis target clock:    11.8 ns
+    * C-Synthesis uncertainty:     1 ns
 
 + RTL Synthesis Options:
     * config_export -vivado_synth_strategy:     default
@@ -29,10 +30,10 @@
 ================================================================
 == RTL Synthesis Resource Summary
 ================================================================
-LUT:              1347
-FF:               552
+LUT:              2181
+FF:               1465
 DSP:              12
-BRAM:             2
+BRAM:             0
 URAM:             0
 SRL:              0
 
@@ -44,27 +45,27 @@ SRL:              0
 +----------------+-------------+
 | Timing         | Period (ns) |
 +----------------+-------------+
-| Target         | 10.000      |
-| Post-Synthesis | 9.056       |
+| Target         | 11.800      |
+| Post-Synthesis | 10.368      |
 +----------------+-------------+
 
 
 ================================================================
 == RTL Synthesis Resources
 ================================================================
-+----------------------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
-| Name                                         | LUT  | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
-+----------------------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
-| inst                                         | 1347 | 552 | 12  | 2    |      |     |        |      |         |          |        |
-|   grp_cpu_Pipeline_PROGRAM_LOOP_fu_58        | 903  | 537 | 12  |      |      |     |        |      |         |          |        |
-|     (grp_cpu_Pipeline_PROGRAM_LOOP_fu_58)    | 641  | 467 |     |      |      |     |        |      |         |          |        |
-|     mul_32ns_32ns_64_2_1_U2                  |      |     |     |      |      |     |        |      |         |          |        |
-|     mul_32ns_32s_64_2_1_U3                   | 106  | 18  | 4   |      |      |     |        |      |         |          |        |
-|     mul_32s_32s_64_2_1_U4                    | 109  | 34  | 4   |      |      |     |        |      |         |          |        |
-|   grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_52     |      |     |     |      |      |     |        |      |         |          |        |
-|     flow_control_loop_pipe_sequential_init_U |      |     |     |      |      |     |        |      |         |          |        |
-|   reg_file_U                                 | 429  |     |     | 2    |      |     |        |      |         |          |        |
-+----------------------------------------------+------+-----+-----+------+------+-----+--------+------+---------+----------+--------+
++----------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                         | LUT  | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++----------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                         | 2181 | 1465 | 12  |      |      |     |        |      |         |          |        |
+|   grp_cpu_Pipeline_PROGRAM_LOOP_fu_187       | 2168 | 1451 | 12  |      |      |     |        |      |         |          |        |
+|     (grp_cpu_Pipeline_PROGRAM_LOOP_fu_187)   | 1150 | 1449 | 4   |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U | 435  | 2    |     |      |      |     |        |      |         |          |        |
+|     mul_32ns_32ns_64_1_1_U32                 | 77   |      | 2   |      |      |     |        |      |         |          |        |
+|     mul_32ns_32s_64_1_1_U33                  | 401  |      | 4   |      |      |     |        |      |         |          |        |
+|     mul_32s_32s_64_1_1_U34                   | 105  |      | 2   |      |      |     |        |      |         |          |        |
+|   grp_cpu_Pipeline_VITIS_LOOP_24_1_fu_152    |      |      |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U |      |      |     |      |      |     |        |      |         |          |        |
++----------------------------------------------+------+------+-----+------+------+-----+--------+------+---------+----------+--------+
 
 
 ================================================================
@@ -73,18 +74,18 @@ SRL:              0
 +-----------------------------------------------------------+-----------+--------+--------+
 | Criteria                                                  | Guideline | Actual | Status |
 +-----------------------------------------------------------+-----------+--------+--------+
-| LUT                                                       | 70%       | 2.53%  | OK     |
-| FD                                                        | 50%       | 0.52%  | OK     |
+| LUT                                                       | 70%       | 4.10%  | OK     |
+| FD                                                        | 50%       | 1.38%  | OK     |
 | LUTRAM+SRL                                                | 25%       | 0.00%  | OK     |
-| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| MUXF7                                                     | 15%       | 0.95%  | OK     |
 | DSP                                                       | 80%       | 5.45%  | OK     |
-| RAMB/FIFO                                                 | 80%       | 0.71%  | OK     |
-| DSP+RAMB+URAM (Avg)                                       | 70%       | 3.08%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 5.45%  | OK     |
 | BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
 | DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
 | MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
-| Control Sets                                              | 998       | 10     | OK     |
-| Average Fanout for modules > 100k cells                   | 4         | 3.09   | OK     |
+| Control Sets                                              | 998       | 41     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 3.10   | OK     |
 | Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
 | Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
 +-----------------------------------------------------------+-----------+--------+--------+
@@ -103,466 +104,216 @@ SRL:              0
 == RTL Synthesis Timing Paths
 ================================================================
 * Timing was met
-+-------+-------+--------------------------------------------------------------+----------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path  | SLACK | STARTPOINT PIN                                               | ENDPOINT PIN                                             | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
-|       |       |                                                              |                                                          |              |            |                |          DELAY |        DELAY |
-+-------+-------+--------------------------------------------------------------+----------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path1 | 0.944 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[10]/CE |           15 |         32 |          8.803 |          3.332 |        5.471 |
-| Path2 | 0.944 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[11]/CE |           15 |         32 |          8.803 |          3.332 |        5.471 |
-| Path3 | 0.944 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[12]/CE |           15 |         32 |          8.803 |          3.332 |        5.471 |
-| Path4 | 0.944 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[13]/CE |           15 |         32 |          8.803 |          3.332 |        5.471 |
-| Path5 | 0.944 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[14]/CE |           15 |         32 |          8.803 |          3.332 |        5.471 |
-+-------+-------+--------------------------------------------------------------+----------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
++-------+-------+-------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                    | ENDPOINT PIN                                                          | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                   |                                                                       |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 1.432 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0/PCIN[0]  |            5 |          6 |          8.884 |          5.221 |        3.663 |
+| Path2 | 1.432 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0/PCIN[10] |            5 |          6 |          8.884 |          5.221 |        3.663 |
+| Path3 | 1.432 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0/PCIN[11] |            5 |          6 |          8.884 |          5.221 |        3.663 |
+| Path4 | 1.432 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0/PCIN[12] |            5 |          6 |          8.884 |          5.221 |        3.663 |
+| Path5 | 1.432 | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]/C | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0/PCIN[13] |            5 |          6 |          8.884 |          5.221 |        3.663 |
++-------+-------+-------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
 
-    +------------------------------------------------------------+----------------------+
-    | Path1 Cells                                                | Primitive Type       |
-    +------------------------------------------------------------+----------------------+
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[10]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[11]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[12]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[13]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[14]      | FLOP_LATCH.flop.FDRE |
-    +------------------------------------------------------------+----------------------+
+    +-----------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                       | Primitive Type       |
+    +-----------------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    +-----------------------------------------------------------------------------------+----------------------+
 
-    +------------------------------------------------------------+----------------------+
-    | Path2 Cells                                                | Primitive Type       |
-    +------------------------------------------------------------+----------------------+
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[10]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[11]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[12]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[13]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[14]      | FLOP_LATCH.flop.FDRE |
-    +------------------------------------------------------------+----------------------+
+    +-----------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                       | Primitive Type       |
+    +-----------------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    +-----------------------------------------------------------------------------------+----------------------+
 
-    +------------------------------------------------------------+----------------------+
-    | Path3 Cells                                                | Primitive Type       |
-    +------------------------------------------------------------+----------------------+
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[10]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[11]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[12]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[13]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[14]      | FLOP_LATCH.flop.FDRE |
-    +------------------------------------------------------------+----------------------+
+    +-----------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                       | Primitive Type       |
+    +-----------------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    +-----------------------------------------------------------------------------------+----------------------+
 
-    +------------------------------------------------------------+----------------------+
-    | Path4 Cells                                                | Primitive Type       |
-    +------------------------------------------------------------+----------------------+
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[10]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[11]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[12]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[13]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[14]      | FLOP_LATCH.flop.FDRE |
-    +------------------------------------------------------------+----------------------+
+    +-----------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                       | Primitive Type       |
+    +-----------------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    +-----------------------------------------------------------------------------------+----------------------+
 
-    +------------------------------------------------------------+----------------------+
-    | Path5 Cells                                                | Primitive Type       |
-    +------------------------------------------------------------+----------------------+
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[10]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[11]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[12]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[13]      | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/opcode_reg_1218_reg[6] | FLOP_LATCH.flop.FDRE |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_14     | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[3]_i_4  | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/op2_1_reg_1386[1]_i_2  | LUT.others.LUT5      |
-    | reg_file_U/mem_address0[1]_INST_0_i_4                      | LUT.others.LUT2      |
-    | reg_file_U/mem_address0[1]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[5]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[9]_INST_0_i_1                      | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[13]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_address0[15]_INST_0_i_1                     | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_10                             | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_9                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_8                              | CARRY.others.CARRY4  |
-    | reg_file_U/mem_we0_INST_0_i_3                              | LUT.others.LUT4      |
-    | reg_file_U/mem_we0_INST_0_i_1                              | LUT.others.LUT5      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144[31]_i_2      | LUT.others.LUT6      |
-    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_58/pc_fu_144_reg[14]      | FLOP_LATCH.flop.FDRE |
-    +------------------------------------------------------------+----------------------+
+    +-----------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                       | Primitive Type       |
+    +-----------------------------------------------------------------------------------+----------------------+
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/reg_file_40_reg_693_reg[1]                   | FLOP_LATCH.flop.FDRE |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_9 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_3 | LUT.others.LUT6      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0_i_1 | LUT.others.LUT3      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32s_64_1_1_U33/mem_d0[1]_INST_0     | LUT.others.LUT1      |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32s_32s_64_1_1_U34/tmp_product__0        | MULT.dsp.DSP48E1     |
+    | grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/prod_ss_reg_5681_reg__0                      | MULT.dsp.DSP48E1     |
+    +-----------------------------------------------------------------------------------+----------------------+
 
 
 ================================================================

@@ -15,7 +15,7 @@
 `define AUTOTB_PER_RESULT_TRANS_FILE "cpu.performance.result.transaction.xml"
 `define AUTOTB_TOP_INST AESL_inst_apatb_cpu_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
-`define AUTOTB_CLOCK_PERIOD_DIV2 5.00
+`define AUTOTB_CLOCK_PERIOD_DIV2 5.90
 
 `define AESL_MEM_mem AESL_automem_mem
 `define AESL_MEM_INST_mem mem_inst_mem

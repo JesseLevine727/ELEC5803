@@ -59892,7 +59892,7 @@ static void init_softmax_input(arch_t mem[(1 << 16)]) {
 
     int xb = 0x4000 >> 2;
 
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 64; i++) {
 
 
         double v = 0.3 * (i+1);
@@ -59920,7 +59920,7 @@ int main(void)
     int pb = 0x5000 >> 2;
     double sum = 0.0;
 
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 64; i++) {
         double p = ((int32_t)mem[pb + i]) / 65536.0;
         sum += p;
         printf("  p[%d] = %f\n", i, p);

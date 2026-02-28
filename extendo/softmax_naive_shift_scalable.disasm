@@ -22,7 +22,7 @@ Disassembly of section .text:
   38:	01a12223          	sw	s10,4(sp)
   3c:	01b12023          	sw	s11,0(sp)
   40:	00478793          	addi	a5,a5,4
-  44:	20068693          	addi	a3,a3,512 # 4200 <__global_pointer$+0x26b4>
+  44:	02068693          	addi	a3,a3,32 # 4020 <__global_pointer$+0x24d4>
   48:	0007a703          	lw	a4,0(a5)
   4c:	00e95463          	bge	s2,a4,54 <main+0x54>
   50:	0007a903          	lw	s2,0(a5)
@@ -40,7 +40,7 @@ Disassembly of section .text:
   80:	22200b93          	li	s7,546
   84:	05b00b13          	li	s6,91
   88:	00010d37          	lui	s10,0x10
-  8c:	200c8c93          	addi	s9,s9,512 # 4200 <__global_pointer$+0x26b4>
+  8c:	020c8c93          	addi	s9,s9,32 # 4020 <__global_pointer$+0x24d4>
   90:	0002a783          	lw	a5,0(t0) # 4000 <__global_pointer$+0x24b4>
   94:	412787b3          	sub	a5,a5,s2
   98:	01b7d463          	bge	a5,s11,a0 <main+0xa0>
@@ -188,7 +188,7 @@ Disassembly of section .text:
  2d0:	fef74ce3          	blt	a4,a5,2c8 <main+0x2c8>
  2d4:	00005637          	lui	a2,0x5
  2d8:	000057b7          	lui	a5,0x5
- 2dc:	20060613          	addi	a2,a2,512 # 5200 <__global_pointer$+0x36b4>
+ 2dc:	02060613          	addi	a2,a2,32 # 5020 <__global_pointer$+0x34d4>
  2e0:	0007a703          	lw	a4,0(a5) # 5000 <__global_pointer$+0x34b4>
  2e4:	00478793          	addi	a5,a5,4
  2e8:	40d75733          	sra	a4,a4,a3

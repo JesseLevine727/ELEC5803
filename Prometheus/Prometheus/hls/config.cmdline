@@ -1,0 +1,3 @@
+relativeroot=/home/elfo/Documents/ELEC5803/Prometheus
+original_argv=--mode hls --cosim --config /home/elfo/Documents/ELEC5803/Prometheus/hls_config.cfg --work_dir Prometheus 
+

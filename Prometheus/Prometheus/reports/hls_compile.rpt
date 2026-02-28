@@ -1,0 +1,262 @@
+
+
+================================================================
+== Synthesis Summary Report of 'softmax_accel'
+================================================================
++ General Information: 
+    * Date:           Fri Feb 27 18:14:38 2026
+    * Version:        2025.1 (Build 6135595 on May 21 2025)
+    * Project:        Prometheus
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+    |                   Modules                  |  Issue  |       |       Latency       | Iteration|         | Trip |          |        |         |           |           |     |
+    |                   & Loops                  |   Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF    |    LUT    | URAM|
+    +--------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+    |+ softmax_accel                             |   Timing|  -0.00|      830|  9.794e+03|         -|      831|     -|        no|  3 (1%)|   7 (3%)|  3187 (2%)|  5003 (9%)|    -|
+    | + softmax_accel_Pipeline_VITIS_LOOP_177_1  |   Timing|  -0.00|      258|  3.044e+03|         -|      256|     -|    rewind|       -|        -|   80 (~0%)|  157 (~0%)|    -|
+    |  o VITIS_LOOP_177_1                        |        -|   8.61|      256|  3.021e+03|         3|        1|   255|       yes|       -|        -|          -|          -|    -|
+    | + softmax_accel_Pipeline_VITIS_LOOP_188_2  |   Timing|  -0.00|      267|  3.151e+03|         -|      257|     -|    rewind|       -|  1 (~0%)|  833 (~0%)|  1088 (2%)|    -|
+    |  o VITIS_LOOP_188_2                        |        -|   8.61|      265|  3.127e+03|        11|        1|   256|       yes|       -|        -|          -|          -|    -|
+    | + softmax_accel_Pipeline_VITIS_LOOP_202_3  |   Timing|  -0.00|      265|  3.127e+03|         -|      257|     -|    rewind|       -|   4 (1%)|  223 (~0%)|  228 (~0%)|    -|
+    |  o VITIS_LOOP_202_3                        |        -|   8.61|      263|  3.103e+03|         9|        1|   256|       yes|       -|        -|          -|          -|    -|
+    +--------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | mem_1      | 0x10   | 32    | W      | Data signal of mem               |                                                                      |
+| s_axi_control | mem_2      | 0x14   | 32    | W      | Data signal of mem               |                                                                      |
+| s_axi_control | input_base | 0x1c   | 32    | W      | Data signal of input_base        |                                                                      |
+| s_axi_control | prob_base  | 0x24   | 32    | W      | Data signal of prob_base         |                                                                      |
+| s_axi_control | dbg_base   | 0x2c   | 32    | W      | Data signal of dbg_base          |                                                                      |
+| s_axi_control | n          | 0x34   | 32    | W      | Data signal of n                 |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------+
+| Argument   | Direction | Datatype     |
++------------+-----------+--------------+
+| mem        | inout     | pointer      |
+| input_base | in        | unsigned int |
+| prob_base  | in        | unsigned int |
+| dbg_base   | in        | unsigned int |
+| n          | in        | unsigned int |
++------------+-----------+--------------+
+
+* SW-to-HW Mapping
++------------+---------------+-----------+----------+--------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Usage | HW Info                              |
++------------+---------------+-----------+----------+--------------------------------------+
+| mem        | m_axi_gmem    | interface |          | channel=0                            |
+| mem        | s_axi_control | register  | offset   | name=mem_1 offset=0x10 range=32      |
+| mem        | s_axi_control | register  | offset   | name=mem_2 offset=0x14 range=32      |
+| input_base | s_axi_control | register  |          | name=input_base offset=0x1c range=32 |
+| prob_base  | s_axi_control | register  |          | name=prob_base offset=0x24 range=32  |
+| dbg_base   | s_axi_control | register  |          | name=dbg_base offset=0x2c range=32   |
+| n          | s_axi_control | register  |          | name=n offset=0x34 range=32          |
++------------+---------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+------------------+-----------------------------+
+| HW Interface | Direction | Length   | Width | Loop             | Loop Location               |
++--------------+-----------+----------+-------+------------------+-----------------------------+
+| m_axi_gmem   | read      | variable | 32    | VITIS_LOOP_177_1 | softmax_accel_hls.cc:177:21 |
+| m_axi_gmem   | read      | variable | 32    | VITIS_LOOP_188_2 | softmax_accel_hls.cc:188:21 |
++--------------+-----------+----------+-------+------------------+-----------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------------------+-----------+--------------+----------+------------------+-----------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location             | Direction | Burst Status | Length   | Loop             | Loop Location               | Resolution | Problem                                                                                               |
++--------------+----------+-----------------------------+-----------+--------------+----------+------------------+-----------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:179:18 | read      | Widen Fail   |          | VITIS_LOOP_177_1 | softmax_accel_hls.cc:177:21 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:179:18 | read      | Inferred     | variable | VITIS_LOOP_177_1 | softmax_accel_hls.cc:177:21 |            |                                                                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:190:18 | read      | Widen Fail   |          | VITIS_LOOP_188_2 | softmax_accel_hls.cc:188:21 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:190:18 | read      | Inferred     | variable | VITIS_LOOP_188_2 | softmax_accel_hls.cc:188:21 |            |                                                                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:208:19 | write     | Fail         |          |                  |                             | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:221:17 | write     | Fail         |          |                  |                             | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:222:17 | write     | Fail         |          |                  |                             | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:223:17 | write     | Fail         |          |                  |                             | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
++--------------+----------+-----------------------------+-----------+--------------+----------+------------------+-----------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
+| Name                                       | DSP | Pragma | Variable     | Op        | Impl                   | Latency |
++--------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
+| + softmax_accel                            | 7   |        |              |           |                        |         |
+|   icmp_ln168_fu_961_p2                     |     |        | icmp_ln168   | seteq     | auto                   | 0       |
+|   icmp_ln169_fu_967_p2                     |     |        | icmp_ln169   | setgt     | auto                   | 0       |
+|   select_ln169_fu_1021_p3                  |     |        | select_ln169 | select    | auto_sel               | 0       |
+|   add_ln176_fu_995_p2                      |     |        | add_ln176    | add       | fabric                 | 0       |
+|   icmp_ln177_fu_1050_p2                    |     |        | icmp_ln177   | setne     | auto                   | 0       |
+|   add_ln177_fu_1060_p2                     |     |        | add_ln177    | add       | fabric                 | 0       |
+|   add_ln177_1_fu_1066_p2                   |     |        | add_ln177_1  | add       | fabric                 | 0       |
+|   add_ln177_2_fu_1076_p2                   |     |        | add_ln177_2  | add       | fabric                 | 0       |
+|   empty_fu_1091_p3                         |     |        | empty        | select    | auto_sel               | 0       |
+|   select_ln188_fu_1113_p3                  |     |        | select_ln188 | select    | auto_sel               | 0       |
+|   icmp_ln197_fu_1130_p2                    |     |        | icmp_ln197   | seteq     | auto                   | 0       |
+|   sum_2_fu_1140_p3                         |     |        | sum_2        | select    | auto_sel               | 0       |
+|   icmp_ln112_fu_1151_p2                    |     |        | icmp_ln112   | seteq     | auto                   | 0       |
+|   xor_ln119_fu_1159_p2                     |     |        | xor_ln119    | xor       | auto                   | 0       |
+|   select_ln119_fu_1165_p3                  |     |        | select_ln119 | select    | auto_sel               | 0       |
+|   sub_ln126_fu_1181_p2                     |     |        | sub_ln126    | sub       | fabric                 | 0       |
+|   shl_ln126_fu_1191_p2                     |     |        | shl_ln126    | shl       | auto_pipe              | 0       |
+|   mul_31s_16ns_47_1_1_U25                  | 2   |        | mx           | mul       | auto                   | 0       |
+|   inv_x_q30_fu_1264_p2                     |     |        | inv_x_q30    | add       | fabric                 | 0       |
+|   sub_ln145_fu_1274_p2                     |     |        | sub_ln145    | sub       | fabric                 | 0       |
+|   shl_ln145_fu_1284_p2                     |     |        | shl_ln145    | shl       | auto_pipe              | 0       |
+|   add_ln127_fu_1216_p2                     |     |        | add_ln127    | add       | fabric                 | 0       |
+|   lshr_ln127_fu_1226_p2                    |     |        | lshr_ln127   | lshr      | auto_pipe              | 0       |
+|   mul_31s_16ns_47_1_1_U25                  | 2   |        | mul_ln136    | mul       | auto                   | 0       |
+|   add_ln137_fu_1303_p2                     |     |        | add_ln137    | add       | fabric                 | 0       |
+|   inv_sum_1_fu_1317_p2                     |     |        | inv_sum_1    | ashr      | auto_pipe              | 0       |
+|   inv_sum_3_fu_1339_p3                     |     |        | inv_sum_3    | select    | auto_sel               | 0       |
+|   icmp_ln148_fu_1357_p2                    |     |        | icmp_ln148   | setne     | auto                   | 0       |
+|   inv_sum_q30_fu_1367_p3                   |     |        | inv_sum_q30  | select    | auto_sel               | 0       |
+|   select_ln217_fu_1387_p3                  |     |        | select_ln217 | select    | auto_sel               | 0       |
+|   add_ln221_fu_1406_p2                     |     |        | add_ln221    | add       | fabric                 | 0       |
+|   add_ln222_fu_1431_p2                     |     |        | add_ln222    | add       | fabric                 | 0       |
+|   add_ln222_1_fu_1448_p2                   |     |        | add_ln222_1  | add       | fabric                 | 0       |
+|   add_ln223_fu_1473_p2                     |     |        | add_ln223    | add       | fabric                 | 0       |
+|   add_ln223_1_fu_1490_p2                   |     |        | add_ln223_1  | add       | fabric                 | 0       |
+|  + softmax_accel_Pipeline_VITIS_LOOP_177_1 | 0   |        |              |           |                        |         |
+|    icmp_ln177_fu_113_p2                    |     |        | icmp_ln177   | setlt     | auto                   | 0       |
+|    icmp_ln180_fu_139_p2                    |     |        | icmp_ln180   | setgt     | auto                   | 0       |
+|    max_x_2_fu_144_p3                       |     |        | max_x_2      | select    | auto_sel               | 0       |
+|    add_ln177_fu_119_p2                     |     |        | add_ln177    | add       | fabric                 | 0       |
+|  + softmax_accel_Pipeline_VITIS_LOOP_188_2 | 1   |        |              |           |                        |         |
+|    icmp_ln188_fu_245_p2                    |     |        | icmp_ln188   | seteq     | auto                   | 0       |
+|    add_ln188_fu_251_p2                     |     |        | add_ln188    | add       | fabric                 | 0       |
+|    x_fu_268_p2                             |     |        | x            | sub       | fabric                 | 0       |
+|    icmp_ln53_fu_272_p2                     |     |        | icmp_ln53    | setlt     | auto                   | 0       |
+|    x_q16_1_fu_277_p3                       |     |        | x_q16_1      | select    | auto_sel               | 0       |
+|    add_ln68_fu_459_p2                      |     |        | add_ln68     | add       | fabric                 | 0       |
+|    dy_fu_470_p2                            |     |        | dy           | sub       | fabric                 | 0       |
+|    mul_18s_12ns_30_1_1_U6                  | 1   |        | interp       | mul       | auto                   | 0       |
+|    y_frac_fu_505_p2                        |     |        | y_frac       | add       | fabric                 | 0       |
+|    xor_ln78_fu_514_p2                      |     |        | xor_ln78     | xor       | auto                   | 0       |
+|    icmp_ln80_fu_446_p2                     |     |        | icmp_ln80    | setgt     | auto                   | 0       |
+|    sh_1_fu_519_p3                          |     |        | sh_1         | select    | auto_sel               | 0       |
+|    y_fu_583_p2                             |     |        | y_2          | shl       | auto_pipe              | 0       |
+|    sh_2_fu_538_p2                          |     |        | sh_2         | sub       | fabric                 | 0       |
+|    icmp_ln84_fu_558_p2                     |     |        | icmp_ln84    | setgt     | auto                   | 0       |
+|    y_fu_583_p6                             |     |        | y_3          | lshr      | auto_pipe              | 0       |
+|    and_ln84_fu_570_p2                      |     |        | and_ln84     | and       | auto                   | 0       |
+|    sparsemux_7_2_32_1_1_U7                 |     |        | y            | sparsemux | onehotencoding_realdef | 0       |
+|    sum64_1_fu_613_p2                       |     |        | sum64_1      | add       | fabric                 | 0       |
+|  + softmax_accel_Pipeline_VITIS_LOOP_202_3 | 4   |        |              |           |                        |         |
+|    icmp_ln202_fu_175_p2                    |     |        | icmp_ln202   | seteq     | auto                   | 0       |
+|    add_ln202_fu_181_p2                     |     |        | add_ln202    | add       | fabric                 | 0       |
+|    mul_32ns_31ns_62_1_1_U17                | 4   |        | prod         | mul       | auto                   | 0       |
+|    add_ln208_fu_204_p2                     |     |        | add_ln208    | add       | fabric                 | 0       |
+|    add_ln208_1_fu_221_p2                   |     |        | add_ln208_1  | add       | fabric                 | 0       |
++--------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
+| Name                                       | Usage        | Type      | BRAM | URAM | Pragma | Variable     | Impl | Latency | Bitwidth, Depth, |
+|                                            |              |           |      |      |        |              |      |         | Banks            |
++--------------------------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
+| + softmax_accel                            |              |           | 3    | 0    |        |              |      |         |                  |
+|   control_s_axi_U                          | interface    | s_axilite |      |      |        |              |      |         |                  |
+|   gmem_m_axi_U                             | interface    | m_axi     | 2    |      |        |              |      |         |                  |
+|   exp_buf_U                                | ram_1p array |           | 1    |      | yes    | exp_buf      | bram | 1       | 32, 256, 1       |
+|   RECIP_M_Q30_U                            | rom_1p       |           |      |      |        | RECIP_M_Q30  | auto | 1       | 31, 16, 1        |
+|   RECIP_B_Q30_U                            | rom_1p       |           |      |      |        | RECIP_B_Q30  | auto | 1       | 31, 16, 1        |
+|  + softmax_accel_Pipeline_VITIS_LOOP_188_2 |              |           | 0    | 0    |        |              |      |         |                  |
+|    EXP2_PTS_Q16_U                          | rom_2p       |           |      |      |        | EXP2_PTS_Q16 | auto | 1       | 18, 17, 1        |
++--------------------------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+-------------------------------+----------------------------+----------------------------------------------------------------------------+
+| Type     | Options                       | Location                   | Messages                                                                   |
++----------+-------------------------------+----------------------------+----------------------------------------------------------------------------+
+| RESOURCE | variable=mem core=RAM_1P_BRAM | riscv32i.cc:19 in cpu, mem | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
++----------+-------------------------------+----------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++--------------+-----------------------------------------------------+-------------------------------------------------------+
+| Type         | Options                                             | Location                                              |
++--------------+-----------------------------------------------------+-------------------------------------------------------+
+| INTERFACE    | ap_none port=pstrb                                  | riscv32i.cc:18 in cpu, pstrb                          |
+| PIPELINE     | ii=1                                                | riscv32i.cc:34 in cpu                                 |
+| INLINE       |                                                     | softmax_accel_hls.cc:28 in q16_mul                    |
+| INLINE       |                                                     | softmax_accel_hls.cc:50 in exp_approx_q16             |
+| INLINE       |                                                     | softmax_accel_hls.cc:111 in recip_sum_q2_30           |
+| UNROLL       |                                                     | softmax_accel_hls.cc:118 in recip_sum_q2_30           |
+| INTERFACE    | m_axi port=mem offset=slave bundle=gmem depth=16384 | softmax_accel_hls.cc:160 in softmax_accel, mem        |
+| INTERFACE    | s_axilite port=mem bundle=control                   | softmax_accel_hls.cc:161 in softmax_accel, mem        |
+| INTERFACE    | s_axilite port=input_base bundle=control            | softmax_accel_hls.cc:162 in softmax_accel, input_base |
+| INTERFACE    | s_axilite port=prob_base bundle=control             | softmax_accel_hls.cc:163 in softmax_accel, prob_base  |
+| INTERFACE    | s_axilite port=dbg_base bundle=control              | softmax_accel_hls.cc:164 in softmax_accel, dbg_base   |
+| INTERFACE    | s_axilite port=n bundle=control                     | softmax_accel_hls.cc:165 in softmax_accel, n          |
+| INTERFACE    | s_axilite port=return bundle=control                | softmax_accel_hls.cc:166 in softmax_accel, return     |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:178 in softmax_accel             |
+| BIND_STORAGE | variable=exp_buf type=ram_1p impl=bram              | softmax_accel_hls.cc:185 in softmax_accel, exp_buf    |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:189 in softmax_accel             |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:203 in softmax_accel             |
+| UNROLL       |                                                     | softmax_accel_hls.cc:216 in softmax_accel             |
++--------------+-----------------------------------------------------+-------------------------------------------------------+
+
+

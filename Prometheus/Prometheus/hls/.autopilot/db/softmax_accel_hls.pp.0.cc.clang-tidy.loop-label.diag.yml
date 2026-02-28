@@ -1,0 +1,90 @@
+---
+MainSourceFile:  /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          280265
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          280731
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          281198
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          576028
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_1:  '
+    FileOffset:      117
+    FilePath:        softmax_accel_hls.cc
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          965076
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_177_1:  '
+    FileOffset:      177
+    FilePath:        softmax_accel_hls.cc
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          966876
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_177_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      185
+    FilePath:        softmax_accel_hls.cc
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_188_2:  '
+    FileOffset:      188
+    FilePath:        softmax_accel_hls.cc
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          967138
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_188_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_202_3:  '
+    FileOffset:      202
+    FilePath:        softmax_accel_hls.cc
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          967494
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_202_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_215_4:  '
+    FileOffset:      215
+    FilePath:        softmax_accel_hls.cc
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc
+        Offset:          967733
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_215_4: '
+...

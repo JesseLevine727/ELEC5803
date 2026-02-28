@@ -1,0 +1,178 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/Prometheus.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Feb 27 18:15:53 2026",
+ "timestampMillis": "1772234153238",
+ "buildStep": {
+  "cmdId": "8f16bd06-8cb8-441c-aecc-4da7c8253056",
+  "name": "vitis-run",
+  "logFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/logs/Prometheus.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /home/elfo/Documents/ELEC5803/Prometheus/hls_config.cfg --work_dir Prometheus ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/Prometheus/hls_config.cfg",
+   "--work_dir",
+   "Prometheus"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/Prometheus"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Feb 27 18:15:53 2026",
+ "timestampMillis": "1772234153238",
+ "status": {
+  "cmdId": "8f16bd06-8cb8-441c-aecc-4da7c8253056",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154894",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "softmax_accel",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/Prometheus/riscv32i.cc",
+     "/home/elfo/Documents/ELEC5803/Prometheus/riscv32i.h",
+     "/home/elfo/Documents/ELEC5803/Prometheus/softmax_accel_hls.cc"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154894",
+ "buildStep": {
+  "cmdId": "a2fdb4d6-5cd5-4d5c-b5e5-f6632c432ba8",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/Prometheus"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154894",
+ "status": {
+  "cmdId": "a2fdb4d6-5cd5-4d5c-b5e5-f6632c432ba8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154894",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/sim/report/softmax_accel_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154895",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154895",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154895",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Feb 27 18:15:54 2026",
+ "timestampMillis": "1772234154895",
+ "report": {
+  "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

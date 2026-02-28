@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/./sim/autowrap/testbench/softmax_accel_hls.cc_pre.cc.tb.cc

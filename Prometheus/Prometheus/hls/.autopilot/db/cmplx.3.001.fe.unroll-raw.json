@@ -1,0 +1,23 @@
+{
+  "0": {
+    "basicblocks": 146,
+    "calls": "",
+    "control_depth": 6,
+    "def_use_depth": 18,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 154,
+    "instructions": 412,
+    "loads": {
+      "G": 4,
+      "L": 1,
+      "T": 3
+    },
+    "memory_accesses": 10,
+    "name": "softmax_accel",
+    "stores": {
+      "L": 1,
+      "T": 4
+    },
+    "total_instructions": 412
+  }
+}

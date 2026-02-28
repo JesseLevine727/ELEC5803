@@ -1,0 +1,118 @@
+{
+  "0": {
+    "basicblocks": 38,
+    "calls": "2 3",
+    "control_depth": 2,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 154,
+    "instructions": 249,
+    "loads": {
+      "L": 5
+    },
+    "memory_accesses": 23,
+    "name": "softmax_accel",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 3995
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "7 6 5 4",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.pp.0.cc",
+    "fileloc": 0,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "",
+    "total_instructions": 809
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 49,
+    "instructions": 276,
+    "loads": {
+      "G": 2,
+      "L": 5
+    },
+    "memory_accesses": 0,
+    "name": "exp_approx_q16",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 1844
+  },
+  "3": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 110,
+    "instructions": 223,
+    "loads": {
+      "G": 2,
+      "L": 7
+    },
+    "memory_accesses": 2,
+    "name": "recip_sum_q2_30",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 1244
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 101,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 257
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 95,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 257
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 45,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 17
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 36,
+    "instructions": 18,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 273
+  }
+}

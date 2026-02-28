@@ -1,0 +1,226 @@
+
+
+================================================================
+== Vitis HLS Report for 'softmax_accel_Pipeline_VITIS_LOOP_202_3'
+================================================================
+* Date:           Fri Feb 27 18:14:38 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  8.614 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       10|      265|  0.118 us|  3.127 us|    2|  257|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_202_3  |        8|      263|         9|          1|          1|  1 ~ 256|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.99>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [softmax_accel_hls.cc:202]   --->   Operation 12 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %mem"   --->   Operation 13 'read' 'mem_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln202_1_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %zext_ln202_1"   --->   Operation 14 'read' 'zext_ln202_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln208_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %zext_ln208"   --->   Operation 15 'read' 'zext_ln208_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%select_ln169_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %select_ln169"   --->   Operation 16 'read' 'select_ln169_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln202_1_cast = zext i30 %zext_ln202_1_read"   --->   Operation 17 'zext' 'zext_ln202_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln208_cast = zext i31 %zext_ln208_read"   --->   Operation 18 'zext' 'zext_ln208_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_buf, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 19 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 16384, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln202 = store i9 0, i9 %i" [softmax_accel_hls.cc:202]   --->   Operation 21 'store' 'store_ln202' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc44"   --->   Operation 22 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%i_1 = load i9 %i" [softmax_accel_hls.cc:202]   --->   Operation 23 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.82ns)   --->   "%icmp_ln202 = icmp_eq  i9 %i_1, i9 %select_ln169_read" [softmax_accel_hls.cc:202]   --->   Operation 25 'icmp' 'icmp_ln202' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 256, i64 128"   --->   Operation 26 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.82ns)   --->   "%add_ln202 = add i9 %i_1, i9 1" [softmax_accel_hls.cc:202]   --->   Operation 27 'add' 'add_ln202' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln202 = br i1 %icmp_ln202, void %for.inc44.split, void %for.body50.exitStub" [softmax_accel_hls.cc:202]   --->   Operation 28 'br' 'br_ln202' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln202 = zext i9 %i_1" [softmax_accel_hls.cc:202]   --->   Operation 29 'zext' 'zext_ln202' <Predicate = (!icmp_ln202)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%exp_buf_addr = getelementptr i32 %exp_buf, i64 0, i64 %zext_ln202" [softmax_accel_hls.cc:206]   --->   Operation 30 'getelementptr' 'exp_buf_addr' <Predicate = (!icmp_ln202)> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (3.25ns)   --->   "%exp_buf_load = load i8 %exp_buf_addr" [softmax_accel_hls.cc:206]   --->   Operation 31 'load' 'exp_buf_load' <Predicate = (!icmp_ln202)> <Delay = 3.25> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln208 = trunc i9 %i_1" [softmax_accel_hls.cc:208]   --->   Operation 32 'trunc' 'trunc_ln208' <Predicate = (!icmp_ln202)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln202 = store i9 %add_ln202, i9 %i" [softmax_accel_hls.cc:202]   --->   Operation 33 'store' 'store_ln202' <Predicate = (!icmp_ln202)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 6.01>
+ST_2 : Operation 34 [1/2] ( I:3.25ns O:3.25ns )   --->   "%exp_buf_load = load i8 %exp_buf_addr" [softmax_accel_hls.cc:206]   --->   Operation 34 'load' 'exp_buf_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln208_1 = zext i8 %trunc_ln208" [softmax_accel_hls.cc:208]   --->   Operation 35 'zext' 'zext_ln208_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (2.49ns)   --->   "%add_ln208 = add i31 %zext_ln208_1, i31 %zext_ln202_1_cast" [softmax_accel_hls.cc:208]   --->   Operation 36 'add' 'add_ln208' <Predicate = true> <Delay = 2.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i33 @_ssdm_op_BitConcatenate.i33.i31.i2, i31 %add_ln208, i2 0" [softmax_accel_hls.cc:208]   --->   Operation 37 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln208_2 = zext i33 %shl_ln" [softmax_accel_hls.cc:208]   --->   Operation 38 'zext' 'zext_ln208_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (3.52ns)   --->   "%add_ln208_1 = add i64 %zext_ln208_2, i64 %mem_read" [softmax_accel_hls.cc:208]   --->   Operation 39 'add' 'add_ln208_1' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln208_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln208_1, i32 2, i32 63" [softmax_accel_hls.cc:208]   --->   Operation 40 'partselect' 'trunc_ln208_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%sext_ln208 = sext i62 %trunc_ln208_1" [softmax_accel_hls.cc:208]   --->   Operation 41 'sext' 'sext_ln208' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln208" [softmax_accel_hls.cc:208]   --->   Operation 42 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 8.61>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln206 = zext i32 %exp_buf_load" [softmax_accel_hls.cc:206]   --->   Operation 43 'zext' 'zext_ln206' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (8.51ns)   --->   "%prod = mul i62 %zext_ln206, i62 %zext_ln208_cast" [softmax_accel_hls.cc:206]   --->   Operation 44 'mul' 'prod' <Predicate = true> <Delay = 8.51> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%p_q16 = partselect i32 @_ssdm_op_PartSelect.i32.i62.i32.i32, i62 %prod, i32 30, i32 61" [softmax_accel_hls.cc:207]   --->   Operation 45 'partselect' 'p_q16' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (8.61ns)   --->   "%gmem_addr_2_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %gmem_addr, i64 1" [softmax_accel_hls.cc:208]   --->   Operation 46 'writereq' 'gmem_addr_2_req' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 8.61>
+ST_4 : Operation 47 [1/1] (8.61ns)   --->   "%write_ln208 = write void @_ssdm_op_Write.m_axi.volatile.i32P1A, i32 %gmem_addr, i32 %p_q16, i4 15" [softmax_accel_hls.cc:208]   --->   Operation 47 'write' 'write_ln208' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 8.61>
+ST_5 : Operation 48 [5/5] (8.61ns)   --->   "%gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr" [softmax_accel_hls.cc:208]   --->   Operation 48 'writeresp' 'gmem_addr_2_resp' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 8.61>
+ST_6 : Operation 49 [4/5] (8.61ns)   --->   "%gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr" [softmax_accel_hls.cc:208]   --->   Operation 49 'writeresp' 'gmem_addr_2_resp' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 8.61>
+ST_7 : Operation 50 [3/5] (8.61ns)   --->   "%gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr" [softmax_accel_hls.cc:208]   --->   Operation 50 'writeresp' 'gmem_addr_2_resp' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 8.61>
+ST_8 : Operation 51 [2/5] (8.61ns)   --->   "%gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr" [softmax_accel_hls.cc:208]   --->   Operation 51 'writeresp' 'gmem_addr_2_resp' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 56 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 56 'ret' 'ret_ln0' <Predicate = (icmp_ln202)> <Delay = 1.58>
+
+State 9 <SV = 8> <Delay = 8.61>
+ST_9 : Operation 52 [1/1] (0.00ns)   --->   "%specpipeline_ln203 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0" [softmax_accel_hls.cc:203]   --->   Operation 52 'specpipeline' 'specpipeline_ln203' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "%specloopname_ln202 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [softmax_accel_hls.cc:202]   --->   Operation 53 'specloopname' 'specloopname_ln202' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/5] (8.61ns)   --->   "%gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr" [softmax_accel_hls.cc:208]   --->   Operation 54 'writeresp' 'gmem_addr_2_resp' <Predicate = true> <Delay = 8.61> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln202 = br void %for.inc44" [softmax_accel_hls.cc:202]   --->   Operation 55 'br' 'br_ln202' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 11.800ns, clock uncertainty: 3.186ns.
+
+ <State 1>: 4.999ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln202', softmax_accel_hls.cc:202) of constant 0 on local variable 'i', softmax_accel_hls.cc:202 [16]  (1.588 ns)
+	'load' operation 9 bit ('i', softmax_accel_hls.cc:202) on local variable 'i', softmax_accel_hls.cc:202 [19]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln202', softmax_accel_hls.cc:202) [21]  (1.823 ns)
+	'store' operation 0 bit ('store_ln202', softmax_accel_hls.cc:202) of variable 'add_ln202', softmax_accel_hls.cc:202 on local variable 'i', softmax_accel_hls.cc:202 [46]  (1.588 ns)
+
+ <State 2>: 6.013ns
+The critical path consists of the following:
+	'add' operation 31 bit ('add_ln208', softmax_accel_hls.cc:208) [36]  (2.493 ns)
+	'add' operation 64 bit ('add_ln208_1', softmax_accel_hls.cc:208) [39]  (3.520 ns)
+
+ <State 3>: 8.614ns
+The critical path consists of the following:
+	bus request operation ('gmem_addr_2_req', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [43]  (8.614 ns)
+
+ <State 4>: 8.614ns
+The critical path consists of the following:
+	bus write operation ('write_ln208', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [44]  (8.614 ns)
+
+ <State 5>: 8.614ns
+The critical path consists of the following:
+	bus response operation ('gmem_addr_2_resp', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [45]  (8.614 ns)
+
+ <State 6>: 8.614ns
+The critical path consists of the following:
+	bus response operation ('gmem_addr_2_resp', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [45]  (8.614 ns)
+
+ <State 7>: 8.614ns
+The critical path consists of the following:
+	bus response operation ('gmem_addr_2_resp', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [45]  (8.614 ns)
+
+ <State 8>: 8.614ns
+The critical path consists of the following:
+	bus response operation ('gmem_addr_2_resp', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [45]  (8.614 ns)
+
+ <State 9>: 8.614ns
+The critical path consists of the following:
+	bus response operation ('gmem_addr_2_resp', softmax_accel_hls.cc:208) on port 'gmem' (softmax_accel_hls.cc:208) [45]  (8.614 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

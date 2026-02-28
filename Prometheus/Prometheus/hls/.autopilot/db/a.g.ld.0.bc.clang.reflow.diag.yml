@@ -1,0 +1,427 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 36, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.1
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 45, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.2
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 95, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.3
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 101, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 200, Column: 29 }
+Function:        softmax_accel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'recip_sum_q2_30(ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 110, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 192, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'exp_approx_q16(ap_int<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+Function:        softmax_accel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_215_4
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:215:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          softmax_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+Function:        softmax_accel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_117_1
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:117:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          softmax_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_softmax_accel_ir
+Args:            
+  - Callee:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_softmax_accel_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 177, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_177_1
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:177:21'
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 179, Column: 18 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep8seq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_188_2
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:188:21'
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 190, Column: 18 }
+  - OrigDirection:   read
+  - OrigID:          for.body16.load.7
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 208, Column: 19 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 208, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc44.store.12
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 221, Column: 17 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 221, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.end55.store.6
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 222, Column: 17 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 222, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.end55.store.10
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 223, Column: 17 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 223, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          for.end55.store.14
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgep8seq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_188_2
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:188:21'
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 177, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 177, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_177_1
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:177:21'
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 177, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_177_1
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:177:21'
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 177, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_177_1
+  - String:          '''('
+  - LoopLoc:         'softmax_accel_hls.cc:177:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_188_2
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:188:21'
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 159, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 21 }
+Function:        softmax_accel
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_188_2
+  - String:          '''('
+  - LoopLoc:         'softmax_accel_hls.cc:188:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

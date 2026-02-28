@@ -8,7 +8,7 @@
 #define DBG_BASE     0x6000
 
 #ifndef N
-#define N 128
+#define N 8
 #endif
 
 // ------------------------------------------------

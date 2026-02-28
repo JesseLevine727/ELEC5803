@@ -1,5 +1,5 @@
 // softmax_accel_hls.cpp
-// Separate HLS accelerator block (Option B)
+// Separate HLS accelerator block
 //
 // - Implements softmax over N elements in Q16.16
 // - exp(x) via exp2 approximation: exp(x)=2^(x/ln2)

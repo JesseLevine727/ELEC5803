@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'softmax_accel_Pipeline_VITIS_LOOP_188_2'
 ================================================================
-* Date:           Fri Feb 27 18:14:38 2026
+* Date:           Sat Feb 28 17:58:39 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        Prometheus
@@ -235,7 +235,6 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'icmp' operation 1 bit ('icmp_ln53', softmax_accel_hls.cc:53->softmax_accel_hls.cc:192) [34]  (2.552 ns)
 	'select' operation 32 bit ('x_q16', softmax_accel_hls.cc:53->softmax_accel_hls.cc:192) [35]  (0.698 ns)
-	'sub' operation 50 bit ('sub_ln56', softmax_accel_hls.cc:56->softmax_accel_hls.cc:192) [40]  (0.000 ns)
 	'sub' operation 50 bit ('sub_ln56_1', softmax_accel_hls.cc:56->softmax_accel_hls.cc:192) [43]  (4.956 ns)
 
  <State 5>: 4.956ns

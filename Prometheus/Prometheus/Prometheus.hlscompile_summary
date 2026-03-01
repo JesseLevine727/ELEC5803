@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Feb 27 18:14:26 2026",
- "timestampMillis": "1772234066830",
+ "dateTimestamp": "Sat Feb 28 17:58:28 2026",
+ "timestampMillis": "1772319508798",
  "buildStep": {
-  "cmdId": "7a2b6035-31b1-4e62-a4de-75d960e46847",
+  "cmdId": "24886583-3956-4799-8b70-c1e6320c4e1c",
   "name": "v++",
   "logFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/logs/Prometheus.steps.log",
   "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/elfo/Documents/ELEC5803/Prometheus/hls_config.cfg --work_dir Prometheus ",
@@ -28,7 +28,7 @@
   "iniFiles": [
    {
     "path": "/home/elfo/Documents/ELEC5803/Prometheus/hls_config.cfg",
-    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nclock=11.8ns\nsyn.file=./riscv32i.cc\nsyn.file=./riscv32i.h\nsyn.file=./softmax_accel_hls.cc\ntb.file=./tb_softmax_accel.cc\nsyn.top=softmax_accel"
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nclock=11.8ns\nsyn.file=./riscv32i.cc\nsyn.file=./riscv32i.h\nsyn.file=./softmax_accel_hls.cc\ntb.file=./tb_softmax_accel.cc\nsyn.top=softmax_accel\ncosim.wave_debug=1\ncosim.trace_level=all"
    }
   ],
   "cwd": "/home/elfo/Documents/ELEC5803/Prometheus"
@@ -38,10 +38,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Feb 27 18:14:26 2026",
- "timestampMillis": "1772234066830",
+ "dateTimestamp": "Sat Feb 28 17:58:28 2026",
+ "timestampMillis": "1772319508798",
  "status": {
-  "cmdId": "7a2b6035-31b1-4e62-a4de-75d960e46847",
+  "cmdId": "24886583-3956-4799-8b70-c1e6320c4e1c",
   "state": "CS_RUNNING"
  }
 }
@@ -49,8 +49,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Feb 27 18:14:28 2026",
- "timestampMillis": "1772234068408",
+ "dateTimestamp": "Sat Feb 28 17:58:30 2026",
+ "timestampMillis": "1772319510347",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -87,10 +87,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Feb 27 18:14:28 2026",
- "timestampMillis": "1772234068408",
+ "dateTimestamp": "Sat Feb 28 17:58:30 2026",
+ "timestampMillis": "1772319510348",
  "buildStep": {
-  "cmdId": "4fe2505b-93d9-4436-8169-f9bd3470cfe6",
+  "cmdId": "3533c57e-4d52-48ac-925e-905aab217fce",
   "name": "",
   "logFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/hls.log",
   "commandLine": "",
@@ -103,10 +103,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Feb 27 18:14:28 2026",
- "timestampMillis": "1772234068408",
+ "dateTimestamp": "Sat Feb 28 17:58:30 2026",
+ "timestampMillis": "1772319510348",
  "status": {
-  "cmdId": "4fe2505b-93d9-4436-8169-f9bd3470cfe6",
+  "cmdId": "3533c57e-4d52-48ac-925e-905aab217fce",
   "state": "CS_RUNNING"
  }
 }
@@ -114,8 +114,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:28 2026",
- "timestampMillis": "1772234068408",
+ "dateTimestamp": "Sat Feb 28 17:58:30 2026",
+ "timestampMillis": "1772319510348",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/hls_data.json",
   "name": "",
@@ -128,8 +128,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:28 2026",
- "timestampMillis": "1772234068408",
+ "dateTimestamp": "Sat Feb 28 17:58:30 2026",
+ "timestampMillis": "1772319510348",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/syn/report/csynth.rpt",
   "name": "",
@@ -142,8 +142,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:28 2026",
- "timestampMillis": "1772234068409",
+ "dateTimestamp": "Sat Feb 28 17:58:30 2026",
+ "timestampMillis": "1772319510348",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/syn/report/csynth.xml",
   "name": "",
@@ -156,8 +156,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078737",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520641",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
@@ -170,8 +170,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078737",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520641",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
@@ -184,8 +184,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078737",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520641",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
@@ -198,10 +198,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078737",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520641",
  "status": {
-  "cmdId": "4fe2505b-93d9-4436-8169-f9bd3470cfe6",
+  "cmdId": "3533c57e-4d52-48ac-925e-905aab217fce",
   "state": "CS_PASSED"
  }
 }
@@ -209,10 +209,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078802",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520702",
  "status": {
-  "cmdId": "7a2b6035-31b1-4e62-a4de-75d960e46847",
+  "cmdId": "24886583-3956-4799-8b70-c1e6320c4e1c",
   "state": "CS_PASSED"
  }
 }
@@ -220,8 +220,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078812",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520711",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/reports/v++_compile_Prometheus_guidance.html",
   "name": "",
@@ -234,8 +234,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:14:38 2026",
- "timestampMillis": "1772234078812",
+ "dateTimestamp": "Sat Feb 28 17:58:40 2026",
+ "timestampMillis": "1772319520711",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/reports/.db/v++_compile_Prometheus_guidance.pb3",
   "name": "",

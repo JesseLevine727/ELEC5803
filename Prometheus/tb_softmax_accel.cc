@@ -4,7 +4,7 @@
 #include <ap_int.h>
 
 #ifndef N
-#define N 8
+#define N 128
 #endif
 
 #define MEM_SIZE 16384

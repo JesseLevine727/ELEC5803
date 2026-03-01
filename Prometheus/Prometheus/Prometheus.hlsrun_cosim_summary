@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Feb 27 18:15:53 2026",
- "timestampMillis": "1772234153238",
+ "dateTimestamp": "Sat Feb 28 17:59:12 2026",
+ "timestampMillis": "1772319552752",
  "buildStep": {
-  "cmdId": "8f16bd06-8cb8-441c-aecc-4da7c8253056",
+  "cmdId": "a87b28cf-f379-4d92-aa30-2cc2fb3e503a",
   "name": "vitis-run",
   "logFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/logs/Prometheus.steps.log",
   "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /home/elfo/Documents/ELEC5803/Prometheus/hls_config.cfg --work_dir Prometheus ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Feb 27 18:15:53 2026",
- "timestampMillis": "1772234153238",
+ "dateTimestamp": "Sat Feb 28 17:59:12 2026",
+ "timestampMillis": "1772319552752",
  "status": {
-  "cmdId": "8f16bd06-8cb8-441c-aecc-4da7c8253056",
+  "cmdId": "a87b28cf-f379-4d92-aa30-2cc2fb3e503a",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154894",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554382",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -82,10 +82,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154894",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "buildStep": {
-  "cmdId": "a2fdb4d6-5cd5-4d5c-b5e5-f6632c432ba8",
+  "cmdId": "37a8000d-7d37-4a04-8b28-a18030a901be",
   "name": "",
   "logFile": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/hls.log",
   "commandLine": "",
@@ -98,10 +98,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154894",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "status": {
-  "cmdId": "a2fdb4d6-5cd5-4d5c-b5e5-f6632c432ba8",
+  "cmdId": "37a8000d-7d37-4a04-8b28-a18030a901be",
   "state": "CS_RUNNING"
  }
 }
@@ -109,8 +109,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154894",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls/sim/report/softmax_accel_cosim.rpt",
   "name": "",
@@ -123,8 +123,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154895",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
@@ -137,8 +137,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154895",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
@@ -151,8 +151,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154895",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
@@ -165,13 +165,63 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Feb 27 18:15:54 2026",
- "timestampMillis": "1772234154895",
+ "dateTimestamp": "Sat Feb 28 17:59:14 2026",
+ "timestampMillis": "1772319554383",
  "report": {
   "path": "/home/elfo/Documents/ELEC5803/Prometheus/Prometheus/hls",
   "name": "",
   "fileType": "DIR",
   "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Feb 28 18:05:36 2026",
+ "timestampMillis": "1772319936130",
+ "status": {
+  "cmdId": "37a8000d-7d37-4a04-8b28-a18030a901be",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Feb 28 18:05:36 2026",
+ "timestampMillis": "1772319936185",
+ "status": {
+  "cmdId": "a87b28cf-f379-4d92-aa30-2cc2fb3e503a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Feb 28 18:05:36 2026",
+ "timestampMillis": "1772319936185",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Feb 28 18:05:36 2026",
+ "timestampMillis": "1772319936185",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
   "cmdId": ""
  }
 }

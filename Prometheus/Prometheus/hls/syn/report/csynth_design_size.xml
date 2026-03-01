@@ -33,8 +33,8 @@
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
                 <row id="0" col0="softmax_accel" col1="softmax_accel_hls.cc:154" col2="3995" col3="334" col4="354" col5="352" col6="384">
-                    <row id="1" col0="exp_approx_q16" col1="softmax_accel_hls.cc:49" col2="1844" col3="" col4="" col5="" col6=""/>
-                    <row id="2" col0="recip_sum_q2_30" col1="softmax_accel_hls.cc:110" col2="1244" col3="" col4="" col5="" col6=""/>
+                    <row id="2" col0="exp_approx_q16" col1="softmax_accel_hls.cc:49" col2="1844" col3="" col4="" col5="" col6=""/>
+                    <row id="6" col0="recip_sum_q2_30" col1="softmax_accel_hls.cc:110" col2="1244" col3="" col4="" col5="" col6=""/>
                 </row>
             </rows>
             <notes/>

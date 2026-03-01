@@ -1195,7 +1195,9 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_cosim trace_level="all" wave_debug="1"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="mem" index="0" direction="inout" srcType="*" srcSize="32">
             <hwRefs>

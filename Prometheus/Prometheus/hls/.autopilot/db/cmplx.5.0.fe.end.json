@@ -1,21 +1,27 @@
 {
-    "0": {
-        "name": "softmax_accel",
+    "1": {
+        "name": "softmax_accel_Pipeline_VITIS_LOOP_188_2",
         "file": "softmax_accel_hls.cc",
-        "fileloc": "154",
-        "instructions": "290",
-        "total_instructions": "451",
-        "calls": "3 2 1",
-        "basicblocks": "72",
-        "memory_accesses": "0",
-        "control_depth": "0",
-        "def_use_depth": "7",
+        "fileloc": "176",
+        "instructions": "92",
+        "total_instructions": "92",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
         "loads": {
-            "G": "4",
-            "L": "2"
+            "G": "2",
+            "L": "3"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
         }
     },
-    "1": {
+    "2": {
         "name": "softmax_accel_Pipeline_VITIS_LOOP_202_3",
         "file": "softmax_accel_hls.cc",
         "fileloc": "202",
@@ -36,26 +42,20 @@
             "L": "1"
         }
     },
-    "2": {
-        "name": "softmax_accel_Pipeline_VITIS_LOOP_188_2",
+    "0": {
+        "name": "softmax_accel",
         "file": "softmax_accel_hls.cc",
-        "fileloc": "176",
-        "instructions": "92",
-        "total_instructions": "92",
-        "calls": "",
-        "basicblocks": "4",
-        "memory_accesses": "8",
-        "control_depth": "1",
-        "def_use_depth": "1",
+        "fileloc": "154",
+        "instructions": "290",
+        "total_instructions": "451",
+        "calls": "3 1 2",
+        "basicblocks": "72",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "7",
         "loads": {
-            "G": "2",
-            "L": "3"
-        },
-        "stores": {
-            "L": "5"
-        },
-        "loops": {
-            "L": "1"
+            "G": "4",
+            "L": "2"
         }
     },
     "3": {

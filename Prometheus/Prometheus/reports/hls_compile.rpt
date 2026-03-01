@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'softmax_accel'
 ================================================================
 + General Information: 
-    * Date:           Fri Feb 27 18:14:38 2026
+    * Date:           Sat Feb 28 17:58:40 2026
     * Version:        2025.1 (Build 6135595 on May 21 2025)
     * Project:        Prometheus
     * Solution:       hls (Vivado IP Flow Target)

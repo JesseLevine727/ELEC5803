@@ -59862,7 +59862,7 @@ int main()
 
 
     printf("\nInput logits:\n");
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 128; i++) {
         double v = -1.0 + 0.25 * i;
         int32_t q = q16(v);
         mem[in + i] = (uint32_t)q;
@@ -59870,13 +59870,13 @@ int main()
     }
 
 
-    softmax_accel(mem, 0x1000, 0x2000, 0x3000, 8);
+    softmax_accel(mem, 0x1000, 0x2000, 0x3000, 128);
 
 
     printf("\nSoftmax probabilities:\n");
 
     double sum = 0.0;
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 128; i++) {
         int32_t p = (int32_t)mem[pr + i];
         double pf = p / 65536.0;
         sum += pf;

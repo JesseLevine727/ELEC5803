@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'softmax_accel_Pipeline_VITIS_LOOP_202_3'
 ================================================================
-* Date:           Fri Feb 27 18:14:38 2026
+* Date:           Sat Feb 28 17:58:40 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        Prometheus
@@ -164,7 +164,7 @@ Target clock period: 11.800ns, clock uncertainty: 3.186ns.
 The critical path consists of the following:
 	'store' operation 0 bit ('store_ln202', softmax_accel_hls.cc:202) of constant 0 on local variable 'i', softmax_accel_hls.cc:202 [16]  (1.588 ns)
 	'load' operation 9 bit ('i', softmax_accel_hls.cc:202) on local variable 'i', softmax_accel_hls.cc:202 [19]  (0.000 ns)
-	'icmp' operation 1 bit ('icmp_ln202', softmax_accel_hls.cc:202) [21]  (1.823 ns)
+	'add' operation 9 bit ('add_ln202', softmax_accel_hls.cc:202) [23]  (1.823 ns)
 	'store' operation 0 bit ('store_ln202', softmax_accel_hls.cc:202) of variable 'add_ln202', softmax_accel_hls.cc:202 on local variable 'i', softmax_accel_hls.cc:202 [46]  (1.588 ns)
 
  <State 2>: 6.013ns

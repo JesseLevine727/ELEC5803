@@ -1,0 +1,13 @@
+{
+  "name": "Prometheus_streaming_w4",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "Prometheus_streaming_w4"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}

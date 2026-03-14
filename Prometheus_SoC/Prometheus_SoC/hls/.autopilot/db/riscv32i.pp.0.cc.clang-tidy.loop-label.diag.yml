@@ -1,0 +1,54 @@
+---
+MainSourceFile:  /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/riscv32i.pp.0.cc
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/riscv32i.pp.0.cc
+        Offset:          286940
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/riscv32i.pp.0.cc
+        Offset:          287406
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/riscv32i.pp.0.cc
+        Offset:          287873
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/riscv32i.pp.0.cc
+        Offset:          582703
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      44
+    FilePath:        riscv32i.cc
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_48_1:  '
+    FileOffset:      48
+    FilePath:        riscv32i.cc
+    Replacements:    
+      - FilePath:        /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/riscv32i.pp.0.cc
+        Offset:          978692
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_48_1: '
+...

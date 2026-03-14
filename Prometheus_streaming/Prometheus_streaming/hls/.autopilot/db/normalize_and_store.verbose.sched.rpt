@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vitis HLS Report for 'normalize_and_store'
+================================================================
+* Date:           Sat Mar 14 13:29:02 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus_streaming
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  8.614 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |       12|      267|  0.142 us|  3.151 us|    2|  257|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.41>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%inv_sum_q30_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %inv_sum_q30"   --->   Operation 5 'read' 'inv_sum_q30_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%n_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %n"   --->   Operation 6 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%prob_stream = alloca i64 1" [softmax_accel_hls.cc:237]   --->   Operation 7 'alloca' 'prob_stream' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 32> <FIFO>
+ST_1 : Operation 8 [2/2] (3.41ns)   --->   "%call_ln240 = call void @emit_prob_stream, i32 %exp_buf, i9 %n_read, i31 %inv_sum_q30_read, i32 %prob_stream" [softmax_accel_hls.cc:240]   --->   Operation 8 'call' 'call_ln240' <Predicate = true> <Delay = 3.41> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln240 = call void @emit_prob_stream, i32 %exp_buf, i9 %n_read, i31 %inv_sum_q30_read, i32 %prob_stream" [softmax_accel_hls.cc:240]   --->   Operation 9 'call' 'call_ln240' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 6.01>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%pr_w_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %pr_w"   --->   Operation 10 'read' 'pr_w_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %mem"   --->   Operation 11 'read' 'mem_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [2/2] (6.01ns)   --->   "%call_ln241 = call void @write_prob_stream, i32 %gmem, i64 %mem_read, i30 %pr_w_read, i9 %n_read, i32 %prob_stream" [softmax_accel_hls.cc:241]   --->   Operation 12 'call' 'call_ln241' <Predicate = true> <Delay = 6.01> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specstablecontent_ln235 = specstablecontent void @_ssdm_op_SpecStableContent, i31 %inv_sum_q30, i1 1, void @p_str" [softmax_accel_hls.cc:235]   --->   Operation 13 'specstablecontent' 'specstablecontent_ln235' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specstablecontent_ln235 = specstablecontent void @_ssdm_op_SpecStableContent, i32 %exp_buf, i1 1, void @p_str" [softmax_accel_hls.cc:235]   --->   Operation 14 'specstablecontent' 'specstablecontent_ln235' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specstablecontent_ln235 = specstablecontent void @_ssdm_op_SpecStableContent, i9 %n, i1 1, void @p_str" [softmax_accel_hls.cc:235]   --->   Operation 15 'specstablecontent' 'specstablecontent_ln235' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specstablecontent_ln235 = specstablecontent void @_ssdm_op_SpecStableContent, i30 %pr_w, i1 1, void @p_str" [softmax_accel_hls.cc:235]   --->   Operation 16 'specstablecontent' 'specstablecontent_ln235' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specstablecontent_ln235 = specstablecontent void @_ssdm_op_SpecStableContent, i64 %mem, i1 1, void @p_str" [softmax_accel_hls.cc:235]   --->   Operation 17 'specstablecontent' 'specstablecontent_ln235' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln235 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_2" [softmax_accel_hls.cc:235]   --->   Operation 18 'specdataflowpipeline' 'specdataflowpipeline_ln235' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %exp_buf, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 19 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_1, i32 0, i32 0, void @empty_2, i32 0, i32 16384, void @empty_3, void @empty_4, void @empty_2, i32 16, i32 16, i32 16, i32 16, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @prob_stream_str, i32 1, void @p_str, void @p_str, i32 32, i32 32, i32 %prob_stream, i32 %prob_stream"   --->   Operation 21 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %prob_stream, void @empty, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/2] (0.00ns)   --->   "%call_ln241 = call void @write_prob_stream, i32 %gmem, i64 %mem_read, i30 %pr_w_read, i9 %n_read, i32 %prob_stream" [softmax_accel_hls.cc:241]   --->   Operation 23 'call' 'call_ln241' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln242 = ret" [softmax_accel_hls.cc:242]   --->   Operation 24 'ret' 'ret_ln242' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 11.800ns, clock uncertainty: 3.186ns.
+
+ <State 1>: 3.411ns
+The critical path consists of the following:
+	wire read operation ('inv_sum_q30_read') on port 'inv_sum_q30' [13]  (0.000 ns)
+	'call' operation 0 bit ('call_ln240', softmax_accel_hls.cc:240) to 'emit_prob_stream' [22]  (3.411 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 6.013ns
+The critical path consists of the following:
+	wire read operation ('pr_w_read') on port 'pr_w' [15]  (0.000 ns)
+	'call' operation 0 bit ('call_ln241', softmax_accel_hls.cc:241) to 'write_prob_stream' [23]  (6.013 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

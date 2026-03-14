@@ -1,0 +1,642 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Sat Mar 14 15:42:53 EDT 2026
+    * Version:         2025.1 (Build 6135595 on May 21 2025)
+    * Project:         Prometheus_SoC
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  11.8 ns
+    * C-Synthesis target clock:    11.8 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              26280
+FF:               52339
+DSP:              32
+BRAM:             9
+URAM:             0
+SRL:              6
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 11.800      |
+| Post-Synthesis | 9.037       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++------------------------------------------------------------------+-------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                             | LUT   | FF    | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++------------------------------------------------------------------+-------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                             | 26280 | 52339 | 32  | 9    |      |     |        |      |         |          |        |
+|   grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62                 | 26258 | 52324 | 32  | 8    |      |     |        |      |         |          |        |
+|     (grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62)             | 1744  | 17417 | 6   |      |      |     |        |      |         |          |        |
+|     RECIP_B_Q30_U                                                | 51    | 30    |     |      |      |     |        |      |         |          |        |
+|     RECIP_M_Q30_U                                                |       |       |     |      |      |     |        |      |         |          |        |
+|     grp_generate_exp_buffer_fu_3181                              | 12785 | 17762 | 4   | 4    |      |     |        |      |         |          |        |
+|           mul_12ns_18s_30_1_1_U531                               | 204   |       | 1   |      |      |     |        |      |         |          |        |
+|           mul_12ns_18s_30_1_1_U533                               | 202   |       | 1   |      |      |     |        |      |         |          |        |
+|           mul_12ns_18s_30_1_1_U535                               | 202   |       | 1   |      |      |     |        |      |         |          |        |
+|           mul_12ns_18s_30_1_1_U537                               | 202   |       | 1   |      |      |     |        |      |         |          |        |
+|       exp_stream_U                                               | 8415  | 21    |     | 4    |      |     |        |      |         |          |        |
+|       start_for_cache_exp_stream_U0_U                            |       |       |     |      |      |     |        |      |         |          |        |
+|     grp_load_logits_and_find_max_fu_2917                         | 8213  | 8494  |     |      |      |     |        |      |         |          |        |
+|       (grp_load_logits_and_find_max_fu_2917)                     | 4     | 8203  |     |      |      |     |        |      |         |          |        |
+|       grp_load_logits_and_find_max_Pipeline_load_loop_fu_568     | 8209  | 291   |     |      |      |     |        |      |         |          |        |
+|         (grp_load_logits_and_find_max_Pipeline_load_loop_fu_568) | 8147  | 289   |     |      |      |     |        |      |         |          |        |
+|         flow_control_loop_pipe_sequential_init_U                 | 62    | 2     |     |      |      |     |        |      |         |          |        |
+|     grp_normalize_and_store_fu_3700                              | 2928  | 8608  | 16  | 4    |      |     |        |      |         |          |        |
+|       emit_prob_stream_U0                                        | 2585  | 8303  | 16  |      |      |     |        |      |         |          |        |
+|         (emit_prob_stream_U0)                                    | 4     | 8211  |     |      |      |     |        |      |         |          |        |
+|         grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106     | 2581  | 92    | 16  |      |      |     |        |      |         |          |        |
+|           (grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106) | 17    | 90    | 8   |      |      |     |        |      |         |          |        |
+|           flow_control_loop_pipe_sequential_init_U               | 2263  | 2     |     |      |      |     |        |      |         |          |        |
+|           mul_32ns_31ns_62_1_1_U2101                             | 75    |       | 2   |      |      |     |        |      |         |          |        |
+|           mul_32ns_31ns_62_1_1_U2102                             | 75    |       | 2   |      |      |     |        |      |         |          |        |
+|           mul_32ns_31ns_62_1_1_U2103                             | 75    |       | 2   |      |      |     |        |      |         |          |        |
+|           mul_32ns_31ns_62_1_1_U2104                             | 76    |       | 2   |      |      |     |        |      |         |          |        |
+|       prob_stream_U                                              |       |       |     |      |      |     |        |      |         |          |        |
+|       write_prob_stream_U0                                       | 293   | 281   |     |      |      |     |        |      |         |          |        |
+|         (write_prob_stream_U0)                                   | 242   | 251   |     |      |      |     |        |      |         |          |        |
+|     mul_31s_16ns_47_1_1_U2898                                    | 284   |       | 2   |      |      |     |        |      |         |          |        |
+|     mul_32ns_32ns_64_1_1_U2899                                   |       |       |     |      |      |     |        |      |         |          |        |
+|     mul_32ns_32s_64_1_1_U2900                                    | 124   |       |     |      |      |     |        |      |         |          |        |
+|     mul_32s_32s_64_1_1_U2901                                     | 79    |       | 2   |      |      |     |        |      |         |          |        |
+|   grp_prometheus_soc_Pipeline_VITIS_LOOP_48_1_fu_56              |       |       |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                     |       |       |     |      |      |     |        |      |         |          |        |
+|   reg_file_U                                                     |       |       |     |      |      |     |        |      |         |          |        |
++------------------------------------------------------------------+-------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 49.40% | OK     |
+| FD                                                        | 50%       | 49.19% | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.03%  | OK     |
+| MUXF7                                                     | 15%       | 7.71%  | OK     |
+| DSP                                                       | 80%       | 14.55% | OK     |
+| RAMB/FIFO                                                 | 80%       | 3.21%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 8.88%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 1101   | REVIEW |
+| Average Fanout for modules > 100k cells                   | 4         | 2.92   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+------------------------------------------------------------------------+--------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                         | ENDPOINT PIN                                                             | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                        |                                                                          |              |            |                |          DELAY |        DELAY |
++-------+-------+------------------------------------------------------------------------+--------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.763 | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]/C | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[31]/D |           17 |         53 |          9.030 |          3.658 |        5.372 |
+| Path2 | 3.181 | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]/C | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[28]/D |           17 |         53 |          8.612 |          3.547 |        5.065 |
+| Path3 | 3.415 | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]/C | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[17]/D |           14 |         53 |          8.378 |          3.312 |        5.066 |
+| Path4 | 3.483 | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]/C | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[27]/D |           15 |         53 |          8.310 |          3.417 |        4.893 |
+| Path5 | 3.585 | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/src1_reg_8988_reg[1]/C  | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[29]/D       |           18 |         33 |          8.240 |          4.197 |        4.043 |
++-------+-------+------------------------------------------------------------------------+--------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_45                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_31                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_19                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_12                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[31]_i_3 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[31]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_22                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_14                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[28]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[28]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_21                         | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_14                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_9                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[17]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[17]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_13                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[27]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[27]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/src1_reg_8988_reg[1]                             | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467[3]_i_4                      | LUT.others.LUT2      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[3]_i_1                  | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mem_address0[0]_INST_0_i_1                       | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[11]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[12]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/and_ln38_1_reg_9085[0]_i_2                       | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/ap_CS_fsm[8]_i_2                                 | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[31]_i_8                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_12                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_8                                 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[3]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[7]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[11]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[15]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[19]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[23]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[27]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[31]_i_3                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[29]                                | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_45                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_31                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_19                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_12                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[31]_i_3 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[31]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_22                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_14                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[28]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[28]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_21                         | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_14                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_9                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[17]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[17]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_13                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[27]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[27]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/src1_reg_8988_reg[1]                             | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467[3]_i_4                      | LUT.others.LUT2      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[3]_i_1                  | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mem_address0[0]_INST_0_i_1                       | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[11]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[12]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/and_ln38_1_reg_9085[0]_i_2                       | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/ap_CS_fsm[8]_i_2                                 | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[31]_i_8                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_12                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_8                                 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[3]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[7]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[11]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[15]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[19]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[23]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[27]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[31]_i_3                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[29]                                | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_45                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_31                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_19                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_12                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[31]_i_3 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[31]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_22                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_14                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[28]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[28]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_21                         | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_14                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_9                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[17]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[17]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_13                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[27]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[27]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/src1_reg_8988_reg[1]                             | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467[3]_i_4                      | LUT.others.LUT2      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[3]_i_1                  | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mem_address0[0]_INST_0_i_1                       | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[11]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[12]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/and_ln38_1_reg_9085[0]_i_2                       | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/ap_CS_fsm[8]_i_2                                 | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[31]_i_8                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_12                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_8                                 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[3]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[7]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[11]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[15]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[19]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[23]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[27]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[31]_i_3                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[29]                                | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_45                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_31                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_19                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_12                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[31]_i_3 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[31]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_22                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_14                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[28]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[28]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_21                         | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_14                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_9                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[17]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[17]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_13                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[27]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[27]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/src1_reg_8988_reg[1]                             | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467[3]_i_4                      | LUT.others.LUT2      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[3]_i_1                  | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mem_address0[0]_INST_0_i_1                       | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[11]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[12]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/and_ln38_1_reg_9085[0]_i_2                       | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/ap_CS_fsm[8]_i_2                                 | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[31]_i_8                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_12                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_8                                 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[3]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[7]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[11]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[15]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[19]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[23]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[27]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[31]_i_3                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[29]                                | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_45                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_31                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_19                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[31]_i_12                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[31]_i_3 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[31]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[30]_i_30                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_22                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_14                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[28]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[28]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[28]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_21                         | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_14                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_9                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[17]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[17]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[17]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/func7_reg_8895_reg[2]                            | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/icmp_ln121_reg_9113[0]_i_2                       | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_23                         | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[30]_i_11                         | LUT.others.LUT3      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[7]_i_45                          | LUT.others.LUT5      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_27                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[7]_i_15                      | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[10]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[14]_i_16                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[16]_i_15                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_28                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[24]_i_17                     | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_13                         | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_8                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832[27]_i_4                          | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mul_32s_32s_64_1_1_U2901/res_22_reg_2832[27]_i_1 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/res_22_reg_2832_reg[27]                          | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/src1_reg_8988_reg[1]                             | FLOP_LATCH.flop.FDRE |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467[3]_i_4                      | LUT.others.LUT2      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[3]_i_1                  | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/mem_address0[0]_INST_0_i_1                       | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[11]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/trunc_ln162_reg_9467_reg[12]_i_1                 | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/and_ln38_1_reg_9085[0]_i_2                       | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/ap_CS_fsm[8]_i_2                                 | LUT.others.LUT4      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[31]_i_8                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_12                                | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318[3]_i_8                                 | LUT.others.LUT6      |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[3]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[7]_i_1                             | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[11]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[15]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[19]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[23]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[27]_i_1                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[31]_i_3                            | CARRY.others.CARRY4  |
+    | grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/pc_fu_318_reg[29]                                | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-----------------------------------------------------------------------+
+| Report Type              | Report Location                                                       |
++--------------------------+-----------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/prometheus_soc_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/prometheus_soc_failfast_synth.rpt                 |
+| power                    | impl/verilog/report/prometheus_soc_power_synth.rpt                    |
+| timing                   | impl/verilog/report/prometheus_soc_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/prometheus_soc_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/prometheus_soc_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/prometheus_soc_utilization_hierarchical_synth.rpt |
++--------------------------+-----------------------------------------------------------------------+
+
+

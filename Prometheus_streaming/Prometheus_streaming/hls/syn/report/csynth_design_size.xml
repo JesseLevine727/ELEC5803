@@ -1,0 +1,61 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 4132, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,   487, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   402, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   410, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   408, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   412, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   412, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   412, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   412, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   419, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   419, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   417, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   413, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   413, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   439, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   446, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="softmax_accel" col1="softmax_accel_hls.cc:258" col2="4132" col3="408" col4="419" col5="413" col6="446">
+                    <row id="12" col0="load_logits_and_find_max" col1="softmax_accel_hls.cc:124" col2="75" col3="24" col4="25" col5="24" col6="28"/>
+                    <row id="6" col0="generate_exp_buffer" col1="softmax_accel_hls.cc:183" col2="2116" col3="95" col4="91" col5="88" col6="97">
+                        <row id="9" col0="emit_exp_stream" col1="softmax_accel_hls.cc:147" col2="2002" col3="71" col4="66" col5="65" col6="69">
+                            <row id="5" col0="exp_approx_q16" col1="softmax_accel_hls.cc:53" col2="1844" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="1" col0="cache_exp_stream" col1="softmax_accel_hls.cc:163" col2="100" col3="18" col4="19" col5="17" col6="20"/>
+                    </row>
+                    <row id="2" col0="recip_sum_q2_30" col1="softmax_accel_hls.cc:87" col2="1244" col3="" col4="" col5="" col6=""/>
+                    <row id="7" col0="normalize_and_store" col1="softmax_accel_hls.cc:228" col2="349" col3="40" col4="40" col5="38" col6="51">
+                        <row id="13" col0="emit_prob_stream" col1="softmax_accel_hls.cc:199" col2="301" col3="18" col4="18" col5="17" col6="21"/>
+                        <row id="11" col0="write_prob_stream" col1="softmax_accel_hls.cc:214" col2="34" col3="16" col4="16" col5="15" col6="22"/>
+                    </row>
+                    <row id="14" col0="derive_shift_dbg" col1="softmax_accel_hls.cc:244" col2="52" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

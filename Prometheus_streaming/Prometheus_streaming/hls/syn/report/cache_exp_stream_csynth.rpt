@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'cache_exp_stream'
+================================================================
+* Date:           Sat Mar 14 13:29:02 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus_streaming
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  8.191 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |        3|      258|  35.400 ns|  3.044 us|    2|  257|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- cache_exp_loop  |        1|      256|         2|          1|          1|  1 ~ 256|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     81|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     77|    -|
+|Register         |        -|    -|     101|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     101|    158|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln173_fu_120_p2             |         +|   0|  0|  14|           9|           1|
+    |sum64_1_fu_142_p2               |         +|   0|  0|  47|          40|          40|
+    |ap_condition_111                |       and|   0|  0|   2|           1|           1|
+    |icmp_ln173_fu_114_p2            |      icmp|   0|  0|  14|           9|           9|
+    |ap_block_pp0_stage0_01001_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0|  81|          61|          54|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                    |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1        |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_5           |   9|          2|    9|         18|
+    |ap_sig_allocacmp_sum64_load_1  |  14|          3|   40|        120|
+    |exp_stream_blk_n               |   9|          2|    1|          2|
+    |i_fu_64                        |   9|          2|    9|         18|
+    |sum64_fu_60                    |   9|          2|   40|         80|
+    |sum64_out                      |   9|          2|   40|         80|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  77|         17|  141|        322|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_5_reg_172              |   9|   0|    9|          0|
+    |i_fu_64                  |   9|   0|    9|          0|
+    |sum64_fu_60              |  40|   0|   40|          0|
+    |sum64_out_preg           |  40|   0|   40|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 101|   0|  101|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  cache_exp_stream|  return value|
+|exp_stream_dout            |   in|   32|     ap_fifo|        exp_stream|       pointer|
+|exp_stream_empty_n         |   in|    1|     ap_fifo|        exp_stream|       pointer|
+|exp_stream_read            |  out|    1|     ap_fifo|        exp_stream|       pointer|
+|exp_stream_num_data_valid  |   in|    6|     ap_fifo|        exp_stream|       pointer|
+|exp_stream_fifo_cap        |   in|    6|     ap_fifo|        exp_stream|       pointer|
+|n                          |   in|    9|   ap_stable|                 n|        scalar|
+|exp_buf_address0           |  out|    8|   ap_memory|           exp_buf|         array|
+|exp_buf_ce0                |  out|    1|   ap_memory|           exp_buf|         array|
+|exp_buf_we0                |  out|    1|   ap_memory|           exp_buf|         array|
+|exp_buf_d0                 |  out|   32|   ap_memory|           exp_buf|         array|
+|sum64_out                  |  out|   40|      ap_vld|         sum64_out|       pointer|
+|sum64_out_ap_vld           |  out|    1|      ap_vld|         sum64_out|       pointer|
++---------------------------+-----+-----+------------+------------------+--------------+
+

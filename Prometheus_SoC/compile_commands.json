@@ -1,0 +1,40 @@
+[
+  {
+    "directory": "/home/elfo/Documents/ELEC5803/Prometheus_SoC",
+    "arguments": [
+      "/home/elfo/Documents/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=prometheus_soc",
+      "-c",
+      "/home/elfo/Documents/ELEC5803/Prometheus_SoC/./softmax_accel_hls.cc"
+    ],
+    "file": "/home/elfo/Documents/ELEC5803/Prometheus_SoC/./softmax_accel_hls.cc"
+  },
+  {
+    "directory": "/home/elfo/Documents/ELEC5803/Prometheus_SoC",
+    "arguments": [
+      "/home/elfo/Documents/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=prometheus_soc",
+      "-c",
+      "/home/elfo/Documents/ELEC5803/Prometheus_SoC/./riscv32i.cc"
+    ],
+    "file": "/home/elfo/Documents/ELEC5803/Prometheus_SoC/./riscv32i.cc"
+  },
+  {
+    "directory": "/home/elfo/Documents/ELEC5803/Prometheus_SoC",
+    "arguments": [
+      "/home/elfo/Documents/2025.1/Vitis/vcxx/libexec/clang++",
+      "--gcc-toolchain=/home/elfo/Documents/2025.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/elfo/Documents/2025.1/Vitis/include",
+      "-c",
+      "/home/elfo/Documents/ELEC5803/Prometheus_SoC/./tb_prometheus_soc.cc"
+    ],
+    "file": "/home/elfo/Documents/ELEC5803/Prometheus_SoC/./tb_prometheus_soc.cc"
+  }
+]

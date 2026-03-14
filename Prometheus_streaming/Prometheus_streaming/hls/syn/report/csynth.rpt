@@ -1,0 +1,281 @@
+
+
+================================================================
+== Synthesis Summary Report of 'softmax_accel'
+================================================================
++ General Information: 
+    * Date:           Sat Mar 14 13:29:03 2026
+    * Version:        2025.1 (Build 6135595 on May 21 2025)
+    * Project:        Prometheus_streaming
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
+    |                     Modules                     |  Issue  |       |       Latency       | Iteration|         | Trip |          |        |         |           |            |     |
+    |                     & Loops                     |   Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP   |     FF    |     LUT    | URAM|
+    +-------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
+    |+ softmax_accel                                  |   Timing|  -0.00|      833|  9.829e+03|         -|      834|     -|        no|  4 (1%)|   7 (3%)|  3338 (3%)|  5323 (10%)|    -|
+    | + load_logits_and_find_max                      |   Timing|  -0.00|      270|  3.186e+03|         -|      270|     -|        no|       -|        -|  173 (~0%)|   450 (~0%)|    -|
+    |  + load_logits_and_find_max_Pipeline_load_loop  |   Timing|  -0.00|      259|  3.056e+03|         -|      257|     -|    rewind|       -|        -|   98 (~0%)|   173 (~0%)|    -|
+    |   o load_loop                                   |        -|   8.61|      257|  3.033e+03|         3|        1|   256|       yes|       -|        -|          -|           -|    -|
+    | + generate_exp_buffer*                          |        -|   0.40|      267|  3.151e+03|         -|      257|     -|  dataflow|       -|  1 (~0%)|  965 (~0%)|   1248 (2%)|    -|
+    |  + emit_exp_stream                              |        -|   0.40|      266|  3.139e+03|         -|      257|     -|    rewind|       -|  1 (~0%)|  765 (~0%)|   1001 (1%)|    -|
+    |   o exp_emit_loop                               |        -|   8.61|      264|  3.115e+03|        10|        1|   256|       yes|       -|        -|          -|           -|    -|
+    |  + cache_exp_stream                             |        -|   0.42|      258|  3.044e+03|         -|      257|     -|    rewind|       -|        -|  101 (~0%)|   160 (~0%)|    -|
+    |   o cache_exp_loop                              |        -|   8.61|      256|  3.021e+03|         2|        1|   256|       yes|       -|        -|          -|           -|    -|
+    | + normalize_and_store*                          |   Timing|  -0.00|      267|  3.151e+03|         -|      257|     -|  dataflow|       -|   4 (1%)|  365 (~0%)|   422 (~0%)|    -|
+    |  + emit_prob_stream                             |        -|   0.10|      260|  3.068e+03|         -|      257|     -|    rewind|       -|   4 (1%)|  143 (~0%)|   110 (~0%)|    -|
+    |   o prob_emit_loop                              |        -|   8.61|      258|  3.044e+03|         4|        1|   256|       yes|       -|        -|          -|           -|    -|
+    |  + write_prob_stream                            |   Timing|  -0.00|      264|  3.115e+03|         -|      257|     -|    rewind|       -|        -|  123 (~0%)|   225 (~0%)|    -|
+    |   o prob_write_loop                             |        -|   8.61|      262|  3.092e+03|         8|        1|   256|       yes|       -|        -|          -|           -|    -|
+    +-------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | mem_1      | 0x10   | 32    | W      | Data signal of mem               |                                                                      |
+| s_axi_control | mem_2      | 0x14   | 32    | W      | Data signal of mem               |                                                                      |
+| s_axi_control | input_base | 0x1c   | 32    | W      | Data signal of input_base        |                                                                      |
+| s_axi_control | prob_base  | 0x24   | 32    | W      | Data signal of prob_base         |                                                                      |
+| s_axi_control | dbg_base   | 0x2c   | 32    | W      | Data signal of dbg_base          |                                                                      |
+| s_axi_control | n          | 0x34   | 32    | W      | Data signal of n                 |                                                                      |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------+
+| Argument   | Direction | Datatype     |
++------------+-----------+--------------+
+| mem        | inout     | pointer      |
+| input_base | in        | unsigned int |
+| prob_base  | in        | unsigned int |
+| dbg_base   | in        | unsigned int |
+| n          | in        | unsigned int |
++------------+-----------+--------------+
+
+* SW-to-HW Mapping
++------------+---------------+-----------+----------+--------------------------------------+
+| Argument   | HW Interface  | HW Type   | HW Usage | HW Info                              |
++------------+---------------+-----------+----------+--------------------------------------+
+| mem        | m_axi_gmem    | interface |          | channel=0                            |
+| mem        | s_axi_control | register  | offset   | name=mem_1 offset=0x10 range=32      |
+| mem        | s_axi_control | register  | offset   | name=mem_2 offset=0x14 range=32      |
+| input_base | s_axi_control | register  |          | name=input_base offset=0x1c range=32 |
+| prob_base  | s_axi_control | register  |          | name=prob_base offset=0x24 range=32  |
+| dbg_base   | s_axi_control | register  |          | name=dbg_base offset=0x2c range=32   |
+| n          | s_axi_control | register  |          | name=n offset=0x34 range=32          |
++------------+---------------+-----------+----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+-----------+----------------------------+
+| HW Interface | Direction | Length   | Width | Loop      | Loop Location              |
++--------------+-----------+----------+-------+-----------+----------------------------+
+| m_axi_gmem   | read      | variable | 32    | load_loop | softmax_accel_hls.cc:135:3 |
++--------------+-----------+----------+-------+-----------+----------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------------------+-----------+--------------+----------+-----------+----------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location             | Direction | Burst Status | Length   | Loop      | Loop Location              | Resolution | Problem                                                                                               |
++--------------+----------+-----------------------------+-----------+--------------+----------+-----------+----------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:137:17 | read      | Widen Fail   |          | load_loop | softmax_accel_hls.cc:135:3 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:137:17 | read      | Inferred     | variable | load_loop | softmax_accel_hls.cc:135:3 |            |                                                                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:224:16 | write     | Fail         |          |           |                            | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:294:17 | write     | Fail         |          |           |                            | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:295:17 | write     | Fail         |          |           |                            | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
+| m_axi_gmem   | mem      | softmax_accel_hls.cc:296:17 | write     | Fail         |          |           |                            | 214-227    | Volatile or Atomic access cannot be transformed                                                       |
++--------------+----------+-----------------------------+-----------+--------------+----------+-----------+----------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
+| Name                                            | DSP | Pragma | Variable     | Op        | Impl                   | Latency |
++-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
+| + softmax_accel                                 | 7   |        |              |           |                        |         |
+|   icmp_ln271_fu_930_p2                          |     |        | icmp_ln271   | seteq     | auto                   | 0       |
+|   icmp_ln272_fu_936_p2                          |     |        | icmp_ln272   | setgt     | auto                   | 0       |
+|   select_ln272_fu_942_p3                        |     |        | select_ln272 | select    | auto_sel               | 0       |
+|   icmp_ln289_fu_988_p2                          |     |        | icmp_ln289   | seteq     | auto                   | 0       |
+|   sum_q16_1_fu_998_p3                           |     |        | sum_q16_1    | select    | auto_sel               | 0       |
+|   icmp_ln89_fu_1009_p2                          |     |        | icmp_ln89    | seteq     | auto                   | 0       |
+|   xor_ln94_fu_1017_p2                           |     |        | xor_ln94     | xor       | auto                   | 0       |
+|   select_ln94_fu_1023_p3                        |     |        | select_ln94  | select    | auto_sel               | 0       |
+|   sub_ln101_fu_1039_p2                          |     |        | sub_ln101    | sub       | fabric                 | 0       |
+|   shl_ln101_fu_1049_p2                          |     |        | shl_ln101    | shl       | auto_pipe              | 0       |
+|   mul_31s_16ns_47_1_1_U50                       | 2   |        | mx           | mul       | auto                   | 0       |
+|   inv_x_q30_fu_1122_p2                          |     |        | inv_x_q30    | add       | fabric                 | 0       |
+|   sub_ln117_fu_1132_p2                          |     |        | sub_ln117    | sub       | fabric                 | 0       |
+|   shl_ln117_fu_1142_p2                          |     |        | shl_ln117    | shl       | auto_pipe              | 0       |
+|   add_ln102_fu_1074_p2                          |     |        | add_ln102    | add       | fabric                 | 0       |
+|   lshr_ln102_fu_1084_p2                         |     |        | lshr_ln102   | lshr      | auto_pipe              | 0       |
+|   mul_31s_16ns_47_1_1_U50                       | 2   |        | mul_ln111    | mul       | auto                   | 0       |
+|   add_ln112_fu_1161_p2                          |     |        | add_ln112    | add       | fabric                 | 0       |
+|   inv_sum_1_fu_1175_p2                          |     |        | inv_sum_1    | ashr      | auto_pipe              | 0       |
+|   inv_sum_3_fu_1197_p3                          |     |        | inv_sum_3    | select    | auto_sel               | 0       |
+|   icmp_ln120_fu_1215_p2                         |     |        | icmp_ln120   | setne     | auto                   | 0       |
+|   inv_sum_q30_fu_1225_p3                        |     |        | inv_sum_q30  | select    | auto_sel               | 0       |
+|   add_ln294_fu_1244_p2                          |     |        | add_ln294    | add       | fabric                 | 0       |
+|   add_ln295_fu_1269_p2                          |     |        | add_ln295    | add       | fabric                 | 0       |
+|   add_ln295_1_fu_1286_p2                        |     |        | add_ln295_1  | add       | fabric                 | 0       |
+|   select_ln249_fu_1314_p3                       |     |        | select_ln249 | select    | auto_sel               | 0       |
+|   add_ln296_fu_1322_p2                          |     |        | add_ln296    | add       | fabric                 | 0       |
+|   add_ln296_1_fu_1339_p2                        |     |        | add_ln296_1  | add       | fabric                 | 0       |
+|  + load_logits_and_find_max                     | 0   |        |              |           |                        |         |
+|    add_ln135_fu_109_p2                          |     |        | add_ln135    | add       | fabric                 | 0       |
+|   + load_logits_and_find_max_Pipeline_load_loop | 0   |        |              |           |                        |         |
+|     icmp_ln135_fu_126_p2                        |     |        | icmp_ln135   | seteq     | auto                   | 0       |
+|     add_ln135_fu_132_p2                         |     |        | add_ln135    | add       | fabric                 | 0       |
+|     icmp_ln139_fu_156_p2                        |     |        | icmp_ln139   | seteq     | auto                   | 0       |
+|     icmp_ln139_1_fu_161_p2                      |     |        | icmp_ln139_1 | setgt     | auto                   | 0       |
+|     or_ln139_fu_166_p2                          |     |        | or_ln139     | or        | auto                   | 0       |
+|     max_x_2_fu_172_p3                           |     |        | max_x_2      | select    | auto_sel               | 0       |
+|  + generate_exp_buffer                          | 1   |        |              |           |                        |         |
+|   + emit_exp_stream                             | 1   |        |              |           |                        |         |
+|     icmp_ln155_fu_207_p2                        |     |        | icmp_ln155   | seteq     | auto                   | 0       |
+|     add_ln155_fu_213_p2                         |     |        | add_ln155    | add       | fabric                 | 0       |
+|     centered_fu_229_p2                          |     |        | centered     | sub       | fabric                 | 0       |
+|     icmp_ln56_fu_234_p2                         |     |        | icmp_ln56    | setlt     | auto                   | 0       |
+|     x_q16_1_fu_239_p3                           |     |        | x_q16_1      | select    | auto_sel               | 0       |
+|     add_ln68_fu_421_p2                          |     |        | add_ln68     | add       | fabric                 | 0       |
+|     dy_fu_432_p2                                |     |        | dy           | sub       | fabric                 | 0       |
+|     mul_12ns_18s_30_1_1_U11                     | 1   |        | interp       | mul       | auto                   | 0       |
+|     y_frac_fu_467_p2                            |     |        | y_frac       | add       | fabric                 | 0       |
+|     xor_ln75_fu_476_p2                          |     |        | xor_ln75     | xor       | auto                   | 0       |
+|     icmp_ln77_fu_408_p2                         |     |        | icmp_ln77    | setgt     | auto                   | 0       |
+|     sh_1_fu_490_p3                              |     |        | sh_1         | select    | auto_sel               | 0       |
+|     y_fu_555_p2                                 |     |        | y_2          | shl       | auto_pipe              | 0       |
+|     sh_2_fu_510_p2                              |     |        | sh_2         | sub       | fabric                 | 0       |
+|     icmp_ln81_fu_530_p2                         |     |        | icmp_ln81    | setgt     | auto                   | 0       |
+|     y_fu_555_p6                                 |     |        | y_3          | lshr      | auto_pipe              | 0       |
+|     and_ln81_fu_542_p2                          |     |        | and_ln81     | and       | auto                   | 0       |
+|     sparsemux_7_2_32_1_1_U12                    |     |        | y            | sparsemux | onehotencoding_realdef | 0       |
+|   + cache_exp_stream                            | 0   |        |              |           |                        |         |
+|     icmp_ln173_fu_114_p2                        |     |        | icmp_ln173   | seteq     | auto                   | 0       |
+|     add_ln173_fu_120_p2                         |     |        | add_ln173    | add       | fabric                 | 0       |
+|     sum64_1_fu_142_p2                           |     |        | sum64_1      | add       | fabric                 | 0       |
+|  + normalize_and_store                          | 4   |        |              |           |                        |         |
+|   + emit_prob_stream                            | 4   |        |              |           |                        |         |
+|     icmp_ln207_fu_116_p2                        |     |        | icmp_ln207   | seteq     | auto                   | 0       |
+|     add_ln207_fu_122_p2                         |     |        | add_ln207    | add       | fabric                 | 0       |
+|     mul_32ns_31ns_62_1_1_U31                    | 4   |        | prod         | mul       | auto                   | 0       |
+|   + write_prob_stream                           | 0   |        |              |           |                        |         |
+|     icmp_ln222_fu_142_p2                        |     |        | icmp_ln222   | seteq     | auto                   | 0       |
+|     add_ln222_fu_148_p2                         |     |        | add_ln222    | add       | fabric                 | 0       |
+|     add_ln224_fu_162_p2                         |     |        | add_ln224    | add       | fabric                 | 0       |
+|     add_ln224_1_fu_180_p2                       |     |        | add_ln224_1  | add       | fabric                 | 0       |
++-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
+| Name                   | Usage        | Type      | BRAM | URAM | Pragma | Variable     | Impl | Latency | Bitwidth, Depth, |
+|                        |              |           |      |      |        |              |      |         | Banks            |
++------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
+| + softmax_accel        |              |           | 4    | 0    |        |              |      |         |                  |
+|   control_s_axi_U      | interface    | s_axilite |      |      |        |              |      |         |                  |
+|   gmem_m_axi_U         | interface    | m_axi     | 2    |      |        |              |      |         |                  |
+|   logits_buf_U         | ram_1p array |           | 1    |      | yes    | logits_buf   | bram | 1       | 32, 256, 1       |
+|   exp_buf_U            | ram_1p array |           | 1    |      | yes    | exp_buf      | bram | 1       | 32, 256, 1       |
+|   RECIP_M_Q30_U        | rom_1p       |           |      |      |        | RECIP_M_Q30  | auto | 1       | 31, 16, 1        |
+|   RECIP_B_Q30_U        | rom_1p       |           |      |      |        | RECIP_B_Q30  | auto | 1       | 31, 16, 1        |
+|  + generate_exp_buffer |              |           | 0    | 0    |        |              |      |         |                  |
+|    exp_stream_U        | fifo channel | stream    |      |      |        | exp_stream   | srl  | 0       | 32, 32, 1        |
+|   + emit_exp_stream    |              |           | 0    | 0    |        |              |      |         |                  |
+|     EXP2_PTS_Q16_U     | rom_2p       |           |      |      |        | EXP2_PTS_Q16 | auto | 1       | 18, 17, 1        |
+|  + normalize_and_store |              |           | 0    | 0    |        |              |      |         |                  |
+|    prob_stream_U       | fifo channel | stream    |      |      |        | prob_stream  | srl  | 0       | 32, 32, 1        |
++------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+-----------------------------------------------------+--------------------------------------------------------------+
+| Type         | Options                                             | Location                                                     |
++--------------+-----------------------------------------------------+--------------------------------------------------------------+
+| INLINE       |                                                     | softmax_accel_hls.cc:54 in exp_approx_q16                    |
+| INLINE       |                                                     | softmax_accel_hls.cc:88 in recip_sum_q2_30                   |
+| UNROLL       |                                                     | softmax_accel_hls.cc:93 in recip_sum_q2_30                   |
+| INLINE       | off                                                 | softmax_accel_hls.cc:130 in load_logits_and_find_max         |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:136 in load_logits_and_find_max         |
+| INLINE       | off                                                 | softmax_accel_hls.cc:152 in emit_exp_stream                  |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:156 in emit_exp_stream                  |
+| INLINE       | off                                                 | softmax_accel_hls.cc:168 in cache_exp_stream                 |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:174 in cache_exp_stream                 |
+| INLINE       | off                                                 | softmax_accel_hls.cc:189 in generate_exp_buffer              |
+| DATAFLOW     |                                                     | softmax_accel_hls.cc:190 in generate_exp_buffer              |
+| STREAM       | variable=exp_stream depth=32                        | softmax_accel_hls.cc:193 in generate_exp_buffer, exp_stream  |
+| INLINE       | off                                                 | softmax_accel_hls.cc:204 in emit_prob_stream                 |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:208 in emit_prob_stream                 |
+| INLINE       | off                                                 | softmax_accel_hls.cc:219 in write_prob_stream                |
+| PIPELINE     | ii=1                                                | softmax_accel_hls.cc:223 in write_prob_stream                |
+| INLINE       | off                                                 | softmax_accel_hls.cc:234 in normalize_and_store              |
+| DATAFLOW     |                                                     | softmax_accel_hls.cc:235 in normalize_and_store              |
+| STREAM       | variable=prob_stream depth=32                       | softmax_accel_hls.cc:238 in normalize_and_store, prob_stream |
+| INLINE       |                                                     | softmax_accel_hls.cc:245 in derive_shift_dbg                 |
+| UNROLL       |                                                     | softmax_accel_hls.cc:248 in derive_shift_dbg                 |
+| INTERFACE    | m_axi port=mem offset=slave bundle=gmem depth=16384 | softmax_accel_hls.cc:263 in softmax_accel, mem               |
+| INTERFACE    | s_axilite port=mem bundle=control                   | softmax_accel_hls.cc:264 in softmax_accel, mem               |
+| INTERFACE    | s_axilite port=input_base bundle=control            | softmax_accel_hls.cc:265 in softmax_accel, input_base        |
+| INTERFACE    | s_axilite port=prob_base bundle=control             | softmax_accel_hls.cc:266 in softmax_accel, prob_base         |
+| INTERFACE    | s_axilite port=dbg_base bundle=control              | softmax_accel_hls.cc:267 in softmax_accel, dbg_base          |
+| INTERFACE    | s_axilite port=n bundle=control                     | softmax_accel_hls.cc:268 in softmax_accel, n                 |
+| INTERFACE    | s_axilite port=return bundle=control                | softmax_accel_hls.cc:269 in softmax_accel, return            |
+| BIND_STORAGE | variable=logits_buf type=ram_1p impl=bram           | softmax_accel_hls.cc:280 in softmax_accel, logits_buf        |
+| BIND_STORAGE | variable=exp_buf type=ram_1p impl=bram              | softmax_accel_hls.cc:281 in softmax_accel, exp_buf           |
++--------------+-----------------------------------------------------+--------------------------------------------------------------+
+
+

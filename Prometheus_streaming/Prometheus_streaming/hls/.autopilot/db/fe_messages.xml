@@ -1,0 +1,117 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="exp_approx_q16" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="recip_sum_q2_30" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="recip_sum_q2_30" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_logits_and_find_max" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:136:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_logits_and_find_max" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:152:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="emit_exp_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="emit_exp_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cache_exp_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:174:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cache_exp_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:189:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generate_exp_buffer" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:190:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generate_exp_buffer" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:193:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generate_exp_buffer" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=exp_stream depth=32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:204:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="emit_prob_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:208:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="emit_prob_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:219:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_prob_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:223:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_prob_stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:234:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="normalize_and_store" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:235:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="normalize_and_store" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:238:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="normalize_and_store" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=prob_stream depth=32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="derive_shift_dbg" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:248:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="derive_shift_dbg" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=softmax_accel" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:263:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=mem offset=slave bundle=gmem depth=16384" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:264:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=mem bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:265:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=input_base bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=prob_base bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:267:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=dbg_base bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:268:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=n bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:269:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:280:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=logits_buf type=ram_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="softmax_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=exp_buf type=ram_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="softmax_accel_hls.cc:158:27" msg_body="Inlining function 'exp_approx_q16(ap_int&lt;32&gt;)' into 'emit_exp_stream(ap_int&lt;32&gt;*, unsigned int, ap_int&lt;32&gt;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;)'">
+        <args Callee="exp_approx_q16(ap_int&lt;32&gt;)" Callee-DebugLoc="File softmax_accel_hls.cc Line 53 Column 0" Caller="emit_exp_stream(ap_int&lt;32&gt;*, unsigned int, ap_int&lt;32&gt;, hls::stream&lt;ap_uint&lt;32&gt;, 0&gt;&amp;)" Caller-DebugLoc="File softmax_accel_hls.cc Line 151 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="softmax_accel_hls.cc:296:32" msg_body="Inlining function 'derive_shift_dbg(ap_uint&lt;32&gt;)' into 'softmax_accel'">
+        <args Callee="derive_shift_dbg(ap_uint&lt;32&gt;)" Callee-DebugLoc="File softmax_accel_hls.cc Line 244 Column 0" Caller="softmax_accel" Caller-DebugLoc="File softmax_accel_hls.cc Line 262 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="softmax_accel_hls.cc:290:29" msg_body="Inlining function 'recip_sum_q2_30(ap_uint&lt;32&gt;)' into 'softmax_accel'">
+        <args Callee="recip_sum_q2_30(ap_uint&lt;32&gt;)" Callee-DebugLoc="File softmax_accel_hls.cc Line 87 Column 0" Caller="softmax_accel" Caller-DebugLoc="File softmax_accel_hls.cc Line 262 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="softmax_accel_hls.cc:262:0" msg_body="Unrolling loop 'VITIS_LOOP_247_1' (softmax_accel_hls.cc:247:21) in function 'softmax_accel' completely with a factor of 32">
+        <args Factor="32" LoopLoc="softmax_accel_hls.cc:247:21" LoopName="VITIS_LOOP_247_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="softmax_accel_hls.cc:262:0" msg_body="Unrolling loop 'VITIS_LOOP_92_1' (softmax_accel_hls.cc:92:20) in function 'softmax_accel' completely with a factor of 32">
+        <args Factor="32" LoopLoc="softmax_accel_hls.cc:92:20" LoopName="VITIS_LOOP_92_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:188:0" msg_body="Skipping array undecay on variable length array 'sum64_out'.">
+        <args ArrayName="sum64_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="softmax_accel_hls.cc:233:0" msg_body="Skipping array undecay on variable length array 'mem'.">
+        <args ArrayName="mem"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

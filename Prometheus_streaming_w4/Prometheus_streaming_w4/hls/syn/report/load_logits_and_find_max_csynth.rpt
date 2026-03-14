@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_logits_and_find_max'
+================================================================
+* Date:           Sat Mar 14 14:59:14 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus_streaming_w4
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  8.614 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       17|       80|  0.201 us|  0.944 us|   17|   80|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+        |                                                        |                                             |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+        |                        Instance                        |                    Module                   |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+        |grp_load_logits_and_find_max_Pipeline_load_loop_fu_100  |load_logits_and_find_max_Pipeline_load_loop  |        6|       69|  70.800 ns|  0.814 us|    2|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     85|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     937|    870|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    206|    -|
+|Register         |        -|    -|      80|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    1017|   1161|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+-----+-----+
+    |                        Instance                        |                    Module                   | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+-----+-----+
+    |grp_load_logits_and_find_max_Pipeline_load_loop_fu_100  |load_logits_and_find_max_Pipeline_load_loop  |        0|   0|  937|  870|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                   |                                             |        0|   0|  937|  870|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln169_fu_118_p2  |         +|   0|  0|  14|           9|           2|
+    |add_ln204_fu_146_p2  |         +|   0|  0|  71|          64|          64|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  85|          73|          66|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  65|         13|    1|         13|
+    |gmem_blk_n_AR          |   9|          2|    1|          2|
+    |m_axi_gmem_0_ARADDR    |  14|          3|   64|        192|
+    |m_axi_gmem_0_ARBURST   |   9|          2|    2|          4|
+    |m_axi_gmem_0_ARCACHE   |   9|          2|    4|          8|
+    |m_axi_gmem_0_ARID      |   9|          2|    1|          2|
+    |m_axi_gmem_0_ARLEN     |  14|          3|   32|         96|
+    |m_axi_gmem_0_ARLOCK    |   9|          2|    2|          4|
+    |m_axi_gmem_0_ARPROT    |   9|          2|    3|          6|
+    |m_axi_gmem_0_ARQOS     |   9|          2|    4|          8|
+    |m_axi_gmem_0_ARREGION  |   9|          2|    4|          8|
+    |m_axi_gmem_0_ARSIZE    |   9|          2|    3|          6|
+    |m_axi_gmem_0_ARUSER    |   9|          2|    1|          2|
+    |m_axi_gmem_0_ARVALID   |  14|          3|    1|          3|
+    |m_axi_gmem_0_RREADY    |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 206|         44|  124|        356|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                            |  12|   0|   12|          0|
+    |blocks_reg_190                                                       |   7|   0|    7|          0|
+    |grp_load_logits_and_find_max_Pipeline_load_loop_fu_100_ap_start_reg  |   1|   0|    1|          0|
+    |trunc_ln_reg_196                                                     |  60|   0|   60|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                |  80|   0|   80|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++-----------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|ap_rst                 |   in|    1|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|ap_start               |   in|    1|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|ap_done                |  out|    1|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|ap_idle                |  out|    1|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|ap_ready               |  out|    1|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|ap_return              |  out|   32|  ap_ctrl_hs|  load_logits_and_find_max|  return value|
+|m_axi_gmem_0_AWVALID   |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWREADY   |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWADDR    |  out|   64|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWID      |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWLEN     |  out|   32|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWSIZE    |  out|    3|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWBURST   |  out|    2|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWLOCK    |  out|    2|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWCACHE   |  out|    4|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWPROT    |  out|    3|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWQOS     |  out|    4|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWREGION  |  out|    4|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_AWUSER    |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WVALID    |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WREADY    |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WDATA     |  out|  128|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WSTRB     |  out|   16|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WLAST     |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WID       |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_WUSER     |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARVALID   |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARREADY   |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARADDR    |  out|   64|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARID      |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARLEN     |  out|   32|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARSIZE    |  out|    3|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARBURST   |  out|    2|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARLOCK    |  out|    2|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARCACHE   |  out|    4|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARPROT    |  out|    3|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARQOS     |  out|    4|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARREGION  |  out|    4|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_ARUSER    |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RVALID    |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RREADY    |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RDATA     |   in|  128|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RLAST     |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RID       |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RFIFONUM  |   in|    9|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RUSER     |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_RRESP     |   in|    2|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_BVALID    |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_BREADY    |  out|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_BRESP     |   in|    2|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_BID       |   in|    1|       m_axi|                      gmem|       pointer|
+|m_axi_gmem_0_BUSER     |   in|    1|       m_axi|                      gmem|       pointer|
+|mem                    |   in|   64|     ap_none|                       mem|        scalar|
+|in_l                   |   in|   28|     ap_none|                      in_l|        scalar|
+|n                      |   in|    9|     ap_none|                         n|        scalar|
+|logits_buf_0_address1  |  out|    6|   ap_memory|              logits_buf_0|         array|
+|logits_buf_0_ce1       |  out|    1|   ap_memory|              logits_buf_0|         array|
+|logits_buf_0_we1       |  out|    1|   ap_memory|              logits_buf_0|         array|
+|logits_buf_0_d1        |  out|   32|   ap_memory|              logits_buf_0|         array|
+|logits_buf_1_address1  |  out|    6|   ap_memory|              logits_buf_1|         array|
+|logits_buf_1_ce1       |  out|    1|   ap_memory|              logits_buf_1|         array|
+|logits_buf_1_we1       |  out|    1|   ap_memory|              logits_buf_1|         array|
+|logits_buf_1_d1        |  out|   32|   ap_memory|              logits_buf_1|         array|
+|logits_buf_2_address1  |  out|    6|   ap_memory|              logits_buf_2|         array|
+|logits_buf_2_ce1       |  out|    1|   ap_memory|              logits_buf_2|         array|
+|logits_buf_2_we1       |  out|    1|   ap_memory|              logits_buf_2|         array|
+|logits_buf_2_d1        |  out|   32|   ap_memory|              logits_buf_2|         array|
+|logits_buf_3_address1  |  out|    6|   ap_memory|              logits_buf_3|         array|
+|logits_buf_3_ce1       |  out|    1|   ap_memory|              logits_buf_3|         array|
+|logits_buf_3_we1       |  out|    1|   ap_memory|              logits_buf_3|         array|
+|logits_buf_3_d1        |  out|   32|   ap_memory|              logits_buf_3|         array|
++-----------------------+-----+-----+------------+--------------------------+--------------+
+

@@ -1,0 +1,239 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<32, false>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>& ap_int_base<64, false>::operator+=<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<64, false>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::RType<64, true>::arg1 operator>><64, true>(ap_int_base<64, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::RType<64, true>::plus operator+<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<32, false>(ap_int_base<32, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::RType<32, false>::arg1 operator<<<32, false>(ap_int_base<32, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::RType<32, false>::arg1 operator>><32, false>(ap_int_base<32, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>::ap_uint<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<64, true>(ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<64, true>::operator><32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator><64, true>(ap_int_base<64, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<64>(ap_int<64> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<65>(ap_int<65> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::RType<64, true>::arg1 operator<<<64, true>(ap_int_base<64, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator<<64, true>(ap_int_base<64, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<16>(ap_uint<16> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::RType<64, true>::mult operator*<64, true, 64, true>(ap_int_base<64, true> const&, ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<128>(ap_int<128> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator><4, false>(ap_int_base<4, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<32>(ap_int<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::RType<($_0)32, true>::minus operator-<16, false>(ap_int_base<16, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::RType<33, true>::arg1 operator>><33, true>(ap_int_base<33, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint<33>(ap_int<33> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDq4_j" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="ssdm_int<64, false>::ssdm_int(unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::RType<64, false>::arg1 operator>><64, false>(ap_int_base<64, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::RType<64, false>::mult operator*<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint<128>(ap_uint<128> const&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="168" pragmaType="inline" parentfunction="num_blocks" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<4, false>::ap_bit_ref(ap_int_base<4, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<4, false>::operator=(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<4, false>::operator bool() const" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="382" pragmaType="inline" parentfunction="write_prob_stream" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="389" pragmaType="pipeline" parentfunction="write_prob_stream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::ap_range_ref(ap_int_base<128, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="ssdm_int<128, false>::ssdm_int(unsigned __int128)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="178" pragmaType="inline" parentfunction="pack_word" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>::operator=(ap_uint<128> const&) volatile" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<32, false>::ap_bit_ref(ap_int_base<32, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>::ap_uint<128>(ap_uint<128> const volatile&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="431" pragmaType="inline" parentfunction="derive_shift_dbg" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="434" pragmaType="unroll" parentfunction="derive_shift_dbg" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_bit_ref<32, false>::operator bool() const" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="420" pragmaType="inline" parentfunction="normalize_and_store" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="421" pragmaType="dataflow" parentfunction="normalize_and_store" disable_start_propagation="0"/>
+<pragma file="softmax_accel_hls.cc" line="424" pragmaType="stream" parentfunction="normalize_and_store" depth="16" type="fifo" variable="prob_stream"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<32>(ap_int<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="183" pragmaType="inline" parentfunction="store_word" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<64>(ap_uint<64> const&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="94" pragmaType="inline" parentfunction="recip_sum_q2_30" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="99" pragmaType="unroll" parentfunction="recip_sum_q2_30" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<vec4_q16_t, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="336" pragmaType="inline" parentfunction="emit_prob_stream" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="343" pragmaType="pipeline" parentfunction="emit_prob_stream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="softmax_accel_hls.cc" line="337" pragmaType="array_partition" parentfunction="emit_prob_stream" dim="1" factor="4" mode="cyclic" dynamic="0" variable="exp_buf"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="197" pragmaType="inline" parentfunction="load_logits_and_find_max" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="205" pragmaType="pipeline" parentfunction="load_logits_and_find_max" off="0" ii="1" rewind="0" style=""/>
+<pragma file="softmax_accel_hls.cc" line="198" pragmaType="array_partition" parentfunction="load_logits_and_find_max" dim="1" factor="4" mode="cyclic" dynamic="0" variable="logits_buf"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>& ap_range_ref<128, false>::operator=<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="449" pragmaType="interface" parentfunction="softmax_accel" mode="m_axi" port="mem" bundle="gmem" offset="slave" name="" depth="4096" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="softmax_accel_hls.cc" line="450" pragmaType="interface" parentfunction="softmax_accel" mode="s_axilite" port="mem" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="softmax_accel_hls.cc" line="451" pragmaType="interface" parentfunction="softmax_accel" mode="s_axilite" port="input_base" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="softmax_accel_hls.cc" line="452" pragmaType="interface" parentfunction="softmax_accel" mode="s_axilite" port="prob_base" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="softmax_accel_hls.cc" line="453" pragmaType="interface" parentfunction="softmax_accel" mode="s_axilite" port="dbg_base" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="softmax_accel_hls.cc" line="454" pragmaType="interface" parentfunction="softmax_accel" mode="s_axilite" port="n" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="softmax_accel_hls.cc" line="455" pragmaType="interface" parentfunction="softmax_accel" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="softmax_accel_hls.cc" line="466" pragmaType="array_partition" parentfunction="softmax_accel" dim="1" factor="4" mode="cyclic" dynamic="0" variable="logits_buf"/>
+<pragma file="softmax_accel_hls.cc" line="467" pragmaType="array_partition" parentfunction="softmax_accel" dim="1" factor="4" mode="cyclic" dynamic="0" variable="exp_buf"/>
+<pragma file="softmax_accel_hls.cc" line="468" pragmaType="bind_storage" parentfunction="softmax_accel" op="666" impl="22" latency="-1" variable="logits_buf"/>
+<pragma file="softmax_accel_hls.cc" line="469" pragmaType="bind_storage" parentfunction="softmax_accel" op="666" impl="22" latency="-1" variable="exp_buf"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<64, false>(ap_int_base<64, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="321" pragmaType="inline" parentfunction="generate_exp_buffer" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="322" pragmaType="dataflow" parentfunction="generate_exp_buffer" disable_start_propagation="0"/>
+<pragma file="softmax_accel_hls.cc" line="325" pragmaType="stream" parentfunction="generate_exp_buffer" depth="16" type="fifo" variable="exp_stream"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<128, true>(ap_int_base<128, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="ssdm_int<16, false>::ssdm_int(unsigned short)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<128>::ap_int<128, true>(ap_int_base<128, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="ssdm_int<128, true>::ssdm_int(__int128)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<65>::ap_int<65, true>(ap_int_base<65, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="_ZN8ssdm_intILi65ELb1EEC2EDq65_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<64, true>(ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<65, true>(ap_int_base<65, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="ssdm_int<64, true>::ssdm_int(long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<64, true>::operator<<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="250" pragmaType="inline" parentfunction="emit_exp_stream" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="257" pragmaType="pipeline" parentfunction="emit_exp_stream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="softmax_accel_hls.cc" line="251" pragmaType="array_partition" parentfunction="emit_exp_stream" dim="1" factor="4" mode="cyclic" dynamic="0" variable="logits_buf"/>
+<pragma file="softmax_accel_hls.cc" line="292" pragmaType="inline" parentfunction="cache_exp_stream" off="1" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="300" pragmaType="pipeline" parentfunction="cache_exp_stream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="softmax_accel_hls.cc" line="293" pragmaType="array_partition" parentfunction="cache_exp_stream" dim="1" factor="4" mode="cyclic" dynamic="0" variable="exp_buf"/>
+<pragma file="softmax_accel_hls.cc" line="156" pragmaType="inline" parentfunction="reduce_sum4" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="_ZN8ssdm_intILi33ELb1EEC2EDq33_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::RType<32, true>::minus operator-<16, false, 32, true>(ap_int_base<16, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::RType<64, false>::plus operator+<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint<65>(ap_uint<65> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base<65, false>(ap_int_base<65, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<65, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<65>::ap_uint<65, false>(ap_int_base<65, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="_ZN8ssdm_intILi65ELb0EEC2EDq65_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::RType<32, true>::minus operator-<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<33>(ap_int<33> const&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="60" pragmaType="inline" parentfunction="exp_approx_q16" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<32, true>::operator<<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<64>(ap_int<64> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::RType<32, true>::arg1 operator>><32, true>(ap_int_base<32, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<16>::ap_int<32>(ap_int<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<16>(ap_int<16> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::RType<32, true>::arg1 operator<<<32, true>(ap_int_base<32, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint<33>(ap_int<33> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::RType<16, false>::arg1 operator>><16, false>(ap_int_base<16, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint<16>(ap_uint<16> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::RType<($_0)32, true>::logic operator&<16, false>(ap_int_base<16, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<12>::ap_uint<32>(ap_int<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<33>::ap_int<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::RType<33, true>::minus operator-<33, true, 33, true>(ap_int_base<33, true> const&, ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<33>::ap_int<34>(ap_int<34> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<33>(ap_int<33> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<12>(ap_uint<12> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<64>::ap_int<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<65>(ap_int<65> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator>=<16, true>(ap_int_base<16, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::operator long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::operator-() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::operator long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::RType<16, true>::minus operator-<1, false, 16, true>(ap_int_base<1, false> const&, ap_int_base<16, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::ap_int_base<16, true>(ap_int_base<16, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<17, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<17>::ap_int<17, true>(ap_int_base<17, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="_ZN8ssdm_intILi17ELb1EEC2EDq17_i" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<16, true>::operator>=<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<65, true>(ap_int_base<65, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<12, false>(ap_int_base<12, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<34, true>(ap_int_base<34, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<34, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<34, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<34>::ap_int<34, true>(ap_int_base<34, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="_ZN8ssdm_intILi34ELb1EEC2EDq34_i" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<12, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="542" pragmaType="inline" parentfunction="_ZN8ssdm_intILi12ELb0EEC2EDq12_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::RType<32, true>::logic operator&<16, false, 32, true>(ap_int_base<16, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<16, true>(ap_int_base<16, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/elfo/Documents/2025.1/Vitis/common/technology/autopilot/etc/ap_common.h" line="534" pragmaType="inline" parentfunction="ssdm_int<16, true>::ssdm_int(short)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<64, true>(ap_int_base<64, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="131" pragmaType="inline" parentfunction="min_i32" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="173" pragmaType="inline" parentfunction="unpack_word" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="softmax_accel_hls.cc" line="140" pragmaType="inline" parentfunction="reduce_max4" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<32, true>::operator><32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<4, false>::operator><32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+</pragmas>

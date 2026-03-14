@@ -1,0 +1,636 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.1
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 37, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.2
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 39, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.3
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 46, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_streaming/Prometheus_streaming/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 158, Column: 27 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI7ap_uintILi32EELi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'exp_approx_q16(ap_int<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 53, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 151, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 195, Column: 2 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 151, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 196, Column: 3 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'cache_exp_stream(hls::stream<ap_uint<32>, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 167, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 240, Column: 2 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_
+Args:            
+  - Callee:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 203, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 241, Column: 3 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_
+Args:            
+  - Callee:          'write_prob_stream(ap_uint<32> volatile*, unsigned int, unsigned int, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 218, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 296, Column: 32 }
+Function:        softmax_accel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'derive_shift_dbg(ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 244, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 292, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 290, Column: 29 }
+Function:        softmax_accel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'recip_sum_q2_30(ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 87, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 287, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 286, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'load_logits_and_find_max(ap_uint<32> volatile*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 129, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+Function:        softmax_accel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_247_1
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:247:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          softmax_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+Function:        softmax_accel
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_92_1
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:92:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          softmax_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 195, Column: 2 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 151, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 196, Column: 3 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'cache_exp_stream(hls::stream<ap_uint<32>, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 167, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 240, Column: 2 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_
+Args:            
+  - Callee:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 203, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 241, Column: 3 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_
+Args:            
+  - Callee:          'write_prob_stream(ap_uint<32> volatile*, unsigned int, unsigned int, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 218, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 286, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'load_logits_and_find_max(ap_uint<32> volatile*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 129, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 287, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 292, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_softmax_accel_ir
+Args:            
+  - Callee:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_softmax_accel_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       sum64_out
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       mem
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       sum64_out
+  - String:          '''.'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 294, Column: 17 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 294, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          _ZL15recip_sum_q2_307ap_uintILi32EE.exit.store.5
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 295, Column: 17 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 295, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          _ZL15recip_sum_q2_307ap_uintILi32EE.exit.store.9
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 296, Column: 17 }
+Function:        softmax_accel
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 296, Column: 17 }
+  - OrigDirection:   write
+  - OrigID:          _ZL16derive_shift_dbg7ap_uintILi32EE.exit.store.6
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 135, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxPV7ap_uintILi32EEjjP6ap_intILi32EES5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        load_loop
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:135:3'
+  - String:          ' '
+  - Function:        'load_logits_and_find_max(ap_uint<32> volatile*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 129, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 137, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.9
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 224, Column: 16 }
+Function:        _ZL17write_prob_streamPV7ap_uintILi32EEjjRN3hls6streamIS0_Li0EEE
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 224, Column: 16 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.7
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'write_prob_stream(ap_uint<32> volatile*, unsigned int, unsigned int, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 218, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 135, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxPV7ap_uintILi32EEjjP6ap_intILi32EES5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 135, Column: 3 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        load_loop
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:135:3'
+  - String:          ' '
+  - Function:        'load_logits_and_find_max(ap_uint<32> volatile*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 129, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 135, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxPV7ap_uintILi32EEjjP6ap_intILi32EES5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        load_loop
+  - String:          ' '
+  - LoopLoc:         'softmax_accel_hls.cc:135:3'
+  - String:          ' '
+  - Function:        'load_logits_and_find_max(ap_uint<32> volatile*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*) (.1)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 129, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 135, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxPV7ap_uintILi32EEjjP6ap_intILi32EES5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        load_loop
+  - String:          '''('
+  - LoopLoc:         'softmax_accel_hls.cc:135:3'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 195, Column: 2 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 151, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 196, Column: 3 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'cache_exp_stream(hls::stream<ap_uint<32>, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 167, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 240, Column: 2 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_.1
+Args:            
+  - Callee:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<ap_uint<32>, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 203, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>) (.1)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 241, Column: 3 }
+Function:        _ZL19normalize_and_storePV7ap_uintILi32EEjjPS0_S0_.1
+Args:            
+  - Callee:          'write_prob_stream(ap_uint<32> volatile*, unsigned int, unsigned int, hls::stream<ap_uint<32>, 0>&) (.1)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 218, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>) (.1)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 286, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'load_logits_and_find_max(ap_uint<32> volatile*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*) (.1)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 129, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 287, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 188, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 292, Column: 3 }
+Function:        softmax_accel
+Args:            
+  - Callee:          'normalize_and_store(ap_uint<32> volatile*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>) (.1)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          softmax_accel
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 262, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

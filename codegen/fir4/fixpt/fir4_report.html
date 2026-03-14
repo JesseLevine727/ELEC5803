@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for fir4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2026-03-02 17:04:33</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>fir4<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function y = fir4(x)
+
+%#codegen
+
+h0 = 0.2;
+h1 = 0.4;
+h2 = 0.3;
+h3 = 0.1;
+
+persistent d1 d2 d3
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>if isempty(d1)
+    d1 = 0;
+    d2 = 0;
+    d3 = 0;
+end</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>
+
+% Shift register
+x0 = x;
+x1 = d1;
+x2 = d2;
+x3 = d3;
+
+d3 = d2;
+d2 = d1;
+d1 = x;
+
+% Fully parallel FIR
+y = h0*x0 + h1*x1 + h2*x2 + h3*x3;
+
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 14)</th></TR><TR class="a">
+<TD class="left">d1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.9502220488383549</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">d2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.9502220488383549</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">d3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.9339932477575505</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">h0</TD><TD class="left">double</TD><TD class="right">0.2</TD><TD class="right">0.2</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 16)</TD></TR>
+<TR class="a">
+<TD class="left">h1</TD><TD class="left">double</TD><TD class="right">0.4</TD><TD class="right">0.4</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+<TR class="b">
+<TD class="left">h2</TD><TD class="left">double</TD><TD class="right">0.3</TD><TD class="right">0.3</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+<TR class="a">
+<TD class="left">h3</TD><TD class="left">double</TD><TD class="right">0.1</TD><TD class="right">0.1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 17)</TD></TR>
+<TR class="b">
+<TD class="left">x</TD><TD class="left">double</TD><TD class="right">0.031832846377420676</TD><TD class="right">0.9502220488383549</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">x0</TD><TD class="left">double</TD><TD class="right">0.031832846377420676</TD><TD class="right">0.9502220488383549</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">x1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.9502220488383549</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">x2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.9339932477575505</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">x3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.9339932477575505</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">y</TD><TD class="left">double</TD><TD class="right">0.12415509262564013</TD><TD class="right">0.788152992972919</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+</TABLE>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<ENTRY>
+{
+ "thisFile": "/home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/Prometheus_SoC.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Mar 14 16:26:23 2026",
+ "timestampMillis": "1773519983234",
+ "buildStep": {
+  "cmdId": "2d35a7a6-5e7d-4c88-a8f6-dafaf49aa38c",
+  "name": "vitis-run",
+  "logFile": "/home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/logs/Prometheus_SoC.steps.log",
+  "commandLine": "/home/elfo/Documents/2025.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/elfo/Documents/ELEC5803/Prometheus_SoC/hls_config.cfg --work_dir Prometheus_SoC ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/elfo/Documents/ELEC5803/Prometheus_SoC/hls_config.cfg",
+   "--work_dir",
+   "Prometheus_SoC"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/Prometheus_SoC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Mar 14 16:26:23 2026",
+ "timestampMillis": "1773519983234",
+ "status": {
+  "cmdId": "2d35a7a6-5e7d-4c88-a8f6-dafaf49aa38c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Mar 14 16:26:24 2026",
+ "timestampMillis": "1773519984787",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "prometheus_soc",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/elfo/Documents/ELEC5803/Prometheus_SoC/riscv32i.cc",
+     "/home/elfo/Documents/ELEC5803/Prometheus_SoC/riscv32i.h",
+     "/home/elfo/Documents/ELEC5803/Prometheus_SoC/softmax_accel_hls.cc"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Mar 14 16:26:24 2026",
+ "timestampMillis": "1773519984787",
+ "buildStep": {
+  "cmdId": "4ddec568-4691-45be-95e6-c8440d2db07e",
+  "name": "",
+  "logFile": "/home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/elfo/Documents/ELEC5803/Prometheus_SoC"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Mar 14 16:26:24 2026",
+ "timestampMillis": "1773519984787",
+ "status": {
+  "cmdId": "4ddec568-4691-45be-95e6-c8440d2db07e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Mar 14 16:26:25 2026",
+ "timestampMillis": "1773519985543",
+ "status": {
+  "cmdId": "4ddec568-4691-45be-95e6-c8440d2db07e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Mar 14 16:26:25 2026",
+ "timestampMillis": "1773519985595",
+ "status": {
+  "cmdId": "2d35a7a6-5e7d-4c88-a8f6-dafaf49aa38c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Mar 14 16:26:25 2026",
+ "timestampMillis": "1773519985595",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Mar 14 16:26:25 2026",
+ "timestampMillis": "1773519985595",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

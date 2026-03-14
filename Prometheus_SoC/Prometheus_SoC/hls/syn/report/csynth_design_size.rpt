@@ -1,0 +1,81 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 23,006       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  1,591       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  1,186       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  1,184       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  1,161       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  1,339       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  1,155       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  1,160       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  1,314       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  1,336       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  1,336       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  1,332       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  5,954       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  5,802       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  5,766       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  4,238       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++------------------------------+--------------------------+-----------------+---------------+--------------+-------------+---------------+
+| Function                     | Location                 | Compile/Link    | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++------------------------------+--------------------------+-----------------+---------------+--------------+-------------+---------------+
+| + prometheus_soc             | riscv32i.cc:41           | 23,006          | 1,161         | 1,336        | 5,802       | 4,238         |
+|    load_word                 | riscv32i.cc:20           |   128 (2 calls) |               |              |             |               |
+|    accel_mmio_addr           | riscv32i.cc:36           |    12 (2 calls) |               |              |             |               |
+|  + softmax_accel_core        | softmax_accel_hls.cc:420 | 14,107          |  858          | 1,060        |             |               |
+|   + load_logits_and_find_max | softmax_accel_hls.cc:168 | 1,039           |  120          |   83         |             |               |
+|      num_blocks              | softmax_accel_hls.cc:153 |     4           |               |              |             |               |
+|      min_i32                 | softmax_accel_hls.cc:116 |    68 (4 calls) |               |              |             |               |
+|      unpack_word             | softmax_accel_hls.cc:158 |   212 (4 calls) |               |              |             |               |
+|    + reduce_max4             | softmax_accel_hls.cc:121 |   262           |               |              |             |               |
+|       min_i32                | softmax_accel_hls.cc:116 |    68 (4 calls) |               |              |             |               |
+|   + generate_exp_buffer      | softmax_accel_hls.cc:292 | 9,147           |  349          |  399         |             |               |
+|    + emit_exp_stream         | softmax_accel_hls.cc:222 | 8,229           |  285          |  299         |             |               |
+|       num_blocks             | softmax_accel_hls.cc:153 |     4           |               |              |             |               |
+|       exp_approx_q16         | softmax_accel_hls.cc:45  | 7,376 (4 calls) |               |              |             |               |
+|    + cache_exp_stream        | softmax_accel_hls.cc:264 |   904           |   58          |   94         |             |               |
+|       num_blocks             | softmax_accel_hls.cc:153 |     4           |               |              |             |               |
+|       reduce_sum4            | softmax_accel_hls.cc:137 |   688           |               |              |             |               |
+|     recip_sum_q2_30          | softmax_accel_hls.cc:79  | 1,244           |               |              |             |               |
+|   + normalize_and_store      | softmax_accel_hls.cc:391 | 2,169           |  136          |  240         |             |               |
+|    + emit_prob_stream        | softmax_accel_hls.cc:308 | 1,453           |   72          |  106         |             |               |
+|       num_blocks             | softmax_accel_hls.cc:153 |     4           |               |              |             |               |
+|    + write_prob_stream       | softmax_accel_hls.cc:354 |   702           |   58          |  128         |             |               |
+|       pack_word              | softmax_accel_hls.cc:163 |   480 (8 calls) |               |              |             |               |
+|     pack_word                | softmax_accel_hls.cc:163 |   180 (3 calls) |               |              |             |               |
+|     derive_shift_dbg         | softmax_accel_hls.cc:407 |    52           |               |              |             |               |
+|    store_word                | riscv32i.cc:27           |    75           |               |              |             |               |
+|    load_logits_and_find_max  | softmax_accel_hls.cc:168 |                 |               |              |  841        |  843          |
+|  + generate_exp_buffer       | softmax_accel_hls.cc:292 |                 |               |              | 1,388       | 1,378         |
+|     emit_exp_stream          | softmax_accel_hls.cc:222 |                 |               |              |  530        |  527          |
+|     cache_exp_stream         | softmax_accel_hls.cc:264 |                 |               |              |  852        |  843          |
+|  + normalize_and_store       | softmax_accel_hls.cc:391 |                 |               |              |  490        |  467          |
+|     emit_prob_stream         | softmax_accel_hls.cc:308 |                 |               |              |  357        |  354          |
+|     write_prob_stream        | softmax_accel_hls.cc:354 |                 |               |              |  127        |  105          |
++------------------------------+--------------------------+-----------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

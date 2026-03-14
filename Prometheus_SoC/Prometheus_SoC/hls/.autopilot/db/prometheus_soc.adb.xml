@@ -1,0 +1,403 @@
+<stg><name>prometheus_soc</name>
+
+
+<trans_list>
+
+<trans id="19" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="20" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="21" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="22" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="64">
+<![CDATA[
+entry:5 %reg_file = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="reg_file"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+entry:6 %call_ln0 = call void @prometheus_soc_Pipeline_VITIS_LOOP_48_1, i32 %reg_file
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="8" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+entry:6 %call_ln0 = call void @prometheus_soc_Pipeline_VITIS_LOOP_48_1, i32 %reg_file
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="9" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="5" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:7 %reg_file_addr = getelementptr i32 %reg_file, i64 0, i64 2
+
+]]></Node>
+<StgValue><ssdm name="reg_file_addr"/></StgValue>
+</operation>
+
+<operation id="10" st_id="3" stage="1" lat="1">
+<core>RAM</core>
+<MemPortIdVec>0 </MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="32" op_1_bw="5" op_2_bw="0">
+<![CDATA[
+entry:8 %store_ln49 = store i32 262140, i5 %reg_file_addr
+
+]]></Node>
+<StgValue><ssdm name="store_ln49"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="11" st_id="4" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="128" op_3_bw="31" op_4_bw="31" op_5_bw="0" op_6_bw="0">
+<![CDATA[
+entry:9 %call_ln0 = call void @prometheus_soc_Pipeline_PROGRAM_LOOP, i32 %reg_file, i128 %mem, i31 %RECIP_M_Q30, i31 %RECIP_B_Q30
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="12" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+entry:0 %spectopmodule_ln41 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln41"/></StgValue>
+</operation>
+
+<operation id="13" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %mem, void @empty_3, i32 0, i32 0, void @empty_2, i32 4294967295, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="14" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="128">
+<![CDATA[
+entry:2 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %mem
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="15" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="4">
+<![CDATA[
+entry:3 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %pstrb
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="16" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
+<![CDATA[
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %pstrb, void @empty_10, i32 4294967295, i32 4294967295, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="17" st_id="5" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="128" op_3_bw="31" op_4_bw="31" op_5_bw="0" op_6_bw="0">
+<![CDATA[
+entry:9 %call_ln0 = call void @prometheus_soc_Pipeline_PROGRAM_LOOP, i32 %reg_file, i128 %mem, i31 %RECIP_M_Q30, i31 %RECIP_B_Q30
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="18" st_id="5" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0">
+<![CDATA[
+entry:10 %ret_ln249 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln249"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="23" name="mem" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="mem"/><MemPortTyVec>2 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="24" name="pstrb" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pstrb"/></StgValue>
+</port>
+<port id="25" name="RECIP_M_Q30" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="RECIP_M_Q30"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="26" name="RECIP_B_Q30" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="RECIP_B_Q30"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="28" from="StgValue_27" to="reg_file" fromId="27" toId="6">
+</dataflow>
+<dataflow id="30" from="prometheus_soc_Pipeline_VITIS_LOOP_48_1" to="call_ln0" fromId="29" toId="7">
+</dataflow>
+<dataflow id="31" from="reg_file" to="call_ln0" fromId="6" toId="7">
+</dataflow>
+<dataflow id="32" from="prometheus_soc_Pipeline_VITIS_LOOP_48_1" to="call_ln0" fromId="29" toId="8">
+</dataflow>
+<dataflow id="33" from="reg_file" to="call_ln0" fromId="6" toId="8">
+</dataflow>
+<dataflow id="34" from="reg_file" to="reg_file_addr" fromId="6" toId="9">
+</dataflow>
+<dataflow id="36" from="StgValue_35" to="reg_file_addr" fromId="35" toId="9">
+</dataflow>
+<dataflow id="38" from="StgValue_37" to="reg_file_addr" fromId="37" toId="9">
+</dataflow>
+<dataflow id="40" from="StgValue_39" to="store_ln49" fromId="39" toId="10">
+</dataflow>
+<dataflow id="41" from="reg_file_addr" to="store_ln49" fromId="9" toId="10">
+</dataflow>
+<dataflow id="43" from="prometheus_soc_Pipeline_PROGRAM_LOOP" to="call_ln0" fromId="42" toId="11">
+</dataflow>
+<dataflow id="44" from="reg_file" to="call_ln0" fromId="6" toId="11">
+</dataflow>
+<dataflow id="45" from="mem" to="call_ln0" fromId="23" toId="11">
+</dataflow>
+<dataflow id="46" from="RECIP_M_Q30" to="call_ln0" fromId="25" toId="11">
+</dataflow>
+<dataflow id="47" from="RECIP_B_Q30" to="call_ln0" fromId="26" toId="11">
+</dataflow>
+<dataflow id="49" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln41" fromId="48" toId="12">
+</dataflow>
+<dataflow id="51" from="empty_8" to="spectopmodule_ln41" fromId="50" toId="12">
+</dataflow>
+<dataflow id="53" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="52" toId="13">
+</dataflow>
+<dataflow id="54" from="mem" to="specinterface_ln0" fromId="23" toId="13">
+</dataflow>
+<dataflow id="56" from="empty_3" to="specinterface_ln0" fromId="55" toId="13">
+</dataflow>
+<dataflow id="58" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="59" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="61" from="empty_2" to="specinterface_ln0" fromId="60" toId="13">
+</dataflow>
+<dataflow id="63" from="StgValue_62" to="specinterface_ln0" fromId="62" toId="13">
+</dataflow>
+<dataflow id="64" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="65" from="empty_2" to="specinterface_ln0" fromId="60" toId="13">
+</dataflow>
+<dataflow id="66" from="empty_2" to="specinterface_ln0" fromId="60" toId="13">
+</dataflow>
+<dataflow id="67" from="empty_2" to="specinterface_ln0" fromId="60" toId="13">
+</dataflow>
+<dataflow id="68" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="69" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="70" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="71" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="72" from="empty_2" to="specinterface_ln0" fromId="60" toId="13">
+</dataflow>
+<dataflow id="73" from="empty_2" to="specinterface_ln0" fromId="60" toId="13">
+</dataflow>
+<dataflow id="74" from="StgValue_62" to="specinterface_ln0" fromId="62" toId="13">
+</dataflow>
+<dataflow id="75" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="76" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="13">
+</dataflow>
+<dataflow id="78" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="77" toId="14">
+</dataflow>
+<dataflow id="79" from="mem" to="specbitsmap_ln0" fromId="23" toId="14">
+</dataflow>
+<dataflow id="80" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="77" toId="15">
+</dataflow>
+<dataflow id="81" from="pstrb" to="specbitsmap_ln0" fromId="24" toId="15">
+</dataflow>
+<dataflow id="82" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="52" toId="16">
+</dataflow>
+<dataflow id="83" from="pstrb" to="specinterface_ln0" fromId="24" toId="16">
+</dataflow>
+<dataflow id="85" from="empty_10" to="specinterface_ln0" fromId="84" toId="16">
+</dataflow>
+<dataflow id="86" from="StgValue_62" to="specinterface_ln0" fromId="62" toId="16">
+</dataflow>
+<dataflow id="87" from="StgValue_62" to="specinterface_ln0" fromId="62" toId="16">
+</dataflow>
+<dataflow id="88" from="empty_2" to="specinterface_ln0" fromId="60" toId="16">
+</dataflow>
+<dataflow id="89" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="90" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="91" from="empty_2" to="specinterface_ln0" fromId="60" toId="16">
+</dataflow>
+<dataflow id="92" from="empty_2" to="specinterface_ln0" fromId="60" toId="16">
+</dataflow>
+<dataflow id="93" from="empty_2" to="specinterface_ln0" fromId="60" toId="16">
+</dataflow>
+<dataflow id="94" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="95" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="96" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="97" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="98" from="empty_2" to="specinterface_ln0" fromId="60" toId="16">
+</dataflow>
+<dataflow id="99" from="empty_2" to="specinterface_ln0" fromId="60" toId="16">
+</dataflow>
+<dataflow id="100" from="StgValue_62" to="specinterface_ln0" fromId="62" toId="16">
+</dataflow>
+<dataflow id="101" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="102" from="StgValue_57" to="specinterface_ln0" fromId="57" toId="16">
+</dataflow>
+<dataflow id="103" from="prometheus_soc_Pipeline_PROGRAM_LOOP" to="call_ln0" fromId="42" toId="17">
+</dataflow>
+<dataflow id="104" from="reg_file" to="call_ln0" fromId="6" toId="17">
+</dataflow>
+<dataflow id="105" from="mem" to="call_ln0" fromId="23" toId="17">
+</dataflow>
+<dataflow id="106" from="RECIP_M_Q30" to="call_ln0" fromId="25" toId="17">
+</dataflow>
+<dataflow id="107" from="RECIP_B_Q30" to="call_ln0" fromId="26" toId="17">
+</dataflow>
+</dataflows>
+
+
+</stg>

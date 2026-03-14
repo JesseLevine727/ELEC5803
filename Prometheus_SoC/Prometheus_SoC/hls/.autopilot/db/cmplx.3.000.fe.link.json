@@ -1,0 +1,400 @@
+{
+  "0": {
+    "basicblocks": 174,
+    "calls": "20 14 20 14 18 16",
+    "control_depth": 23,
+    "def_use_depth": 8,
+    "file": "riscv32i.cc",
+    "fileloc": 41,
+    "instructions": 1475,
+    "loads": {
+      "L": 54
+    },
+    "memory_accesses": 310,
+    "name": "prometheus_soc",
+    "stores": {
+      "L": 54
+    },
+    "total_instructions": 23006
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "21 17",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 391,
+    "instructions": 13,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "normalize_and_store",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2169
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 158,
+    "instructions": 12,
+    "memory_accesses": 0,
+    "name": "unpack_word",
+    "total_instructions": 53
+  },
+  "11": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 137,
+    "instructions": 94,
+    "memory_accesses": 0,
+    "name": "reduce_sum4",
+    "total_instructions": 688
+  },
+  "12": {
+    "basicblocks": 22,
+    "calls": "8 8 8 8",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 121,
+    "instructions": 98,
+    "loads": {
+      "L": 7
+    },
+    "memory_accesses": 0,
+    "name": "reduce_max4",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 262
+  },
+  "13": {
+    "basicblocks": 15,
+    "calls": "24 11",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 264,
+    "instructions": 108,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 29,
+    "name": "cache_exp_stream",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 904
+  },
+  "14": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "riscv32i.cc",
+    "fileloc": 36,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "accel_mmio_addr",
+    "total_instructions": 6
+  },
+  "15": {
+    "basicblocks": 15,
+    "calls": "24 9 9 9 9",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 222,
+    "instructions": 188,
+    "loads": {
+      "L": 9
+    },
+    "memory_accesses": 44,
+    "name": "emit_exp_stream",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 8229
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "riscv32i.cc",
+    "fileloc": 27,
+    "instructions": 24,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "store_word",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 75
+  },
+  "17": {
+    "basicblocks": 17,
+    "calls": "2 2 2 2 2 2 2 2",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 354,
+    "instructions": 121,
+    "loads": {
+      "L": 11
+    },
+    "memory_accesses": 16,
+    "name": "write_prob_stream",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 702
+  },
+  "18": {
+    "basicblocks": 9,
+    "calls": "22 7 25 1 2 2 3 2",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 420,
+    "instructions": 114,
+    "loads": {
+      "L": 7
+    },
+    "memory_accesses": 0,
+    "name": "softmax_accel_core",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 14107
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "6 4 5 23",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.pp.0.cc",
+    "fileloc": 0,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "",
+    "total_instructions": 809
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 163,
+    "instructions": 9,
+    "memory_accesses": 0,
+    "name": "pack_word",
+    "total_instructions": 60
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "riscv32i.cc",
+    "fileloc": 20,
+    "instructions": 23,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "load_word",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 64
+  },
+  "21": {
+    "basicblocks": 15,
+    "calls": "24",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 308,
+    "instructions": 280,
+    "loads": {
+      "L": 9
+    },
+    "memory_accesses": 56,
+    "name": "emit_prob_stream",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 1453
+  },
+  "22": {
+    "basicblocks": 18,
+    "calls": "24 8 8 8 8 10 10 10 10 12",
+    "control_depth": 3,
+    "def_use_depth": 4,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 168,
+    "instructions": 201,
+    "loads": {
+      "L": 16
+    },
+    "memory_accesses": 56,
+    "name": "load_logits_and_find_max",
+    "stores": {
+      "L": 19
+    },
+    "total_instructions": 1039
+  },
+  "23": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 38,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 257
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 153,
+    "instructions": 4,
+    "memory_accesses": 0,
+    "name": "num_blocks",
+    "total_instructions": 4
+  },
+  "25": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 79,
+    "instructions": 223,
+    "loads": {
+      "G": 2,
+      "L": 7
+    },
+    "memory_accesses": 2,
+    "name": "recip_sum_q2_30",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 1244
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 2,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 407,
+    "instructions": 20,
+    "memory_accesses": 2,
+    "name": "derive_shift_dbg",
+    "total_instructions": 52
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 29,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 17
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 31,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 257
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 21,
+    "instructions": 18,
+    "memory_accesses": 0,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 273
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "15 13",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 292,
+    "instructions": 13,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "generate_exp_buffer",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 9147
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 116,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "min_i32",
+    "total_instructions": 17
+  },
+  "9": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 45,
+    "instructions": 276,
+    "loads": {
+      "G": 2,
+      "L": 5
+    },
+    "memory_accesses": 0,
+    "name": "exp_approx_q16",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 1844
+  }
+}

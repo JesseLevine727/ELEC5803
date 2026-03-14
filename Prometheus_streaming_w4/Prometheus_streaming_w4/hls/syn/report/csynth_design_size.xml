@@ -1,0 +1,79 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 14254, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,  1075, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,    894, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,    893, user inline pragmas are applied</column>
+            <column name="">(4) simplification,    875, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  1082, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,    898, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,    903, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  1057, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  1078, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  1078, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  1076, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  1196, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  1052, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  1042, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  1019, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="softmax_accel" col1="softmax_accel_hls.cc:444" col2="14254" col3="875" col4="1078" col5="1052" col6="1019">
+                    <row id="21" col0="load_logits_and_find_max" col1="softmax_accel_hls.cc:191" col2="1060" col3="120" col4="83" col5="82" col6="87">
+                        <row id="13" col0="num_blocks" col1="softmax_accel_hls.cc:167" col2="4" col3="" col4="" col5="" col6=""/>
+                        <row id="18" col0="min_i32" col1="softmax_accel_hls.cc:130" col2="68" col2_disp="   68 (4 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="19" col0="unpack_word" col1="softmax_accel_hls.cc:172" col2="212" col2_disp="  212 (4 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="2" col0="reduce_max4" col1="softmax_accel_hls.cc:135" col2="262" col3="" col4="" col5="" col6="">
+                            <row id="18" col0="min_i32" col1="softmax_accel_hls.cc:130" col2="68" col2_disp="   68 (4 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="17" col0="generate_exp_buffer" col1="softmax_accel_hls.cc:315" col2="9147" col3="349" col4="399" col5="376" col6="366">
+                        <row id="12" col0="emit_exp_stream" col1="softmax_accel_hls.cc:245" col2="8229" col3="285" col4="299" col5="278" col6="275">
+                            <row id="13" col0="num_blocks" col1="softmax_accel_hls.cc:167" col2="4" col3="" col4="" col5="" col6=""/>
+                            <row id="9" col0="exp_approx_q16" col1="softmax_accel_hls.cc:59" col2="7376" col2_disp="7,376 (4 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="10" col0="cache_exp_stream" col1="softmax_accel_hls.cc:287" col2="904" col3="58" col4="94" col5="92" col6="83">
+                            <row id="13" col0="num_blocks" col1="softmax_accel_hls.cc:167" col2="4" col3="" col4="" col5="" col6=""/>
+                            <row id="6" col0="reduce_sum4" col1="softmax_accel_hls.cc:151" col2="688" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="20" col0="recip_sum_q2_30" col1="softmax_accel_hls.cc:93" col2="1244" col3="" col4="" col5="" col6=""/>
+                    <row id="8" col0="normalize_and_store" col1="softmax_accel_hls.cc:414" col2="2194" col3="136" col4="240" col5="238" col6="221">
+                        <row id="1" col0="emit_prob_stream" col1="softmax_accel_hls.cc:331" col2="1453" col3="72" col4="106" col5="105" col6="102">
+                            <row id="13" col0="num_blocks" col1="softmax_accel_hls.cc:167" col2="4" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="3" col0="write_prob_stream" col1="softmax_accel_hls.cc:377" col2="727" col3="58" col4="128" col5="127" col6="111">
+                            <row id="14" col0="pack_word" col1="softmax_accel_hls.cc:177" col2="480" col2_disp="  480 (8 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="7" col0="store_word" col1="softmax_accel_hls.cc:182" col2="294" col2_disp="  294 (3 calls)" col3="" col4="" col5="" col6="">
+                        <row id="14" col0="pack_word" col1="softmax_accel_hls.cc:177" col2="180" col2_disp="  180 (3 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="11" col0="derive_shift_dbg" col1="softmax_accel_hls.cc:430" col2="52" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

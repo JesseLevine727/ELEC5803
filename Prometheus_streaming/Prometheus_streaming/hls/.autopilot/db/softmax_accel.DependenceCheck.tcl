@@ -1,0 +1,33 @@
+
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.RECIP_M_Q30_U"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.RECIP_B_Q30_U"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.logits_buf_U"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.exp_buf_U"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_load_logits_and_find_max_fu_650"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_load_logits_and_find_max_fu_650.grp_load_logits_and_find_max_Pipeline_load_loop_fu_86"},
+	{"ID" : "7", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_load_logits_and_find_max_fu_650.grp_load_logits_and_find_max_Pipeline_load_loop_fu_86.flow_control_loop_pipe_sequential_init_U"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.emit_exp_stream_U0"},
+	{"ID" : "10", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.emit_exp_stream_U0.EXP2_PTS_Q16_U"},
+	{"ID" : "11", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.emit_exp_stream_U0.mul_12ns_18s_30_1_1_U11"},
+	{"ID" : "12", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.emit_exp_stream_U0.sparsemux_7_2_32_1_1_U12"},
+	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.emit_exp_stream_U0.flow_control_loop_pipe_U"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.cache_exp_stream_U0"},
+	{"ID" : "15", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.cache_exp_stream_U0.flow_control_loop_pipe_U"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.exp_stream_U"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_generate_exp_buffer_fu_660.start_for_cache_exp_stream_U0_U"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.emit_prob_stream_U0"},
+	{"ID" : "20", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.emit_prob_stream_U0.mul_32ns_31ns_62_1_1_U31"},
+	{"ID" : "21", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.emit_prob_stream_U0.flow_control_loop_pipe_U"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.write_prob_stream_U0"},
+	{"ID" : "23", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.write_prob_stream_U0.flow_control_loop_pipe_U"},
+	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.prob_stream_U"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_normalize_and_store_fu_671.start_for_write_prob_stream_U0_U"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.control_s_axi_U"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.gmem_m_axi_U"},
+	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_31s_16ns_47_1_1_U50"}]}
+set DependenceCheckSize 0

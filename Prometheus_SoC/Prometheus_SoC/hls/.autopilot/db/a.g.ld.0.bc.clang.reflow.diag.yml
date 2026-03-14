@@ -1,0 +1,1938 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 21, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.1
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 29, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.2
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+Args:            
+  - Callee:          __cxx_global_var_init.3
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 38, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_softmax_accel_hls.pp.0.cc
+    DebugLoc:        { File: /home/elfo/Documents/ELEC5803/Prometheus_SoC/Prometheus_SoC/hls/.autopilot/db/softmax_accel_hls.pp.0.cc, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 130, Column: 34 }
+Function:        _ZL11reduce_max46ap_intILi32EES0_S0_S0_7ap_uintILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'min_i32()'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'reduce_max4(ap_int<32>, ap_int<32>, ap_int<32>, ap_int<32>, ap_uint<4>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 125, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 213, Column: 28 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reduce_max4(ap_int<32>, ap_int<32>, ap_int<32>, ap_int<32>, ap_uint<4>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 125, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 208, Column: 24 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'unpack_word(ap_uint<128>, int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 158, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 190, Column: 21 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'min_i32()'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 178, Column: 21 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'num_blocks(unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 153, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 230, Column: 20 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'num_blocks(unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 153, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 226, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 256, Column: 16 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'exp_approx_q16(ap_int<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 45, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 226, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 286, Column: 14 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'reduce_sum4(ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 141, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cache_exp_stream(hls::stream<vec4_q16_t, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 268, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 273, Column: 21 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'num_blocks(unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 153, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cache_exp_stream(hls::stream<vec4_q16_t, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 268, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 304, Column: 2 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 226, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 305, Column: 3 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'cache_exp_stream(hls::stream<vec4_q16_t, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 268, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 316, Column: 20 }
+Function:        _ZL16emit_prob_streamP7ap_uintILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'num_blocks(unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 153, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 312, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 385, Column: 22 }
+Function:        _ZL17write_prob_streamP7ap_uintILi128EEjjRN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pack_word(ap_uint<128>&, int, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 163, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write_prob_stream(ap_uint<128>*, unsigned int, unsigned int, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 358, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 403, Column: 2 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - Callee:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 312, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 404, Column: 3 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - Callee:          'write_prob_stream(ap_uint<128>*, unsigned int, unsigned int, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 358, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 453, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pack_word(ap_uint<128>&, int, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 163, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 453, Column: 62 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'derive_shift_dbg(ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 407, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 448, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - Callee:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 446, Column: 29 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'recip_sum_q2_30(ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 79, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 443, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - Callee:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 442, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - Callee:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: riscv32i.cc, Line: 202, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'store_word(ap_uint<128>*, unsigned int, ap_uint<32>)'
+    DebugLoc:        { File: riscv32i.cc, Line: 27, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: riscv32i.cc, Line: 194, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - Callee:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: riscv32i.cc, Line: 185, Column: 13 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'accel_mmio_addr(unsigned int)'
+    DebugLoc:        { File: riscv32i.cc, Line: 36, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: riscv32i.cc, Line: 176, Column: 23 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_word(ap_uint<128>*, unsigned int)'
+    DebugLoc:        { File: riscv32i.cc, Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-pragma-preprocess
+Name:            PragmaResourceTopArg
+DebugLoc:        { File: riscv32i.cc, Line: 44, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'The resource pragma (bind_storage) on top-level function argument, in '''
+  - Pragma:          call
+    DebugLoc:        { File: riscv32i.cc, Line: 44, Column: 9 }
+  - String:          ''' is unsupported, please use INTERFACE pragma instead'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 410, Column: 21 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_410_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 84, Column: 20 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_84_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 365, Column: 3 }
+Function:        _ZL17write_prob_streamP7ap_uintILi128EEjjRN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_write_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 319, Column: 3 }
+Function:        _ZL16emit_prob_streamP7ap_uintILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 276, Column: 3 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        cache_exp_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 3 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        exp_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 181, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        load_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_410_1
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:410:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          softmax_accel_core
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_84_1
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:84:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          softmax_accel_core
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 304, Column: 2 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 226, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 305, Column: 3 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'cache_exp_stream(hls::stream<vec4_q16_t, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 268, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 403, Column: 2 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - Callee:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 312, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 404, Column: 3 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - Callee:          'write_prob_stream(ap_uint<128>*, unsigned int, unsigned int, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 358, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 442, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - Callee:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 443, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - Callee:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 448, Column: 3 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - Callee:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: riscv32i.cc, Line: 194, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - Callee:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_prometheus_soc_ir
+Args:            
+  - Callee:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_prometheus_soc_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       sum64_out
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          logits_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          exp_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 301, Column: 26 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            exp_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '132'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 400, Column: 26 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            prob_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '132'
+  - String:          '-bits'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: riscv32i.cc, Line: 60, Column: 3 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        PROGRAM_LOOP
+  - String:          '''('
+  - LoopLoc:         'riscv32i.cc:60:3'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 365, Column: 3 }
+Function:        _ZL17write_prob_streamP7ap_uintILi128EEjjRN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_write_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 319, Column: 3 }
+Function:        _ZL16emit_prob_streamP7ap_uintILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 276, Column: 3 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        cache_exp_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 3 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        exp_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 181, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        load_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_48_1
+  - String:          '> at '
+  - LoopLoc:         'riscv32i.cc:48:20'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 365, Column: 3 }
+Function:        _ZL17write_prob_streamP7ap_uintILi128EEjjRN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_write_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 319, Column: 3 }
+Function:        _ZL16emit_prob_streamP7ap_uintILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 276, Column: 3 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        cache_exp_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 3 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        exp_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 181, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        load_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: riscv32i.cc, Line: 194, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'softmax_accel_core(ap_uint<128>*, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 424, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 21, Column: 0 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=_ZL12EXP2_PTS_Q16'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:21:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:234:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 234, Column: 9 }
+  - VarName:         EXP2_PTS_Q16
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 234, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            EXP2_PTS_Q16
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_0.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_0.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_0.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_1.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_1.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_1.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_2.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_2.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_2.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_3'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_3
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_3
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=logits_buf_3.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:432:14'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:182:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+  - VarName:         logits_buf_3.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 182, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            logits_buf_3.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_0.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_0.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_0.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_1.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_1.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_1.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_2.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_2.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_2.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_3'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax_accel_core
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_3
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z18softmax_accel_coreP7ap_uintILi128EEjjjj
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_3
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=exp_buf_3.i'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  prometheus_soc
+  - String:          ' '
+  - varLoc:          'softmax_accel_hls.cc:433:15'
+  - String:          ' '
+  - PragmaSrcLoc:    'softmax_accel_hls.cc:277:9'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+  - VarName:         exp_buf_3.i
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 277, Column: 9 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            exp_buf_3.i
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 21, Column: 0 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL12EXP2_PTS_Q16
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 59, Column: 38 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 59, Column: 38 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 59, Column: 38 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 59, Column: 38 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          logits_buf_0.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          logits_buf_1.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          logits_buf_2.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 432, Column: 14 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          logits_buf_3.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          exp_buf_0.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          exp_buf_1.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          exp_buf_2.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 433, Column: 15 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          exp_buf_3.i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 365, Column: 3 }
+Function:        _ZL17write_prob_streamP7ap_uintILi128EEjjRN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_write_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 319, Column: 3 }
+Function:        _ZL16emit_prob_streamP7ap_uintILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        prob_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 276, Column: 3 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        cache_exp_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 3 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        exp_emit_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 181, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        load_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 365, Column: 3 }
+Function:        _ZL17write_prob_streamP7ap_uintILi128EEjjRN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        prob_write_loop
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:365:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          write_prob_stream
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 319, Column: 3 }
+Function:        _ZL16emit_prob_streamP7ap_uintILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        prob_emit_loop
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:319:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          emit_prob_stream
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 276, Column: 3 }
+Function:        _ZL16cache_exp_streamRN3hls6streamI10vec4_q16_tLi0EEEjP7ap_uintILi32EEPS4_ILi64EE
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        cache_exp_loop
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:276:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          cache_exp_stream
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 233, Column: 3 }
+Function:        _ZL15emit_exp_streamP6ap_intILi32EEjS0_RN3hls6streamI10vec4_q16_tLi0EEE
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        exp_emit_loop
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:233:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          emit_exp_stream
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 181, Column: 3 }
+Function:        _ZL24load_logits_and_find_maxP7ap_uintILi128EEjjP6ap_intILi32EES4_
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        load_loop
+  - String:          ''' ('
+  - LoopLoc:         'softmax_accel_hls.cc:181:3'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          load_logits_and_find_max
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 304, Column: 2 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'emit_exp_stream(ap_int<32>*, unsigned int, ap_int<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 226, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 305, Column: 3 }
+Function:        _ZL19generate_exp_bufferP6ap_intILi32EEjS0_P7ap_uintILi32EEPS2_ILi64EE
+Args:            
+  - Callee:          'cache_exp_stream(hls::stream<vec4_q16_t, 0>&, unsigned int, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 268, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 403, Column: 2 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - Callee:          'emit_prob_stream(ap_uint<32>*, unsigned int, ap_uint<32>, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 312, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 404, Column: 3 }
+Function:        _ZL19normalize_and_storeP7ap_uintILi128EEjjPS_ILi32EES2_
+Args:            
+  - Callee:          'write_prob_stream(ap_uint<128>*, unsigned int, unsigned int, hls::stream<vec4_q16_t, 0>&)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 358, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 442, Column: 3 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - Callee:          'load_logits_and_find_max(ap_uint<128>*, unsigned int, unsigned int, ap_int<32>*, ap_int<32>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 173, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 443, Column: 3 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - Callee:          'generate_exp_buffer(ap_int<32>*, unsigned int, ap_int<32>, ap_uint<32>*, ap_uint<64>*)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 297, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: softmax_accel_hls.cc, Line: 448, Column: 3 }
+Function:        _Z14prometheus_socP7ap_uintILi128EEPVS_ILi4EE
+Args:            
+  - Callee:          'normalize_and_store(ap_uint<128>*, unsigned int, unsigned int, ap_uint<32>*, ap_uint<32>)'
+    DebugLoc:        { File: softmax_accel_hls.cc, Line: 396, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'prometheus_soc(ap_uint<128>*, ap_uint<4> volatile*)'
+    DebugLoc:        { File: riscv32i.cc, Line: 41, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

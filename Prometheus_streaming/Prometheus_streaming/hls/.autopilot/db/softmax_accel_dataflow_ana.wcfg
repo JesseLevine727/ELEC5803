@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="softmax_accel.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_softmax_accel_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel//AESL_inst_softmax_accel_activity">
+         <obj_property name="label">AESL_inst_softmax_accel_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_softmax_accel_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_softmax_accel_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel//AESL_inst_softmax_accel_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel//AESL_inst_softmax_accel_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel//AESL_inst_softmax_accel_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_fu_650_activity">
+            <obj_property name="label">grp_load_logits_and_find_max_fu_650_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_load_logits_and_find_max_fu_650_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_load_logits_and_find_max_fu_650_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_fu_650_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_fu_650_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_fu_650_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity">
+               <obj_property name="label">grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/grp_generate_exp_buffer_fu_660_activity">
+            <obj_property name="label">grp_generate_exp_buffer_fu_660_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_generate_exp_buffer_fu_660_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_generate_exp_buffer_fu_660_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/grp_generate_exp_buffer_fu_660_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/grp_generate_exp_buffer_fu_660_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/grp_generate_exp_buffer_fu_660_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/emit_exp_stream_U0_activity">
+               <obj_property name="label">emit_exp_stream_U0_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">emit_exp_stream_U0_activity</obj_property>
+               <obj_property name="ObjectShortName">emit_exp_stream_U0_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/emit_exp_stream_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/emit_exp_stream_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/emit_exp_stream_U0_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/cache_exp_stream_U0_activity">
+               <obj_property name="label">cache_exp_stream_U0_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">cache_exp_stream_U0_activity</obj_property>
+               <obj_property name="ObjectShortName">cache_exp_stream_U0_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/cache_exp_stream_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/cache_exp_stream_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/cache_exp_stream_U0_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/grp_normalize_and_store_fu_671_activity">
+            <obj_property name="label">grp_normalize_and_store_fu_671_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_normalize_and_store_fu_671_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_normalize_and_store_fu_671_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/grp_normalize_and_store_fu_671_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/grp_normalize_and_store_fu_671_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/grp_normalize_and_store_fu_671_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/emit_prob_stream_U0_activity">
+               <obj_property name="label">emit_prob_stream_U0_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">emit_prob_stream_U0_activity</obj_property>
+               <obj_property name="ObjectShortName">emit_prob_stream_U0_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/emit_prob_stream_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/emit_prob_stream_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/emit_prob_stream_U0_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/write_prob_stream_U0_activity">
+               <obj_property name="label">write_prob_stream_U0_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">write_prob_stream_U0_activity</obj_property>
+               <obj_property name="ObjectShortName">write_prob_stream_U0_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/write_prob_stream_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/write_prob_stream_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/write_prob_stream_U0_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel//AESL_inst_softmax_accel_activity">
+      <obj_property name="ElementShortName">AESL_inst_softmax_accel_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_softmax_accel_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_softmax_accel_group">
+      <obj_property name="label">AESL_inst_softmax_accel</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_fu_650_activity">
+         <obj_property name="ElementShortName">grp_load_logits_and_find_max_fu_650_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_load_logits_and_find_max_fu_650_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/grp_generate_exp_buffer_fu_660_activity">
+         <obj_property name="ElementShortName">grp_generate_exp_buffer_fu_660_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_generate_exp_buffer_fu_660_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/grp_normalize_and_store_fu_671_activity">
+         <obj_property name="ElementShortName">grp_normalize_and_store_fu_671_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_normalize_and_store_fu_671_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_softmax_accel_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_load_logits_and_find_max_fu_650_group">
+         <obj_property name="label">grp_load_logits_and_find_max_fu_650</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity">
+            <obj_property name="ElementShortName">grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_load_logits_and_find_max_fu_650_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_group">
+            <obj_property name="label">grp_load_logits_and_find_max_Pipeline_load_loop_fu_86</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_load_logits_and_find_max_Pipeline_load_loop_fu_86_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_load_logits_and_find_max_fu_650/grp_load_logits_and_find_max_Pipeline_load_loop_fu_86/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_generate_exp_buffer_fu_660_group">
+         <obj_property name="label">grp_generate_exp_buffer_fu_660</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/emit_exp_stream_U0_activity">
+            <obj_property name="ElementShortName">emit_exp_stream_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">emit_exp_stream_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/cache_exp_stream_U0_activity">
+            <obj_property name="ElementShortName">cache_exp_stream_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">cache_exp_stream_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_generate_exp_buffer_fu_660_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="emit_exp_stream_U0_group">
+            <obj_property name="label">emit_exp_stream_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="emit_exp_stream_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="EXP2_PTS_Q16_group">
+                  <obj_property name="label">EXP2_PTS_Q16(PIPO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/EXP2_PTS_Q16_address0">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/EXP2_PTS_Q16_q0">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/EXP2_PTS_Q16_ce0">
+                     <obj_property name="ElementShortName">EXP2_PTS_Q16_ce0</obj_property>
+                     <obj_property name="ObjectShortName">EXP2_PTS_Q16_ce0</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                     <obj_property name="label">ap_ready(t_read)</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="emit_exp_stream_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/real_start">
+                  <obj_property name="ElementShortName">real_start</obj_property>
+                  <obj_property name="ObjectShortName">real_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="emit_exp_stream_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="exp_stream_group">
+                  <obj_property name="label">exp_stream(exp_stream_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/exp_stream_blk_n">
+                     <obj_property name="ElementShortName">exp_stream_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/exp_stream_din">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/exp_stream_full_n">
+                     <obj_property name="ElementShortName">exp_stream_full_n</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_full_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/emit_exp_stream_U0/exp_stream_write">
+                     <obj_property name="ElementShortName">exp_stream_write</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_write</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="cache_exp_stream_U0_group">
+            <obj_property name="label">cache_exp_stream_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="cache_exp_stream_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="exp_stream_group">
+                  <obj_property name="label">exp_stream(exp_stream_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_stream_blk_n">
+                     <obj_property name="ElementShortName">exp_stream_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_stream_dout">
+                     <obj_property name="ElementShortName">exp_stream_dout[31:0]</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_dout[31:0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_stream_empty_n">
+                     <obj_property name="ElementShortName">exp_stream_empty_n</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_empty_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_stream_read">
+                     <obj_property name="ElementShortName">exp_stream_read</obj_property>
+                     <obj_property name="ObjectShortName">exp_stream_read</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="cache_exp_stream_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="cache_exp_stream_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="exp_buf_group">
+                  <obj_property name="label">exp_buf(PIPO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_buf_address0">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_buf_d0">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_buf_ce0">
+                     <obj_property name="ElementShortName">exp_buf_ce0</obj_property>
+                     <obj_property name="ObjectShortName">exp_buf_ce0</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/exp_buf_we0">
+                     <obj_property name="ElementShortName">exp_buf_we0</obj_property>
+                     <obj_property name="ObjectShortName">exp_buf_we0</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                     <obj_property name="label">ap_done(i_write)</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_generate_exp_buffer_fu_660/cache_exp_stream_U0/ap_continue">
+                     <obj_property name="ElementShortName">ap_continue</obj_property>
+                     <obj_property name="ObjectShortName">ap_continue</obj_property>
+                     <obj_property name="label">ap_continue(i_full_n)</obj_property>
+                     <obj_property name="DisplayName">label</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_normalize_and_store_fu_671_group">
+         <obj_property name="label">grp_normalize_and_store_fu_671</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/emit_prob_stream_U0_activity">
+            <obj_property name="ElementShortName">emit_prob_stream_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">emit_prob_stream_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/write_prob_stream_U0_activity">
+            <obj_property name="ElementShortName">write_prob_stream_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">write_prob_stream_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_normalize_and_store_fu_671_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="emit_prob_stream_U0_group">
+            <obj_property name="label">emit_prob_stream_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="emit_prob_stream_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="emit_prob_stream_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/real_start">
+                  <obj_property name="ElementShortName">real_start</obj_property>
+                  <obj_property name="ObjectShortName">real_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="emit_prob_stream_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="prob_stream_group">
+                  <obj_property name="label">prob_stream(prob_stream_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/prob_stream_blk_n">
+                     <obj_property name="ElementShortName">prob_stream_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/prob_stream_din">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/prob_stream_full_n">
+                     <obj_property name="ElementShortName">prob_stream_full_n</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_full_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/emit_prob_stream_U0/prob_stream_write">
+                     <obj_property name="ElementShortName">prob_stream_write</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_write</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="write_prob_stream_U0_group">
+            <obj_property name="label">write_prob_stream_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="write_prob_stream_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="prob_stream_group">
+                  <obj_property name="label">prob_stream(prob_stream_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/prob_stream_blk_n">
+                     <obj_property name="ElementShortName">prob_stream_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/prob_stream_dout">
+                     <obj_property name="ElementShortName">prob_stream_dout[31:0]</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_dout[31:0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/prob_stream_empty_n">
+                     <obj_property name="ElementShortName">prob_stream_empty_n</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_empty_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/prob_stream_read">
+                     <obj_property name="ElementShortName">prob_stream_read</obj_property>
+                     <obj_property name="ObjectShortName">prob_stream_read</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="write_prob_stream_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_softmax_accel_top/AESL_inst_softmax_accel/grp_normalize_and_store_fu_671/write_prob_stream_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="write_prob_stream_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

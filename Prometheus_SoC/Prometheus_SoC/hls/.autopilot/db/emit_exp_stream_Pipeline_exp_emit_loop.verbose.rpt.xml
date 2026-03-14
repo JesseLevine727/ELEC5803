@@ -1,0 +1,586 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'emit_exp_stream_Pipeline_exp_emit_loop'" level="0">
+<item name = "Date">Sat Mar 14 16:27:07 2026
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">Prometheus_SoC</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">11.80 ns, 8.206 ns, 3.19 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">8, 71, 94.400 ns, 0.838 us, 2, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- exp_emit_loop">6, 69, 7, 1, 1, 1 ~ 64, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 3065, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 4, 0, 1672, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 45, -</column>
+<column name="Register">-, -, 1920, 128, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 1, 1, 9, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_12ns_18s_30_1_1_U531">mul_12ns_18s_30_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_12ns_18s_30_1_1_U533">mul_12ns_18s_30_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_12ns_18s_30_1_1_U535">mul_12ns_18s_30_1_1, 0, 1, 0, 6, 0</column>
+<column name="mul_12ns_18s_30_1_1_U537">mul_12ns_18s_30_1_1, 0, 1, 0, 6, 0</column>
+<column name="sparsemux_129_6_32_1_1_U522">sparsemux_129_6_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="sparsemux_129_6_32_1_1_U523">sparsemux_129_6_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="sparsemux_129_6_32_1_1_U524">sparsemux_129_6_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="sparsemux_129_6_32_1_1_U525">sparsemux_129_6_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="sparsemux_33_4_17_1_1_U526">sparsemux_33_4_17_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_17_1_1_U527">sparsemux_33_4_17_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_17_1_1_U528">sparsemux_33_4_17_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_17_1_1_U529">sparsemux_33_4_17_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_18_1_1_U530">sparsemux_33_4_18_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_18_1_1_U532">sparsemux_33_4_18_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_18_1_1_U534">sparsemux_33_4_18_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_33_4_18_1_1_U536">sparsemux_33_4_18_1_1, 0, 0, 0, 65, 0</column>
+<column name="sparsemux_7_2_32_1_1_U538">sparsemux_7_2_32_1_1, 0, 0, 0, 9, 0</column>
+<column name="sparsemux_7_2_32_1_1_U539">sparsemux_7_2_32_1_1, 0, 0, 0, 9, 0</column>
+<column name="sparsemux_7_2_32_1_1_U540">sparsemux_7_2_32_1_1, 0, 0, 0, 9, 0</column>
+<column name="sparsemux_7_2_32_1_1_U541">sparsemux_7_2_32_1_1, 0, 0, 0, 9, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln233_fu_2461_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln50_10_fu_4329_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_12_fu_3978_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_13_fu_3994_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_14_fu_4488_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_1_fu_3895_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_2_fu_4011_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_4_fu_3912_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_5_fu_3928_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_6_fu_4170_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_8_fu_3945_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_9_fu_3961_p2">+, 0, 0, 50, 50, 50</column>
+<column name="add_ln50_fu_3879_p2">+, 0, 0, 50, 50, 50</column>
+<column name="t64_1_fu_4186_p2">+, 0, 0, 50, 50, 50</column>
+<column name="t64_2_fu_4345_p2">+, 0, 0, 50, 50, 50</column>
+<column name="t64_3_fu_4504_p2">+, 0, 0, 50, 50, 50</column>
+<column name="t64_fu_4027_p2">+, 0, 0, 50, 50, 50</column>
+<column name="y_frac_1_fu_5179_p2">+, 0, 0, 26, 19, 19</column>
+<column name="y_frac_2_fu_5301_p2">+, 0, 0, 26, 19, 19</column>
+<column name="y_frac_3_fu_5423_p2">+, 0, 0, 26, 19, 19</column>
+<column name="y_frac_fu_5054_p2">+, 0, 0, 26, 19, 19</column>
+<column name="dy_1_fu_4813_p2">-, 0, 0, 25, 18, 18</column>
+<column name="dy_2_fu_4916_p2">-, 0, 0, 25, 18, 18</column>
+<column name="dy_3_fu_5019_p2">-, 0, 0, 25, 18, 18</column>
+<column name="dy_fu_4710_p2">-, 0, 0, 25, 18, 18</column>
+<column name="sh_11_fu_5467_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sh_2_fu_5098_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sh_5_fu_5223_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sh_8_fu_5345_p2">-, 0, 0, 24, 1, 17</column>
+<column name="sub_ln50_1_fu_3682_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_2_fu_3724_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_3_fu_3742_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_4_fu_3784_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_5_fu_3802_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_6_fu_3844_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_7_fu_3862_p2">-, 0, 0, 50, 50, 50</column>
+<column name="sub_ln50_fu_3664_p2">-, 0, 0, 50, 50, 50</column>
+<column name="x_q16_2_fu_3041_p2">-, 0, 0, 39, 32, 32</column>
+<column name="x_q16_4_fu_3329_p2">-, 0, 0, 39, 32, 32</column>
+<column name="x_q16_6_fu_3617_p2">-, 0, 0, 39, 32, 32</column>
+<column name="x_q16_fu_2753_p2">-, 0, 0, 39, 32, 32</column>
+<column name="and_ln67_fu_5114_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln73_1_fu_5140_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln73_2_fu_5255_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln73_3_fu_5377_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln73_4_fu_5499_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln73_fu_5135_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_01001_grp1">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln233_fu_2455_p2">icmp, 0, 0, 14, 7, 7</column>
+<column name="icmp_ln247_fu_2771_p2">icmp, 0, 0, 14, 9, 9</column>
+<column name="icmp_ln251_fu_3059_p2">icmp, 0, 0, 14, 9, 9</column>
+<column name="icmp_ln255_fu_3347_p2">icmp, 0, 0, 14, 9, 9</column>
+<column name="icmp_ln48_1_fu_3688_p2">icmp, 0, 0, 39, 32, 21</column>
+<column name="icmp_ln48_2_fu_3748_p2">icmp, 0, 0, 39, 32, 21</column>
+<column name="icmp_ln48_3_fu_3808_p2">icmp, 0, 0, 39, 32, 21</column>
+<column name="icmp_ln48_fu_3628_p2">icmp, 0, 0, 39, 32, 21</column>
+<column name="icmp_ln69_1_fu_4312_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln69_2_fu_4471_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln69_3_fu_4630_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln69_fu_4153_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln73_1_fu_5243_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln73_2_fu_5365_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln73_3_fu_5487_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="icmp_ln73_fu_5129_p2">icmp, 0, 0, 12, 12, 1</column>
+<column name="pkt_keep_fu_2483_p2">icmp, 0, 0, 14, 9, 9</column>
+<column name="y_15_fu_5153_p4">lshr, 0, 0, 100, 32, 32</column>
+<column name="y_16_fu_5268_p6">lshr, 0, 0, 100, 32, 32</column>
+<column name="y_17_fu_5512_p6">lshr, 0, 0, 100, 32, 32</column>
+<column name="y_fu_5390_p6">lshr, 0, 0, 100, 32, 32</column>
+<column name="pkt_keep_2_fu_5568_p3">select, 0, 0, 3, 1, 3</column>
+<column name="pkt_keep_3_fu_5589_p3">select, 0, 0, 4, 1, 4</column>
+<column name="pkt_keep_8_fu_5549_p3">select, 0, 0, 2, 1, 2</column>
+<column name="pkt_v1_2_fu_5288_p3">select, 0, 0, 32, 1, 32</column>
+<column name="pkt_v2_2_fu_5410_p3">select, 0, 0, 32, 1, 32</column>
+<column name="pkt_v3_2_fu_5532_p3">select, 0, 0, 32, 1, 32</column>
+<column name="sh_10_fu_5447_p3">select, 0, 0, 4, 1, 2</column>
+<column name="sh_1_fu_5078_p3">select, 0, 0, 4, 1, 2</column>
+<column name="sh_4_fu_5203_p3">select, 0, 0, 4, 1, 2</column>
+<column name="sh_7_fu_5325_p3">select, 0, 0, 4, 1, 2</column>
+<column name="x_q16_1_fu_3633_p3">select, 0, 0, 32, 1, 21</column>
+<column name="x_q16_3_fu_3693_p3">select, 0, 0, 32, 1, 21</column>
+<column name="x_q16_5_fu_3753_p3">select, 0, 0, 32, 1, 21</column>
+<column name="x_q16_7_fu_3813_p3">select, 0, 0, 32, 1, 21</column>
+<column name="y_15_fu_5153_p2">shl, 0, 0, 100, 32, 32</column>
+<column name="y_16_fu_5268_p2">shl, 0, 0, 100, 32, 32</column>
+<column name="y_17_fu_5512_p2">shl, 0, 0, 100, 32, 32</column>
+<column name="y_fu_5390_p2">shl, 0, 0, 100, 32, 32</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln67_1_fu_5189_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln67_2_fu_5311_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln67_3_fu_5433_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln67_fu_5064_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_blk_4">9, 2, 7, 14</column>
+<column name="blk_fu_882">9, 2, 7, 14</column>
+<column name="exp_stream_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln50_13_reg_5735">44, 0, 50, 6</column>
+<column name="add_ln50_1_reg_5720">44, 0, 50, 6</column>
+<column name="add_ln50_5_reg_5725">44, 0, 50, 6</column>
+<column name="add_ln50_9_reg_5730">44, 0, 50, 6</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
+<column name="blk_fu_882">7, 0, 7, 0</column>
+<column name="icmp_ln247_reg_5632">1, 0, 1, 0</column>
+<column name="icmp_ln251_reg_5644">1, 0, 1, 0</column>
+<column name="icmp_ln255_reg_5656">1, 0, 1, 0</column>
+<column name="icmp_ln69_1_reg_5809">1, 0, 1, 0</column>
+<column name="icmp_ln69_1_reg_5809_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="icmp_ln69_2_reg_5846">1, 0, 1, 0</column>
+<column name="icmp_ln69_2_reg_5846_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="icmp_ln69_3_reg_5883">1, 0, 1, 0</column>
+<column name="icmp_ln69_3_reg_5883_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="icmp_ln69_reg_5772">1, 0, 1, 0</column>
+<column name="icmp_ln69_reg_5772_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="idx_1_reg_5792">4, 0, 4, 0</column>
+<column name="idx_2_reg_5829">4, 0, 4, 0</column>
+<column name="idx_3_reg_5866">4, 0, 4, 0</column>
+<column name="idx_reg_5755">4, 0, 4, 0</column>
+<column name="k_1_reg_5787">16, 0, 16, 0</column>
+<column name="k_1_reg_5787_pp0_iter4_reg">16, 0, 16, 0</column>
+<column name="k_2_reg_5824">16, 0, 16, 0</column>
+<column name="k_2_reg_5824_pp0_iter4_reg">16, 0, 16, 0</column>
+<column name="k_3_reg_5861">16, 0, 16, 0</column>
+<column name="k_3_reg_5861_pp0_iter4_reg">16, 0, 16, 0</column>
+<column name="k_reg_5750">16, 0, 16, 0</column>
+<column name="k_reg_5750_pp0_iter4_reg">16, 0, 16, 0</column>
+<column name="pkt_keep_reg_5618">1, 0, 1, 0</column>
+<column name="pkt_v1_2_reg_5913">32, 0, 32, 0</column>
+<column name="pkt_v2_2_reg_5918">32, 0, 32, 0</column>
+<column name="pkt_v3_2_reg_5923">32, 0, 32, 0</column>
+<column name="rem_1_reg_5782">12, 0, 12, 0</column>
+<column name="rem_2_reg_5819">12, 0, 12, 0</column>
+<column name="rem_3_reg_5856">12, 0, 12, 0</column>
+<column name="rem_reg_5745">12, 0, 12, 0</column>
+<column name="sub_ln50_1_reg_5676">38, 0, 50, 12</column>
+<column name="sub_ln50_3_reg_5689">38, 0, 50, 12</column>
+<column name="sub_ln50_5_reg_5702">38, 0, 50, 12</column>
+<column name="sub_ln50_7_reg_5715">38, 0, 50, 12</column>
+<column name="t64_1_reg_5777">48, 0, 50, 2</column>
+<column name="t64_1_reg_5777_pp0_iter4_reg">48, 0, 50, 2</column>
+<column name="t64_2_reg_5814">48, 0, 50, 2</column>
+<column name="t64_2_reg_5814_pp0_iter4_reg">48, 0, 50, 2</column>
+<column name="t64_3_reg_5851">48, 0, 50, 2</column>
+<column name="t64_3_reg_5851_pp0_iter4_reg">48, 0, 50, 2</column>
+<column name="t64_reg_5740">48, 0, 50, 2</column>
+<column name="t64_reg_5740_pp0_iter4_reg">48, 0, 50, 2</column>
+<column name="tmp_102_reg_5803">1, 0, 1, 0</column>
+<column name="tmp_102_reg_5803_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="tmp_112_reg_5840">1, 0, 1, 0</column>
+<column name="tmp_112_reg_5840_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="tmp_122_reg_5877">1, 0, 1, 0</column>
+<column name="tmp_122_reg_5877_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="tmp_92_reg_5766">1, 0, 1, 0</column>
+<column name="tmp_92_reg_5766_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="trunc_ln64_1_reg_5893">18, 0, 18, 0</column>
+<column name="trunc_ln64_2_reg_5898">18, 0, 18, 0</column>
+<column name="trunc_ln64_3_reg_5903">18, 0, 18, 0</column>
+<column name="trunc_ln_reg_5888">18, 0, 18, 0</column>
+<column name="x_q16_1_reg_5668">32, 0, 32, 0</column>
+<column name="x_q16_1_reg_5668_pp0_iter2_reg">32, 0, 32, 0</column>
+<column name="x_q16_2_reg_5638">32, 0, 32, 0</column>
+<column name="x_q16_3_reg_5681">32, 0, 32, 0</column>
+<column name="x_q16_3_reg_5681_pp0_iter2_reg">32, 0, 32, 0</column>
+<column name="x_q16_4_reg_5650">32, 0, 32, 0</column>
+<column name="x_q16_5_reg_5694">32, 0, 32, 0</column>
+<column name="x_q16_5_reg_5694_pp0_iter2_reg">32, 0, 32, 0</column>
+<column name="x_q16_6_reg_5662">32, 0, 32, 0</column>
+<column name="x_q16_7_reg_5707">32, 0, 32, 0</column>
+<column name="x_q16_7_reg_5707_pp0_iter2_reg">32, 0, 32, 0</column>
+<column name="x_q16_reg_5626">32, 0, 32, 0</column>
+<column name="y0_1_reg_5797">17, 0, 17, 0</column>
+<column name="y0_1_reg_5797_pp0_iter4_reg">17, 0, 17, 0</column>
+<column name="y0_2_reg_5834">17, 0, 17, 0</column>
+<column name="y0_2_reg_5834_pp0_iter4_reg">17, 0, 17, 0</column>
+<column name="y0_3_reg_5871">17, 0, 17, 0</column>
+<column name="y0_3_reg_5871_pp0_iter4_reg">17, 0, 17, 0</column>
+<column name="y0_reg_5760">17, 0, 17, 0</column>
+<column name="y0_reg_5760_pp0_iter4_reg">17, 0, 17, 0</column>
+<column name="y_15_reg_5908">32, 0, 32, 0</column>
+<column name="icmp_ln247_reg_5632">64, 32, 1, 0</column>
+<column name="icmp_ln251_reg_5644">64, 32, 1, 0</column>
+<column name="icmp_ln255_reg_5656">64, 32, 1, 0</column>
+<column name="pkt_keep_reg_5618">64, 32, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, emit_exp_stream_Pipeline_exp_emit_loop, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, emit_exp_stream_Pipeline_exp_emit_loop, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, emit_exp_stream_Pipeline_exp_emit_loop, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, emit_exp_stream_Pipeline_exp_emit_loop, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, emit_exp_stream_Pipeline_exp_emit_loop, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, emit_exp_stream_Pipeline_exp_emit_loop, return value</column>
+<column name="exp_stream_din">out, 132, ap_fifo, exp_stream, pointer</column>
+<column name="exp_stream_full_n">in, 1, ap_fifo, exp_stream, pointer</column>
+<column name="exp_stream_write">out, 1, ap_fifo, exp_stream, pointer</column>
+<column name="exp_stream_num_data_valid">in, 32, ap_fifo, exp_stream, pointer</column>
+<column name="exp_stream_fifo_cap">in, 32, ap_fifo, exp_stream, pointer</column>
+<column name="blocks_cast">in, 7, ap_stable, blocks_cast, scalar</column>
+<column name="n">in, 9, ap_stable, n, scalar</column>
+<column name="logits_buf_0_0_load">in, 32, ap_stable, logits_buf_0_0_load, scalar</column>
+<column name="logits_buf_0_1_load">in, 32, ap_stable, logits_buf_0_1_load, scalar</column>
+<column name="logits_buf_0_2_load">in, 32, ap_stable, logits_buf_0_2_load, scalar</column>
+<column name="logits_buf_0_3_load">in, 32, ap_stable, logits_buf_0_3_load, scalar</column>
+<column name="logits_buf_0_4_load">in, 32, ap_stable, logits_buf_0_4_load, scalar</column>
+<column name="logits_buf_0_5_load">in, 32, ap_stable, logits_buf_0_5_load, scalar</column>
+<column name="logits_buf_0_6_load">in, 32, ap_stable, logits_buf_0_6_load, scalar</column>
+<column name="logits_buf_0_7_load">in, 32, ap_stable, logits_buf_0_7_load, scalar</column>
+<column name="logits_buf_0_8_load">in, 32, ap_stable, logits_buf_0_8_load, scalar</column>
+<column name="logits_buf_0_9_load">in, 32, ap_stable, logits_buf_0_9_load, scalar</column>
+<column name="logits_buf_0_10_load">in, 32, ap_stable, logits_buf_0_10_load, scalar</column>
+<column name="logits_buf_0_11_load">in, 32, ap_stable, logits_buf_0_11_load, scalar</column>
+<column name="logits_buf_0_12_load">in, 32, ap_stable, logits_buf_0_12_load, scalar</column>
+<column name="logits_buf_0_13_load">in, 32, ap_stable, logits_buf_0_13_load, scalar</column>
+<column name="logits_buf_0_14_load">in, 32, ap_stable, logits_buf_0_14_load, scalar</column>
+<column name="logits_buf_0_15_load">in, 32, ap_stable, logits_buf_0_15_load, scalar</column>
+<column name="logits_buf_0_16_load">in, 32, ap_stable, logits_buf_0_16_load, scalar</column>
+<column name="logits_buf_0_17_load">in, 32, ap_stable, logits_buf_0_17_load, scalar</column>
+<column name="logits_buf_0_18_load">in, 32, ap_stable, logits_buf_0_18_load, scalar</column>
+<column name="logits_buf_0_19_load">in, 32, ap_stable, logits_buf_0_19_load, scalar</column>
+<column name="logits_buf_0_20_load">in, 32, ap_stable, logits_buf_0_20_load, scalar</column>
+<column name="logits_buf_0_21_load">in, 32, ap_stable, logits_buf_0_21_load, scalar</column>
+<column name="logits_buf_0_22_load">in, 32, ap_stable, logits_buf_0_22_load, scalar</column>
+<column name="logits_buf_0_23_load">in, 32, ap_stable, logits_buf_0_23_load, scalar</column>
+<column name="logits_buf_0_24_load">in, 32, ap_stable, logits_buf_0_24_load, scalar</column>
+<column name="logits_buf_0_25_load">in, 32, ap_stable, logits_buf_0_25_load, scalar</column>
+<column name="logits_buf_0_26_load">in, 32, ap_stable, logits_buf_0_26_load, scalar</column>
+<column name="logits_buf_0_27_load">in, 32, ap_stable, logits_buf_0_27_load, scalar</column>
+<column name="logits_buf_0_28_load">in, 32, ap_stable, logits_buf_0_28_load, scalar</column>
+<column name="logits_buf_0_29_load">in, 32, ap_stable, logits_buf_0_29_load, scalar</column>
+<column name="logits_buf_0_30_load">in, 32, ap_stable, logits_buf_0_30_load, scalar</column>
+<column name="logits_buf_0_31_load">in, 32, ap_stable, logits_buf_0_31_load, scalar</column>
+<column name="logits_buf_0_32_load">in, 32, ap_stable, logits_buf_0_32_load, scalar</column>
+<column name="logits_buf_0_33_load">in, 32, ap_stable, logits_buf_0_33_load, scalar</column>
+<column name="logits_buf_0_34_load">in, 32, ap_stable, logits_buf_0_34_load, scalar</column>
+<column name="logits_buf_0_35_load">in, 32, ap_stable, logits_buf_0_35_load, scalar</column>
+<column name="logits_buf_0_36_load">in, 32, ap_stable, logits_buf_0_36_load, scalar</column>
+<column name="logits_buf_0_37_load">in, 32, ap_stable, logits_buf_0_37_load, scalar</column>
+<column name="logits_buf_0_38_load">in, 32, ap_stable, logits_buf_0_38_load, scalar</column>
+<column name="logits_buf_0_39_load">in, 32, ap_stable, logits_buf_0_39_load, scalar</column>
+<column name="logits_buf_0_40_load">in, 32, ap_stable, logits_buf_0_40_load, scalar</column>
+<column name="logits_buf_0_41_load">in, 32, ap_stable, logits_buf_0_41_load, scalar</column>
+<column name="logits_buf_0_42_load">in, 32, ap_stable, logits_buf_0_42_load, scalar</column>
+<column name="logits_buf_0_43_load">in, 32, ap_stable, logits_buf_0_43_load, scalar</column>
+<column name="logits_buf_0_44_load">in, 32, ap_stable, logits_buf_0_44_load, scalar</column>
+<column name="logits_buf_0_45_load">in, 32, ap_stable, logits_buf_0_45_load, scalar</column>
+<column name="logits_buf_0_46_load">in, 32, ap_stable, logits_buf_0_46_load, scalar</column>
+<column name="logits_buf_0_47_load">in, 32, ap_stable, logits_buf_0_47_load, scalar</column>
+<column name="logits_buf_0_48_load">in, 32, ap_stable, logits_buf_0_48_load, scalar</column>
+<column name="logits_buf_0_49_load">in, 32, ap_stable, logits_buf_0_49_load, scalar</column>
+<column name="logits_buf_0_50_load">in, 32, ap_stable, logits_buf_0_50_load, scalar</column>
+<column name="logits_buf_0_51_load">in, 32, ap_stable, logits_buf_0_51_load, scalar</column>
+<column name="logits_buf_0_52_load">in, 32, ap_stable, logits_buf_0_52_load, scalar</column>
+<column name="logits_buf_0_53_load">in, 32, ap_stable, logits_buf_0_53_load, scalar</column>
+<column name="logits_buf_0_54_load">in, 32, ap_stable, logits_buf_0_54_load, scalar</column>
+<column name="logits_buf_0_55_load">in, 32, ap_stable, logits_buf_0_55_load, scalar</column>
+<column name="logits_buf_0_56_load">in, 32, ap_stable, logits_buf_0_56_load, scalar</column>
+<column name="logits_buf_0_57_load">in, 32, ap_stable, logits_buf_0_57_load, scalar</column>
+<column name="logits_buf_0_58_load">in, 32, ap_stable, logits_buf_0_58_load, scalar</column>
+<column name="logits_buf_0_59_load">in, 32, ap_stable, logits_buf_0_59_load, scalar</column>
+<column name="logits_buf_0_60_load">in, 32, ap_stable, logits_buf_0_60_load, scalar</column>
+<column name="logits_buf_0_61_load">in, 32, ap_stable, logits_buf_0_61_load, scalar</column>
+<column name="logits_buf_0_62_load">in, 32, ap_stable, logits_buf_0_62_load, scalar</column>
+<column name="logits_buf_0_63_load">in, 32, ap_stable, logits_buf_0_63_load, scalar</column>
+<column name="max_x">in, 32, ap_stable, max_x, scalar</column>
+<column name="logits_buf_1_0_load">in, 32, ap_stable, logits_buf_1_0_load, scalar</column>
+<column name="logits_buf_1_1_load">in, 32, ap_stable, logits_buf_1_1_load, scalar</column>
+<column name="logits_buf_1_2_load">in, 32, ap_stable, logits_buf_1_2_load, scalar</column>
+<column name="logits_buf_1_3_load">in, 32, ap_stable, logits_buf_1_3_load, scalar</column>
+<column name="logits_buf_1_4_load">in, 32, ap_stable, logits_buf_1_4_load, scalar</column>
+<column name="logits_buf_1_5_load">in, 32, ap_stable, logits_buf_1_5_load, scalar</column>
+<column name="logits_buf_1_6_load">in, 32, ap_stable, logits_buf_1_6_load, scalar</column>
+<column name="logits_buf_1_7_load">in, 32, ap_stable, logits_buf_1_7_load, scalar</column>
+<column name="logits_buf_1_8_load">in, 32, ap_stable, logits_buf_1_8_load, scalar</column>
+<column name="logits_buf_1_9_load">in, 32, ap_stable, logits_buf_1_9_load, scalar</column>
+<column name="logits_buf_1_10_load">in, 32, ap_stable, logits_buf_1_10_load, scalar</column>
+<column name="logits_buf_1_11_load">in, 32, ap_stable, logits_buf_1_11_load, scalar</column>
+<column name="logits_buf_1_12_load">in, 32, ap_stable, logits_buf_1_12_load, scalar</column>
+<column name="logits_buf_1_13_load">in, 32, ap_stable, logits_buf_1_13_load, scalar</column>
+<column name="logits_buf_1_14_load">in, 32, ap_stable, logits_buf_1_14_load, scalar</column>
+<column name="logits_buf_1_15_load">in, 32, ap_stable, logits_buf_1_15_load, scalar</column>
+<column name="logits_buf_1_16_load">in, 32, ap_stable, logits_buf_1_16_load, scalar</column>
+<column name="logits_buf_1_17_load">in, 32, ap_stable, logits_buf_1_17_load, scalar</column>
+<column name="logits_buf_1_18_load">in, 32, ap_stable, logits_buf_1_18_load, scalar</column>
+<column name="logits_buf_1_19_load">in, 32, ap_stable, logits_buf_1_19_load, scalar</column>
+<column name="logits_buf_1_20_load">in, 32, ap_stable, logits_buf_1_20_load, scalar</column>
+<column name="logits_buf_1_21_load">in, 32, ap_stable, logits_buf_1_21_load, scalar</column>
+<column name="logits_buf_1_22_load">in, 32, ap_stable, logits_buf_1_22_load, scalar</column>
+<column name="logits_buf_1_23_load">in, 32, ap_stable, logits_buf_1_23_load, scalar</column>
+<column name="logits_buf_1_24_load">in, 32, ap_stable, logits_buf_1_24_load, scalar</column>
+<column name="logits_buf_1_25_load">in, 32, ap_stable, logits_buf_1_25_load, scalar</column>
+<column name="logits_buf_1_26_load">in, 32, ap_stable, logits_buf_1_26_load, scalar</column>
+<column name="logits_buf_1_27_load">in, 32, ap_stable, logits_buf_1_27_load, scalar</column>
+<column name="logits_buf_1_28_load">in, 32, ap_stable, logits_buf_1_28_load, scalar</column>
+<column name="logits_buf_1_29_load">in, 32, ap_stable, logits_buf_1_29_load, scalar</column>
+<column name="logits_buf_1_30_load">in, 32, ap_stable, logits_buf_1_30_load, scalar</column>
+<column name="logits_buf_1_31_load">in, 32, ap_stable, logits_buf_1_31_load, scalar</column>
+<column name="logits_buf_1_32_load">in, 32, ap_stable, logits_buf_1_32_load, scalar</column>
+<column name="logits_buf_1_33_load">in, 32, ap_stable, logits_buf_1_33_load, scalar</column>
+<column name="logits_buf_1_34_load">in, 32, ap_stable, logits_buf_1_34_load, scalar</column>
+<column name="logits_buf_1_35_load">in, 32, ap_stable, logits_buf_1_35_load, scalar</column>
+<column name="logits_buf_1_36_load">in, 32, ap_stable, logits_buf_1_36_load, scalar</column>
+<column name="logits_buf_1_37_load">in, 32, ap_stable, logits_buf_1_37_load, scalar</column>
+<column name="logits_buf_1_38_load">in, 32, ap_stable, logits_buf_1_38_load, scalar</column>
+<column name="logits_buf_1_39_load">in, 32, ap_stable, logits_buf_1_39_load, scalar</column>
+<column name="logits_buf_1_40_load">in, 32, ap_stable, logits_buf_1_40_load, scalar</column>
+<column name="logits_buf_1_41_load">in, 32, ap_stable, logits_buf_1_41_load, scalar</column>
+<column name="logits_buf_1_42_load">in, 32, ap_stable, logits_buf_1_42_load, scalar</column>
+<column name="logits_buf_1_43_load">in, 32, ap_stable, logits_buf_1_43_load, scalar</column>
+<column name="logits_buf_1_44_load">in, 32, ap_stable, logits_buf_1_44_load, scalar</column>
+<column name="logits_buf_1_45_load">in, 32, ap_stable, logits_buf_1_45_load, scalar</column>
+<column name="logits_buf_1_46_load">in, 32, ap_stable, logits_buf_1_46_load, scalar</column>
+<column name="logits_buf_1_47_load">in, 32, ap_stable, logits_buf_1_47_load, scalar</column>
+<column name="logits_buf_1_48_load">in, 32, ap_stable, logits_buf_1_48_load, scalar</column>
+<column name="logits_buf_1_49_load">in, 32, ap_stable, logits_buf_1_49_load, scalar</column>
+<column name="logits_buf_1_50_load">in, 32, ap_stable, logits_buf_1_50_load, scalar</column>
+<column name="logits_buf_1_51_load">in, 32, ap_stable, logits_buf_1_51_load, scalar</column>
+<column name="logits_buf_1_52_load">in, 32, ap_stable, logits_buf_1_52_load, scalar</column>
+<column name="logits_buf_1_53_load">in, 32, ap_stable, logits_buf_1_53_load, scalar</column>
+<column name="logits_buf_1_54_load">in, 32, ap_stable, logits_buf_1_54_load, scalar</column>
+<column name="logits_buf_1_55_load">in, 32, ap_stable, logits_buf_1_55_load, scalar</column>
+<column name="logits_buf_1_56_load">in, 32, ap_stable, logits_buf_1_56_load, scalar</column>
+<column name="logits_buf_1_57_load">in, 32, ap_stable, logits_buf_1_57_load, scalar</column>
+<column name="logits_buf_1_58_load">in, 32, ap_stable, logits_buf_1_58_load, scalar</column>
+<column name="logits_buf_1_59_load">in, 32, ap_stable, logits_buf_1_59_load, scalar</column>
+<column name="logits_buf_1_60_load">in, 32, ap_stable, logits_buf_1_60_load, scalar</column>
+<column name="logits_buf_1_61_load">in, 32, ap_stable, logits_buf_1_61_load, scalar</column>
+<column name="logits_buf_1_62_load">in, 32, ap_stable, logits_buf_1_62_load, scalar</column>
+<column name="logits_buf_1_63_load">in, 32, ap_stable, logits_buf_1_63_load, scalar</column>
+<column name="logits_buf_2_0_load">in, 32, ap_stable, logits_buf_2_0_load, scalar</column>
+<column name="logits_buf_2_1_load">in, 32, ap_stable, logits_buf_2_1_load, scalar</column>
+<column name="logits_buf_2_2_load">in, 32, ap_stable, logits_buf_2_2_load, scalar</column>
+<column name="logits_buf_2_3_load">in, 32, ap_stable, logits_buf_2_3_load, scalar</column>
+<column name="logits_buf_2_4_load">in, 32, ap_stable, logits_buf_2_4_load, scalar</column>
+<column name="logits_buf_2_5_load">in, 32, ap_stable, logits_buf_2_5_load, scalar</column>
+<column name="logits_buf_2_6_load">in, 32, ap_stable, logits_buf_2_6_load, scalar</column>
+<column name="logits_buf_2_7_load">in, 32, ap_stable, logits_buf_2_7_load, scalar</column>
+<column name="logits_buf_2_8_load">in, 32, ap_stable, logits_buf_2_8_load, scalar</column>
+<column name="logits_buf_2_9_load">in, 32, ap_stable, logits_buf_2_9_load, scalar</column>
+<column name="logits_buf_2_10_load">in, 32, ap_stable, logits_buf_2_10_load, scalar</column>
+<column name="logits_buf_2_11_load">in, 32, ap_stable, logits_buf_2_11_load, scalar</column>
+<column name="logits_buf_2_12_load">in, 32, ap_stable, logits_buf_2_12_load, scalar</column>
+<column name="logits_buf_2_13_load">in, 32, ap_stable, logits_buf_2_13_load, scalar</column>
+<column name="logits_buf_2_14_load">in, 32, ap_stable, logits_buf_2_14_load, scalar</column>
+<column name="logits_buf_2_15_load">in, 32, ap_stable, logits_buf_2_15_load, scalar</column>
+<column name="logits_buf_2_16_load">in, 32, ap_stable, logits_buf_2_16_load, scalar</column>
+<column name="logits_buf_2_17_load">in, 32, ap_stable, logits_buf_2_17_load, scalar</column>
+<column name="logits_buf_2_18_load">in, 32, ap_stable, logits_buf_2_18_load, scalar</column>
+<column name="logits_buf_2_19_load">in, 32, ap_stable, logits_buf_2_19_load, scalar</column>
+<column name="logits_buf_2_20_load">in, 32, ap_stable, logits_buf_2_20_load, scalar</column>
+<column name="logits_buf_2_21_load">in, 32, ap_stable, logits_buf_2_21_load, scalar</column>
+<column name="logits_buf_2_22_load">in, 32, ap_stable, logits_buf_2_22_load, scalar</column>
+<column name="logits_buf_2_23_load">in, 32, ap_stable, logits_buf_2_23_load, scalar</column>
+<column name="logits_buf_2_24_load">in, 32, ap_stable, logits_buf_2_24_load, scalar</column>
+<column name="logits_buf_2_25_load">in, 32, ap_stable, logits_buf_2_25_load, scalar</column>
+<column name="logits_buf_2_26_load">in, 32, ap_stable, logits_buf_2_26_load, scalar</column>
+<column name="logits_buf_2_27_load">in, 32, ap_stable, logits_buf_2_27_load, scalar</column>
+<column name="logits_buf_2_28_load">in, 32, ap_stable, logits_buf_2_28_load, scalar</column>
+<column name="logits_buf_2_29_load">in, 32, ap_stable, logits_buf_2_29_load, scalar</column>
+<column name="logits_buf_2_30_load">in, 32, ap_stable, logits_buf_2_30_load, scalar</column>
+<column name="logits_buf_2_31_load">in, 32, ap_stable, logits_buf_2_31_load, scalar</column>
+<column name="logits_buf_2_32_load">in, 32, ap_stable, logits_buf_2_32_load, scalar</column>
+<column name="logits_buf_2_33_load">in, 32, ap_stable, logits_buf_2_33_load, scalar</column>
+<column name="logits_buf_2_34_load">in, 32, ap_stable, logits_buf_2_34_load, scalar</column>
+<column name="logits_buf_2_35_load">in, 32, ap_stable, logits_buf_2_35_load, scalar</column>
+<column name="logits_buf_2_36_load">in, 32, ap_stable, logits_buf_2_36_load, scalar</column>
+<column name="logits_buf_2_37_load">in, 32, ap_stable, logits_buf_2_37_load, scalar</column>
+<column name="logits_buf_2_38_load">in, 32, ap_stable, logits_buf_2_38_load, scalar</column>
+<column name="logits_buf_2_39_load">in, 32, ap_stable, logits_buf_2_39_load, scalar</column>
+<column name="logits_buf_2_40_load">in, 32, ap_stable, logits_buf_2_40_load, scalar</column>
+<column name="logits_buf_2_41_load">in, 32, ap_stable, logits_buf_2_41_load, scalar</column>
+<column name="logits_buf_2_42_load">in, 32, ap_stable, logits_buf_2_42_load, scalar</column>
+<column name="logits_buf_2_43_load">in, 32, ap_stable, logits_buf_2_43_load, scalar</column>
+<column name="logits_buf_2_44_load">in, 32, ap_stable, logits_buf_2_44_load, scalar</column>
+<column name="logits_buf_2_45_load">in, 32, ap_stable, logits_buf_2_45_load, scalar</column>
+<column name="logits_buf_2_46_load">in, 32, ap_stable, logits_buf_2_46_load, scalar</column>
+<column name="logits_buf_2_47_load">in, 32, ap_stable, logits_buf_2_47_load, scalar</column>
+<column name="logits_buf_2_48_load">in, 32, ap_stable, logits_buf_2_48_load, scalar</column>
+<column name="logits_buf_2_49_load">in, 32, ap_stable, logits_buf_2_49_load, scalar</column>
+<column name="logits_buf_2_50_load">in, 32, ap_stable, logits_buf_2_50_load, scalar</column>
+<column name="logits_buf_2_51_load">in, 32, ap_stable, logits_buf_2_51_load, scalar</column>
+<column name="logits_buf_2_52_load">in, 32, ap_stable, logits_buf_2_52_load, scalar</column>
+<column name="logits_buf_2_53_load">in, 32, ap_stable, logits_buf_2_53_load, scalar</column>
+<column name="logits_buf_2_54_load">in, 32, ap_stable, logits_buf_2_54_load, scalar</column>
+<column name="logits_buf_2_55_load">in, 32, ap_stable, logits_buf_2_55_load, scalar</column>
+<column name="logits_buf_2_56_load">in, 32, ap_stable, logits_buf_2_56_load, scalar</column>
+<column name="logits_buf_2_57_load">in, 32, ap_stable, logits_buf_2_57_load, scalar</column>
+<column name="logits_buf_2_58_load">in, 32, ap_stable, logits_buf_2_58_load, scalar</column>
+<column name="logits_buf_2_59_load">in, 32, ap_stable, logits_buf_2_59_load, scalar</column>
+<column name="logits_buf_2_60_load">in, 32, ap_stable, logits_buf_2_60_load, scalar</column>
+<column name="logits_buf_2_61_load">in, 32, ap_stable, logits_buf_2_61_load, scalar</column>
+<column name="logits_buf_2_62_load">in, 32, ap_stable, logits_buf_2_62_load, scalar</column>
+<column name="logits_buf_2_63_load">in, 32, ap_stable, logits_buf_2_63_load, scalar</column>
+<column name="logits_buf_3_0_load">in, 32, ap_stable, logits_buf_3_0_load, scalar</column>
+<column name="logits_buf_3_1_load">in, 32, ap_stable, logits_buf_3_1_load, scalar</column>
+<column name="logits_buf_3_2_load">in, 32, ap_stable, logits_buf_3_2_load, scalar</column>
+<column name="logits_buf_3_3_load">in, 32, ap_stable, logits_buf_3_3_load, scalar</column>
+<column name="logits_buf_3_4_load">in, 32, ap_stable, logits_buf_3_4_load, scalar</column>
+<column name="logits_buf_3_5_load">in, 32, ap_stable, logits_buf_3_5_load, scalar</column>
+<column name="logits_buf_3_6_load">in, 32, ap_stable, logits_buf_3_6_load, scalar</column>
+<column name="logits_buf_3_7_load">in, 32, ap_stable, logits_buf_3_7_load, scalar</column>
+<column name="logits_buf_3_8_load">in, 32, ap_stable, logits_buf_3_8_load, scalar</column>
+<column name="logits_buf_3_9_load">in, 32, ap_stable, logits_buf_3_9_load, scalar</column>
+<column name="logits_buf_3_10_load">in, 32, ap_stable, logits_buf_3_10_load, scalar</column>
+<column name="logits_buf_3_11_load">in, 32, ap_stable, logits_buf_3_11_load, scalar</column>
+<column name="logits_buf_3_12_load">in, 32, ap_stable, logits_buf_3_12_load, scalar</column>
+<column name="logits_buf_3_13_load">in, 32, ap_stable, logits_buf_3_13_load, scalar</column>
+<column name="logits_buf_3_14_load">in, 32, ap_stable, logits_buf_3_14_load, scalar</column>
+<column name="logits_buf_3_15_load">in, 32, ap_stable, logits_buf_3_15_load, scalar</column>
+<column name="logits_buf_3_16_load">in, 32, ap_stable, logits_buf_3_16_load, scalar</column>
+<column name="logits_buf_3_17_load">in, 32, ap_stable, logits_buf_3_17_load, scalar</column>
+<column name="logits_buf_3_18_load">in, 32, ap_stable, logits_buf_3_18_load, scalar</column>
+<column name="logits_buf_3_19_load">in, 32, ap_stable, logits_buf_3_19_load, scalar</column>
+<column name="logits_buf_3_20_load">in, 32, ap_stable, logits_buf_3_20_load, scalar</column>
+<column name="logits_buf_3_21_load">in, 32, ap_stable, logits_buf_3_21_load, scalar</column>
+<column name="logits_buf_3_22_load">in, 32, ap_stable, logits_buf_3_22_load, scalar</column>
+<column name="logits_buf_3_23_load">in, 32, ap_stable, logits_buf_3_23_load, scalar</column>
+<column name="logits_buf_3_24_load">in, 32, ap_stable, logits_buf_3_24_load, scalar</column>
+<column name="logits_buf_3_25_load">in, 32, ap_stable, logits_buf_3_25_load, scalar</column>
+<column name="logits_buf_3_26_load">in, 32, ap_stable, logits_buf_3_26_load, scalar</column>
+<column name="logits_buf_3_27_load">in, 32, ap_stable, logits_buf_3_27_load, scalar</column>
+<column name="logits_buf_3_28_load">in, 32, ap_stable, logits_buf_3_28_load, scalar</column>
+<column name="logits_buf_3_29_load">in, 32, ap_stable, logits_buf_3_29_load, scalar</column>
+<column name="logits_buf_3_30_load">in, 32, ap_stable, logits_buf_3_30_load, scalar</column>
+<column name="logits_buf_3_31_load">in, 32, ap_stable, logits_buf_3_31_load, scalar</column>
+<column name="logits_buf_3_32_load">in, 32, ap_stable, logits_buf_3_32_load, scalar</column>
+<column name="logits_buf_3_33_load">in, 32, ap_stable, logits_buf_3_33_load, scalar</column>
+<column name="logits_buf_3_34_load">in, 32, ap_stable, logits_buf_3_34_load, scalar</column>
+<column name="logits_buf_3_35_load">in, 32, ap_stable, logits_buf_3_35_load, scalar</column>
+<column name="logits_buf_3_36_load">in, 32, ap_stable, logits_buf_3_36_load, scalar</column>
+<column name="logits_buf_3_37_load">in, 32, ap_stable, logits_buf_3_37_load, scalar</column>
+<column name="logits_buf_3_38_load">in, 32, ap_stable, logits_buf_3_38_load, scalar</column>
+<column name="logits_buf_3_39_load">in, 32, ap_stable, logits_buf_3_39_load, scalar</column>
+<column name="logits_buf_3_40_load">in, 32, ap_stable, logits_buf_3_40_load, scalar</column>
+<column name="logits_buf_3_41_load">in, 32, ap_stable, logits_buf_3_41_load, scalar</column>
+<column name="logits_buf_3_42_load">in, 32, ap_stable, logits_buf_3_42_load, scalar</column>
+<column name="logits_buf_3_43_load">in, 32, ap_stable, logits_buf_3_43_load, scalar</column>
+<column name="logits_buf_3_44_load">in, 32, ap_stable, logits_buf_3_44_load, scalar</column>
+<column name="logits_buf_3_45_load">in, 32, ap_stable, logits_buf_3_45_load, scalar</column>
+<column name="logits_buf_3_46_load">in, 32, ap_stable, logits_buf_3_46_load, scalar</column>
+<column name="logits_buf_3_47_load">in, 32, ap_stable, logits_buf_3_47_load, scalar</column>
+<column name="logits_buf_3_48_load">in, 32, ap_stable, logits_buf_3_48_load, scalar</column>
+<column name="logits_buf_3_49_load">in, 32, ap_stable, logits_buf_3_49_load, scalar</column>
+<column name="logits_buf_3_50_load">in, 32, ap_stable, logits_buf_3_50_load, scalar</column>
+<column name="logits_buf_3_51_load">in, 32, ap_stable, logits_buf_3_51_load, scalar</column>
+<column name="logits_buf_3_52_load">in, 32, ap_stable, logits_buf_3_52_load, scalar</column>
+<column name="logits_buf_3_53_load">in, 32, ap_stable, logits_buf_3_53_load, scalar</column>
+<column name="logits_buf_3_54_load">in, 32, ap_stable, logits_buf_3_54_load, scalar</column>
+<column name="logits_buf_3_55_load">in, 32, ap_stable, logits_buf_3_55_load, scalar</column>
+<column name="logits_buf_3_56_load">in, 32, ap_stable, logits_buf_3_56_load, scalar</column>
+<column name="logits_buf_3_57_load">in, 32, ap_stable, logits_buf_3_57_load, scalar</column>
+<column name="logits_buf_3_58_load">in, 32, ap_stable, logits_buf_3_58_load, scalar</column>
+<column name="logits_buf_3_59_load">in, 32, ap_stable, logits_buf_3_59_load, scalar</column>
+<column name="logits_buf_3_60_load">in, 32, ap_stable, logits_buf_3_60_load, scalar</column>
+<column name="logits_buf_3_61_load">in, 32, ap_stable, logits_buf_3_61_load, scalar</column>
+<column name="logits_buf_3_62_load">in, 32, ap_stable, logits_buf_3_62_load, scalar</column>
+<column name="logits_buf_3_63_load">in, 32, ap_stable, logits_buf_3_63_load, scalar</column>
+</table>
+</item>
+</section>
+</profile>

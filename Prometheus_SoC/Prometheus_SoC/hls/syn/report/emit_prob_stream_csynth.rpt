@@ -1,0 +1,660 @@
+
+
+================================================================
+== Vitis HLS Report for 'emit_prob_stream'
+================================================================
+* Date:           Sat Mar 14 16:27:08 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus_SoC
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  8.510 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        5|       68|  59.000 ns|  0.802 us|    5|   68|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------+------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+        |                                                      |                                          |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+        |                       Instance                       |                  Module                  |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+        +------------------------------------------------------+------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+        |grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106  |emit_prob_stream_Pipeline_prob_emit_loop  |        4|       67|  47.200 ns|  0.791 us|    2|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +------------------------------------------------------+------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     16|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|   16|     307|   1442|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     23|    -|
+|Register         |        -|    -|    8243|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|   16|    8550|   1481|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    7|       8|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------+------------------------------------------+---------+----+-----+------+-----+
+    |                       Instance                       |                  Module                  | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +------------------------------------------------------+------------------------------------------+---------+----+-----+------+-----+
+    |grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106  |emit_prob_stream_Pipeline_prob_emit_loop  |        0|  16|  307|  1442|    0|
+    +------------------------------------------------------+------------------------------------------+---------+----+-----+------+-----+
+    |Total                                                 |                                          |        0|  16|  307|  1442|    0|
+    +------------------------------------------------------+------------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln155_fu_2629_p2  |         +|   0|  0|  14|           9|           2|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  16|          10|           3|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  14|          3|    1|          3|
+    |ap_done    |   9|          2|    1|          2|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  23|          5|    2|          5|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |                                Name                               | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                          |   2|   0|    2|          0|
+    |ap_done_reg                                                        |   1|   0|    1|          0|
+    |blocks_cast_reg_2656                                               |   7|   0|    7|          0|
+    |exp_buf_0_0_read_reg_2661                                          |  32|   0|   32|          0|
+    |exp_buf_0_10_read_reg_2711                                         |  32|   0|   32|          0|
+    |exp_buf_0_11_read_reg_2716                                         |  32|   0|   32|          0|
+    |exp_buf_0_12_read_reg_2721                                         |  32|   0|   32|          0|
+    |exp_buf_0_13_read_reg_2726                                         |  32|   0|   32|          0|
+    |exp_buf_0_14_read_reg_2731                                         |  32|   0|   32|          0|
+    |exp_buf_0_15_read_reg_2736                                         |  32|   0|   32|          0|
+    |exp_buf_0_16_read_reg_2741                                         |  32|   0|   32|          0|
+    |exp_buf_0_17_read_reg_2746                                         |  32|   0|   32|          0|
+    |exp_buf_0_18_read_reg_2751                                         |  32|   0|   32|          0|
+    |exp_buf_0_19_read_reg_2756                                         |  32|   0|   32|          0|
+    |exp_buf_0_1_read_reg_2666                                          |  32|   0|   32|          0|
+    |exp_buf_0_20_read_reg_2761                                         |  32|   0|   32|          0|
+    |exp_buf_0_21_read_reg_2766                                         |  32|   0|   32|          0|
+    |exp_buf_0_22_read_reg_2771                                         |  32|   0|   32|          0|
+    |exp_buf_0_23_read_reg_2776                                         |  32|   0|   32|          0|
+    |exp_buf_0_24_read_reg_2781                                         |  32|   0|   32|          0|
+    |exp_buf_0_25_read_reg_2786                                         |  32|   0|   32|          0|
+    |exp_buf_0_26_read_reg_2791                                         |  32|   0|   32|          0|
+    |exp_buf_0_27_read_reg_2796                                         |  32|   0|   32|          0|
+    |exp_buf_0_28_read_reg_2801                                         |  32|   0|   32|          0|
+    |exp_buf_0_29_read_reg_2806                                         |  32|   0|   32|          0|
+    |exp_buf_0_2_read_reg_2671                                          |  32|   0|   32|          0|
+    |exp_buf_0_30_read_reg_2811                                         |  32|   0|   32|          0|
+    |exp_buf_0_31_read_reg_2816                                         |  32|   0|   32|          0|
+    |exp_buf_0_32_read_reg_2821                                         |  32|   0|   32|          0|
+    |exp_buf_0_33_read_reg_2826                                         |  32|   0|   32|          0|
+    |exp_buf_0_34_read_reg_2831                                         |  32|   0|   32|          0|
+    |exp_buf_0_35_read_reg_2836                                         |  32|   0|   32|          0|
+    |exp_buf_0_36_read_reg_2841                                         |  32|   0|   32|          0|
+    |exp_buf_0_37_read_reg_2846                                         |  32|   0|   32|          0|
+    |exp_buf_0_38_read_reg_2851                                         |  32|   0|   32|          0|
+    |exp_buf_0_39_read_reg_2856                                         |  32|   0|   32|          0|
+    |exp_buf_0_3_read_reg_2676                                          |  32|   0|   32|          0|
+    |exp_buf_0_40_read_reg_2861                                         |  32|   0|   32|          0|
+    |exp_buf_0_41_read_reg_2866                                         |  32|   0|   32|          0|
+    |exp_buf_0_42_read_reg_2871                                         |  32|   0|   32|          0|
+    |exp_buf_0_43_read_reg_2876                                         |  32|   0|   32|          0|
+    |exp_buf_0_44_read_reg_2881                                         |  32|   0|   32|          0|
+    |exp_buf_0_45_read_reg_2886                                         |  32|   0|   32|          0|
+    |exp_buf_0_46_read_reg_2891                                         |  32|   0|   32|          0|
+    |exp_buf_0_47_read_reg_2896                                         |  32|   0|   32|          0|
+    |exp_buf_0_48_read_reg_2901                                         |  32|   0|   32|          0|
+    |exp_buf_0_49_read_reg_2906                                         |  32|   0|   32|          0|
+    |exp_buf_0_4_read_reg_2681                                          |  32|   0|   32|          0|
+    |exp_buf_0_50_read_reg_2911                                         |  32|   0|   32|          0|
+    |exp_buf_0_51_read_reg_2916                                         |  32|   0|   32|          0|
+    |exp_buf_0_52_read_reg_2921                                         |  32|   0|   32|          0|
+    |exp_buf_0_53_read_reg_2926                                         |  32|   0|   32|          0|
+    |exp_buf_0_54_read_reg_2931                                         |  32|   0|   32|          0|
+    |exp_buf_0_55_read_reg_2936                                         |  32|   0|   32|          0|
+    |exp_buf_0_56_read_reg_2941                                         |  32|   0|   32|          0|
+    |exp_buf_0_57_read_reg_2946                                         |  32|   0|   32|          0|
+    |exp_buf_0_58_read_reg_2951                                         |  32|   0|   32|          0|
+    |exp_buf_0_59_read_reg_2956                                         |  32|   0|   32|          0|
+    |exp_buf_0_5_read_reg_2686                                          |  32|   0|   32|          0|
+    |exp_buf_0_60_read_reg_2961                                         |  32|   0|   32|          0|
+    |exp_buf_0_61_read_reg_2966                                         |  32|   0|   32|          0|
+    |exp_buf_0_62_read_reg_2971                                         |  32|   0|   32|          0|
+    |exp_buf_0_63_read_reg_2976                                         |  32|   0|   32|          0|
+    |exp_buf_0_6_read_reg_2691                                          |  32|   0|   32|          0|
+    |exp_buf_0_7_read_reg_2696                                          |  32|   0|   32|          0|
+    |exp_buf_0_8_read_reg_2701                                          |  32|   0|   32|          0|
+    |exp_buf_0_9_read_reg_2706                                          |  32|   0|   32|          0|
+    |exp_buf_1_0_read_reg_2981                                          |  32|   0|   32|          0|
+    |exp_buf_1_10_read_reg_3031                                         |  32|   0|   32|          0|
+    |exp_buf_1_11_read_reg_3036                                         |  32|   0|   32|          0|
+    |exp_buf_1_12_read_reg_3041                                         |  32|   0|   32|          0|
+    |exp_buf_1_13_read_reg_3046                                         |  32|   0|   32|          0|
+    |exp_buf_1_14_read_reg_3051                                         |  32|   0|   32|          0|
+    |exp_buf_1_15_read_reg_3056                                         |  32|   0|   32|          0|
+    |exp_buf_1_16_read_reg_3061                                         |  32|   0|   32|          0|
+    |exp_buf_1_17_read_reg_3066                                         |  32|   0|   32|          0|
+    |exp_buf_1_18_read_reg_3071                                         |  32|   0|   32|          0|
+    |exp_buf_1_19_read_reg_3076                                         |  32|   0|   32|          0|
+    |exp_buf_1_1_read_reg_2986                                          |  32|   0|   32|          0|
+    |exp_buf_1_20_read_reg_3081                                         |  32|   0|   32|          0|
+    |exp_buf_1_21_read_reg_3086                                         |  32|   0|   32|          0|
+    |exp_buf_1_22_read_reg_3091                                         |  32|   0|   32|          0|
+    |exp_buf_1_23_read_reg_3096                                         |  32|   0|   32|          0|
+    |exp_buf_1_24_read_reg_3101                                         |  32|   0|   32|          0|
+    |exp_buf_1_25_read_reg_3106                                         |  32|   0|   32|          0|
+    |exp_buf_1_26_read_reg_3111                                         |  32|   0|   32|          0|
+    |exp_buf_1_27_read_reg_3116                                         |  32|   0|   32|          0|
+    |exp_buf_1_28_read_reg_3121                                         |  32|   0|   32|          0|
+    |exp_buf_1_29_read_reg_3126                                         |  32|   0|   32|          0|
+    |exp_buf_1_2_read_reg_2991                                          |  32|   0|   32|          0|
+    |exp_buf_1_30_read_reg_3131                                         |  32|   0|   32|          0|
+    |exp_buf_1_31_read_reg_3136                                         |  32|   0|   32|          0|
+    |exp_buf_1_32_read_reg_3141                                         |  32|   0|   32|          0|
+    |exp_buf_1_33_read_reg_3146                                         |  32|   0|   32|          0|
+    |exp_buf_1_34_read_reg_3151                                         |  32|   0|   32|          0|
+    |exp_buf_1_35_read_reg_3156                                         |  32|   0|   32|          0|
+    |exp_buf_1_36_read_reg_3161                                         |  32|   0|   32|          0|
+    |exp_buf_1_37_read_reg_3166                                         |  32|   0|   32|          0|
+    |exp_buf_1_38_read_reg_3171                                         |  32|   0|   32|          0|
+    |exp_buf_1_39_read_reg_3176                                         |  32|   0|   32|          0|
+    |exp_buf_1_3_read_reg_2996                                          |  32|   0|   32|          0|
+    |exp_buf_1_40_read_reg_3181                                         |  32|   0|   32|          0|
+    |exp_buf_1_41_read_reg_3186                                         |  32|   0|   32|          0|
+    |exp_buf_1_42_read_reg_3191                                         |  32|   0|   32|          0|
+    |exp_buf_1_43_read_reg_3196                                         |  32|   0|   32|          0|
+    |exp_buf_1_44_read_reg_3201                                         |  32|   0|   32|          0|
+    |exp_buf_1_45_read_reg_3206                                         |  32|   0|   32|          0|
+    |exp_buf_1_46_read_reg_3211                                         |  32|   0|   32|          0|
+    |exp_buf_1_47_read_reg_3216                                         |  32|   0|   32|          0|
+    |exp_buf_1_48_read_reg_3221                                         |  32|   0|   32|          0|
+    |exp_buf_1_49_read_reg_3226                                         |  32|   0|   32|          0|
+    |exp_buf_1_4_read_reg_3001                                          |  32|   0|   32|          0|
+    |exp_buf_1_50_read_reg_3231                                         |  32|   0|   32|          0|
+    |exp_buf_1_51_read_reg_3236                                         |  32|   0|   32|          0|
+    |exp_buf_1_52_read_reg_3241                                         |  32|   0|   32|          0|
+    |exp_buf_1_53_read_reg_3246                                         |  32|   0|   32|          0|
+    |exp_buf_1_54_read_reg_3251                                         |  32|   0|   32|          0|
+    |exp_buf_1_55_read_reg_3256                                         |  32|   0|   32|          0|
+    |exp_buf_1_56_read_reg_3261                                         |  32|   0|   32|          0|
+    |exp_buf_1_57_read_reg_3266                                         |  32|   0|   32|          0|
+    |exp_buf_1_58_read_reg_3271                                         |  32|   0|   32|          0|
+    |exp_buf_1_59_read_reg_3276                                         |  32|   0|   32|          0|
+    |exp_buf_1_5_read_reg_3006                                          |  32|   0|   32|          0|
+    |exp_buf_1_60_read_reg_3281                                         |  32|   0|   32|          0|
+    |exp_buf_1_61_read_reg_3286                                         |  32|   0|   32|          0|
+    |exp_buf_1_62_read_reg_3291                                         |  32|   0|   32|          0|
+    |exp_buf_1_63_read_reg_3296                                         |  32|   0|   32|          0|
+    |exp_buf_1_6_read_reg_3011                                          |  32|   0|   32|          0|
+    |exp_buf_1_7_read_reg_3016                                          |  32|   0|   32|          0|
+    |exp_buf_1_8_read_reg_3021                                          |  32|   0|   32|          0|
+    |exp_buf_1_9_read_reg_3026                                          |  32|   0|   32|          0|
+    |exp_buf_2_0_read_reg_3301                                          |  32|   0|   32|          0|
+    |exp_buf_2_10_read_reg_3351                                         |  32|   0|   32|          0|
+    |exp_buf_2_11_read_reg_3356                                         |  32|   0|   32|          0|
+    |exp_buf_2_12_read_reg_3361                                         |  32|   0|   32|          0|
+    |exp_buf_2_13_read_reg_3366                                         |  32|   0|   32|          0|
+    |exp_buf_2_14_read_reg_3371                                         |  32|   0|   32|          0|
+    |exp_buf_2_15_read_reg_3376                                         |  32|   0|   32|          0|
+    |exp_buf_2_16_read_reg_3381                                         |  32|   0|   32|          0|
+    |exp_buf_2_17_read_reg_3386                                         |  32|   0|   32|          0|
+    |exp_buf_2_18_read_reg_3391                                         |  32|   0|   32|          0|
+    |exp_buf_2_19_read_reg_3396                                         |  32|   0|   32|          0|
+    |exp_buf_2_1_read_reg_3306                                          |  32|   0|   32|          0|
+    |exp_buf_2_20_read_reg_3401                                         |  32|   0|   32|          0|
+    |exp_buf_2_21_read_reg_3406                                         |  32|   0|   32|          0|
+    |exp_buf_2_22_read_reg_3411                                         |  32|   0|   32|          0|
+    |exp_buf_2_23_read_reg_3416                                         |  32|   0|   32|          0|
+    |exp_buf_2_24_read_reg_3421                                         |  32|   0|   32|          0|
+    |exp_buf_2_25_read_reg_3426                                         |  32|   0|   32|          0|
+    |exp_buf_2_26_read_reg_3431                                         |  32|   0|   32|          0|
+    |exp_buf_2_27_read_reg_3436                                         |  32|   0|   32|          0|
+    |exp_buf_2_28_read_reg_3441                                         |  32|   0|   32|          0|
+    |exp_buf_2_29_read_reg_3446                                         |  32|   0|   32|          0|
+    |exp_buf_2_2_read_reg_3311                                          |  32|   0|   32|          0|
+    |exp_buf_2_30_read_reg_3451                                         |  32|   0|   32|          0|
+    |exp_buf_2_31_read_reg_3456                                         |  32|   0|   32|          0|
+    |exp_buf_2_32_read_reg_3461                                         |  32|   0|   32|          0|
+    |exp_buf_2_33_read_reg_3466                                         |  32|   0|   32|          0|
+    |exp_buf_2_34_read_reg_3471                                         |  32|   0|   32|          0|
+    |exp_buf_2_35_read_reg_3476                                         |  32|   0|   32|          0|
+    |exp_buf_2_36_read_reg_3481                                         |  32|   0|   32|          0|
+    |exp_buf_2_37_read_reg_3486                                         |  32|   0|   32|          0|
+    |exp_buf_2_38_read_reg_3491                                         |  32|   0|   32|          0|
+    |exp_buf_2_39_read_reg_3496                                         |  32|   0|   32|          0|
+    |exp_buf_2_3_read_reg_3316                                          |  32|   0|   32|          0|
+    |exp_buf_2_40_read_reg_3501                                         |  32|   0|   32|          0|
+    |exp_buf_2_41_read_reg_3506                                         |  32|   0|   32|          0|
+    |exp_buf_2_42_read_reg_3511                                         |  32|   0|   32|          0|
+    |exp_buf_2_43_read_reg_3516                                         |  32|   0|   32|          0|
+    |exp_buf_2_44_read_reg_3521                                         |  32|   0|   32|          0|
+    |exp_buf_2_45_read_reg_3526                                         |  32|   0|   32|          0|
+    |exp_buf_2_46_read_reg_3531                                         |  32|   0|   32|          0|
+    |exp_buf_2_47_read_reg_3536                                         |  32|   0|   32|          0|
+    |exp_buf_2_48_read_reg_3541                                         |  32|   0|   32|          0|
+    |exp_buf_2_49_read_reg_3546                                         |  32|   0|   32|          0|
+    |exp_buf_2_4_read_reg_3321                                          |  32|   0|   32|          0|
+    |exp_buf_2_50_read_reg_3551                                         |  32|   0|   32|          0|
+    |exp_buf_2_51_read_reg_3556                                         |  32|   0|   32|          0|
+    |exp_buf_2_52_read_reg_3561                                         |  32|   0|   32|          0|
+    |exp_buf_2_53_read_reg_3566                                         |  32|   0|   32|          0|
+    |exp_buf_2_54_read_reg_3571                                         |  32|   0|   32|          0|
+    |exp_buf_2_55_read_reg_3576                                         |  32|   0|   32|          0|
+    |exp_buf_2_56_read_reg_3581                                         |  32|   0|   32|          0|
+    |exp_buf_2_57_read_reg_3586                                         |  32|   0|   32|          0|
+    |exp_buf_2_58_read_reg_3591                                         |  32|   0|   32|          0|
+    |exp_buf_2_59_read_reg_3596                                         |  32|   0|   32|          0|
+    |exp_buf_2_5_read_reg_3326                                          |  32|   0|   32|          0|
+    |exp_buf_2_60_read_reg_3601                                         |  32|   0|   32|          0|
+    |exp_buf_2_61_read_reg_3606                                         |  32|   0|   32|          0|
+    |exp_buf_2_62_read_reg_3611                                         |  32|   0|   32|          0|
+    |exp_buf_2_63_read_reg_3616                                         |  32|   0|   32|          0|
+    |exp_buf_2_6_read_reg_3331                                          |  32|   0|   32|          0|
+    |exp_buf_2_7_read_reg_3336                                          |  32|   0|   32|          0|
+    |exp_buf_2_8_read_reg_3341                                          |  32|   0|   32|          0|
+    |exp_buf_2_9_read_reg_3346                                          |  32|   0|   32|          0|
+    |exp_buf_3_0_read_reg_3621                                          |  32|   0|   32|          0|
+    |exp_buf_3_10_read_reg_3671                                         |  32|   0|   32|          0|
+    |exp_buf_3_11_read_reg_3676                                         |  32|   0|   32|          0|
+    |exp_buf_3_12_read_reg_3681                                         |  32|   0|   32|          0|
+    |exp_buf_3_13_read_reg_3686                                         |  32|   0|   32|          0|
+    |exp_buf_3_14_read_reg_3691                                         |  32|   0|   32|          0|
+    |exp_buf_3_15_read_reg_3696                                         |  32|   0|   32|          0|
+    |exp_buf_3_16_read_reg_3701                                         |  32|   0|   32|          0|
+    |exp_buf_3_17_read_reg_3706                                         |  32|   0|   32|          0|
+    |exp_buf_3_18_read_reg_3711                                         |  32|   0|   32|          0|
+    |exp_buf_3_19_read_reg_3716                                         |  32|   0|   32|          0|
+    |exp_buf_3_1_read_reg_3626                                          |  32|   0|   32|          0|
+    |exp_buf_3_20_read_reg_3721                                         |  32|   0|   32|          0|
+    |exp_buf_3_21_read_reg_3726                                         |  32|   0|   32|          0|
+    |exp_buf_3_22_read_reg_3731                                         |  32|   0|   32|          0|
+    |exp_buf_3_23_read_reg_3736                                         |  32|   0|   32|          0|
+    |exp_buf_3_24_read_reg_3741                                         |  32|   0|   32|          0|
+    |exp_buf_3_25_read_reg_3746                                         |  32|   0|   32|          0|
+    |exp_buf_3_26_read_reg_3751                                         |  32|   0|   32|          0|
+    |exp_buf_3_27_read_reg_3756                                         |  32|   0|   32|          0|
+    |exp_buf_3_28_read_reg_3761                                         |  32|   0|   32|          0|
+    |exp_buf_3_29_read_reg_3766                                         |  32|   0|   32|          0|
+    |exp_buf_3_2_read_reg_3631                                          |  32|   0|   32|          0|
+    |exp_buf_3_30_read_reg_3771                                         |  32|   0|   32|          0|
+    |exp_buf_3_31_read_reg_3776                                         |  32|   0|   32|          0|
+    |exp_buf_3_32_read_reg_3781                                         |  32|   0|   32|          0|
+    |exp_buf_3_33_read_reg_3786                                         |  32|   0|   32|          0|
+    |exp_buf_3_34_read_reg_3791                                         |  32|   0|   32|          0|
+    |exp_buf_3_35_read_reg_3796                                         |  32|   0|   32|          0|
+    |exp_buf_3_36_read_reg_3801                                         |  32|   0|   32|          0|
+    |exp_buf_3_37_read_reg_3806                                         |  32|   0|   32|          0|
+    |exp_buf_3_38_read_reg_3811                                         |  32|   0|   32|          0|
+    |exp_buf_3_39_read_reg_3816                                         |  32|   0|   32|          0|
+    |exp_buf_3_3_read_reg_3636                                          |  32|   0|   32|          0|
+    |exp_buf_3_40_read_reg_3821                                         |  32|   0|   32|          0|
+    |exp_buf_3_41_read_reg_3826                                         |  32|   0|   32|          0|
+    |exp_buf_3_42_read_reg_3831                                         |  32|   0|   32|          0|
+    |exp_buf_3_43_read_reg_3836                                         |  32|   0|   32|          0|
+    |exp_buf_3_44_read_reg_3841                                         |  32|   0|   32|          0|
+    |exp_buf_3_45_read_reg_3846                                         |  32|   0|   32|          0|
+    |exp_buf_3_46_read_reg_3851                                         |  32|   0|   32|          0|
+    |exp_buf_3_47_read_reg_3856                                         |  32|   0|   32|          0|
+    |exp_buf_3_48_read_reg_3861                                         |  32|   0|   32|          0|
+    |exp_buf_3_49_read_reg_3866                                         |  32|   0|   32|          0|
+    |exp_buf_3_4_read_reg_3641                                          |  32|   0|   32|          0|
+    |exp_buf_3_50_read_reg_3871                                         |  32|   0|   32|          0|
+    |exp_buf_3_51_read_reg_3876                                         |  32|   0|   32|          0|
+    |exp_buf_3_52_read_reg_3881                                         |  32|   0|   32|          0|
+    |exp_buf_3_53_read_reg_3886                                         |  32|   0|   32|          0|
+    |exp_buf_3_54_read_reg_3891                                         |  32|   0|   32|          0|
+    |exp_buf_3_55_read_reg_3896                                         |  32|   0|   32|          0|
+    |exp_buf_3_56_read_reg_3901                                         |  32|   0|   32|          0|
+    |exp_buf_3_57_read_reg_3906                                         |  32|   0|   32|          0|
+    |exp_buf_3_58_read_reg_3911                                         |  32|   0|   32|          0|
+    |exp_buf_3_59_read_reg_3916                                         |  32|   0|   32|          0|
+    |exp_buf_3_5_read_reg_3646                                          |  32|   0|   32|          0|
+    |exp_buf_3_60_read_reg_3921                                         |  32|   0|   32|          0|
+    |exp_buf_3_61_read_reg_3926                                         |  32|   0|   32|          0|
+    |exp_buf_3_62_read_reg_3931                                         |  32|   0|   32|          0|
+    |exp_buf_3_63_read_reg_3936                                         |  32|   0|   32|          0|
+    |exp_buf_3_6_read_reg_3651                                          |  32|   0|   32|          0|
+    |exp_buf_3_7_read_reg_3656                                          |  32|   0|   32|          0|
+    |exp_buf_3_8_read_reg_3661                                          |  32|   0|   32|          0|
+    |exp_buf_3_9_read_reg_3666                                          |  32|   0|   32|          0|
+    |grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106_ap_start_reg  |   1|   0|    1|          0|
+    |inv_sum_q30_read_reg_2646                                          |  31|   0|   31|          0|
+    |n_read_reg_2651                                                    |   9|   0|    9|          0|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                              |8243|   0| 8243|          0|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++----------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|exp_buf_0_0                 |   in|   32|   ap_stable|       exp_buf_0_0|       pointer|
+|exp_buf_0_1                 |   in|   32|   ap_stable|       exp_buf_0_1|       pointer|
+|exp_buf_0_2                 |   in|   32|   ap_stable|       exp_buf_0_2|       pointer|
+|exp_buf_0_3                 |   in|   32|   ap_stable|       exp_buf_0_3|       pointer|
+|exp_buf_0_4                 |   in|   32|   ap_stable|       exp_buf_0_4|       pointer|
+|exp_buf_0_5                 |   in|   32|   ap_stable|       exp_buf_0_5|       pointer|
+|exp_buf_0_6                 |   in|   32|   ap_stable|       exp_buf_0_6|       pointer|
+|exp_buf_0_7                 |   in|   32|   ap_stable|       exp_buf_0_7|       pointer|
+|exp_buf_0_8                 |   in|   32|   ap_stable|       exp_buf_0_8|       pointer|
+|exp_buf_0_9                 |   in|   32|   ap_stable|       exp_buf_0_9|       pointer|
+|exp_buf_0_10                |   in|   32|   ap_stable|      exp_buf_0_10|       pointer|
+|exp_buf_0_11                |   in|   32|   ap_stable|      exp_buf_0_11|       pointer|
+|exp_buf_0_12                |   in|   32|   ap_stable|      exp_buf_0_12|       pointer|
+|exp_buf_0_13                |   in|   32|   ap_stable|      exp_buf_0_13|       pointer|
+|exp_buf_0_14                |   in|   32|   ap_stable|      exp_buf_0_14|       pointer|
+|exp_buf_0_15                |   in|   32|   ap_stable|      exp_buf_0_15|       pointer|
+|exp_buf_0_16                |   in|   32|   ap_stable|      exp_buf_0_16|       pointer|
+|exp_buf_0_17                |   in|   32|   ap_stable|      exp_buf_0_17|       pointer|
+|exp_buf_0_18                |   in|   32|   ap_stable|      exp_buf_0_18|       pointer|
+|exp_buf_0_19                |   in|   32|   ap_stable|      exp_buf_0_19|       pointer|
+|exp_buf_0_20                |   in|   32|   ap_stable|      exp_buf_0_20|       pointer|
+|exp_buf_0_21                |   in|   32|   ap_stable|      exp_buf_0_21|       pointer|
+|exp_buf_0_22                |   in|   32|   ap_stable|      exp_buf_0_22|       pointer|
+|exp_buf_0_23                |   in|   32|   ap_stable|      exp_buf_0_23|       pointer|
+|exp_buf_0_24                |   in|   32|   ap_stable|      exp_buf_0_24|       pointer|
+|exp_buf_0_25                |   in|   32|   ap_stable|      exp_buf_0_25|       pointer|
+|exp_buf_0_26                |   in|   32|   ap_stable|      exp_buf_0_26|       pointer|
+|exp_buf_0_27                |   in|   32|   ap_stable|      exp_buf_0_27|       pointer|
+|exp_buf_0_28                |   in|   32|   ap_stable|      exp_buf_0_28|       pointer|
+|exp_buf_0_29                |   in|   32|   ap_stable|      exp_buf_0_29|       pointer|
+|exp_buf_0_30                |   in|   32|   ap_stable|      exp_buf_0_30|       pointer|
+|exp_buf_0_31                |   in|   32|   ap_stable|      exp_buf_0_31|       pointer|
+|exp_buf_0_32                |   in|   32|   ap_stable|      exp_buf_0_32|       pointer|
+|exp_buf_0_33                |   in|   32|   ap_stable|      exp_buf_0_33|       pointer|
+|exp_buf_0_34                |   in|   32|   ap_stable|      exp_buf_0_34|       pointer|
+|exp_buf_0_35                |   in|   32|   ap_stable|      exp_buf_0_35|       pointer|
+|exp_buf_0_36                |   in|   32|   ap_stable|      exp_buf_0_36|       pointer|
+|exp_buf_0_37                |   in|   32|   ap_stable|      exp_buf_0_37|       pointer|
+|exp_buf_0_38                |   in|   32|   ap_stable|      exp_buf_0_38|       pointer|
+|exp_buf_0_39                |   in|   32|   ap_stable|      exp_buf_0_39|       pointer|
+|exp_buf_0_40                |   in|   32|   ap_stable|      exp_buf_0_40|       pointer|
+|exp_buf_0_41                |   in|   32|   ap_stable|      exp_buf_0_41|       pointer|
+|exp_buf_0_42                |   in|   32|   ap_stable|      exp_buf_0_42|       pointer|
+|exp_buf_0_43                |   in|   32|   ap_stable|      exp_buf_0_43|       pointer|
+|exp_buf_0_44                |   in|   32|   ap_stable|      exp_buf_0_44|       pointer|
+|exp_buf_0_45                |   in|   32|   ap_stable|      exp_buf_0_45|       pointer|
+|exp_buf_0_46                |   in|   32|   ap_stable|      exp_buf_0_46|       pointer|
+|exp_buf_0_47                |   in|   32|   ap_stable|      exp_buf_0_47|       pointer|
+|exp_buf_0_48                |   in|   32|   ap_stable|      exp_buf_0_48|       pointer|
+|exp_buf_0_49                |   in|   32|   ap_stable|      exp_buf_0_49|       pointer|
+|exp_buf_0_50                |   in|   32|   ap_stable|      exp_buf_0_50|       pointer|
+|exp_buf_0_51                |   in|   32|   ap_stable|      exp_buf_0_51|       pointer|
+|exp_buf_0_52                |   in|   32|   ap_stable|      exp_buf_0_52|       pointer|
+|exp_buf_0_53                |   in|   32|   ap_stable|      exp_buf_0_53|       pointer|
+|exp_buf_0_54                |   in|   32|   ap_stable|      exp_buf_0_54|       pointer|
+|exp_buf_0_55                |   in|   32|   ap_stable|      exp_buf_0_55|       pointer|
+|exp_buf_0_56                |   in|   32|   ap_stable|      exp_buf_0_56|       pointer|
+|exp_buf_0_57                |   in|   32|   ap_stable|      exp_buf_0_57|       pointer|
+|exp_buf_0_58                |   in|   32|   ap_stable|      exp_buf_0_58|       pointer|
+|exp_buf_0_59                |   in|   32|   ap_stable|      exp_buf_0_59|       pointer|
+|exp_buf_0_60                |   in|   32|   ap_stable|      exp_buf_0_60|       pointer|
+|exp_buf_0_61                |   in|   32|   ap_stable|      exp_buf_0_61|       pointer|
+|exp_buf_0_62                |   in|   32|   ap_stable|      exp_buf_0_62|       pointer|
+|exp_buf_0_63                |   in|   32|   ap_stable|      exp_buf_0_63|       pointer|
+|exp_buf_1_0                 |   in|   32|   ap_stable|       exp_buf_1_0|       pointer|
+|exp_buf_1_1                 |   in|   32|   ap_stable|       exp_buf_1_1|       pointer|
+|exp_buf_1_2                 |   in|   32|   ap_stable|       exp_buf_1_2|       pointer|
+|exp_buf_1_3                 |   in|   32|   ap_stable|       exp_buf_1_3|       pointer|
+|exp_buf_1_4                 |   in|   32|   ap_stable|       exp_buf_1_4|       pointer|
+|exp_buf_1_5                 |   in|   32|   ap_stable|       exp_buf_1_5|       pointer|
+|exp_buf_1_6                 |   in|   32|   ap_stable|       exp_buf_1_6|       pointer|
+|exp_buf_1_7                 |   in|   32|   ap_stable|       exp_buf_1_7|       pointer|
+|exp_buf_1_8                 |   in|   32|   ap_stable|       exp_buf_1_8|       pointer|
+|exp_buf_1_9                 |   in|   32|   ap_stable|       exp_buf_1_9|       pointer|
+|exp_buf_1_10                |   in|   32|   ap_stable|      exp_buf_1_10|       pointer|
+|exp_buf_1_11                |   in|   32|   ap_stable|      exp_buf_1_11|       pointer|
+|exp_buf_1_12                |   in|   32|   ap_stable|      exp_buf_1_12|       pointer|
+|exp_buf_1_13                |   in|   32|   ap_stable|      exp_buf_1_13|       pointer|
+|exp_buf_1_14                |   in|   32|   ap_stable|      exp_buf_1_14|       pointer|
+|exp_buf_1_15                |   in|   32|   ap_stable|      exp_buf_1_15|       pointer|
+|exp_buf_1_16                |   in|   32|   ap_stable|      exp_buf_1_16|       pointer|
+|exp_buf_1_17                |   in|   32|   ap_stable|      exp_buf_1_17|       pointer|
+|exp_buf_1_18                |   in|   32|   ap_stable|      exp_buf_1_18|       pointer|
+|exp_buf_1_19                |   in|   32|   ap_stable|      exp_buf_1_19|       pointer|
+|exp_buf_1_20                |   in|   32|   ap_stable|      exp_buf_1_20|       pointer|
+|exp_buf_1_21                |   in|   32|   ap_stable|      exp_buf_1_21|       pointer|
+|exp_buf_1_22                |   in|   32|   ap_stable|      exp_buf_1_22|       pointer|
+|exp_buf_1_23                |   in|   32|   ap_stable|      exp_buf_1_23|       pointer|
+|exp_buf_1_24                |   in|   32|   ap_stable|      exp_buf_1_24|       pointer|
+|exp_buf_1_25                |   in|   32|   ap_stable|      exp_buf_1_25|       pointer|
+|exp_buf_1_26                |   in|   32|   ap_stable|      exp_buf_1_26|       pointer|
+|exp_buf_1_27                |   in|   32|   ap_stable|      exp_buf_1_27|       pointer|
+|exp_buf_1_28                |   in|   32|   ap_stable|      exp_buf_1_28|       pointer|
+|exp_buf_1_29                |   in|   32|   ap_stable|      exp_buf_1_29|       pointer|
+|exp_buf_1_30                |   in|   32|   ap_stable|      exp_buf_1_30|       pointer|
+|exp_buf_1_31                |   in|   32|   ap_stable|      exp_buf_1_31|       pointer|
+|exp_buf_1_32                |   in|   32|   ap_stable|      exp_buf_1_32|       pointer|
+|exp_buf_1_33                |   in|   32|   ap_stable|      exp_buf_1_33|       pointer|
+|exp_buf_1_34                |   in|   32|   ap_stable|      exp_buf_1_34|       pointer|
+|exp_buf_1_35                |   in|   32|   ap_stable|      exp_buf_1_35|       pointer|
+|exp_buf_1_36                |   in|   32|   ap_stable|      exp_buf_1_36|       pointer|
+|exp_buf_1_37                |   in|   32|   ap_stable|      exp_buf_1_37|       pointer|
+|exp_buf_1_38                |   in|   32|   ap_stable|      exp_buf_1_38|       pointer|
+|exp_buf_1_39                |   in|   32|   ap_stable|      exp_buf_1_39|       pointer|
+|exp_buf_1_40                |   in|   32|   ap_stable|      exp_buf_1_40|       pointer|
+|exp_buf_1_41                |   in|   32|   ap_stable|      exp_buf_1_41|       pointer|
+|exp_buf_1_42                |   in|   32|   ap_stable|      exp_buf_1_42|       pointer|
+|exp_buf_1_43                |   in|   32|   ap_stable|      exp_buf_1_43|       pointer|
+|exp_buf_1_44                |   in|   32|   ap_stable|      exp_buf_1_44|       pointer|
+|exp_buf_1_45                |   in|   32|   ap_stable|      exp_buf_1_45|       pointer|
+|exp_buf_1_46                |   in|   32|   ap_stable|      exp_buf_1_46|       pointer|
+|exp_buf_1_47                |   in|   32|   ap_stable|      exp_buf_1_47|       pointer|
+|exp_buf_1_48                |   in|   32|   ap_stable|      exp_buf_1_48|       pointer|
+|exp_buf_1_49                |   in|   32|   ap_stable|      exp_buf_1_49|       pointer|
+|exp_buf_1_50                |   in|   32|   ap_stable|      exp_buf_1_50|       pointer|
+|exp_buf_1_51                |   in|   32|   ap_stable|      exp_buf_1_51|       pointer|
+|exp_buf_1_52                |   in|   32|   ap_stable|      exp_buf_1_52|       pointer|
+|exp_buf_1_53                |   in|   32|   ap_stable|      exp_buf_1_53|       pointer|
+|exp_buf_1_54                |   in|   32|   ap_stable|      exp_buf_1_54|       pointer|
+|exp_buf_1_55                |   in|   32|   ap_stable|      exp_buf_1_55|       pointer|
+|exp_buf_1_56                |   in|   32|   ap_stable|      exp_buf_1_56|       pointer|
+|exp_buf_1_57                |   in|   32|   ap_stable|      exp_buf_1_57|       pointer|
+|exp_buf_1_58                |   in|   32|   ap_stable|      exp_buf_1_58|       pointer|
+|exp_buf_1_59                |   in|   32|   ap_stable|      exp_buf_1_59|       pointer|
+|exp_buf_1_60                |   in|   32|   ap_stable|      exp_buf_1_60|       pointer|
+|exp_buf_1_61                |   in|   32|   ap_stable|      exp_buf_1_61|       pointer|
+|exp_buf_1_62                |   in|   32|   ap_stable|      exp_buf_1_62|       pointer|
+|exp_buf_1_63                |   in|   32|   ap_stable|      exp_buf_1_63|       pointer|
+|exp_buf_2_0                 |   in|   32|   ap_stable|       exp_buf_2_0|       pointer|
+|exp_buf_2_1                 |   in|   32|   ap_stable|       exp_buf_2_1|       pointer|
+|exp_buf_2_2                 |   in|   32|   ap_stable|       exp_buf_2_2|       pointer|
+|exp_buf_2_3                 |   in|   32|   ap_stable|       exp_buf_2_3|       pointer|
+|exp_buf_2_4                 |   in|   32|   ap_stable|       exp_buf_2_4|       pointer|
+|exp_buf_2_5                 |   in|   32|   ap_stable|       exp_buf_2_5|       pointer|
+|exp_buf_2_6                 |   in|   32|   ap_stable|       exp_buf_2_6|       pointer|
+|exp_buf_2_7                 |   in|   32|   ap_stable|       exp_buf_2_7|       pointer|
+|exp_buf_2_8                 |   in|   32|   ap_stable|       exp_buf_2_8|       pointer|
+|exp_buf_2_9                 |   in|   32|   ap_stable|       exp_buf_2_9|       pointer|
+|exp_buf_2_10                |   in|   32|   ap_stable|      exp_buf_2_10|       pointer|
+|exp_buf_2_11                |   in|   32|   ap_stable|      exp_buf_2_11|       pointer|
+|exp_buf_2_12                |   in|   32|   ap_stable|      exp_buf_2_12|       pointer|
+|exp_buf_2_13                |   in|   32|   ap_stable|      exp_buf_2_13|       pointer|
+|exp_buf_2_14                |   in|   32|   ap_stable|      exp_buf_2_14|       pointer|
+|exp_buf_2_15                |   in|   32|   ap_stable|      exp_buf_2_15|       pointer|
+|exp_buf_2_16                |   in|   32|   ap_stable|      exp_buf_2_16|       pointer|
+|exp_buf_2_17                |   in|   32|   ap_stable|      exp_buf_2_17|       pointer|
+|exp_buf_2_18                |   in|   32|   ap_stable|      exp_buf_2_18|       pointer|
+|exp_buf_2_19                |   in|   32|   ap_stable|      exp_buf_2_19|       pointer|
+|exp_buf_2_20                |   in|   32|   ap_stable|      exp_buf_2_20|       pointer|
+|exp_buf_2_21                |   in|   32|   ap_stable|      exp_buf_2_21|       pointer|
+|exp_buf_2_22                |   in|   32|   ap_stable|      exp_buf_2_22|       pointer|
+|exp_buf_2_23                |   in|   32|   ap_stable|      exp_buf_2_23|       pointer|
+|exp_buf_2_24                |   in|   32|   ap_stable|      exp_buf_2_24|       pointer|
+|exp_buf_2_25                |   in|   32|   ap_stable|      exp_buf_2_25|       pointer|
+|exp_buf_2_26                |   in|   32|   ap_stable|      exp_buf_2_26|       pointer|
+|exp_buf_2_27                |   in|   32|   ap_stable|      exp_buf_2_27|       pointer|
+|exp_buf_2_28                |   in|   32|   ap_stable|      exp_buf_2_28|       pointer|
+|exp_buf_2_29                |   in|   32|   ap_stable|      exp_buf_2_29|       pointer|
+|exp_buf_2_30                |   in|   32|   ap_stable|      exp_buf_2_30|       pointer|
+|exp_buf_2_31                |   in|   32|   ap_stable|      exp_buf_2_31|       pointer|
+|exp_buf_2_32                |   in|   32|   ap_stable|      exp_buf_2_32|       pointer|
+|exp_buf_2_33                |   in|   32|   ap_stable|      exp_buf_2_33|       pointer|
+|exp_buf_2_34                |   in|   32|   ap_stable|      exp_buf_2_34|       pointer|
+|exp_buf_2_35                |   in|   32|   ap_stable|      exp_buf_2_35|       pointer|
+|exp_buf_2_36                |   in|   32|   ap_stable|      exp_buf_2_36|       pointer|
+|exp_buf_2_37                |   in|   32|   ap_stable|      exp_buf_2_37|       pointer|
+|exp_buf_2_38                |   in|   32|   ap_stable|      exp_buf_2_38|       pointer|
+|exp_buf_2_39                |   in|   32|   ap_stable|      exp_buf_2_39|       pointer|
+|exp_buf_2_40                |   in|   32|   ap_stable|      exp_buf_2_40|       pointer|
+|exp_buf_2_41                |   in|   32|   ap_stable|      exp_buf_2_41|       pointer|
+|exp_buf_2_42                |   in|   32|   ap_stable|      exp_buf_2_42|       pointer|
+|exp_buf_2_43                |   in|   32|   ap_stable|      exp_buf_2_43|       pointer|
+|exp_buf_2_44                |   in|   32|   ap_stable|      exp_buf_2_44|       pointer|
+|exp_buf_2_45                |   in|   32|   ap_stable|      exp_buf_2_45|       pointer|
+|exp_buf_2_46                |   in|   32|   ap_stable|      exp_buf_2_46|       pointer|
+|exp_buf_2_47                |   in|   32|   ap_stable|      exp_buf_2_47|       pointer|
+|exp_buf_2_48                |   in|   32|   ap_stable|      exp_buf_2_48|       pointer|
+|exp_buf_2_49                |   in|   32|   ap_stable|      exp_buf_2_49|       pointer|
+|exp_buf_2_50                |   in|   32|   ap_stable|      exp_buf_2_50|       pointer|
+|exp_buf_2_51                |   in|   32|   ap_stable|      exp_buf_2_51|       pointer|
+|exp_buf_2_52                |   in|   32|   ap_stable|      exp_buf_2_52|       pointer|
+|exp_buf_2_53                |   in|   32|   ap_stable|      exp_buf_2_53|       pointer|
+|exp_buf_2_54                |   in|   32|   ap_stable|      exp_buf_2_54|       pointer|
+|exp_buf_2_55                |   in|   32|   ap_stable|      exp_buf_2_55|       pointer|
+|exp_buf_2_56                |   in|   32|   ap_stable|      exp_buf_2_56|       pointer|
+|exp_buf_2_57                |   in|   32|   ap_stable|      exp_buf_2_57|       pointer|
+|exp_buf_2_58                |   in|   32|   ap_stable|      exp_buf_2_58|       pointer|
+|exp_buf_2_59                |   in|   32|   ap_stable|      exp_buf_2_59|       pointer|
+|exp_buf_2_60                |   in|   32|   ap_stable|      exp_buf_2_60|       pointer|
+|exp_buf_2_61                |   in|   32|   ap_stable|      exp_buf_2_61|       pointer|
+|exp_buf_2_62                |   in|   32|   ap_stable|      exp_buf_2_62|       pointer|
+|exp_buf_2_63                |   in|   32|   ap_stable|      exp_buf_2_63|       pointer|
+|exp_buf_3_0                 |   in|   32|   ap_stable|       exp_buf_3_0|       pointer|
+|exp_buf_3_1                 |   in|   32|   ap_stable|       exp_buf_3_1|       pointer|
+|exp_buf_3_2                 |   in|   32|   ap_stable|       exp_buf_3_2|       pointer|
+|exp_buf_3_3                 |   in|   32|   ap_stable|       exp_buf_3_3|       pointer|
+|exp_buf_3_4                 |   in|   32|   ap_stable|       exp_buf_3_4|       pointer|
+|exp_buf_3_5                 |   in|   32|   ap_stable|       exp_buf_3_5|       pointer|
+|exp_buf_3_6                 |   in|   32|   ap_stable|       exp_buf_3_6|       pointer|
+|exp_buf_3_7                 |   in|   32|   ap_stable|       exp_buf_3_7|       pointer|
+|exp_buf_3_8                 |   in|   32|   ap_stable|       exp_buf_3_8|       pointer|
+|exp_buf_3_9                 |   in|   32|   ap_stable|       exp_buf_3_9|       pointer|
+|exp_buf_3_10                |   in|   32|   ap_stable|      exp_buf_3_10|       pointer|
+|exp_buf_3_11                |   in|   32|   ap_stable|      exp_buf_3_11|       pointer|
+|exp_buf_3_12                |   in|   32|   ap_stable|      exp_buf_3_12|       pointer|
+|exp_buf_3_13                |   in|   32|   ap_stable|      exp_buf_3_13|       pointer|
+|exp_buf_3_14                |   in|   32|   ap_stable|      exp_buf_3_14|       pointer|
+|exp_buf_3_15                |   in|   32|   ap_stable|      exp_buf_3_15|       pointer|
+|exp_buf_3_16                |   in|   32|   ap_stable|      exp_buf_3_16|       pointer|
+|exp_buf_3_17                |   in|   32|   ap_stable|      exp_buf_3_17|       pointer|
+|exp_buf_3_18                |   in|   32|   ap_stable|      exp_buf_3_18|       pointer|
+|exp_buf_3_19                |   in|   32|   ap_stable|      exp_buf_3_19|       pointer|
+|exp_buf_3_20                |   in|   32|   ap_stable|      exp_buf_3_20|       pointer|
+|exp_buf_3_21                |   in|   32|   ap_stable|      exp_buf_3_21|       pointer|
+|exp_buf_3_22                |   in|   32|   ap_stable|      exp_buf_3_22|       pointer|
+|exp_buf_3_23                |   in|   32|   ap_stable|      exp_buf_3_23|       pointer|
+|exp_buf_3_24                |   in|   32|   ap_stable|      exp_buf_3_24|       pointer|
+|exp_buf_3_25                |   in|   32|   ap_stable|      exp_buf_3_25|       pointer|
+|exp_buf_3_26                |   in|   32|   ap_stable|      exp_buf_3_26|       pointer|
+|exp_buf_3_27                |   in|   32|   ap_stable|      exp_buf_3_27|       pointer|
+|exp_buf_3_28                |   in|   32|   ap_stable|      exp_buf_3_28|       pointer|
+|exp_buf_3_29                |   in|   32|   ap_stable|      exp_buf_3_29|       pointer|
+|exp_buf_3_30                |   in|   32|   ap_stable|      exp_buf_3_30|       pointer|
+|exp_buf_3_31                |   in|   32|   ap_stable|      exp_buf_3_31|       pointer|
+|exp_buf_3_32                |   in|   32|   ap_stable|      exp_buf_3_32|       pointer|
+|exp_buf_3_33                |   in|   32|   ap_stable|      exp_buf_3_33|       pointer|
+|exp_buf_3_34                |   in|   32|   ap_stable|      exp_buf_3_34|       pointer|
+|exp_buf_3_35                |   in|   32|   ap_stable|      exp_buf_3_35|       pointer|
+|exp_buf_3_36                |   in|   32|   ap_stable|      exp_buf_3_36|       pointer|
+|exp_buf_3_37                |   in|   32|   ap_stable|      exp_buf_3_37|       pointer|
+|exp_buf_3_38                |   in|   32|   ap_stable|      exp_buf_3_38|       pointer|
+|exp_buf_3_39                |   in|   32|   ap_stable|      exp_buf_3_39|       pointer|
+|exp_buf_3_40                |   in|   32|   ap_stable|      exp_buf_3_40|       pointer|
+|exp_buf_3_41                |   in|   32|   ap_stable|      exp_buf_3_41|       pointer|
+|exp_buf_3_42                |   in|   32|   ap_stable|      exp_buf_3_42|       pointer|
+|exp_buf_3_43                |   in|   32|   ap_stable|      exp_buf_3_43|       pointer|
+|exp_buf_3_44                |   in|   32|   ap_stable|      exp_buf_3_44|       pointer|
+|exp_buf_3_45                |   in|   32|   ap_stable|      exp_buf_3_45|       pointer|
+|exp_buf_3_46                |   in|   32|   ap_stable|      exp_buf_3_46|       pointer|
+|exp_buf_3_47                |   in|   32|   ap_stable|      exp_buf_3_47|       pointer|
+|exp_buf_3_48                |   in|   32|   ap_stable|      exp_buf_3_48|       pointer|
+|exp_buf_3_49                |   in|   32|   ap_stable|      exp_buf_3_49|       pointer|
+|exp_buf_3_50                |   in|   32|   ap_stable|      exp_buf_3_50|       pointer|
+|exp_buf_3_51                |   in|   32|   ap_stable|      exp_buf_3_51|       pointer|
+|exp_buf_3_52                |   in|   32|   ap_stable|      exp_buf_3_52|       pointer|
+|exp_buf_3_53                |   in|   32|   ap_stable|      exp_buf_3_53|       pointer|
+|exp_buf_3_54                |   in|   32|   ap_stable|      exp_buf_3_54|       pointer|
+|exp_buf_3_55                |   in|   32|   ap_stable|      exp_buf_3_55|       pointer|
+|exp_buf_3_56                |   in|   32|   ap_stable|      exp_buf_3_56|       pointer|
+|exp_buf_3_57                |   in|   32|   ap_stable|      exp_buf_3_57|       pointer|
+|exp_buf_3_58                |   in|   32|   ap_stable|      exp_buf_3_58|       pointer|
+|exp_buf_3_59                |   in|   32|   ap_stable|      exp_buf_3_59|       pointer|
+|exp_buf_3_60                |   in|   32|   ap_stable|      exp_buf_3_60|       pointer|
+|exp_buf_3_61                |   in|   32|   ap_stable|      exp_buf_3_61|       pointer|
+|exp_buf_3_62                |   in|   32|   ap_stable|      exp_buf_3_62|       pointer|
+|exp_buf_3_63                |   in|   32|   ap_stable|      exp_buf_3_63|       pointer|
+|n                           |   in|    9|   ap_stable|                 n|        scalar|
+|inv_sum_q30                 |   in|   31|   ap_stable|       inv_sum_q30|        scalar|
+|prob_stream_din             |  out|  132|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_full_n          |   in|    1|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_write           |  out|    1|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_num_data_valid  |   in|   32|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_fifo_cap        |   in|   32|     ap_fifo|       prob_stream|       pointer|
++----------------------------+-----+-----+------------+------------------+--------------+
+

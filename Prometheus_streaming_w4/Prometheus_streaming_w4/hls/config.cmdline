@@ -1,0 +1,3 @@
+relativeroot=/home/elfo/Documents/ELEC5803/Prometheus_streaming_w4
+original_argv=--mode hls --cosim --config /home/elfo/Documents/ELEC5803/Prometheus_streaming_w4/hls_config.cfg --work_dir Prometheus_streaming_w4 
+

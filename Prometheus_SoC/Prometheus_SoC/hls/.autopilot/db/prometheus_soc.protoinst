@@ -1,0 +1,165 @@
+{
+	"version": "1.0",
+	"modules": {
+		"prometheus_soc": {
+			"proto_instances": {
+				"/AESL_inst_prometheus_soc_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/cache_exp_stream_U0/cache_exp_stream_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/cache_exp_stream_U0/grp_cache_exp_stream_Pipeline_cache_exp_loop_fu_575/grp_cache_exp_stream_Pipeline_cache_exp_loop_fu_575_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/emit_exp_stream_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/grp_generate_exp_buffer_fu_3181_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_fu_2917_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/emit_prob_stream_U0/emit_prob_stream_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/emit_prob_stream_U0/grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106/grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/grp_normalize_and_store_fu_3700_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/write_prob_stream_U0/grp_write_prob_stream_Pipeline_prob_write_loop_fu_101/grp_write_prob_stream_Pipeline_prob_write_loop_fu_101_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/write_prob_stream_U0/write_prob_stream_U0_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_CONTINUE": { "actual": "ap_continue"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_prometheus_soc_Pipeline_VITIS_LOOP_48_1_fu_56/grp_prometheus_soc_Pipeline_VITIS_LOOP_48_1_fu_56_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

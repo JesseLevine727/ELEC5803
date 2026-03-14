@@ -1,0 +1,9 @@
+{
+  "name": "Prometheus_streaming_w4",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/hls_config.cfg"],
+    "work_dir": "."
+  }
+}

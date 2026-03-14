@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'emit_prob_stream'
+================================================================
+* Date:           Sat Mar 14 13:29:02 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus_streaming
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  8.510 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |        5|      260|  59.000 ns|  3.068 us|    2|  257|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- prob_emit_loop  |        3|      258|         4|          1|          1|  1 ~ 256|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     34|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    4|       0|     20|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     54|    -|
+|Register         |        -|    -|     143|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    4|     143|    108|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |mul_32ns_31ns_62_1_1_U31  |mul_32ns_31ns_62_1_1  |        0|   4|  0|  20|    0|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+    |Total                     |                      |        0|   4|  0|  20|    0|
+    +--------------------------+----------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln207_fu_122_p2             |         +|   0|  0|  14|           9|           1|
+    |ap_condition_130                |       and|   0|  0|   2|           1|           1|
+    |icmp_ln207_fu_116_p2            |      icmp|   0|  0|  14|           9|           9|
+    |ap_block_pp0_stage0_01001_grp1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0|  34|          21|          14|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3     |   9|          2|    9|         18|
+    |i_fu_64                  |   9|          2|    9|         18|
+    |prob_stream_blk_n        |   9|          2|    1|          2|
+    |real_start               |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   22|         44|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   1|   0|    1|          0|
+    |ap_done_reg                             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                 |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg        |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg        |   1|   0|    1|          0|
+    |exp_buf_load_reg_173                    |  32|   0|   32|          0|
+    |i_fu_64                                 |   9|   0|    9|          0|
+    |inv_sum_q30_cast_reg_159                |  31|   0|   62|         31|
+    |inv_sum_q30_cast_reg_159_pp0_iter1_reg  |  31|   0|   62|         31|
+    |start_once_reg                          |   1|   0|    1|          0|
+    |trunc_ln_reg_178                        |  32|   0|   32|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   | 143|   0|  205|         62|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++----------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|start_full_n                |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_continue                 |   in|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|start_out                   |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|start_write                 |  out|    1|  ap_ctrl_hs|  emit_prob_stream|  return value|
+|prob_stream_din             |  out|   32|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_full_n          |   in|    1|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_write           |  out|    1|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_num_data_valid  |   in|   32|     ap_fifo|       prob_stream|       pointer|
+|prob_stream_fifo_cap        |   in|   32|     ap_fifo|       prob_stream|       pointer|
+|exp_buf_address0            |  out|    8|   ap_stable|           exp_buf|         array|
+|exp_buf_ce0                 |  out|    1|   ap_stable|           exp_buf|         array|
+|exp_buf_q0                  |   in|   32|   ap_stable|           exp_buf|         array|
+|n                           |   in|    9|   ap_stable|                 n|        scalar|
+|inv_sum_q30                 |   in|   31|   ap_stable|       inv_sum_q30|        scalar|
++----------------------------+-----+-----+------------+------------------+--------------+
+

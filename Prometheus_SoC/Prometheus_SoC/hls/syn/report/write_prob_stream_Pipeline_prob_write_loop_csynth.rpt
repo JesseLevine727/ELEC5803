@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'write_prob_stream_Pipeline_prob_write_loop'
+================================================================
+* Date:           Sat Mar 14 16:27:08 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        Prometheus_SoC
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  11.80 ns|  6.961 ns|     3.19 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |        2|       66|  23.600 ns|  0.779 us|    1|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- prob_write_loop  |        0|       64|         2|          1|          1|  0 ~ 64|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     49|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     45|    -|
+|Register         |        -|    -|      30|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      30|     94|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln365_fu_99_p2         |         +|   0|  0|  14|           7|           1|
+    |add_ln375_fu_122_p2        |         +|   0|  0|  17|          14|          14|
+    |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln365_fu_93_p2        |      icmp|   0|  0|  14|           7|           7|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  49|          30|          25|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_blk_1   |   9|          2|    7|         14|
+    |blk_fu_50                |   9|          2|    7|         14|
+    |prob_stream_blk_n        |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   17|         34|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |blk_fu_50                |   7|   0|    7|          0|
+    |pr_l_read_reg_139        |  14|   0|   14|          0|
+    |trunc_ln375_reg_147      |   6|   0|    6|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  30|   0|   30|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++----------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  write_prob_stream_Pipeline_prob_write_loop|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  write_prob_stream_Pipeline_prob_write_loop|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  write_prob_stream_Pipeline_prob_write_loop|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  write_prob_stream_Pipeline_prob_write_loop|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  write_prob_stream_Pipeline_prob_write_loop|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  write_prob_stream_Pipeline_prob_write_loop|  return value|
+|prob_stream_dout            |   in|  132|     ap_fifo|                                 prob_stream|       pointer|
+|prob_stream_empty_n         |   in|    1|     ap_fifo|                                 prob_stream|       pointer|
+|prob_stream_read            |  out|    1|     ap_fifo|                                 prob_stream|       pointer|
+|prob_stream_num_data_valid  |   in|    5|     ap_fifo|                                 prob_stream|       pointer|
+|prob_stream_fifo_cap        |   in|    5|     ap_fifo|                                 prob_stream|       pointer|
+|full_blocks                 |   in|    7|   ap_stable|                                 full_blocks|        scalar|
+|pr_l                        |   in|   14|   ap_stable|                                        pr_l|        scalar|
+|mem_address0                |  out|   14|   ap_memory|                                         mem|         array|
+|mem_ce0                     |  out|    1|   ap_memory|                                         mem|         array|
+|mem_we0                     |  out|    1|   ap_memory|                                         mem|         array|
+|mem_d0                      |  out|  128|   ap_memory|                                         mem|         array|
++----------------------------+-----+-----+------------+--------------------------------------------+--------------+
+

@@ -1,0 +1,13 @@
+{
+  "name": "Prometheus_SoC",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "Prometheus_SoC"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}

@@ -1,0 +1,129 @@
+{
+  "0": {
+    "basicblocks": 151,
+    "calls": "7 3 1",
+    "control_depth": 0,
+    "def_use_depth": 8,
+    "file": "riscv32i.cc",
+    "fileloc": 41,
+    "instructions": 3083,
+    "loads": {
+      "G": 4,
+      "L": 4,
+      "T": 4
+    },
+    "memory_accesses": 1,
+    "name": "prometheus_soc",
+    "stores": {
+      "L": 6,
+      "T": 2
+    },
+    "total_instructions": 5954
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "6 4",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 391,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "normalize_and_store",
+    "total_instructions": 490
+  },
+  "2": {
+    "basicblocks": 276,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 8,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 264,
+    "instructions": 826,
+    "memory_accesses": 257,
+    "name": "cache_exp_stream",
+    "stores": {
+      "L": 257
+    },
+    "total_instructions": 856
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "5 2",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 292,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "generate_exp_buffer",
+    "total_instructions": 1536
+  },
+  "4": {
+    "basicblocks": 14,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 5,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 354,
+    "instructions": 67,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "write_prob_stream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 127
+  },
+  "5": {
+    "basicblocks": 27,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 21,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 222,
+    "instructions": 640,
+    "loads": {
+      "G": 128,
+      "L": 256
+    },
+    "memory_accesses": 385,
+    "name": "emit_exp_stream",
+    "total_instructions": 674
+  },
+  "6": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 11,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 308,
+    "instructions": 323,
+    "loads": {
+      "L": 256
+    },
+    "memory_accesses": 257,
+    "name": "emit_prob_stream",
+    "total_instructions": 357
+  },
+  "7": {
+    "basicblocks": 276,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 15,
+    "file": "softmax_accel_hls.cc",
+    "fileloc": 168,
+    "instructions": 845,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 257,
+    "name": "load_logits_and_find_max",
+    "stores": {
+      "L": 257
+    },
+    "total_instructions": 845
+  }
+}

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sat Mar 14 17:30:53 2026
+| Date         : Wed Mar 18 18:10:55 2026
 | Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file prometheus_pynq_z1_axi_gpio_status_0_0_utilization_synth.rpt -pb prometheus_pynq_z1_axi_gpio_status_0_0_utilization_synth.pb
 | Design       : prometheus_pynq_z1_axi_gpio_status_0_0
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   44 |     0 |          0 |     53200 |  0.08 |
-|   LUT as Logic          |   44 |     0 |          0 |     53200 |  0.08 |
+| Slice LUTs*             |   96 |     0 |          0 |     53200 |  0.18 |
+|   LUT as Logic          |   96 |     0 |          0 |     53200 |  0.18 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         |   68 |     0 |          0 |    106400 |  0.06 |
-|   Register as Flip Flop |   68 |     0 |          0 |    106400 |  0.06 |
+| Slice Registers         |  318 |     0 |          0 |    106400 |  0.30 |
+|   Register as Flip Flop |  318 |     0 |          0 |    106400 |  0.30 |
 |   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
@@ -59,8 +59,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 5     |          Yes |         Set |            - |
-| 63    |          Yes |       Reset |            - |
+| 33    |          Yes |         Set |            - |
+| 285   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,13 +149,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   63 |        Flop & Latch |
-| LUT5     |   13 |                 LUT |
-| LUT6     |   12 |                 LUT |
+| FDRE     |  285 |        Flop & Latch |
+| LUT6     |   40 |                 LUT |
+| LUT5     |   40 |                 LUT |
+| FDSE     |   33 |        Flop & Latch |
 | LUT2     |    9 |                 LUT |
-| LUT4     |    8 |                 LUT |
 | LUT3     |    7 |                 LUT |
-| FDSE     |    5 |        Flop & Latch |
+| LUT4     |    4 |                 LUT |
 | LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 

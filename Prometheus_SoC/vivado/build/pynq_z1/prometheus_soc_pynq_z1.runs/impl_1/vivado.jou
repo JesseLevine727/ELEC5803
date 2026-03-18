@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Mar 14 17:32:26 2026
-# Process ID         : 600917
+# Start of session at: Wed Mar 18 18:13:37 2026
+# Process ID         : 212292
 # Current directory  : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/impl_1
 # Command line       : vivado -log prometheus_pynq_z1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source prometheus_pynq_z1_wrapper.tcl -notrace
 # Log file           : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/impl_1/prometheus_pynq_z1_wrapper.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 64918 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73508 MB
-# Available Virtual  : 56286 MB
+# Available Virtual  : 66358 MB
 #-----------------------------------------------------------
 source prometheus_pynq_z1_wrapper.tcl -notrace

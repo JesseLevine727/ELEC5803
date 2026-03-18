@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Sat Mar 14 17:32:00 2026
+-- Date        : Wed Mar 18 18:12:37 2026
 -- Host        : gondor running 64-bit Ubuntu 24.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ip/prometheus_pynq_z1_prometheus_soc_0_0/prometheus_pynq_z1_prometheus_soc_0_0_stub.vhdl
@@ -18,7 +18,7 @@ entity prometheus_pynq_z1_prometheus_soc_0_0 is
     ap_clk : in STD_LOGIC;
     ap_rst : in STD_LOGIC;
     ctrl_start : in STD_LOGIC;
-    status : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    status : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_addr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_clk : out STD_LOGIC;
     bram_din : out STD_LOGIC_VECTOR ( 127 downto 0 );
@@ -40,7 +40,7 @@ architecture stub of prometheus_pynq_z1_prometheus_soc_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "ap_clk,ap_rst,ctrl_start,status[3:0],bram_addr[31:0],bram_clk,bram_din[127:0],bram_dout[127:0],bram_en,bram_rst,bram_we[15:0]";
+  attribute black_box_pad_pin of stub : architecture is "ap_clk,ap_rst,ctrl_start,status[31:0],bram_addr[31:0],bram_clk,bram_din[127:0],bram_dout[127:0],bram_en,bram_rst,bram_we[15:0]";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of ap_clk : signal is "xilinx.com:signal:clock:1.0 ap_clk CLK";
   attribute X_INTERFACE_MODE : string;

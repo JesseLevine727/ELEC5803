@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Mar 14 17:30:38 2026
-# Process ID         : 597120
+# Start of session at: Wed Mar 18 18:10:40 2026
+# Process ID         : 208423
 # Current directory  : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1
 # Command line       : vivado -log prometheus_pynq_z1_axi_gpio_status_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prometheus_pynq_z1_axi_gpio_status_0_0.tcl
 # Log file           : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1/prometheus_pynq_z1_axi_gpio_status_0_0.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5520.020 MHz
+# CPU Frequency      : 2982.259 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64918 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73508 MB
-# Available Virtual  : 55749 MB
+# Available Virtual  : 66050 MB
 #-----------------------------------------------------------
 source prometheus_pynq_z1_axi_gpio_status_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -31,16 +31,16 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 208541
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.285 ; gain = 439.797 ; free physical = 8397 ; free virtual = 49064
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.254 ; gain = 440.797 ; free physical = 5255 ; free virtual = 57761
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'prometheus_pynq_z1_axi_gpio_status_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ip/prometheus_pynq_z1_axi_gpio_status_0_0/synth/prometheus_pynq_z1_axi_gpio_status_0_0.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 4 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 32 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 1 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -75,7 +75,7 @@ INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/P
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
-	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-3491] module 'xpm_cdc_array_single' declared at '/home/elfo/Documents/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903' bound to instance 'INPUT_DOUBLE_REGS3' of component 'xpm_cdc_array_single' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:458]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/home/elfo/Documents/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/home/elfo/Documents/2025.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
@@ -86,6 +86,34 @@ WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GE
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[16].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[17].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[18].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[19].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[20].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[21].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[22].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[23].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[24].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[25].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[26].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[27].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[28].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[29].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[30].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[31].GPIO_DBus_i_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/0271/hdl/axi_gpio_v2_0_vh_rfs.vhd:355]
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ABus_Reg[1] in module GPIO_Core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ABus_Reg[2] in module GPIO_Core is either unconnected or has no load
@@ -142,18 +170,18 @@ WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module slave_attachment is either
 WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module slave_attachment is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module slave_attachment is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2231.223 ; gain = 521.734 ; free physical = 7892 ; free virtual = 48564
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2232.223 ; gain = 523.766 ; free physical = 4954 ; free virtual = 57464
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2249.035 ; gain = 539.547 ; free physical = 7884 ; free virtual = 48556
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2247.066 ; gain = 538.609 ; free physical = 4923 ; free virtual = 57433
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2249.035 ; gain = 539.547 ; free physical = 7884 ; free virtual = 48556
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2247.066 ; gain = 538.609 ; free physical = 4923 ; free virtual = 57433
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2249.035 ; gain = 0.000 ; free physical = 7884 ; free virtual = 48556
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2247.066 ; gain = 0.000 ; free physical = 4915 ; free virtual = 57425
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -169,28 +197,27 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/prometheus_p
 INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2367.773 ; gain = 0.000 ; free physical = 7756 ; free virtual = 48427
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.805 ; gain = 0.000 ; free physical = 4794 ; free virtual = 57319
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2367.809 ; gain = 0.000 ; free physical = 7756 ; free virtual = 48427
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2370.840 ; gain = 0.000 ; free physical = 4792 ; free virtual = 57318
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2367.809 ; gain = 658.320 ; free physical = 7657 ; free virtual = 48336
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2370.840 ; gain = 662.383 ; free physical = 4575 ; free virtual = 57103
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2375.777 ; gain = 666.289 ; free physical = 7657 ; free virtual = 48336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2378.809 ; gain = 670.352 ; free physical = 4575 ; free virtual = 57103
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2375.777 ; gain = 666.289 ; free physical = 7657 ; free virtual = 48335
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2378.809 ; gain = 670.352 ; free physical = 4575 ; free virtual = 57103
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -203,7 +230,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2375.777 ; gain = 666.289 ; free physical = 7655 ; free virtual = 48333
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2378.809 ; gain = 670.352 ; free physical = 4570 ; free virtual = 57098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -212,17 +239,17 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 9     
 	                9 Bit    Registers := 1     
-	                4 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 22    
+	                1 Bit    Registers := 50    
 +---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
 	   5 Input   32 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 7     
+	   2 Input    4 Bit        Muxes := 5     
 	   2 Input    2 Bit        Muxes := 3     
 	   3 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
@@ -240,10 +267,10 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
----------------------------------------------------------------------------------
-Start Cross Boundary Optimization
----------------------------------------------------------------------------------
 WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module axi_gpio is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module axi_gpio is either unconnected or has no load
@@ -282,31 +309,25 @@ WARNING: [Synth 8-7129] Port gpio2_io_i[2] in module axi_gpio is either unconnec
 WARNING: [Synth 8-7129] Port gpio2_io_i[1] in module axi_gpio is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gpio2_io_i[0] in module axi_gpio is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2375.777 ; gain = 666.289 ; free physical = 7633 ; free virtual = 48309
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Area Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2375.777 ; gain = 666.289 ; free physical = 7610 ; free virtual = 48286
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2378.809 ; gain = 670.352 ; free physical = 4549 ; free virtual = 57079
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2411.777 ; gain = 702.289 ; free physical = 7381 ; free virtual = 48058
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2412.809 ; gain = 704.352 ; free physical = 4402 ; free virtual = 56942
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.824 ; gain = 731.336 ; free physical = 7341 ; free virtual = 48018
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2442.855 ; gain = 734.398 ; free physical = 4359 ; free virtual = 56899
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2440.824 ; gain = 731.336 ; free physical = 7341 ; free virtual = 48018
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2442.855 ; gain = 734.398 ; free physical = 4359 ; free virtual = 56899
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -324,37 +345,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 3997 ; free virtual = 56537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 3997 ; free virtual = 56537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 4035 ; free virtual = 56575
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 4067 ; free virtual = 56607
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 4127 ; free virtual = 56667
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 4130 ; free virtual = 56669
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -373,38 +394,38 @@ Report Cell Usage:
 |1     |LUT1 |     2|
 |2     |LUT2 |     9|
 |3     |LUT3 |     7|
-|4     |LUT4 |     8|
-|5     |LUT5 |    13|
-|6     |LUT6 |    12|
-|7     |FDRE |    63|
-|8     |FDSE |     5|
+|4     |LUT4 |     4|
+|5     |LUT5 |    40|
+|6     |LUT6 |    40|
+|7     |FDRE |   285|
+|8     |FDSE |    33|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6712 ; free virtual = 47387
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.668 ; gain = 890.211 ; free physical = 4137 ; free virtual = 56677
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2598.637 ; gain = 770.375 ; free physical = 6672 ; free virtual = 47373
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.637 ; gain = 889.148 ; free physical = 6672 ; free virtual = 47373
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2598.668 ; gain = 766.438 ; free physical = 4130 ; free virtual = 56669
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2598.676 ; gain = 890.211 ; free physical = 4130 ; free virtual = 56669
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2598.637 ; gain = 0.000 ; free physical = 6665 ; free virtual = 47367
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2598.676 ; gain = 0.000 ; free physical = 4280 ; free virtual = 56820
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2654.664 ; gain = 0.000 ; free physical = 6690 ; free virtual = 47368
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2654.695 ; gain = 0.000 ; free physical = 4273 ; free virtual = 56816
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: ba691a
+Synth Design complete | Checksum: f121524c
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 125 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2654.699 ; gain = 1122.914 ; free physical = 6690 ; free virtual = 47368
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1600.688; main = 1600.688; forked = 0.000
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2654.668; main = 2654.668; forked = 0.000
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2678.676 ; gain = 0.000 ; free physical = 6690 ; free virtual = 47368
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2654.730 ; gain = 1121.945 ; free physical = 4251 ; free virtual = 56794
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1718.016; main = 1580.652; forked = 198.729
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3490.750; main = 2654.699; forked = 963.891
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2678.707 ; gain = 0.000 ; free physical = 4242 ; free virtual = 56785
 INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1/prometheus_pynq_z1_axi_gpio_status_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP prometheus_pynq_z1_axi_gpio_status_0_0, cache-ID = 74e9cc824c977418
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP prometheus_pynq_z1_axi_gpio_status_0_0, cache-ID = dfd98438211509c7
 INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2678.676 ; gain = 0.000 ; free physical = 6665 ; free virtual = 47343
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2678.707 ; gain = 0.000 ; free physical = 4215 ; free virtual = 56758
 INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1/prometheus_pynq_z1_axi_gpio_status_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file prometheus_pynq_z1_axi_gpio_status_0_0_utilization_synth.rpt -pb prometheus_pynq_z1_axi_gpio_status_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 14 17:30:54 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 18:10:55 2026...

@@ -1,0 +1,293 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Mar 18 19:10:49 2026
+# Process ID         : 291423
+# Current directory  : /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1
+# Command line       : vivado -log baseline_cpu_pynq_z1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source baseline_cpu_pynq_z1_wrapper.tcl
+# Log file           : /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/baseline_cpu_pynq_z1_wrapper.vds
+# Journal file       : /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/vivado.jou
+# Running On         : gondor
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
+# CPU Frequency      : 3726.963 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 64918 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 73508 MB
+# Available Virtual  : 65851 MB
+#-----------------------------------------------------------
+source baseline_cpu_pynq_z1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/elfo/Documents/2025.1/Vivado/data/ip'.
+Command: synth_design -top baseline_cpu_pynq_z1_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 291487
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2174.332 ; gain = 441.797 ; free physical = 8588 ; free virtual = 61406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_wrapper' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/hdl/baseline_cpu_pynq_z1_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_axi_bram_ctrl_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_axi_bram_ctrl_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'gpio_io_t' of module 'baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0' is unconnected for instance 'axi_gpio_ctrl_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:246]
+WARNING: [Synth 8-7023] instance 'axi_gpio_ctrl_0' of module 'baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0' has 22 connections declared, but only 21 given [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:246]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_axi_gpio_status_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_axi_gpio_status_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_axi_gpio_status_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_axi_gpio_status_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_baseline_cpu_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_baseline_cpu_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_baseline_cpu_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_baseline_cpu_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_blk_mem_gen_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_blk_mem_gen_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'baseline_cpu_pynq_z1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:301]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'baseline_cpu_pynq_z1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:301]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'baseline_cpu_pynq_z1_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:301]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_processing_system7_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_processing_system7_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_rst_ps7_0_84M_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_rst_ps7_0_84M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_rst_ps7_0_84M_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_rst_ps7_0_84M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'baseline_cpu_pynq_z1_rst_ps7_0_84M_0' is unconnected for instance 'rst_ps7_0_84M' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:381]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'baseline_cpu_pynq_z1_rst_ps7_0_84M_0' is unconnected for instance 'rst_ps7_0_84M' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:381]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'baseline_cpu_pynq_z1_rst_ps7_0_84M_0' is unconnected for instance 'rst_ps7_0_84M' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:381]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_84M' of module 'baseline_cpu_pynq_z1_rst_ps7_0_84M_0' has 10 connections declared, but only 7 given [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:381]
+INFO: [Synth 8-6157] synthesizing module 'baseline_cpu_pynq_z1_smartconnect_0_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_smartconnect_0_0' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/.Xil/Vivado-291423-gondor/realtime/baseline_cpu_pynq_z1_smartconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S01_AXI_awready' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_wready' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_bid' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_bresp' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_buser' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_bvalid' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_arready' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_rid' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_rdata' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_rresp' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_rlast' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_ruser' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'S01_AXI_rvalid' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'baseline_cpu_pynq_z1_smartconnect_0_0' has 156 connections declared, but only 137 given [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:389]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/synth/baseline_cpu_pynq_z1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'baseline_cpu_pynq_z1_wrapper' (0#1) [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/hdl/baseline_cpu_pynq_z1_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2256.270 ; gain = 523.734 ; free physical = 8486 ; free virtual = 61304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2271.113 ; gain = 538.578 ; free physical = 8486 ; free virtual = 61304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2271.113 ; gain = 538.578 ; free physical = 8486 ; free virtual = 61304
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2271.113 ; gain = 0.000 ; free physical = 8486 ; free virtual = 61304
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/processing_system7_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/processing_system7_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/rst_ps7_0_84M'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/rst_ps7_0_84M'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/baseline_cpu_pynq_z1_smartconnect_0_0/baseline_cpu_pynq_z1_smartconnect_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/smartconnect_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/baseline_cpu_pynq_z1_smartconnect_0_0/baseline_cpu_pynq_z1_smartconnect_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/smartconnect_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_bram_ctrl_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_blk_mem_gen_0_0/baseline_cpu_pynq_z1_blk_mem_gen_0_0/baseline_cpu_pynq_z1_blk_mem_gen_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/blk_mem_gen_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_blk_mem_gen_0_0/baseline_cpu_pynq_z1_blk_mem_gen_0_0/baseline_cpu_pynq_z1_blk_mem_gen_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/blk_mem_gen_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_ctrl_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_ctrl_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_status_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_status_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_baseline_cpu_0_0/baseline_cpu_pynq_z1_baseline_cpu_0_0/baseline_cpu_pynq_z1_baseline_cpu_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/baseline_cpu_0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_baseline_cpu_0_0/baseline_cpu_pynq_z1_baseline_cpu_0_0/baseline_cpu_pynq_z1_baseline_cpu_0_0_in_context.xdc] for cell 'baseline_cpu_pynq_z1_i/baseline_cpu_0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2317.070 ; gain = 0.000 ; free physical = 8479 ; free virtual = 61297
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2317.105 ; gain = 0.000 ; free physical = 8479 ; free virtual = 61297
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'baseline_cpu_pynq_z1_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '11.875', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2317.105 ; gain = 584.570 ; free physical = 8476 ; free virtual = 61295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2325.074 ; gain = 592.539 ; free physical = 8476 ; free virtual = 61295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2325.074 ; gain = 592.539 ; free physical = 8476 ; free virtual = 61295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2325.074 ; gain = 592.539 ; free physical = 8476 ; free virtual = 61295
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2325.074 ; gain = 592.539 ; free physical = 8475 ; free virtual = 61299
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2421.074 ; gain = 688.539 ; free physical = 8393 ; free virtual = 61217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2422.074 ; gain = 689.539 ; free physical = 8393 ; free virtual = 61217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2432.090 ; gain = 699.555 ; free physical = 8386 ; free virtual = 61209
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------------+----------+
+|      |BlackBox name                               |Instances |
++------+--------------------------------------------+----------+
+|1     |baseline_cpu_pynq_z1_axi_bram_ctrl_0_0      |         1|
+|2     |baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0      |         1|
+|3     |baseline_cpu_pynq_z1_axi_gpio_status_0_0    |         1|
+|4     |baseline_cpu_pynq_z1_baseline_cpu_0_0       |         1|
+|5     |baseline_cpu_pynq_z1_blk_mem_gen_0_0        |         1|
+|6     |baseline_cpu_pynq_z1_processing_system7_0_0 |         1|
+|7     |baseline_cpu_pynq_z1_rst_ps7_0_84M_0        |         1|
+|8     |baseline_cpu_pynq_z1_smartconnect_0_0       |         1|
++------+--------------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |baseline_cpu_pynq_z1_axi_bram_ctrl_0      |     1|
+|2     |baseline_cpu_pynq_z1_axi_gpio_ctrl_0      |     1|
+|3     |baseline_cpu_pynq_z1_axi_gpio_status_0    |     1|
+|4     |baseline_cpu_pynq_z1_baseline_cpu_0       |     1|
+|5     |baseline_cpu_pynq_z1_blk_mem_gen_0        |     1|
+|6     |baseline_cpu_pynq_z1_processing_system7_0 |     1|
+|7     |baseline_cpu_pynq_z1_rst_ps7_0_84M        |     1|
+|8     |baseline_cpu_pynq_z1_smartconnect_0       |     1|
++------+------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.902 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2606.902 ; gain = 828.375 ; free physical = 8230 ; free virtual = 61054
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.910 ; gain = 874.367 ; free physical = 8230 ; free virtual = 61054
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.910 ; gain = 0.000 ; free physical = 8230 ; free virtual = 61053
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.910 ; gain = 0.000 ; free physical = 8379 ; free virtual = 61203
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e2693ca0
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2606.938 ; gain = 1043.199 ; free physical = 8379 ; free virtual = 61203
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1778.708; main = 1778.708; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2606.906; main = 2606.906; forked = 0.000
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/synth_1/baseline_cpu_pynq_z1_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file baseline_cpu_pynq_z1_wrapper_utilization_synth.rpt -pb baseline_cpu_pynq_z1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 19:11:04 2026...

@@ -1,0 +1,13 @@
++====================+===================+=======================================================================================================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                                                                                                                   |
++====================+===================+=======================================================================================================================================================+
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/pc_fu_274_reg[0]/D                                              |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/ap_CS_fsm_reg[3]/D                                                                                   |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/run_active_reg/D                                                                                           |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/ap_CS_fsm_reg[0]/D                                                                                   |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187_ap_start_reg_reg/D                                              |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/ap_loop_init_int_reg/D |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/ap_enable_reg_pp0_iter1_reg/D                                   |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/ap_done_cache_reg/D    |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/done_latched_reg/D                                                                                         |
++--------------------+-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+

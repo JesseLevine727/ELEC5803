@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Mar 14 17:32:11 2026
-# Process ID         : 600530
+# Start of session at: Wed Mar 18 18:13:02 2026
+# Process ID         : 212005
 # Current directory  : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1
 # Command line       : vivado -log prometheus_pynq_z1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prometheus_pynq_z1_wrapper.tcl
 # Log file           : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/prometheus_pynq_z1_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 2982.259 MHz
+# CPU Frequency      : 3619.435 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64918 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73508 MB
-# Available Virtual  : 56420 MB
+# Available Virtual  : 66334 MB
 #-----------------------------------------------------------
 source prometheus_pynq_z1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -31,38 +31,38 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 212051
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2175.309 ; gain = 440.742 ; free physical = 11836 ; free virtual = 52701
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2174.246 ; gain = 440.711 ; free physical = 9463 ; free virtual = 61886
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_wrapper' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/hdl/prometheus_pynq_z1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_axi_bram_ctrl_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_axi_bram_ctrl_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_axi_gpio_ctrl_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_axi_gpio_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_axi_gpio_ctrl_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_axi_gpio_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_axi_bram_ctrl_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_axi_bram_ctrl_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_axi_gpio_ctrl_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_axi_gpio_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_axi_gpio_ctrl_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_axi_gpio_ctrl_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'gpio_io_t' of module 'prometheus_pynq_z1_axi_gpio_ctrl_0_0' is unconnected for instance 'axi_gpio_ctrl_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:246]
 WARNING: [Synth 8-7023] instance 'axi_gpio_ctrl_0' of module 'prometheus_pynq_z1_axi_gpio_ctrl_0_0' has 22 connections declared, but only 21 given [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:246]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_axi_gpio_status_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_axi_gpio_status_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_axi_gpio_status_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_axi_gpio_status_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_blk_mem_gen_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_blk_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_blk_mem_gen_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_axi_gpio_status_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_axi_gpio_status_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_axi_gpio_status_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_axi_gpio_status_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_blk_mem_gen_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_blk_mem_gen_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_blk_mem_gen_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'prometheus_pynq_z1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:289]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'prometheus_pynq_z1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:289]
 WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'prometheus_pynq_z1_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:289]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_processing_system7_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_processing_system7_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_prometheus_soc_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_prometheus_soc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_prometheus_soc_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_prometheus_soc_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_rst_ps7_0_84M_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_rst_ps7_0_84M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_rst_ps7_0_84M_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_rst_ps7_0_84M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_processing_system7_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_processing_system7_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_prometheus_soc_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_prometheus_soc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_prometheus_soc_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_prometheus_soc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_rst_ps7_0_84M_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_rst_ps7_0_84M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_rst_ps7_0_84M_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_rst_ps7_0_84M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'prometheus_pynq_z1_rst_ps7_0_84M_0' is unconnected for instance 'rst_ps7_0_84M' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:381]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'prometheus_pynq_z1_rst_ps7_0_84M_0' is unconnected for instance 'rst_ps7_0_84M' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:381]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'prometheus_pynq_z1_rst_ps7_0_84M_0' is unconnected for instance 'rst_ps7_0_84M' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:381]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_84M' of module 'prometheus_pynq_z1_rst_ps7_0_84M_0' has 10 connections declared, but only 7 given [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:381]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_smartconnect_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_smartconnect_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-600530-gondor/realtime/prometheus_pynq_z1_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_smartconnect_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_smartconnect_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/.Xil/Vivado-212005-gondor/realtime/prometheus_pynq_z1_smartconnect_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'S01_AXI_awready' of module 'prometheus_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:389]
 WARNING: [Synth 8-7071] port 'S01_AXI_wready' of module 'prometheus_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:389]
 WARNING: [Synth 8-7071] port 'S01_AXI_bid' of module 'prometheus_pynq_z1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:389]
@@ -86,18 +86,18 @@ WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'prometheus_pynq_z1_
 INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/synth/prometheus_pynq_z1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_wrapper' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/hdl/prometheus_pynq_z1_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2257.246 ; gain = 522.680 ; free physical = 11724 ; free virtual = 52591
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2257.184 ; gain = 523.648 ; free physical = 9368 ; free virtual = 61792
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2283.059 ; gain = 548.492 ; free physical = 11724 ; free virtual = 52591
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2272.027 ; gain = 538.492 ; free physical = 9368 ; free virtual = 61792
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2283.059 ; gain = 548.492 ; free physical = 11724 ; free virtual = 52591
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2272.027 ; gain = 538.492 ; free physical = 9368 ; free virtual = 61792
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2283.059 ; gain = 0.000 ; free physical = 11724 ; free virtual = 52591
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2272.027 ; gain = 0.000 ; free physical = 9368 ; free virtual = 61792
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -122,31 +122,30 @@ Parsing XDC File [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq
 Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2326.047 ; gain = 0.000 ; free physical = 11728 ; free virtual = 52595
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2315.016 ; gain = 0.000 ; free physical = 9365 ; free virtual = 61789
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2326.082 ; gain = 0.000 ; free physical = 11728 ; free virtual = 52595
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2315.051 ; gain = 0.000 ; free physical = 9365 ; free virtual = 61789
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'prometheus_pynq_z1_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '11.875', this can lead to different synthesis results.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2326.082 ; gain = 591.516 ; free physical = 11739 ; free virtual = 52605
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2315.051 ; gain = 581.516 ; free physical = 9383 ; free virtual = 61807
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2334.051 ; gain = 599.484 ; free physical = 11739 ; free virtual = 52605
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2323.020 ; gain = 589.484 ; free physical = 9383 ; free virtual = 61807
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2334.051 ; gain = 599.484 ; free physical = 11739 ; free virtual = 52605
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2323.020 ; gain = 589.484 ; free physical = 9383 ; free virtual = 61807
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2334.051 ; gain = 599.484 ; free physical = 11738 ; free virtual = 52606
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2323.020 ; gain = 589.484 ; free physical = 9381 ; free virtual = 61806
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -164,36 +163,30 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Start Cross Boundary Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2334.051 ; gain = 599.484 ; free physical = 11738 ; free virtual = 52610
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Area Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2334.051 ; gain = 599.484 ; free physical = 11738 ; free virtual = 52610
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2323.020 ; gain = 589.484 ; free physical = 9381 ; free virtual = 61810
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2422.051 ; gain = 687.484 ; free physical = 11658 ; free virtual = 52530
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2423.020 ; gain = 689.484 ; free physical = 9290 ; free virtual = 61720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2422.051 ; gain = 687.484 ; free physical = 11658 ; free virtual = 52530
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2424.020 ; gain = 690.484 ; free physical = 9290 ; free virtual = 61720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2433.066 ; gain = 698.500 ; free physical = 11641 ; free virtual = 52514
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2434.035 ; gain = 700.500 ; free physical = 9283 ; free virtual = 61712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -211,37 +204,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -275,26 +268,26 @@ Report Cell Usage:
 |8     |prometheus_pynq_z1_smartconnect_0       |     1|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.848 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2606.879 ; gain = 829.289 ; free physical = 11513 ; free virtual = 52385
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2606.879 ; gain = 872.312 ; free physical = 11513 ; free virtual = 52385
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2607.848 ; gain = 831.289 ; free physical = 9142 ; free virtual = 61572
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2607.855 ; gain = 874.312 ; free physical = 9142 ; free virtual = 61572
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.879 ; gain = 0.000 ; free physical = 11513 ; free virtual = 52385
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2607.855 ; gain = 0.000 ; free physical = 9253 ; free virtual = 61682
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.879 ; gain = 0.000 ; free physical = 11500 ; free virtual = 52372
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2607.855 ; gain = 0.000 ; free physical = 9289 ; free virtual = 61719
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 93d59f8f
+Synth Design complete | Checksum: 19f4583
 INFO: [Common 17-83] Releasing license: Synthesis
-36 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+35 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2606.914 ; gain = 1037.238 ; free physical = 11499 ; free virtual = 52371
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1781.617; main = 1781.617; forked = 0.000
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2606.883; main = 2606.883; forked = 0.000
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2607.883 ; gain = 1045.145 ; free physical = 9289 ; free virtual = 61719
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1778.283; main = 1778.283; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2607.852; main = 2607.852; forked = 0.000
 INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/synth_1/prometheus_pynq_z1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file prometheus_pynq_z1_wrapper_utilization_synth.rpt -pb prometheus_pynq_z1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 14 17:32:25 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 18:13:17 2026...

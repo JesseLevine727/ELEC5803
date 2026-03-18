@@ -5,7 +5,8 @@
 // This wrapper does three things:
 // 1. Converts the raw HLS ap_memory port into a standard BRAM controller port.
 // 2. Latches the single-cycle ap_done pulse so software can poll it safely.
-// 3. Generates a one-cycle ap_start pulse from a level-driven GPIO control bit.
+// 3. Measures end-to-end run latency in FPGA clock cycles.
+// 4. Generates a one-cycle ap_start pulse from a level-driven GPIO control bit.
 
 module prometheus_soc_wrapper (
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
@@ -16,8 +17,8 @@ module prometheus_soc_wrapper (
     (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst, POLARITY ACTIVE_HIGH" *)
     input  wire        ap_rst,
 
-    input  wire        ctrl_start,
-    output wire [3:0]  status,
+    input  wire         ctrl_start,
+    output wire [31:0]  status,
 
     (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORT ADDR" *)
     (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORT, MASTER_TYPE BRAM_CTRL, MEM_SIZE 262144, MEM_WIDTH 128, READ_WRITE_MODE READ_WRITE" *)
@@ -45,8 +46,11 @@ module prometheus_soc_wrapper (
   wire        hls_ap_idle;
   wire        hls_ap_ready;
 
-  reg ctrl_start_d = 1'b0;
-  reg done_latched = 1'b0;
+  reg         ctrl_start_d = 1'b0;
+  reg         done_latched = 1'b0;
+  reg         run_active   = 1'b0;
+  reg [27:0]  cycle_count  = 28'd0;
+  reg [27:0]  cycle_latched = 28'd0;
 
   wire start_pulse = ctrl_start & ~ctrl_start_d;
 
@@ -54,13 +58,24 @@ module prometheus_soc_wrapper (
     if (ap_rst) begin
       ctrl_start_d <= 1'b0;
       done_latched <= 1'b0;
+      run_active <= 1'b0;
+      cycle_count <= 28'd0;
+      cycle_latched <= 28'd0;
     end else begin
       ctrl_start_d <= ctrl_start;
 
       if (start_pulse) begin
         done_latched <= 1'b0;
+        run_active <= 1'b1;
+        cycle_count <= 28'd0;
+        cycle_latched <= 28'd0;
       end else if (hls_ap_done) begin
         done_latched <= 1'b1;
+        run_active <= 1'b0;
+        cycle_count <= cycle_count + {{27{1'b0}}, 1'b1};
+        cycle_latched <= cycle_count + {{27{1'b0}}, 1'b1};
+      end else if (run_active) begin
+        cycle_count <= cycle_count + {{27{1'b0}}, 1'b1};
       end
     end
   end
@@ -69,6 +84,7 @@ module prometheus_soc_wrapper (
   assign status[1] = hls_ap_idle;
   assign status[2] = hls_ap_ready;
   assign status[3] = ~hls_ap_idle;
+  assign status[31:4] = run_active ? cycle_count : cycle_latched;
 
   assign bram_addr = {14'd0, hls_mem_address0, 4'b0000};
   assign bram_clk  = ap_clk;

@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="70" Path="/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="b821763f62c14f6faa25a8586eeb2031"/>
+    <Option Name="Id" Val="572aa31c144643cca07d3ae290500b8f"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -122,15 +122,15 @@
           <Proxy FileSetName="prometheus_pynq_z1_smartconnect_0_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PPRDIR/ip_repo/prometheus_soc_wrapper_1_0/component.xml">
-        <FileInfo SFType="IPXACT"/>
-      </File>
       <File Path="$PGENDIR/sources_1/bd/prometheus_pynq_z1/hdl/prometheus_pynq_z1_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/prometheus_soc_wrapper_1_0/component.xml">
+        <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
@@ -168,12 +168,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="prometheus_pynq_z1_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_processing_system7_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_processing_system7_0_0">
-      <Config>
-        <Option Name="TopModule" Val="prometheus_pynq_z1_processing_system7_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="prometheus_pynq_z1_axi_gpio_status_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_axi_gpio_status_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_axi_gpio_status_0_0">
       <Config>
         <Option Name="TopModule" Val="prometheus_pynq_z1_axi_gpio_status_0_0"/>
@@ -183,12 +177,6 @@
     <FileSet Name="prometheus_pynq_z1_axi_gpio_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_axi_gpio_ctrl_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_axi_gpio_ctrl_0_0">
       <Config>
         <Option Name="TopModule" Val="prometheus_pynq_z1_axi_gpio_ctrl_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="prometheus_pynq_z1_prometheus_soc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_prometheus_soc_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_prometheus_soc_0_0">
-      <Config>
-        <Option Name="TopModule" Val="prometheus_pynq_z1_prometheus_soc_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -204,6 +192,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="prometheus_pynq_z1_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_processing_system7_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_processing_system7_0_0">
+      <Config>
+        <Option Name="TopModule" Val="prometheus_pynq_z1_processing_system7_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="prometheus_pynq_z1_smartconnect_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_smartconnect_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_smartconnect_0_0">
       <Config>
         <Option Name="TopModule" Val="prometheus_pynq_z1_smartconnect_0_0"/>
@@ -213,6 +207,12 @@
     <FileSet Name="prometheus_pynq_z1_rst_ps7_0_84M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_rst_ps7_0_84M_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_rst_ps7_0_84M_0">
       <Config>
         <Option Name="TopModule" Val="prometheus_pynq_z1_rst_ps7_0_84M_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="prometheus_pynq_z1_prometheus_soc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prometheus_pynq_z1_prometheus_soc_0_0" RelGenDir="$PGENDIR/prometheus_pynq_z1_prometheus_soc_0_0">
+      <Config>
+        <Option Name="TopModule" Val="prometheus_pynq_z1_prometheus_soc_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -249,19 +249,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="prometheus_pynq_z1_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_processing_system7_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="prometheus_pynq_z1_axi_gpio_status_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_axi_gpio_status_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_axi_gpio_status_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_status_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -271,17 +263,9 @@
     </Run>
     <Run Id="prometheus_pynq_z1_axi_gpio_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_axi_gpio_ctrl_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_axi_gpio_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_axi_gpio_ctrl_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_ctrl_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_ctrl_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="prometheus_pynq_z1_prometheus_soc_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_prometheus_soc_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_prometheus_soc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_prometheus_soc_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -291,7 +275,9 @@
     </Run>
     <Run Id="prometheus_pynq_z1_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_blk_mem_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_blk_mem_gen_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -301,7 +287,21 @@
     </Run>
     <Run Id="prometheus_pynq_z1_axi_bram_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_axi_bram_ctrl_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_axi_bram_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_bram_ctrl_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_bram_ctrl_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="prometheus_pynq_z1_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_processing_system7_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -311,7 +311,9 @@
     </Run>
     <Run Id="prometheus_pynq_z1_smartconnect_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_smartconnect_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_smartconnect_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_smartconnect_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_smartconnect_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_smartconnect_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -321,7 +323,21 @@
     </Run>
     <Run Id="prometheus_pynq_z1_rst_ps7_0_84M_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_rst_ps7_0_84M_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_rst_ps7_0_84M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_rst_ps7_0_84M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_rst_ps7_0_84M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_rst_ps7_0_84M_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="prometheus_pynq_z1_prometheus_soc_0_0_synth_1" Type="Ft3:Synth" SrcSet="prometheus_pynq_z1_prometheus_soc_0_0" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_prometheus_soc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prometheus_pynq_z1_prometheus_soc_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -347,26 +363,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="prometheus_pynq_z1_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_processing_system7_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="prometheus_pynq_z1_axi_gpio_status_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_axi_gpio_status_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_axi_gpio_status_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_status_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_status_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -383,24 +384,9 @@
     </Run>
     <Run Id="prometheus_pynq_z1_axi_gpio_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_axi_gpio_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_axi_gpio_ctrl_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_ctrl_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_gpio_ctrl_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="prometheus_pynq_z1_prometheus_soc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_prometheus_soc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_prometheus_soc_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -417,7 +403,9 @@
     </Run>
     <Run Id="prometheus_pynq_z1_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_blk_mem_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_blk_mem_gen_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -434,7 +422,28 @@
     </Run>
     <Run Id="prometheus_pynq_z1_axi_bram_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_axi_bram_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_bram_ctrl_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_axi_bram_ctrl_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="prometheus_pynq_z1_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_processing_system7_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_processing_system7_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -451,7 +460,9 @@
     </Run>
     <Run Id="prometheus_pynq_z1_smartconnect_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_smartconnect_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_smartconnect_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_smartconnect_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_smartconnect_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -468,7 +479,28 @@
     </Run>
     <Run Id="prometheus_pynq_z1_rst_ps7_0_84M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_rst_ps7_0_84M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_rst_ps7_0_84M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_rst_ps7_0_84M_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_rst_ps7_0_84M_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="prometheus_pynq_z1_prometheus_soc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="prometheus_pynq_z1_prometheus_soc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="prometheus_pynq_z1_prometheus_soc_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/prometheus_pynq_z1_prometheus_soc_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

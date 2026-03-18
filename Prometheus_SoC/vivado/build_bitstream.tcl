@@ -4,6 +4,8 @@ set proj_name prometheus_soc_pynq_z1
 set bd_name prometheus_pynq_z1
 set xpr_path [file join $build_dir ${proj_name}.xpr]
 set bd_path [file join $build_dir ${proj_name}.srcs sources_1 bd $bd_name ${bd_name}.bd]
+set impl_dir [file join $build_dir ${proj_name}.runs impl_1]
+set overlay_dir [file join $build_dir overlay]
 
 if {![file exists $xpr_path]} {
   error "Project not found: $xpr_path. Run create_pynq_z1_project.tcl first."
@@ -23,4 +25,12 @@ update_compile_order -fileset sources_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 
+file mkdir $overlay_dir
+file copy -force [file join $impl_dir ${bd_name}_wrapper.bit] [file join $overlay_dir ${bd_name}.bit]
+file copy -force \
+  [file join $build_dir ${proj_name}.gen sources_1 bd $bd_name hw_handoff ${bd_name}.hwh] \
+  [file join $overlay_dir ${bd_name}.hwh]
+
 puts "Implementation status: [get_property STATUS [get_runs impl_1]]"
+puts "Overlay bitstream: [file join $overlay_dir ${bd_name}.bit]"
+puts "Overlay hardware handoff: [file join $overlay_dir ${bd_name}.hwh]"

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sat Mar 14 17:32:09 2026
+| Date         : Wed Mar 18 18:12:30 2026
 | Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file prometheus_pynq_z1_smartconnect_0_0_utilization_synth.rpt -pb prometheus_pynq_z1_smartconnect_0_0_utilization_synth.pb
 | Design       : prometheus_pynq_z1_smartconnect_0_0
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 6549 |     0 |          0 |     53200 | 12.31 |
-|   LUT as Logic             | 4955 |     0 |          0 |     53200 |  9.31 |
+| Slice LUTs*                | 6585 |     0 |          0 |     53200 | 12.38 |
+|   LUT as Logic             | 4991 |     0 |          0 |     53200 |  9.38 |
 |   LUT as Memory            | 1594 |     0 |          0 |     17400 |  9.16 |
 |     LUT as Distributed RAM | 1188 |     0 |            |           |       |
 |     LUT as Shift Register  |  406 |     0 |            |           |       |
-| Slice Registers            | 8166 |     0 |          0 |    106400 |  7.67 |
-|   Register as Flip Flop    | 8166 |     0 |          0 |    106400 |  7.67 |
+| Slice Registers            | 8162 |     0 |          0 |    106400 |  7.67 |
+|   Register as Flip Flop    | 8162 |     0 |          0 |    106400 |  7.67 |
 |   Register as Latch        |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     13300 |  0.00 |
@@ -62,7 +62,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 138   |          Yes |           - |        Reset |
 | 307   |          Yes |         Set |            - |
-| 7721  |          Yes |       Reset |            - |
+| 7717  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,14 +151,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 7721 |        Flop & Latch |
+| FDRE     | 7717 |        Flop & Latch |
 | LUT6     | 1916 |                 LUT |
 | RAMD32   | 1772 |  Distributed Memory |
-| LUT3     | 1679 |                 LUT |
-| LUT4     |  998 |                 LUT |
-| LUT5     |  969 |                 LUT |
+| LUT3     | 1599 |                 LUT |
+| LUT5     | 1041 |                 LUT |
+| LUT4     | 1002 |                 LUT |
 | RAMS32   |  584 |  Distributed Memory |
-| LUT2     |  443 |                 LUT |
+| LUT2     |  446 |                 LUT |
 | LUT1     |  320 |                 LUT |
 | FDSE     |  307 |        Flop & Latch |
 | SRL16E   |  223 |  Distributed Memory |

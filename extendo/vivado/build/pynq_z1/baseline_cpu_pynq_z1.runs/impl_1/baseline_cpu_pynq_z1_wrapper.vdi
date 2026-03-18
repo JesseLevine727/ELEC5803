@@ -1,0 +1,1366 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Mar 18 19:11:25 2026
+# Process ID         : 291752
+# Current directory  : /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1
+# Command line       : vivado -log baseline_cpu_pynq_z1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source baseline_cpu_pynq_z1_wrapper.tcl -notrace
+# Log file           : /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper.vdi
+# Journal file       : /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/vivado.jou
+# Running On         : gondor
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
+# CPU Frequency      : 5696.288 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 64918 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 73508 MB
+# Available Virtual  : 65814 MB
+#-----------------------------------------------------------
+source baseline_cpu_pynq_z1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/elfo/Documents/2025.1/Vivado/data/ip'.
+Command: link_design -top baseline_cpu_pynq_z1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0/baseline_cpu_pynq_z1_axi_bram_ctrl_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/axi_gpio_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/axi_gpio_status_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_baseline_cpu_0_0/baseline_cpu_pynq_z1_baseline_cpu_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/baseline_cpu_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_blk_mem_gen_0_0/baseline_cpu_pynq_z1_blk_mem_gen_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0.dcp' for cell 'baseline_cpu_pynq_z1_i/rst_ps7_0_84M'
+INFO: [Project 1-454] Reading design checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/baseline_cpu_pynq_z1_smartconnect_0_0.dcp' for cell 'baseline_cpu_pynq_z1_i/smartconnect_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1807.051 ; gain = 0.000 ; free physical = 9252 ; free virtual = 62070
+INFO: [Netlist 29-17] Analyzing 490 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0.xdc] for cell 'baseline_cpu_pynq_z1_i/processing_system7_0/inst'
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.356250 which will be rounded to 0.356 to ensure it is an integer multiple of 1 picosecond [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0.xdc:21]
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_processing_system7_0_0/baseline_cpu_pynq_z1_processing_system7_0_0.xdc] for cell 'baseline_cpu_pynq_z1_i/processing_system7_0/inst'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/rst_ps7_0_84M/U0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_rst_ps7_0_84M_0/baseline_cpu_pynq_z1_rst_ps7_0_84M_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/rst_ps7_0_84M/U0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/bd_0/ip/ip_1/bd_6868_psr_aclk_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/bd_0/ip/ip_1/bd_6868_psr_aclk_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/smartconnect.xdc] for cell 'baseline_cpu_pynq_z1_i/smartconnect_0/inst'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_smartconnect_0_0/smartconnect.xdc] for cell 'baseline_cpu_pynq_z1_i/smartconnect_0/inst'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_ctrl_0/U0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0/baseline_cpu_pynq_z1_axi_gpio_ctrl_0_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_ctrl_0/U0'
+Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_status_0/U0'
+Finished Parsing XDC File [/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.gen/sources_1/bd/baseline_cpu_pynq_z1/ip/baseline_cpu_pynq_z1_axi_gpio_status_0_0/baseline_cpu_pynq_z1_axi_gpio_status_0_0_board.xdc] for cell 'baseline_cpu_pynq_z1_i/axi_gpio_status_0/U0'
+INFO: [Project 1-1714] 84 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'baseline_cpu_pynq_z1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2581.172 ; gain = 0.000 ; free physical = 8675 ; free virtual = 61493
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 156 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 146 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances
+
+20 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2581.207 ; gain = 1015.664 ; free physical = 8675 ; free virtual = 61493
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2606.953 ; gain = 25.746 ; free physical = 8620 ; free virtual = 61438
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2606.953 ; gain = 0.000 ; free physical = 8604 ; free virtual = 61422
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8272 ; free virtual = 61090
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8272 ; free virtual = 61090
+Phase 1 Initialization | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8272 ; free virtual = 61090
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8272 ; free virtual = 61090
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+Phase 2 Timer Update And Timing Data Collection | Checksum: 64a06670
+
+Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 26 inverters resulting in an inversion of 522 pins
+INFO: [Opt 31-138] Pushed 21 inverter(s) to 158 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 156dfee3f
+
+Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+Retarget | Checksum: 156dfee3f
+INFO: [Opt 31-389] Phase Retarget created 26 cells and removed 135 cells
+INFO: [Opt 31-1021] In phase Retarget, 80 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+Phase 4 Constant propagation | Checksum: 1711cad77
+
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+Constant propagation | Checksum: 1711cad77
+INFO: [Opt 31-389] Phase Constant propagation created 139 cells and removed 356 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 80 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+Phase 5 Sweep | Checksum: 1552c12a2
+
+Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2915.852 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+Sweep | Checksum: 1552c12a2
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1346 cells
+INFO: [Opt 31-1021] In phase Sweep, 100 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 1552c12a2
+
+Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+BUFG optimization | Checksum: 1552c12a2
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1552c12a2
+
+Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+Shift Register Optimization | Checksum: 1552c12a2
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 1315c1df1
+
+Time (s): cpu = 00:00:00.97 ; elapsed = 00:00:00.7 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+Post Processing Netlist | Checksum: 1315c1df1
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 80 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 11414db2e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.8 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2947.867 ; gain = 0.000 ; free physical = 8265 ; free virtual = 61083
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 11414db2e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+Phase 9 Finalization | Checksum: 11414db2e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              26  |             135  |                                             80  |
+|  Constant propagation         |             139  |             356  |                                             80  |
+|  Sweep                        |               0  |            1346  |                                            100  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             80  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 11414db2e
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2947.867 ; gain = 32.016 ; free physical = 8265 ; free virtual = 61083
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 64 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 32 newly gated: 0 Total Ports: 128
+Number of Flops added for Enable Generation: 3
+
+Ending PowerOpt Patch Enables Task | Checksum: 1b2a4103d
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8015 ; free virtual = 60834
+Ending Power Optimization Task | Checksum: 1b2a4103d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3261.727 ; gain = 313.859 ; free physical = 8015 ; free virtual = 60834
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 149e17136
+
+Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.5 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60834
+Ending Final Cleanup Task | Checksum: 149e17136
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60834
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60834
+Ending Netlist Obfuscation Task | Checksum: 149e17136
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60834
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3261.727 ; gain = 680.520 ; free physical = 8016 ; free virtual = 60834
+INFO: [Vivado 12-24828] Executing command : report_drc -file baseline_cpu_pynq_z1_wrapper_drc_opted.rpt -pb baseline_cpu_pynq_z1_wrapper_drc_opted.pb -rpx baseline_cpu_pynq_z1_wrapper_drc_opted.rpx
+Command: report_drc -file baseline_cpu_pynq_z1_wrapper_drc_opted.rpt -pb baseline_cpu_pynq_z1_wrapper_drc_opted.pb -rpx baseline_cpu_pynq_z1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60835
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60835
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8012 ; free virtual = 60832
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8012 ; free virtual = 60832
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8012 ; free virtual = 60832
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8011 ; free virtual = 60832
+Write Physdb Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 8011 ; free virtual = 60832
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 7991 ; free virtual = 60813
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 9ff31e03
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 7991 ; free virtual = 60813
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 7991 ; free virtual = 60813
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 85542844
+
+Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.56 . Memory (MB): peak = 3261.727 ; gain = 0.000 ; free physical = 7992 ; free virtual = 60815
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 151138f31
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7992 ; free virtual = 60815
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 151138f31
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7992 ; free virtual = 60815
+Phase 1 Placer Initialization | Checksum: 151138f31
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7992 ; free virtual = 60815
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 163dbf0e8
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8033 ; free virtual = 60856
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1dbb53604
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8033 ; free virtual = 60856
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1dbb53604
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8035 ; free virtual = 60857
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1e3d546c7
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8034 ; free virtual = 60857
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 1dd07d3da
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8034 ; free virtual = 60857
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 96 LUTNM shape to break, 538 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 28, two critical 68, total 96, new lutff created 6
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 313 nets or LUTs. Breaked 96 LUTs, combined 217 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8035 ; free virtual = 60857
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           96  |            217  |                   313  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           96  |            217  |                   313  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2297c4715
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8033 ; free virtual = 60856
+Phase 2.5 Global Place Phase2 | Checksum: 2b3b64e66
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8029 ; free virtual = 60852
+Phase 2 Global Placement | Checksum: 2b3b64e66
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8029 ; free virtual = 60852
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 211b0e260
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8029 ; free virtual = 60851
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 172260d9a
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8028 ; free virtual = 60851
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 20346f408
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8028 ; free virtual = 60851
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 23d149897
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8028 ; free virtual = 60851
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1ff0242b7
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7982 ; free virtual = 60805
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 13d8414a1
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7980 ; free virtual = 60803
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1020afeab
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7980 ; free virtual = 60803
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 12c5e5bfa
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:17 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7980 ; free virtual = 60803
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1fa0e4d51
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7974 ; free virtual = 60797
+Phase 3 Detail Placement | Checksum: 1fa0e4d51
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7974 ; free virtual = 60797
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1bb70c7df
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.106 | TNS=-6209.030 |
+Phase 1 Physical Synthesis Initialization | Checksum: 163ec0dbf
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7976 ; free virtual = 60799
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1f424dd80
+
+Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7976 ; free virtual = 60799
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1bb70c7df
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 7976 ; free virtual = 60799
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-3.584. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 14c0ff0ce
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+Phase 4.1 Post Commit Optimization | Checksum: 14c0ff0ce
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 14c0ff0ce
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                4x4|                8x8|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 14c0ff0ce
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+Phase 4.3 Placer Reporting | Checksum: 14c0ff0ce
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8023 ; free virtual = 60846
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 16e24631b
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+Ending Placer Task | Checksum: 121a74b1d
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+95 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 3273.816 ; gain = 12.090 ; free physical = 8023 ; free virtual = 60846
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file baseline_cpu_pynq_z1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8004 ; free virtual = 60827
+INFO: [Vivado 12-24828] Executing command : report_io -file baseline_cpu_pynq_z1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8002 ; free virtual = 60826
+INFO: [Vivado 12-24828] Executing command : report_utilization -file baseline_cpu_pynq_z1_wrapper_utilization_placed.rpt -pb baseline_cpu_pynq_z1_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7996 ; free virtual = 60823
+Wrote PlaceDB: Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7977 ; free virtual = 60819
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7977 ; free virtual = 60819
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7977 ; free virtual = 60819
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7977 ; free virtual = 60820
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7977 ; free virtual = 60821
+Write Physdb Complete: Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.3 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7977 ; free virtual = 60821
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.36 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7984 ; free virtual = 60813
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.38s |  WALL: 0.39s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7984 ; free virtual = 60813
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.584 | TNS=-4173.011 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1325dff20
+
+Time (s): cpu = 00:00:00.9 ; elapsed = 00:00:00.57 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7987 ; free virtual = 60816
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.584 | TNS=-4173.011 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 1325dff20
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.63 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7987 ; free virtual = 60816
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.584 | TNS=-4173.011 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.486 | TNS=-4161.869 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[9]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.466 | TNS=-4149.448 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/cascadelatb_tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[13]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.463 | TNS=-4135.589 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[2]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[4]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.454 | TNS=-4124.644 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/cascadelatb_tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[4]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[6]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.450 | TNS=-4113.377 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[0]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[2]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.397 | TNS=-4097.601 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_T_i_2_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_en. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.369 | TNS=-4095.564 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/ENB. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_T_i_2__1_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_en. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.368 | TNS=-4087.678 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[6]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[8]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.366 | TNS=-4085.628 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[1]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.365 | TNS=-4068.219 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[13]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.351 | TNS=-4063.450 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[9]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.335 | TNS=-4047.739 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[12]_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_we[0]_INST_0_i_1
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[12]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.323 | TNS=-4025.851 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_comp_1.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_15_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.313 | TNS=-4015.035 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[6]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[8]_INST_0_comp_1.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_15_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.311 | TNS=-4016.251 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[12]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[14]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.284 | TNS=-4014.267 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663[0]_i_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-242] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_0. Rewired (signal push) baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[31]_3[3] to 1 loads. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.279 | TNS=-3959.669 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_15_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_15_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/O[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_12_sn_1. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_12_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.275 | TNS=-3954.677 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_12_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_12_sn_1. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[12]_i_1_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.199 | TNS=-3859.828 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_8_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_8_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_13_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.173 | TNS=-3839.526 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_7_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.167 | TNS=-3832.615 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.159 | TNS=-3823.110 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_14_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_14_sn_1. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_1_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.144 | TNS=-3818.431 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_4_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_40
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.131 | TNS=-3812.203 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_8_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.078 | TNS=-3741.176 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_7_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[5]_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_we[0]_INST_0_i_2
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[5]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.071 | TNS=-3735.380 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_8_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_8_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_8_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.046 | TNS=-3706.124 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_8_sn_1_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_8_sn_1_repN. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[1]_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.032 | TNS=-3672.698 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.012 | TNS=-3663.914 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_12_sn_1. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[12]_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[31]_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.008 | TNS=-3636.781 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.008 | TNS=-3632.035 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[5]_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_we[0]_INST_0_i_2
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[5]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.989 | TNS=-3621.596 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[14]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.972 | TNS=-3608.168 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_8_sn_1_repN. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[1]_i_1_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln43_reg_5604_reg[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.941 | TNS=-3552.905 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.940 | TNS=-3547.240 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_7_sn_1. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[0]_i_1_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[5]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.931 | TNS=-3539.464 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_9_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_9_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.928 | TNS=-3536.694 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_3_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_32_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_86_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.919 | TNS=-3532.605 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_4_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_35
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.908 | TNS=-3528.248 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_3_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_28
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.907 | TNS=-3527.853 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_8_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_8_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.902 | TNS=-3525.873 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.900 | TNS=-3524.385 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_8_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_8_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_5_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.899 | TNS=-3502.529 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_21_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.894 | TNS=-3501.429 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_6_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_6_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.893 | TNS=-3501.034 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_4_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_40_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.892 | TNS=-3500.638 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 7 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.875 | TNS=-3493.474 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_2_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.873 | TNS=-3477.795 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.858 | TNS=-3471.855 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_22. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_22. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_12_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.857 | TNS=-3471.460 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_4_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.853 | TNS=-3440.901 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_4_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_4_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.845 | TNS=-3433.838 |
+INFO: [Physopt 32-81] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_1_sn_1. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_1_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.842 | TNS=-3434.352 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_114_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_182_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.839 | TNS=-3433.164 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_1_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.820 | TNS=-3424.560 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_11_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.815 | TNS=-3395.900 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_87_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.814 | TNS=-3394.208 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_4_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_22
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.795 | TNS=-3385.104 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_3_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_28
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.788 | TNS=-3382.332 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_2_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_25
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.787 | TNS=-3381.526 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_2_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_31_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_84_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.786 | TNS=-3380.298 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_21_n_0. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_21_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.784 | TNS=-3379.309 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_23_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_5_sn_1. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_5_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.779 | TNS=-3350.203 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_34_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_34
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_34_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.776 | TNS=-3347.433 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_23. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_23. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_9_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_29_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.771 | TNS=-3345.453 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_84_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_158_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_158
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_158_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.768 | TNS=-3344.266 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_86_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_86_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_86_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.767 | TNS=-3343.341 |
+INFO: [Physopt 32-81] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_17_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.764 | TNS=-3345.988 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_33_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_33_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.762 | TNS=-3345.196 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.759 | TNS=-3344.008 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.757 | TNS=-3343.216 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_5_sn_1_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[2].  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[4]_INST_0_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.756 | TNS=-3339.188 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11].  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[13]_INST_0_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.741 | TNS=-3327.681 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[4].  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[6]_INST_0_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.734 | TNS=-3323.748 |
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[12].  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[14]_INST_0_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.730 | TNS=-3328.425 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.721 | TNS=-3309.097 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.715 | TNS=-3298.793 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.690 | TNS=-3279.337 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.678 | TNS=-3261.865 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.674 | TNS=-3258.217 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.661 | TNS=-3243.049 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_20[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[6].  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[8]_INST_0_comp_1
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.658 | TNS=-3244.365 |
+INFO: [Physopt 32-710] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_we[0]. Critical path length was reduced through logic transformation on cell baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_we[0]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[12]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.658 | TNS=-3231.404 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/cascadelatb_tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663[0]_i_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_20[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.657 | TNS=-3231.008 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.652 | TNS=-3229.028 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.650 | TNS=-3226.724 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.644 | TNS=-3220.540 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_23_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln43_reg_5604_reg[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.643 | TNS=-3196.004 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_23. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_30_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.643 | TNS=-3196.004 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_4_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.642 | TNS=-3207.198 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/mul_32ns_32ns_64_1_1_U32/bram_dout[19][2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_18_sn_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.631 | TNS=-3203.546 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[3]_INST_0_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_n_0.  Re-placed instance baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_comp
+INFO: [Physopt 32-735] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/tmp_product_i_115_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.629 | TNS=-3202.594 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_4_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_1_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.629 | TNS=-3202.594 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+Phase 3 Critical Path Optimization | Checksum: 18f7e23c7
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:16 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.629 | TNS=-3202.594 |
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/cascadelatb_tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663[0]_i_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_20[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[17]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[15]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[11]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_4_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_1_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/cascadelatb_tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/bram_addr[17]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663[0]_i_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/or_ln213_reg_5663_reg[0]_i_4_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout[19]_20[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[7]_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_4_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/imm_reg_805[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_dout_1_sn_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/flow_control_loop_pipe_sequential_init_U/bram_addr[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net baseline_cpu_pynq_z1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.629 | TNS=-3202.594 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+Phase 4 Critical Path Optimization | Checksum: 18f7e23c7
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:17 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-2.629 | TNS=-3202.594 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.955  |        970.417  |            6  |              0  |                    92  |           0  |           2  |  00:00:16  |
+|  Total          |          0.955  |        970.417  |            6  |              0  |                    92  |           0  |           3  |  00:00:16  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+Ending Physical Synthesis Task | Checksum: 13426f5dd
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:17 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+INFO: [Common 17-83] Releasing license: Implementation
+492 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:01:05 ; elapsed = 00:00:18 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8020 ; free virtual = 60850
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 8016 ; free virtual = 60850
+Wrote PlaceDB: Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.28 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7982 ; free virtual = 60832
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7982 ; free virtual = 60832
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7982 ; free virtual = 60832
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7982 ; free virtual = 60833
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7982 ; free virtual = 60834
+Write Physdb Complete: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.32 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7982 ; free virtual = 60834
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 5484b992 ConstDB: 0 ShapeSum: 59b7d9e2 RouteDB: 15f972f0
+Post Restoration Checksum: NetGraph: cb87acb7 | NumContArr: 5fb67a4c | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2b0901c3d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7966 ; free virtual = 60802
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2b0901c3d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7966 ; free virtual = 60802
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2b0901c3d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3273.816 ; gain = 0.000 ; free physical = 7966 ; free virtual = 60802
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 2befb722a
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3275.996 ; gain = 2.180 ; free physical = 7918 ; free virtual = 60754
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.324 | TNS=-2652.077| WHS=-0.312 | THS=-354.292|
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 2d3b9e235
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 3300.059 ; gain = 26.242 ; free physical = 7914 ; free virtual = 60749
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 13067
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 13067
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 2b55c86cb
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 3300.059 ; gain = 26.242 ; free physical = 7914 ; free virtual = 60749
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 2b55c86cb
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 3300.059 ; gain = 26.242 ; free physical = 7914 ; free virtual = 60749
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 161198882
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:16 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7238 ; free virtual = 60074
+Phase 4 Initial Routing | Checksum: 161198882
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:16 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7238 ; free virtual = 60074
+INFO: [Route 35-580] Design has 9 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+===================+==========================================================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                                                                      |
++====================+===================+==========================================================================================================+
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187/pc_fu_274_reg[0]/D |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/ap_CS_fsm_reg[3]/D                                      |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/run_active_reg/D                                              |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/ap_CS_fsm_reg[0]/D                                      |
+| clk_fpga_0         | clk_fpga_0        | baseline_cpu_pynq_z1_i/baseline_cpu_0/inst/u_cpu/grp_cpu_Pipeline_PROGRAM_LOOP_fu_187_ap_start_reg_reg/D |
++--------------------+-------------------+----------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 2681
+ Number of Nodes with overlaps = 698
+ Number of Nodes with overlaps = 300
+ Number of Nodes with overlaps = 141
+ Number of Nodes with overlaps = 48
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.096 | TNS=-4459.570| WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 31c7277fc
+
+Time (s): cpu = 00:02:11 ; elapsed = 00:01:23 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7300 ; free virtual = 60136
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 500
+ Number of Nodes with overlaps = 195
+ Number of Nodes with overlaps = 74
+ Number of Nodes with overlaps = 29
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.089 | TNS=-4637.237| WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 24584fe70
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:02:19 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7299 ; free virtual = 60135
+Phase 5 Rip-up And Reroute | Checksum: 24584fe70
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:02:19 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7299 ; free virtual = 60135
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 23323941d
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:02:19 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7299 ; free virtual = 60135
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.075 | TNS=-4570.928| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 6.1 Delay CleanUp | Checksum: 32cbf7c27
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 32cbf7c27
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+Phase 6 Delay and Skew Optimization | Checksum: 32cbf7c27
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.029 | TNS=-4561.929| WHS=0.016  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 33b1293a6
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+Phase 7 Post Hold Fix | Checksum: 33b1293a6
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 4.96557 %
+  Global Horizontal Routing Utilization  = 5.87213 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 2x2 Area, Max Cong = 87.6126%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X30Y42 -> INT_R_X31Y43
+South Dir 1x1 Area, Max Cong = 85.5856%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X30Y43 -> INT_L_X30Y43
+East Dir 2x2 Area, Max Cong = 91.9118%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X30Y42 -> INT_R_X31Y43
+   INT_L_X26Y38 -> INT_R_X27Y39
+   INT_L_X28Y38 -> INT_R_X29Y39
+   INT_L_X26Y36 -> INT_R_X27Y37
+West Dir 2x2 Area, Max Cong = 90.4412%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X30Y42 -> INT_R_X31Y43
+   INT_L_X24Y38 -> INT_R_X25Y39
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.666667 Sparse Ratio: 1.25
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 2 Aspect Ratio: 0.888889 Sparse Ratio: 1.8125
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 1 Sparse Ratio: 1.75
+
+Phase 8 Route finalize | Checksum: 33b1293a6
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 33b1293a6
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:02:20 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60135
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 340c55b3d
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:21 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60134
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 340c55b3d
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:21 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60134
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.029 | TNS=-4561.929| WHS=0.016  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 12 Post Router Timing | Checksum: 340c55b3d
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:21 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60134
+Total Elapsed time in route_design: 140.67 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 125dba184
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:21 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60134
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 125dba184
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:02:21 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60134
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+508 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:27 ; elapsed = 00:02:21 . Memory (MB): peak = 3920.059 ; gain = 646.242 ; free physical = 7298 ; free virtual = 60134
+INFO: [Vivado 12-24828] Executing command : report_drc -file baseline_cpu_pynq_z1_wrapper_drc_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_drc_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_drc_routed.rpx
+Command: report_drc -file baseline_cpu_pynq_z1_wrapper_drc_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_drc_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file baseline_cpu_pynq_z1_wrapper_timing_summary_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_timing_summary_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file baseline_cpu_pynq_z1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file baseline_cpu_pynq_z1_wrapper_bus_skew_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_bus_skew_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_route_status -file baseline_cpu_pynq_z1_wrapper_route_status.rpt -pb baseline_cpu_pynq_z1_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file baseline_cpu_pynq_z1_wrapper_power_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_power_summary_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_power_routed.rpx
+Command: report_power -file baseline_cpu_pynq_z1_wrapper_power_routed.rpt -pb baseline_cpu_pynq_z1_wrapper_power_summary_routed.pb -rpx baseline_cpu_pynq_z1_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+528 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file baseline_cpu_pynq_z1_wrapper_clock_utilization_routed.rpt
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7271 ; free virtual = 60124
+Wrote PlaceDB: Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7252 ; free virtual = 60120
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7252 ; free virtual = 60120
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7249 ; free virtual = 60120
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7241 ; free virtual = 60113
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7241 ; free virtual = 60114
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.33 . Memory (MB): peak = 3976.086 ; gain = 0.000 ; free physical = 7241 ; free virtual = 60114
+INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/extendo/vivado/build/pynq_z1/baseline_cpu_pynq_z1.runs/impl_1/baseline_cpu_pynq_z1_wrapper_routed.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m02_nodes/m02_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m01_nodes/m01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the baseline_cpu_pynq_z1_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+Command: write_bitstream -force baseline_cpu_pynq_z1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./baseline_cpu_pynq_z1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+572 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 4024.109 ; gain = 0.000 ; free physical = 7268 ; free virtual = 60129
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 19:15:26 2026...

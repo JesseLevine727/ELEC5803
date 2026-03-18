@@ -288,7 +288,7 @@ proc create_root_design { parentCell } {
   set axi_gpio_status_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_status_0 ]
   set_property -dict [list \
     CONFIG.C_ALL_INPUTS {1} \
-    CONFIG.C_GPIO_WIDTH {4} \
+    CONFIG.C_GPIO_WIDTH {32} \
   ] $axi_gpio_status_0
 
 

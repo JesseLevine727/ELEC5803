@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date             : Sat Mar 14 17:35:01 2026
+| Date             : Wed Mar 18 18:16:15 2026
 | Host             : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command          : report_power -file prometheus_pynq_z1_wrapper_power_routed.rpt -pb prometheus_pynq_z1_wrapper_power_summary_routed.pb -rpx prometheus_pynq_z1_wrapper_power_routed.rpx
 | Design           : prometheus_pynq_z1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.098        |
+| Total On-Chip Power (W)  | 2.101        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.943        |
+| Dynamic (W)              | 1.945        |
 | Device Static (W)        | 0.156        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 60.8         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.056 |        3 |       --- |             --- |
-| Slice Logic              |     0.110 |   102062 |       --- |             --- |
-|   LUT as Logic           |     0.100 |    31154 |     53200 |           58.56 |
-|   F7/F8 Muxes            |     0.004 |     3066 |     53200 |            5.76 |
-|   Register               |     0.003 |    59887 |    106400 |           56.28 |
-|   CARRY4                 |     0.002 |      488 |     13300 |            3.67 |
-|   LUT as Distributed RAM |     0.001 |     1044 |     17400 |            6.00 |
+| Clocks                   |     0.054 |        3 |       --- |             --- |
+| Slice Logic              |     0.109 |   102690 |       --- |             --- |
+|   LUT as Logic           |     0.100 |    31290 |     53200 |           58.82 |
+|   F7/F8 Muxes            |     0.003 |     3066 |     53200 |            5.76 |
+|   Register               |     0.002 |    60358 |    106400 |           56.73 |
+|   CARRY4                 |     0.002 |      502 |     13300 |            3.77 |
+|   LUT as Distributed RAM |     0.001 |     1060 |     17400 |            6.09 |
 |   LUT as Shift Register  |    <0.001 |      367 |     17400 |            2.11 |
 |   Others                 |     0.000 |     1013 |       --- |             --- |
-| Signals                  |     0.191 |    73542 |       --- |             --- |
-| Block RAM                |     0.037 |     68.5 |       140 |           48.93 |
-| DSPs                     |     0.022 |       32 |       220 |           14.55 |
+| Signals                  |     0.193 |    73983 |       --- |             --- |
+| Block RAM                |     0.040 |     68.5 |       140 |           48.93 |
+| DSPs                     |     0.023 |       32 |       220 |           14.55 |
 | PS7                      |     1.526 |        1 |       --- |             --- |
 | Static Power             |     0.156 |          |           |                 |
-| Total                    |     2.098 |          |           |                 |
+| Total                    |     2.101 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.435 |       0.414 |      0.021 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.437 |       0.416 |      0.021 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.017 |       0.000 |      0.017 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -152,18 +152,18 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| prometheus_pynq_z1_wrapper |     1.943 |
-|   prometheus_pynq_z1_i     |     1.943 |
+| prometheus_pynq_z1_wrapper |     1.945 |
+|   prometheus_pynq_z1_i     |     1.945 |
 |     axi_bram_ctrl_0        |     0.004 |
 |       U0                   |     0.004 |
-|     blk_mem_gen_0          |     0.048 |
-|       U0                   |     0.048 |
+|     blk_mem_gen_0          |     0.051 |
+|       U0                   |     0.051 |
 |     processing_system7_0   |     1.526 |
 |       inst                 |     1.526 |
-|     prometheus_soc_0       |     0.327 |
+|     prometheus_soc_0       |     0.328 |
 |       inst                 |     0.327 |
-|     smartconnect_0         |     0.037 |
-|       inst                 |     0.037 |
+|     smartconnect_0         |     0.035 |
+|       inst                 |     0.035 |
 +----------------------------+-----------+
 
 

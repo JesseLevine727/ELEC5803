@@ -99,7 +99,7 @@ set_property -dict [list \
 set axi_gpio_status_0 [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_status_0]
 set_property -dict [list \
   CONFIG.C_ALL_INPUTS {1} \
-  CONFIG.C_GPIO_WIDTH {4}] $axi_gpio_status_0
+  CONFIG.C_GPIO_WIDTH {32}] $axi_gpio_status_0
 
 set prometheus_soc_0 [create_bd_cell -type ip -vlnv user.org:user:prometheus_soc_wrapper:1.0 prometheus_soc_0]
 

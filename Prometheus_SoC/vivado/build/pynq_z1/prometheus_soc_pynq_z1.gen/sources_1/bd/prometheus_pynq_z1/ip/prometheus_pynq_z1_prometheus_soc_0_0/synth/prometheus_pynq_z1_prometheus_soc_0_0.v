@@ -77,7 +77,7 @@ input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire ap_rst;
 input wire ctrl_start;
-output wire [3 : 0] status;
+output wire [31 : 0] status;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORT ADDR" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORT, MASTER_TYPE BRAM_CTRL, MEM_SIZE 262144, MEM_WIDTH 128, READ_WRITE_MODE READ_WRITE, MEM_ECC NONE, READ_LATENCY 1" *)

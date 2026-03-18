@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-//Date        : Sat Mar 14 17:30:32 2026
+//Date        : Wed Mar 18 18:10:31 2026
 //Host        : gondor running 64-bit Ubuntu 24.04.3 LTS
 //Command     : generate_target prometheus_pynq_z1.bd
 //Design      : prometheus_pynq_z1
@@ -131,7 +131,7 @@ module prometheus_pynq_z1
   wire prometheus_soc_0_BRAM_PORT_EN;
   wire prometheus_soc_0_BRAM_PORT_RST;
   wire [15:0]prometheus_soc_0_BRAM_PORT_WE;
-  wire [3:0]prometheus_soc_0_status;
+  wire [31:0]prometheus_soc_0_status;
   wire [0:0]rst_ps7_0_84M_peripheral_aresetn;
   wire [0:0]rst_ps7_0_84M_peripheral_reset;
   wire [17:0]smartconnect_0_M00_AXI_ARADDR;

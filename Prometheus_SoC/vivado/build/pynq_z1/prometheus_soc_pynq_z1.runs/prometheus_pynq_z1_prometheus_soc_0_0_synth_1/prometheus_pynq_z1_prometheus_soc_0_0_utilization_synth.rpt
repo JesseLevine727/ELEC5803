@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sat Mar 14 17:31:59 2026
+| Date         : Wed Mar 18 18:12:37 2026
 | Host         : gondor running 64-bit Ubuntu 24.04.3 LTS
 | Command      : report_utilization -file prometheus_pynq_z1_prometheus_soc_0_0_utilization_synth.rpt -pb prometheus_pynq_z1_prometheus_soc_0_0_utilization_synth.pb
 | Design       : prometheus_pynq_z1_prometheus_soc_0_0
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*                | 26298 |     0 |          0 |     53200 | 49.43 |
-|   LUT as Logic             | 26292 |     0 |          0 |     53200 | 49.42 |
+| Slice LUTs*                | 26299 |     0 |          0 |     53200 | 49.43 |
+|   LUT as Logic             | 26293 |     0 |          0 |     53200 | 49.42 |
 |   LUT as Memory            |     6 |     0 |          0 |     17400 |  0.03 |
 |     LUT as Distributed RAM |     0 |     0 |            |           |       |
 |     LUT as Shift Register  |     6 |     0 |            |           |       |
-| Slice Registers            | 52341 |     0 |          0 |    106400 | 49.19 |
-|   Register as Flip Flop    | 52341 |     0 |          0 |    106400 | 49.19 |
+| Slice Registers            | 52398 |     0 |          0 |    106400 | 49.25 |
+|   Register as Flip Flop    | 52398 |     0 |          0 |    106400 | 49.25 |
 |   Register as Latch        |     0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                   |  2050 |     0 |          0 |     26600 |  7.71 |
 | F8 Muxes                   |  1016 |     0 |          0 |     13300 |  7.64 |
@@ -62,7 +62,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 101   |          Yes |         Set |            - |
-| 52240 |          Yes |       Reset |            - |
+| 52297 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,16 +154,16 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 52240 |        Flop & Latch |
-| LUT6     | 21156 |                 LUT |
-| LUT3     |  2522 |                 LUT |
+| FDRE     | 52297 |        Flop & Latch |
+| LUT6     | 21155 |                 LUT |
+| LUT3     |  2545 |                 LUT |
 | MUXF7    |  2050 |               MuxFx |
 | LUT5     |  1784 |                 LUT |
-| LUT4     |  1628 |                 LUT |
-| LUT2     |  1420 |                 LUT |
+| LUT4     |  1619 |                 LUT |
+| LUT2     |  1418 |                 LUT |
 | MUXF8    |  1016 |               MuxFx |
-| CARRY4   |   466 |          CarryLogic |
-| LUT1     |   142 |                 LUT |
+| CARRY4   |   480 |          CarryLogic |
+| LUT1     |   143 |                 LUT |
 | FDSE     |   101 |        Flop & Latch |
 | DSP48E1  |    32 |    Block Arithmetic |
 | SRL16E   |     6 |  Distributed Memory |

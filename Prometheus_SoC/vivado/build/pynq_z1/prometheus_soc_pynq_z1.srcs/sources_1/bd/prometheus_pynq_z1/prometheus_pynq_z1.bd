@@ -729,7 +729,7 @@
             "value": "1"
           },
           "C_GPIO_WIDTH": {
-            "value": "4"
+            "value": "32"
           }
         }
       },

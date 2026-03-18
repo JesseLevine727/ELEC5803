@@ -30,7 +30,7 @@ The PYNQ-Z1 overlay created by `create_pynq_z1_project.tcl` uses:
 - `axi_gpio_status_0` for status polling
 - `prometheus_soc_wrapper` as a module reference
 
-The wrapper converts the HLS `ap_memory` signals into a standard Vivado BRAM interface and latches `ap_done` so software polling does not miss the completion pulse.
+The wrapper converts the HLS `ap_memory` signals into a standard Vivado BRAM interface, latches `ap_done` so software polling does not miss the completion pulse, and captures the SoC run latency in FPGA clock cycles.
 
 ## Memory map
 
@@ -52,6 +52,7 @@ GPIO status bits:
 - `bit 1` -> idle
 - `bit 2` -> ready
 - `bit 3` -> busy
+- `bits 31:4` -> measured latency in FPGA clock cycles for the last completed run
 
 ## Build
 
@@ -74,6 +75,13 @@ To build the bitstream from the generated project:
 ```bash
 cd /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado
 vivado -mode batch -source build_bitstream.tcl
+```
+
+To recreate the project and rebuild the bitstream in one command:
+
+```bash
+cd /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado
+./rebuild_pynq_z1_bitstream.sh
 ```
 
 ## Output artifacts

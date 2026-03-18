@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Mar 14 17:30:38 2026
-# Process ID         : 597121
+# Start of session at: Wed Mar 18 18:11:22 2026
+# Process ID         : 210452
 # Current directory  : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_prometheus_soc_0_0_synth_1
 # Command line       : vivado -log prometheus_pynq_z1_prometheus_soc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prometheus_pynq_z1_prometheus_soc_0_0.tcl
 # Log file           : /home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_prometheus_soc_0_0_synth_1/prometheus_pynq_z1_prometheus_soc_0_0.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.3 LTS
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5558.232 MHz
+# CPU Frequency      : 2982.259 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 64918 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73508 MB
-# Available Virtual  : 55749 MB
+# Available Virtual  : 61625 MB
 #-----------------------------------------------------------
 source prometheus_pynq_z1_prometheus_soc_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -31,107 +31,107 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 210493
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.305 ; gain = 441.711 ; free physical = 8387 ; free virtual = 49054
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2149.113 ; gain = 439.742 ; free physical = 4767 ; free virtual = 57324
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'prometheus_pynq_z1_prometheus_soc_0_0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ip/prometheus_pynq_z1_prometheus_soc_0_0/synth/prometheus_pynq_z1_prometheus_soc_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_wrapper' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_wrapper.v:10]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_reg_file_RAM_AUTO_1R1W' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_reg_file_RAM_AUTO_1R1W.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_reg_file_RAM_AUTO_1R1W' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_reg_file_RAM_AUTO_1R1W.v:7]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_flow_control_loop_pipe_sequential_init' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_flow_control_loop_pipe_sequential_init.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_flow_control_loop_pipe_sequential_init' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_flow_control_loop_pipe_sequential_init.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.dat' is read successfully [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-3876] $readmem data file './prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.dat' is read successfully [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.v:7]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_load_logits_and_find_max' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_load_logits_and_find_max.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_load_logits_and_find_max_Pipeline_load_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_load_logits_and_find_max_Pipeline_load_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_load_logits_and_find_max_Pipeline_load_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_load_logits_and_find_max_Pipeline_load_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_load_logits_and_find_max' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_load_logits_and_find_max.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_generate_exp_buffer' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_generate_exp_buffer.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_exp_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_129_6_32_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_129_6_32_1_1.v:8]
-INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_129_6_32_1_1.v:414]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_129_6_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_129_6_32_1_1.v:8]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_33_4_17_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_33_4_17_1_1.v:8]
-INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_33_4_17_1_1.v:126]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_33_4_17_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_33_4_17_1_1.v:8]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_33_4_18_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_33_4_18_1_1.v:8]
-INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_33_4_18_1_1.v:126]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_33_4_18_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_33_4_18_1_1.v:8]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_12ns_18s_30_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_12ns_18s_30_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_12ns_18s_30_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_12ns_18s_30_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_7_2_32_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_7_2_32_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_7_2_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_sparsemux_7_2_32_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_exp_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_cache_exp_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_cache_exp_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_cache_exp_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_cache_exp_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A.v:10]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A_ram' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A.v:201]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A_ram' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A.v:201]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A.v:10]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:10]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0_ShiftReg' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0_ShiftReg' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_generate_exp_buffer' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_generate_exp_buffer.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_normalize_and_store' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_normalize_and_store.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_prob_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32ns_31ns_62_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32ns_31ns_62_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_prob_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_write_prob_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_write_prob_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_write_prob_stream_Pipeline_prob_write_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_write_prob_stream_Pipeline_prob_write_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_write_prob_stream_Pipeline_prob_write_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_write_prob_stream_Pipeline_prob_write_loop.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_write_prob_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_write_prob_stream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A_x' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A_x.v:10]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A_x_ram' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A_x.v:201]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A_x_ram' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A_x.v:201]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A_x' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_fifo_w132_d16_A_x.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_normalize_and_store' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_normalize_and_store.v:9]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_31s_16ns_47_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_31s_16ns_47_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_31s_16ns_47_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_31s_16ns_47_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32ns_32ns_64_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32ns_32ns_64_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32ns_32ns_64_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32ns_32ns_64_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32ns_32s_64_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32ns_32s_64_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32ns_32s_64_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32ns_32s_64_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32s_32s_64_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32s_32s_64_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32s_32s_64_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_mul_32s_32s_64_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_partselect_32ns_128ns_7ns_32_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partselect_32ns_128ns_7ns_32_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_partselect_32ns_128ns_7ns_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partselect_32ns_128ns_7ns_32_1_1.v:8]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1.v:8]
-INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_wrapper' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_wrapper.v:10]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_wrapper' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_wrapper.v:11]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_reg_file_RAM_AUTO_1R1W' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_reg_file_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_reg_file_RAM_AUTO_1R1W' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_reg_file_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_flow_control_loop_pipe_sequential_init' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_flow_control_loop_pipe_sequential_init' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_VITIS_LOOP_48_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.dat' is read successfully [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_M_Q30_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.dat' is read successfully [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP_RECIP_B_Q30_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_load_logits_and_find_max' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_load_logits_and_find_max.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_load_logits_and_find_max_Pipeline_load_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_load_logits_and_find_max_Pipeline_load_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_load_logits_and_find_max_Pipeline_load_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_load_logits_and_find_max_Pipeline_load_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_load_logits_and_find_max' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_load_logits_and_find_max.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_generate_exp_buffer' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_generate_exp_buffer.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_exp_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_129_6_32_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_129_6_32_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_129_6_32_1_1.v:414]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_129_6_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_129_6_32_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_33_4_17_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_33_4_17_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_33_4_17_1_1.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_33_4_17_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_33_4_17_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_33_4_18_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_33_4_18_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_33_4_18_1_1.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_33_4_18_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_33_4_18_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_12ns_18s_30_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_12ns_18s_30_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_12ns_18s_30_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_12ns_18s_30_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_sparsemux_7_2_32_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_7_2_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_sparsemux_7_2_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_sparsemux_7_2_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_exp_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_cache_exp_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_cache_exp_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_cache_exp_stream_Pipeline_cache_exp_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_cache_exp_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_cache_exp_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A.v:10]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A_ram' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A.v:201]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A_ram' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A.v:201]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A.v:10]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:10]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0_ShiftReg' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0_ShiftReg' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_start_for_cache_exp_stream_U0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_start_for_cache_exp_stream_U0.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_generate_exp_buffer' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_generate_exp_buffer.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_normalize_and_store' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_normalize_and_store.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_prob_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32ns_31ns_62_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32ns_31ns_62_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_emit_prob_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_write_prob_stream' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_write_prob_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_write_prob_stream_Pipeline_prob_write_loop' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_write_prob_stream_Pipeline_prob_write_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_write_prob_stream_Pipeline_prob_write_loop' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_write_prob_stream_Pipeline_prob_write_loop.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_write_prob_stream' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_write_prob_stream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A_x' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A_x.v:10]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_fifo_w132_d16_A_x_ram' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A_x.v:201]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A_x_ram' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A_x.v:201]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_fifo_w132_d16_A_x' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_fifo_w132_d16_A_x.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_normalize_and_store' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_normalize_and_store.v:9]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_31s_16ns_47_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_31s_16ns_47_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_31s_16ns_47_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_31s_16ns_47_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32ns_32ns_64_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_32ns_64_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32ns_32ns_64_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_32ns_64_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32ns_32s_64_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_32s_64_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32ns_32s_64_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_32s_64_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_mul_32s_32s_64_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32s_32s_64_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_mul_32s_32s_64_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32s_32s_64_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_partselect_32ns_128ns_7ns_32_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partselect_32ns_128ns_7ns_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_partselect_32ns_128ns_7ns_32_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partselect_32ns_128ns_7ns_32_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1' [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prometheus_soc_wrapper' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_wrapper.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'prometheus_pynq_z1_prometheus_soc_0_0' (0#1) [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ip/prometheus_pynq_z1_prometheus_soc_0_0/synth/prometheus_pynq_z1_prometheus_soc_0_0.v:53]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-WARNING: [Synth 8-3936] Found unconnected internal register 'din_tmp_reg' and it is trimmed from '160' to '128' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1.v:28]
-WARNING: [Synth 8-3936] Found unconnected internal register 'din_tmp_reg' and it is trimmed from '160' to '128' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1.v:28]
-WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred4692_state37_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4757]
-WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred2518_state6_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4775]
-WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred2526_state6_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4777]
-WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred5550_state6_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4781]
+WARNING: [Synth 8-3936] Found unconnected internal register 'din_tmp_reg' and it is trimmed from '160' to '128' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partset_128ns_128ns_32s_7ns_128_1_1.v:28]
+WARNING: [Synth 8-3936] Found unconnected internal register 'din_tmp_reg' and it is trimmed from '160' to '128' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_partset_128ns_128ns_32ns_7ns_128_1_1.v:28]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred4692_state37_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4757]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred2518_state6_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4775]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred2526_state6_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4777]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred5550_state6_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:4781]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 WARNING: [Synth 8-7129] Port prob_stream_dout[131] in module prometheus_soc_write_prob_stream_Pipeline_prob_write_loop is either unconnected or has no load
@@ -236,54 +236,53 @@ WARNING: [Synth 8-7129] Port mem_q1[117] in module prometheus_soc_normalize_and_
 WARNING: [Synth 8-7129] Port mem_q1[116] in module prometheus_soc_normalize_and_store is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2400.242 ; gain = 692.648 ; free physical = 7678 ; free virtual = 48354
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2401.051 ; gain = 691.680 ; free physical = 3901 ; free virtual = 56462
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2412.117 ; gain = 704.523 ; free physical = 7678 ; free virtual = 48354
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2412.926 ; gain = 703.555 ; free physical = 3892 ; free virtual = 56454
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2412.117 ; gain = 704.523 ; free physical = 7678 ; free virtual = 48354
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2412.926 ; gain = 703.555 ; free physical = 3892 ; free virtual = 56454
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.3 . Memory (MB): peak = 2412.117 ; gain = 0.000 ; free physical = 7666 ; free virtual = 48344
+Netlist sorting complete. Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2412.926 ; gain = 0.000 ; free physical = 3944 ; free virtual = 56503
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2551.855 ; gain = 0.000 ; free physical = 7601 ; free virtual = 48275
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2554.664 ; gain = 0.000 ; free physical = 3740 ; free virtual = 56298
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.21 . Memory (MB): peak = 2581.668 ; gain = 29.777 ; free physical = 7562 ; free virtual = 48236
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.65 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2582.477 ; gain = 27.777 ; free physical = 3718 ; free virtual = 56277
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
-INFO: [Synth 8-5738] Shared memory is not available on this host. Will not attempt parallel processing for synth_design.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2581.668 ; gain = 874.074 ; free physical = 6731 ; free virtual = 47405
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2582.477 ; gain = 873.105 ; free physical = 3734 ; free virtual = 56293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2589.672 ; gain = 882.078 ; free physical = 6731 ; free virtual = 47405
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2590.480 ; gain = 881.109 ; free physical = 3734 ; free virtual = 56293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2589.672 ; gain = 882.078 ; free physical = 6731 ; free virtual = 47405
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2590.480 ; gain = 881.109 ; free physical = 3733 ; free virtual = 56293
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_1_reg_5777_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2927]
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_2_reg_5814_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2929]
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_3_reg_5851_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2931]
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_reg_5740_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2933]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_1_reg_5777_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2927]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_2_reg_5814_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2929]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_3_reg_5851_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2931]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_reg_5740_pp0_iter4_reg_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2933]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
@@ -298,7 +297,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' throug
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2589.672 ; gain = 882.078 ; free physical = 10679 ; free virtual = 51353
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2590.480 ; gain = 881.109 ; free physical = 3637 ; free virtual = 56208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -311,6 +310,7 @@ Detailed RTL Component Info :
 	   2 Input   33 Bit       Adders := 6     
 	   3 Input   32 Bit       Adders := 5     
 	   2 Input   32 Bit       Adders := 4     
+	   2 Input   28 Bit       Adders := 1     
 	   2 Input   19 Bit       Adders := 4     
 	   3 Input   18 Bit       Adders := 4     
 	   2 Input   14 Bit       Adders := 3     
@@ -339,6 +339,7 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1591  
 	               31 Bit    Registers := 7     
 	               30 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
 	               18 Bit    Registers := 4     
 	               17 Bit    Registers := 8     
@@ -355,7 +356,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 9     
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 171   
+	                1 Bit    Registers := 172   
 +---Multipliers : 
 	              32x32  Multipliers := 1     
 	              32x33  Multipliers := 5     
@@ -374,7 +375,7 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit        Muxes := 1065  
 	   4 Input   32 Bit        Muxes := 4     
 	  17 Input   31 Bit        Muxes := 2     
-	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 2     
 	   2 Input   26 Bit        Muxes := 1     
 	   2 Input   24 Bit        Muxes := 1     
 	   2 Input   20 Bit        Muxes := 1     
@@ -390,7 +391,7 @@ Detailed RTL Component Info :
 	   2 Input    2 Bit        Muxes := 15    
 	   5 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 85    
+	   2 Input    1 Bit        Muxes := 88    
 	   7 Input    1 Bit        Muxes := 1     
 	   5 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -405,14 +406,39 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Start Cross Boundary Optimization
+Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_3_reg_5851_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2930]
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_2_reg_5814_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2928]
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_1_reg_5777_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2926]
-WARNING: [Synth 8-3936] Found unconnected internal register 't64_reg_5740_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2932]
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[31] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[30] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[29] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[28] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[27] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[26] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[25] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[24] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[23] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[22] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[21] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[20] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[19] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[18] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[3] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[2] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[1] driven by constant 0
+INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[0] driven by constant 0
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_3_reg_5851_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2930]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_2_reg_5814_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2928]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_1_reg_5777_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2926]
+WARNING: [Synth 8-3936] Found unconnected internal register 't64_reg_5740_reg' and it is trimmed from '48' to '34' bits. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop.v:2932]
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_tmp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 DSP Report: Generating DSP mul_12ns_18s_30_1_1_U531/tmp_product, operation Mode is: A*B2.
 DSP Report: register mul_12ns_18s_30_1_1_U531/tmp_product is absorbed into DSP mul_12ns_18s_30_1_1_U531/tmp_product.
 DSP Report: operator mul_12ns_18s_30_1_1_U531/tmp_product is absorbed into DSP mul_12ns_18s_30_1_1_U531/tmp_product.
@@ -425,10 +451,136 @@ DSP Report: operator mul_12ns_18s_30_1_1_U535/tmp_product is absorbed into DSP m
 DSP Report: Generating DSP mul_12ns_18s_30_1_1_U537/tmp_product, operation Mode is: A*B2.
 DSP Report: register mul_12ns_18s_30_1_1_U537/tmp_product is absorbed into DSP mul_12ns_18s_30_1_1_U537/tmp_product.
 DSP Report: operator mul_12ns_18s_30_1_1_U537/tmp_product is absorbed into DSP mul_12ns_18s_30_1_1_U537/tmp_product.
-WARNING: [Synth 8-6014] Unused sequential element res_39_reg_9498_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7918]
-WARNING: [Synth 8-6014] Unused sequential element res_38_reg_9503_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7917]
-WARNING: [Synth 8-6014] Unused sequential element res_38_reg_9503_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7917]
-WARNING: [Synth 8-6014] Unused sequential element res_38_reg_9503_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7917]
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[5]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[4]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[3]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[2]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[1]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[0]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[6]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[7]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[8]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[9]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[10]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/sub_ln50_1_reg_5676_reg[11]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[28]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_reg_5755_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[29]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_reg_5755_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[30]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_reg_5755_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[31]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_reg_5755_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[28]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_1_reg_5792_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[29]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_1_reg_5792_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[30]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_1_reg_5792_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[31]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_1_reg_5792_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[28]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_2_reg_5829_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[29]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_2_reg_5829_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[30]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_2_reg_5829_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[31]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_2_reg_5829_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[28]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_3_reg_5866_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[29]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_3_reg_5866_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[30]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_3_reg_5866_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[31]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/idx_3_reg_5866_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[1]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[0]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[2]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[3]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[4]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[4]' (FD) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106 /\add_ln50_1_reg_5720_reg[5] )
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_pp0_iter4_reg_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_pp0_iter4_reg_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_pp0_iter4_reg_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_reg_5740_pp0_iter4_reg_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_reg_5760_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_2_reg_5834_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_reg_5760_pp0_iter4_reg_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_2_reg_5834_pp0_iter4_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_92_reg_5766_reg[0]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_reg[15]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_92_reg_5766_pp0_iter4_reg_reg[0]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_reg_5750_pp0_iter4_reg_reg[15]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_pp0_iter4_reg_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_pp0_iter4_reg_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_pp0_iter4_reg_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_1_reg_5777_pp0_iter4_reg_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_1_reg_5797_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_2_reg_5834_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_1_reg_5797_pp0_iter4_reg_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_2_reg_5834_pp0_iter4_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_reg[15]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_102_reg_5803_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_1_reg_5787_pp0_iter4_reg_reg[15]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_102_reg_5803_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_pp0_iter4_reg_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_pp0_iter4_reg_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_pp0_iter4_reg_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_2_reg_5814_pp0_iter4_reg_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_2_reg_5834_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_3_reg_5871_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_2_reg_5834_pp0_iter4_reg_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_3_reg_5871_pp0_iter4_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_reg[15]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_112_reg_5840_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_2_reg_5824_pp0_iter4_reg_reg[15]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_112_reg_5840_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_pp0_iter4_reg_reg[35]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_pp0_iter4_reg_reg[34]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_pp0_iter4_reg_reg[33]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/t64_3_reg_5851_pp0_iter4_reg_reg[32]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106 /\y0_3_reg_5871_reg[16] )
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_3_reg_5871_pp0_iter4_reg_reg[16]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/y0_3_reg_5871_reg[16]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_reg[15]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_122_reg_5877_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/k_3_reg_5861_pp0_iter4_reg_reg[15]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/tmp_122_reg_5877_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106 /\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\emit_exp_stream_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106 /ap_done_reg_reg)
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[6]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_1_reg_5668_pp0_iter2_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_1_reg_5720_reg[7]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_1_reg_5668_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_5_reg_5725_reg[6]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_3_reg_5681_pp0_iter2_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_5_reg_5725_reg[7]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_3_reg_5681_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_9_reg_5730_reg[6]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_5_reg_5694_pp0_iter2_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_9_reg_5730_reg[7]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_5_reg_5694_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_13_reg_5735_reg[6]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_7_reg_5707_pp0_iter2_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/add_ln50_13_reg_5735_reg[7]' (FDE) to 'emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/x_q16_7_reg_5707_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106 /\y0_3_reg_5871_reg[16] )
+WARNING: [Synth 8-3917] design prometheus_soc_generate_exp_buffer__GB1 has port if_fifo_cap[4] driven by constant 1
+WARNING: [Synth 8-3917] design prometheus_soc_generate_exp_buffer__GB1 has port if_fifo_cap[3] driven by constant 0
+WARNING: [Synth 8-3917] design prometheus_soc_generate_exp_buffer__GB1 has port if_fifo_cap[2] driven by constant 0
+WARNING: [Synth 8-3917] design prometheus_soc_generate_exp_buffer__GB1 has port if_fifo_cap[1] driven by constant 0
+WARNING: [Synth 8-3917] design prometheus_soc_generate_exp_buffer__GB1 has port if_fifo_cap[0] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cache_exp_stream_U0/grp_cache_exp_stream_Pipeline_cache_exp_loop_fu_575/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (cache_exp_stream_U0/grp_cache_exp_stream_Pipeline_cache_exp_loop_fu_575/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[0]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[0]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[1]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[1]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[1]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[2]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[2]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[2]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[3]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[3]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[3]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[4]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[4]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[4]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[5]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[5]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[6]'
+INFO: [Synth 8-3886] merging instance 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[5]' (FDRE) to 'grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[6]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/\ap_phi_reg_pp0_iter1_x1_1_reg_2601_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/\ap_phi_reg_pp0_iter1_x0_1_reg_2581_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/\ap_phi_reg_pp0_iter1_keep_reg_2568_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/\ap_phi_reg_pp0_iter1_x3_1_reg_2641_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/\ap_phi_reg_pp0_iter1_x2_1_reg_2621_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_32ns_64_1_1.v:41]
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_32s_64_1_1.v:42]
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32s_32s_64_1_1.v:44]
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 0. Recommended levels of pipeline registers is 2. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_31s_16ns_47_1_1.v:43]
+WARNING: [Synth 8-6014] Unused sequential element res_39_reg_9498_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7918]
+WARNING: [Synth 8-6014] Unused sequential element res_38_reg_9503_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7917]
+WARNING: [Synth 8-6014] Unused sequential element res_38_reg_9503_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7917]
+WARNING: [Synth 8-6014] Unused sequential element res_38_reg_9503_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP.v:7917]
 DSP Report: Generating DSP mul_32s_32s_64_1_1_U2901/tmp_product, operation Mode is: A2*B.
 DSP Report: register mul_32s_32s_64_1_1_U2901/tmp_product is absorbed into DSP mul_32s_32s_64_1_1_U2901/tmp_product.
 DSP Report: operator mul_32s_32s_64_1_1_U2901/tmp_product is absorbed into DSP mul_32s_32s_64_1_1_U2901/tmp_product.
@@ -481,10 +633,19 @@ DSP Report: operator mul_31s_16ns_47_1_1_U2898/tmp_product is absorbed into DSP 
 DSP Report: Generating DSP mul_31s_16ns_47_1_1_U2898/tmp_product, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator mul_31s_16ns_47_1_1_U2898/tmp_product is absorbed into DSP mul_31s_16ns_47_1_1_U2898/tmp_product.
 DSP Report: operator mul_31s_16ns_47_1_1_U2898/tmp_product is absorbed into DSP mul_31s_16ns_47_1_1_U2898/tmp_product.
-WARNING: [Synth 8-6014] Unused sequential element pkt_v0_reg_3682_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1874]
-WARNING: [Synth 8-6014] Unused sequential element pkt_v1_reg_3687_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1875]
-WARNING: [Synth 8-6014] Unused sequential element pkt_v2_reg_3692_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1876]
-WARNING: [Synth 8-6014] Unused sequential element pkt_v3_reg_3697_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/8c9a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1877]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (RECIP_M_Q30_U/\q0_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (RECIP_B_Q30_U/\q0_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\res_1_fu_338_reg[31] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\reg_4304_reg[30] )
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:41]
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:41]
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:41]
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 1. Recommended levels of pipeline registers is 4. [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_mul_32ns_31ns_62_1_1.v:41]
+WARNING: [Synth 8-6014] Unused sequential element pkt_v0_reg_3682_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1874]
+WARNING: [Synth 8-6014] Unused sequential element pkt_v1_reg_3687_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1875]
+WARNING: [Synth 8-6014] Unused sequential element pkt_v2_reg_3692_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1876]
+WARNING: [Synth 8-6014] Unused sequential element pkt_v3_reg_3697_reg was removed.  [/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.gen/sources_1/bd/prometheus_pynq_z1/ipshared/ad0a/src/prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.v:1877]
 DSP Report: Generating DSP mul_32ns_31ns_62_1_1_U2101/tmp_product, operation Mode is: A2*B2.
 DSP Report: register tmp_reg_3644_reg is absorbed into DSP mul_32ns_31ns_62_1_1_U2101/tmp_product.
 DSP Report: register mul_32ns_31ns_62_1_1_U2101/tmp_product is absorbed into DSP mul_32ns_31ns_62_1_1_U2101/tmp_product.
@@ -565,30 +726,11 @@ DSP Report: register pkt_v3_reg_3697_reg is absorbed into DSP pkt_v3_reg_3697_re
 DSP Report: register pkt_v3_reg_3697_reg is absorbed into DSP pkt_v3_reg_3697_reg.
 DSP Report: operator mul_32ns_31ns_62_1_1_U2104/tmp_product is absorbed into DSP pkt_v3_reg_3697_reg.
 DSP Report: operator mul_32ns_31ns_62_1_1_U2104/tmp_product is absorbed into DSP pkt_v3_reg_3697_reg.
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[31] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[30] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[29] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[28] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[27] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[26] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[25] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[24] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[23] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[22] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[21] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[20] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[19] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[18] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[3] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[2] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[1] driven by constant 0
-INFO: [Synth 8-3917] design prometheus_pynq_z1_prometheus_soc_0_0 has port bram_addr[0] driven by constant 0
----------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2589.672 ; gain = 882.078 ; free physical = 7830 ; free virtual = 48505
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Area Optimization
----------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\grp_normalize_and_store_fu_3700/emit_prob_stream_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\grp_normalize_and_store_fu_3700/write_prob_stream_U0/grp_write_prob_stream_Pipeline_prob_write_loop_fu_101/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\grp_normalize_and_store_fu_3700/emit_prob_stream_U0/grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106 /\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\grp_normalize_and_store_fu_3700/emit_prob_stream_U0/grp_emit_prob_stream_Pipeline_prob_emit_loop_fu_2106 /ap_done_reg_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\grp_normalize_and_store_fu_3700/write_prob_stream_U0/grp_write_prob_stream_Pipeline_prob_write_loop_fu_101/ap_CS_fsm_reg[0] )
 WARNING: [Synth 8-3332] Sequential element (pkt_v0_reg_3682_reg[47]) is unused and will be removed from module prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.
 WARNING: [Synth 8-3332] Sequential element (pkt_v0_reg_3682_reg[46]) is unused and will be removed from module prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.
 WARNING: [Synth 8-3332] Sequential element (pkt_v0_reg_3682_reg[45]) is unused and will be removed from module prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.
@@ -690,37 +832,38 @@ WARNING: [Synth 8-3332] Sequential element (pkt_v1_reg_3687_reg[28]) is unused a
 WARNING: [Synth 8-3332] Sequential element (pkt_v1_reg_3687_reg[27]) is unused and will be removed from module prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.
 WARNING: [Synth 8-3332] Sequential element (pkt_v1_reg_3687_reg[26]) is unused and will be removed from module prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9178 ; free virtual = 49873
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 2618.414 ; gain = 909.043 ; free physical = 1747 ; free virtual = 54021
 ---------------------------------------------------------------------------------
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_31s_16ns_47_1_1_U2898/tmp_product_16 : 0 0 : 3035 5464 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_31s_16ns_47_1_1_U2898/tmp_product_16 : 0 1 : 2429 5464 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_22 : 0 0 : 2793 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_22 : 0 1 : 2607 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_20 : 0 0 : 2793 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_20 : 0 1 : 2607 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_1e : 0 0 : 2793 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_1e : 0 1 : 2607 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_1a : 0 0 : 2793 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_1a : 0 1 : 2607 5400 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_21 : 0 0 : 3137 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_21 : 0 1 : 2229 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_1f : 0 0 : 3137 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_1f : 0 1 : 2229 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_1d : 0 0 : 3137 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_1d : 0 1 : 2229 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_19 : 0 0 : 3137 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_19 : 0 1 : 2229 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_11 : 0 0 : 3137 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_11 : 0 1 : 2229 5366 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_13 : 0 0 : 2176 4080 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_13 : 0 1 : 1904 4080 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32ns_32ns_64_1_1_U2899/tmp_product_5 : 0 0 : 3137 3137 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_39_reg_9498_reg_7 : 0 0 : 2825 2825 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32ns_32ns_64_1_1_U2899/tmp_product_9 : 0 0 : 2777 2777 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_38_reg_9503_reg_d : 0 0 : 2700 2700 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_39_reg_9498_reg_b : 0 0 : 2688 2688 : Used 1 time 0
- Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_38_reg_9503_reg_f : 0 0 : 2572 2572 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_a : 0 0 : 3137 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_a : 0 1 : 2719 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_8 : 0 0 : 3137 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_8 : 0 1 : 2719 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_6 : 0 0 : 3137 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_6 : 0 1 : 2719 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_0 : 0 0 : 3137 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_0 : 0 1 : 2719 5856 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_31s_16ns_47_1_1_U2898/tmp_product_11 : 0 0 : 3035 5464 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_31s_16ns_47_1_1_U2898/tmp_product_11 : 0 1 : 2429 5464 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_b : 0 0 : 2793 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2101/tmp_product_b : 0 1 : 2607 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_9 : 0 0 : 2793 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2102/tmp_product_9 : 0 1 : 2607 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_7 : 0 0 : 2793 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2103/tmp_product_7 : 0 1 : 2607 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_3 : 0 0 : 2793 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 mul_32ns_31ns_62_1_1_U2104/tmp_product_3 : 0 1 : 2607 5400 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_c : 0 0 : 3137 5366 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_c : 0 1 : 2229 5366 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_e : 0 0 : 2176 4080 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32s_32s_64_1_1_U2901/tmp_product_e : 0 1 : 1904 4080 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32ns_32ns_64_1_1_U2899/tmp_product_0 : 0 0 : 3137 3137 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_39_reg_9498_reg_2 : 0 0 : 2825 2825 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 mul_32ns_32ns_64_1_1_U2899/tmp_product_4 : 0 0 : 2777 2777 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_38_reg_9503_reg_8 : 0 0 : 2700 2700 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_39_reg_9498_reg_6 : 0 0 : 2688 2688 : Used 1 time 0
+ Sort Area is prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 res_38_reg_9503_reg_a : 0 0 : 2572 2572 : Used 1 time 0
  Sort Area is prometheus_soc_generate_exp_buffer__GB0 mul_12ns_18s_30_1_1_U531/tmp_product_4 : 0 0 : 1660 1660 : Used 1 time 0
  Sort Area is prometheus_soc_generate_exp_buffer__GB0 mul_12ns_18s_30_1_1_U533/tmp_product_3 : 0 0 : 1660 1660 : Used 1 time 0
  Sort Area is prometheus_soc_generate_exp_buffer__GB0 mul_12ns_18s_30_1_1_U535/tmp_product_2 : 0 0 : 1660 1660 : Used 1 time 0
@@ -730,53 +873,53 @@ Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+--------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name                           | RTL Object                                                                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+--------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|prometheus_pynq_z1_prometheus_soc_0_0 | exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg                                    | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
-|prometheus_pynq_z1_prometheus_soc_0_0 | grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
-|prometheus_pynq_z1_prometheus_soc_0_0 | reg_file_U/ram_reg                                                                           | 32 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-+--------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++----------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                               | RTL Object                                                                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|prometheus_soc_generate_exp_buffer__GB1                   | exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg                                    | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 | grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|prometheus_pynq_z1_prometheus_soc_0_0                     | reg_file_U/ram_reg                                                                           | 32 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+--------------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                                             | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A2*B            | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A*B)'        | 16     | 15     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A2*B)'       | 18     | 15     | 48     | -      | 48     | 1    | 0    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A*B)'        | 16     | 16     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A2*B)'       | 18     | 16     | 48     | -      | 48     | 1    | 0    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A2*B            | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (PCIN>>17)+A*B  | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
-+--------------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++----------------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                               | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | A*B2            | 18     | 13     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A2*B            | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (PCIN>>17)+A*B  | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A*B)'        | 16     | 15     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A2*B)'       | 18     | 15     | 48     | -      | 48     | 1    | 0    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A*B)'        | 16     | 16     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A2*B)'       | 18     | 16     | 48     | -      | 48     | 1    | 0    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A2*B            | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (PCIN>>17)+A*B  | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 16     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17)+A2*B | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
++----------------------------------------------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -786,26 +929,26 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:51 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9193 ; free virtual = 49887
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:44 . Memory (MB): peak = 2672.492 ; gain = 963.121 ; free physical = 1954 ; free virtual = 54228
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:51 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9193 ; free virtual = 49887
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 2695.492 ; gain = 986.121 ; free physical = 1930 ; free virtual = 54204
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+--------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name                           | RTL Object                                                                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+--------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|prometheus_pynq_z1_prometheus_soc_0_0 | exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg                                    | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
-|prometheus_pynq_z1_prometheus_soc_0_0 | grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
-|prometheus_pynq_z1_prometheus_soc_0_0 | reg_file_U/ram_reg                                                                           | 32 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
-+--------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++----------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                               | RTL Object                                                                                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|prometheus_soc_generate_exp_buffer__GB1                   | exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg                                    | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB3 | grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg | 15 x 132(READ_FIRST)   | W |   | 15 x 132(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|prometheus_pynq_z1_prometheus_soc_0_0                     | reg_file_U/ram_reg                                                                           | 32 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -813,14 +956,14 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance grp_generate_exp_buffer_fu_3181i_1/exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance grp_generate_exp_buffer_fu_3181i_1/exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62i_5/grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62i_5/grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance u_prometheus_soci_6/reg_file_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance u_prometheus_soci_6/reg_file_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance grp_generate_exp_buffer_fu_3181i_1/inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance grp_generate_exp_buffer_fu_3181i_1/inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62i_5/inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62i_5/inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:00:56 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9265 ; free virtual = 49961
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 2734.449 ; gain = 1025.078 ; free physical = 700 ; free virtual = 52984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -834,57 +977,63 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/exp_stream_U/U_prometheus_soc_fifo_w132_d16_A_ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_normalize_and_store_fu_3700/prob_stream_U/U_prometheus_soc_fifo_w132_d16_A_x_ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_prometheus_soc/reg_file_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_prometheus_soc/reg_file_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9314 ; free virtual = 50008
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:55 . Memory (MB): peak = 2908.176 ; gain = 1198.805 ; free physical = 583 ; free virtual = 52866
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:01 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9305 ; free virtual = 49999
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:55 . Memory (MB): peak = 2908.176 ; gain = 1198.805 ; free physical = 577 ; free virtual = 52860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:01:04 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9325 ; free virtual = 50020
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 2958.871 ; gain = 1249.500 ; free physical = 516 ; free virtual = 52800
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:01:04 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9324 ; free virtual = 50019
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:58 . Memory (MB): peak = 2958.871 ; gain = 1249.500 ; free physical = 520 ; free virtual = 52803
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:05 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9329 ; free virtual = 50024
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 2982.684 ; gain = 1273.312 ; free physical = 524 ; free virtual = 52807
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9330 ; free virtual = 50025
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 2982.684 ; gain = 1273.312 ; free physical = 524 ; free virtual = 52807
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name                                               | RTL Name                                                                                                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|prometheus_soc_generate_exp_buffer__GB0                   | emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/pkt_keep_reg_5618_pp0_iter4_reg_reg[0]                         | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|prometheus_soc_generate_exp_buffer__GB0                   | emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/icmp_ln247_reg_5632_pp0_iter4_reg_reg[0]                       | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|prometheus_soc_generate_exp_buffer__GB0                   | emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/icmp_ln251_reg_5644_pp0_iter4_reg_reg[0]                       | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|prometheus_soc_generate_exp_buffer__GB0                   | emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/icmp_ln255_reg_5656_pp0_iter4_reg_reg[0]                       | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|prometheus_soc_generate_exp_buffer__GB0                   | emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/ap_loop_exit_ready_pp0_iter5_reg_reg                           | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB0 | grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/icmp_ln214_reg_3802_pp0_iter2_reg_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++--------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                           | RTL Name                                                                                                                                                                                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|prometheus_pynq_z1_prometheus_soc_0_0 | inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/pkt_keep_reg_5618_pp0_iter4_reg_reg[0]   | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|prometheus_pynq_z1_prometheus_soc_0_0 | inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/icmp_ln247_reg_5632_pp0_iter4_reg_reg[0] | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|prometheus_pynq_z1_prometheus_soc_0_0 | inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/icmp_ln251_reg_5644_pp0_iter4_reg_reg[0] | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|prometheus_pynq_z1_prometheus_soc_0_0 | inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/icmp_ln255_reg_5656_pp0_iter4_reg_reg[0] | 5      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|prometheus_pynq_z1_prometheus_soc_0_0 | inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_generate_exp_buffer_fu_3181/emit_exp_stream_U0/grp_emit_exp_stream_Pipeline_exp_emit_loop_fu_2106/ap_loop_exit_ready_pp0_iter5_reg_reg     | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|prometheus_pynq_z1_prometheus_soc_0_0 | inst/u_prometheus_soc/grp_prometheus_soc_Pipeline_PROGRAM_LOOP_fu_62/grp_load_logits_and_find_max_fu_2917/grp_load_logits_and_find_max_Pipeline_load_loop_fu_568/icmp_ln214_reg_3802_pp0_iter2_reg_reg[0]           | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -894,42 +1043,42 @@ Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+--------------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                                             | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+--------------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (PCIN>>17+A'*B')'  | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (PCIN>>17+A'*B')'  | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A'*B')'         | 15     | 18     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A'*B')'         | 17     | 18     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A'*B')'         | 15     | 15     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (C+A'*B')'         | 17     | 15     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop   | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A''*B              | 17     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | (PCIN>>17+A*B)'    | 16     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A'*B'              | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A'*B'              | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A'*B'              | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|prometheus_pynq_z1_prometheus_soc_0_0                   | A'*B'              | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-+--------------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++----------------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                               | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (PCIN>>17+A'*B')'  | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (PCIN>>17+A'*B')'  | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A'*B')'         | 15     | 18     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A'*B')'         | 17     | 18     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A'*B')'         | 15     | 15     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (C+A'*B')'         | 17     | 15     | 48     | -      | 48     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_exp_stream_Pipeline_exp_emit_loop     | (A*B')'            | 30     | 12     | -      | -      | 31     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A'*B'')' | 15     | 14     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | (PCIN>>17+A*B'')'  | 0      | 14     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A''*B'             | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_emit_prob_stream_Pipeline_prob_emit_loop   | A'*B''             | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A''*B              | 17     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | (PCIN>>17+A*B)'    | 16     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A'*B'              | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A'*B'              | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A'*B'              | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|prometheus_soc_prometheus_soc_Pipeline_PROGRAM_LOOP__GCB2 | A'*B'              | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++----------------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -942,50 +1091,50 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |   466|
+|1     |CARRY4   |   480|
 |2     |DSP48E1  |    32|
-|12    |LUT1     |   142|
-|13    |LUT2     |  1420|
-|14    |LUT3     |  2522|
-|15    |LUT4     |  1628|
+|12    |LUT1     |   143|
+|13    |LUT2     |  1418|
+|14    |LUT3     |  2545|
+|15    |LUT4     |  1619|
 |16    |LUT5     |  1784|
-|17    |LUT6     | 21156|
+|17    |LUT6     | 21155|
 |18    |MUXF7    |  2050|
 |19    |MUXF8    |  1016|
 |20    |RAMB18E1 |     1|
 |21    |RAMB36E1 |     4|
 |22    |SRL16E   |     6|
-|23    |FDRE     | 52240|
+|23    |FDRE     | 52297|
 |24    |FDSE     |   101|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9329 ; free virtual = 50024
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 2982.684 ; gain = 1273.312 ; free physical = 524 ; free virtual = 52807
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 329 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 3018.367 ; gain = 1141.223 ; free physical = 9336 ; free virtual = 50031
-Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 3018.367 ; gain = 1310.773 ; free physical = 9336 ; free virtual = 50031
+Synthesis finished with 0 errors, 0 critical warnings and 271 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 2986.598 ; gain = 1107.676 ; free physical = 6725 ; free virtual = 59009
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:01 . Memory (MB): peak = 2986.598 ; gain = 1277.227 ; free physical = 6725 ; free virtual = 58994
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.44 . Memory (MB): peak = 3018.367 ; gain = 0.000 ; free physical = 9360 ; free virtual = 50055
-INFO: [Netlist 29-17] Analyzing 3569 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2986.598 ; gain = 0.000 ; free physical = 6803 ; free virtual = 59075
+INFO: [Netlist 29-17] Analyzing 3583 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3074.395 ; gain = 0.000 ; free physical = 9371 ; free virtual = 50070
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3074.520 ; gain = 0.000 ; free physical = 6827 ; free virtual = 59147
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 860fa729
+Synth Design complete | Checksum: 61d37f03
 INFO: [Common 17-83] Releasing license: Synthesis
-153 Infos, 223 Warnings, 0 Critical Warnings and 0 Errors encountered.
+302 Infos, 227 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:12 . Memory (MB): peak = 3074.430 ; gain = 1507.727 ; free physical = 9359 ; free virtual = 50058
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2116.438; main = 2116.438; forked = 0.000
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3074.398; main = 3074.398; forked = 0.000
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3098.406 ; gain = 0.000 ; free physical = 9355 ; free virtual = 50059
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 3074.555 ; gain = 1534.949 ; free physical = 6843 ; free virtual = 59154
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 8328.984; main = 2077.801; forked = 6622.353
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 14176.395; main = 3074.523; forked = 11426.512
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3098.531 ; gain = 0.000 ; free physical = 6842 ; free virtual = 59158
 INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_prometheus_soc_0_0_synth_1/prometheus_pynq_z1_prometheus_soc_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP prometheus_pynq_z1_prometheus_soc_0_0, cache-ID = 4f99a9a19b0e0ae7
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP prometheus_pynq_z1_prometheus_soc_0_0, cache-ID = 3318728d262baec8
 INFO: [Coretcl 2-1174] Renamed 42 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3098.406 ; gain = 0.000 ; free physical = 9011 ; free virtual = 49793
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3098.531 ; gain = 0.000 ; free physical = 6820 ; free virtual = 59199
 INFO: [Common 17-1381] The checkpoint '/home/elfo/Documents/ELEC5803/Prometheus_SoC/vivado/build/pynq_z1/prometheus_soc_pynq_z1.runs/prometheus_pynq_z1_prometheus_soc_0_0_synth_1/prometheus_pynq_z1_prometheus_soc_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file prometheus_pynq_z1_prometheus_soc_0_0_utilization_synth.rpt -pb prometheus_pynq_z1_prometheus_soc_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Mar 14 17:32:04 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 18:12:41 2026...

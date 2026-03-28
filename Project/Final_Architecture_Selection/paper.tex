@@ -16,6 +16,7 @@
 
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{groupplots}
+\usetikzlibrary{positioning}
 \sisetup{
   round-mode=places,
   round-precision=3,
@@ -43,7 +44,7 @@ Ottawa, Canada
 \maketitle
 
 \begin{abstract}
-This paper consolidates a multi-phase hardware design study into a single research narrative centered on Softmax acceleration for resource-constrained edge systems. Starting from a reproduced high-level synthesis (HLS) RV32I RISC-V processor, the work first extends the core to RV32IM, then optimizes the baseline through pipelining, and finally integrates a dedicated fixed-point Softmax accelerator into a shared-memory system-on-chip (SoC) called \emph{Prometheus SoC}. The accelerator uses max-subtraction for numerical stabilization, piecewise-linear exponential and reciprocal approximations, and a four-lane vectorized datapath implemented with HLS dataflow. The resulting system is exposed to the processor through memory-mapped I/O and deployed on a Digilent PYNQ-Z1. Across the implementation-level comparison used for architecture selection, the software-only core scales as $287.89N + 74.34$ cycles, while the integrated SoC scales as $0.74N + 226.61$ cycles. This yields a measured speedup of $114.7\times$ at $N=128$ and an asymptotic slope-based limit of approximately $389\times$. The accelerator also restores Softmax normalization accuracy, maintaining sums near unity while the software baseline degrades substantially with increasing vector length. FPGA measurements from the implemented SoC match simulation exactly at the sampled verification points and meet timing at \SI{84.2}{\mega\hertz}. Together, these results justify the final architectural choice of a tightly integrated RISC-V plus accelerator SoC.
+This paper consolidates a multi-phase hardware design study into a single research narrative centered on Softmax acceleration for resource-constrained edge systems. Starting from a reproduced high-level synthesis (HLS) RV32I RISC-V processor, the work first extends the core with multiplication support, then optimizes the baseline through pipelining, and finally integrates a dedicated fixed-point Softmax accelerator into a shared-memory system-on-chip (SoC) called \emph{Prometheus SoC}. The implemented accelerator uses max-subtraction for numerical stabilization, piecewise-linear exponential and reciprocal approximations, and a four-lane vectorized datapath implemented with HLS dataflow. The resulting system combines a 32-bit RISC-V controller core, 128-bit shared BRAM, MMIO launch registers, and a board-level wrapper that latches completion and cycle counts on a Digilent PYNQ-Z1. Across the implementation-level comparison used for architecture selection, the software-only core scales as $287.89N + 74.34$ cycles, while the integrated SoC scales as $0.74N + 226.61$ cycles. This yields a measured speedup of $114.7\times$ at $N=128$ and an asymptotic slope-based limit of approximately $389\times$. The accelerator also restores Softmax normalization accuracy, maintaining sums near unity while the software baseline degrades substantially with increasing vector length. FPGA measurements from the implemented SoC match simulation exactly at the sampled verification points and meet timing at \SI{84.2}{\mega\hertz}. Together, these results justify the final architectural choice of a tightly integrated RISC-V plus accelerator SoC.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -61,7 +62,7 @@ This project began from the HLS RV32I SoC of Toker \cite{toker2023hlsriscv}, the
 
 The main contributions of this work are:
 \begin{enumerate}
-\item a consolidated hardware progression from baseline RV32I reproduction to an RV32IM, pipelined, Softmax-capable system;
+\item a consolidated hardware progression from baseline RV32I reproduction to a multiply-enabled, pipelined, Softmax-capable system;
 \item a fixed-point Softmax accelerator with log-sum-exp stabilization, piecewise-linear exponential and reciprocal approximations, and a four-lane vectorized datapath;
 \item a shared-BRAM, MMIO-controlled SoC integration that allows a RISC-V core to launch and read back accelerator results without DMA; and
 \item end-to-end validation on the PYNQ-Z1, including architecture-selection plots, board-level implementation data, and FPGA-versus-simulation agreement.
@@ -75,31 +76,96 @@ Kim \emph{et al.} \cite{kim2025softmax} focus instead on the non-linear bottlene
 The position of this work is therefore between those references. It begins from an HLS RISC-V system in the style of \cite{toker2023hlsriscv}, then specializes that system around the Softmax bottleneck highlighted by \cite{kim2025softmax}, while keeping the processor in the loop as the software controller.
 
 \section{Project Evolution and Final Architecture}
-The project evolved through five reports that directly informed the final system. Report~1 reproduced the RV32I baseline and established the bare-metal memory-image workflow. Report~2 extended the baseline to RV32IM so multiplication-based fixed-point kernels became practical. Report~3 proposed the specialization strategy: approximate exponentiation, memory-mapped control, and shared memory between processor and accelerator. Report~5 delivered the first pipelined RV32IM baseline and a standalone Softmax accelerator. Report~6 integrated these ideas into the final \emph{Prometheus SoC}, which is the focus of this paper.
+The project evolved through five reports that directly informed the final system. Report~1 reproduced the RV32I baseline and established the bare-metal memory-image workflow. Report~2 extended the baseline with the multiplication subset needed for fixed-point kernels. Report~3 proposed the specialization strategy: approximate exponentiation, memory-mapped control, and shared memory between processor and accelerator. Report~5 delivered the first pipelined multiply-enabled baseline and a standalone Softmax accelerator. Report~6 integrated these ideas into the final \emph{Prometheus SoC}, which is the focus of this paper.
 
-\begin{figure}[t]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{figures/report6-000.png}
 \caption{Vivado block diagram of the implemented Prometheus SoC on the PYNQ-Z1. The Zynq processing system provides AXI control, while the programmable logic contains the packaged Prometheus SoC wrapper, AXI BRAM controller, shared BRAM, and GPIO-based start/status path.}
 \label{fig:block_diagram}
 \end{figure}
 
-Fig.~\ref{fig:block_diagram} shows the final deployed system. The Zynq processing system acts as host-side control logic and accesses the programmable logic through AXI SmartConnect. Shared BRAM holds the RISC-V program image, input logits, output probabilities, and debug words. Two AXI GPIO blocks implement a simple hardware-software handshake: one pulses the start signal, and the other returns latched status bits and FPGA cycle counts.
+Fig.~\ref{fig:block_diagram} shows the final deployed system. The Zynq processing system acts as the host and reaches the programmable logic through \texttt{M\_AXI\_GP0}, AXI SmartConnect, an AXI BRAM controller, and two AXI GPIO peripherals. The shared memory is a true dual-port BRAM configured as 16384 lines of 128 bits, giving a total capacity of 256~KiB. BRAM Port~A is visible to the processing system through AXI at \texttt{0x40000000}, while BRAM Port~B is connected directly to the packaged HLS SoC wrapper. This shared image simultaneously stores the RISC-V program, input logits, output probabilities, and debug words.
 
-Inside the packaged HLS core, the RISC-V processor and accelerator share the same memory image. The software configures the accelerator through MMIO registers at address \texttt{0x7000}, writing the input base address, output base address, debug base address, and vector length $N$, then setting the start bit. The accelerator reads logits from BRAM, computes exponentials after subtracting the vector maximum, accumulates the sum, computes an approximate reciprocal, and writes normalized probabilities back into BRAM. This integration avoids explicit data copying and keeps the processor responsible for orchestration rather than numerical throughput.
+The wrapper is architecturally important rather than just connective logic. It converts the HLS \texttt{ap\_memory} interface into a standard BRAM port, edge-detects a GPIO level into a one-cycle \texttt{ap\_start} pulse, latches the one-cycle \texttt{ap\_done} indication so software can poll it safely, and accumulates end-to-end cycle count in hardware. The exported 32-bit status word uses bits \texttt{[3:0]} for done, idle, ready, and busy, and bits \texttt{[31:4]} for the measured FPGA cycle count. This wrapper is what makes the synthesized HLS block behave like a board-usable accelerator subsystem instead of a raw simulation artifact.
+
+Inside the packaged HLS core, the processor and accelerator share a single 128-bit memory image. The controller side is a compact 32-bit RISC-V core with 32 architectural registers and a single pipelined instruction loop. It implements the RV32I integer subset plus the multiplication instructions needed by the project software path, but not division or remainder. Each 128-bit BRAM line is treated as four 32-bit words, so scalar software execution and vectorized accelerator access both target the same memory without format conversion.
+
+The processor exposes the accelerator through an internal MMIO block beginning at \texttt{0x7000}. Software writes the input base address, output base address, debug base address, and vector length $N$ to this register file, then writes the start bit. In the current implementation, that start write does not merely notify an external engine; it causes the CPU control path to call the accelerator directly and block until the accelerator returns. This means the integrated design is best understood as a tightly coupled coprocessor architecture with shared BRAM rather than a DMA-driven loosely coupled accelerator.
+
+The accelerator datapath itself is organized as a fixed-point four-lane Softmax pipeline operating on Q16.16 data with a maximum supported vector length of 256. The first stage streams logits from BRAM into a local buffer while performing a four-way reduction to find the maximum element. The second stage subtracts that maximum and computes approximate exponentials. Those exponentials are cached locally, summed into a 64-bit accumulator, passed through a piecewise-linear reciprocal approximation, and finally multiplied by the reciprocal to generate normalized probabilities. The probability stream is then written back to BRAM four words at a time, and the accelerator emits debug values including the observed maximum and accumulated sum.
 
 The exponential path exploits the identity
 \begin{equation}
 e^x = 2^{x / \ln 2},
 \end{equation}
-implemented with a fixed-point multiply by $1 / \ln 2$, a power-of-two shift for the integer component, and a 17-point piecewise-linear lookup for the fractional component. The final accelerator version uses a four-word vector width and HLS dataflow so memory movement and arithmetic can overlap.
+implemented with a fixed-point multiply by $1 / \ln 2$, a power-of-two shift for the integer component, and a 17-point piecewise-linear lookup for the fractional component. Reciprocal normalization uses a separate 16-segment piecewise-linear approximation in Q2.30. The final accelerator version uses a four-word vector width and HLS \texttt{DATAFLOW} regions so exponential generation, buffering, normalization, and writeback can overlap internally.
+
+\begin{table}[t]
+\centering
+\caption{Compact architectural summary of the implemented Prometheus SoC.}
+\label{tab:arch_summary}
+\scriptsize
+\begin{tabular}{@{}p{0.27\columnwidth}p{0.64\columnwidth}@{}}
+\toprule
+Item & Implemented detail \\
+\midrule
+Top-level HLS block & One HLS SoC containing a 32-bit RISC-V controller core, a four-lane Softmax accelerator, and a shared BRAM image. \\
+Shared memory & 16384 lines $\times$ 128 bits = 256~KiB true dual-port BRAM; each line holds four 32-bit words. \\
+Board mapping & PS7 accesses BRAM through AXI at \texttt{0x40000000}; the HLS SoC uses the second BRAM port directly. \\
+Local memory map & Program at \texttt{0x0000}; inputs at \texttt{0x4000}; probabilities at \texttt{0x5000}; debug at \texttt{0x6000}; accelerator MMIO at \texttt{0x7000}--\texttt{0x7010}. \\
+MMIO registers & \texttt{0x7000} AP\_CTRL; \texttt{0x7004} input base; \texttt{0x7008} probability base; \texttt{0x700C} debug base; \texttt{0x7010} vector length $N$. \\
+Status word & Bits \texttt{[3:0]} give done, idle, ready, and busy; bits \texttt{[31:4]} hold the latched FPGA cycle count. \\
+CPU subset & RV32I integer core with 32 registers plus multiply instructions used by the software path; division and remainder are not implemented. \\
+Launch semantics & Writing the MMIO start bit causes the CPU control path to call the accelerator directly and block until completion. \\
+Input format & Logits are stored as signed Q16.16 values in shared BRAM. \\
+Accelerator width & Four-lane vector datapath; one 128-bit BRAM line corresponds to one four-element accelerator block. \\
+Exponential path & Max subtraction, conversion through $2^{x/\ln 2}$, and a 17-point piecewise-linear lookup for the fractional term. \\
+Normalization path & 64-bit accumulated exponential sum followed by a 16-segment piecewise-linear reciprocal approximation in Q2.30. \\
+Debug outputs & The accelerator writes back the observed maximum, accumulated sum in Q16.16, and a derived shift/debug term. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[
+    node distance=0.45cm,
+    flowbox/.style={
+        draw,
+        rounded corners=2pt,
+        align=center,
+        font=\tiny,
+        minimum width=0.76\columnwidth,
+        inner sep=2.5pt
+    },
+    flowarrow/.style={->, thick}
+]
+\node[flowbox, fill=gray!8] (boot) {PS loads BRAM image and pulses \texttt{ctrl\_start}};
+\node[flowbox, fill=gray!8, below=of boot] (cpu) {RISC-V core boots from shared BRAM and writes accelerator MMIO registers at \texttt{0x7000}};
+\node[flowbox, fill=gray!8, below=of cpu] (launch) {MMIO start write invokes the four-lane Softmax accelerator and stalls the CPU control path};
+\node[flowbox, fill=gray!8, below=of launch] (accel) {Accelerator reads logits, finds max, computes approximate exponentials, accumulates sum, applies reciprocal normalization};
+\node[flowbox, fill=gray!8, below=of accel] (writeback) {Probabilities and debug words are written back into shared BRAM at \texttt{0x5000} and \texttt{0x6000}};
+\node[flowbox, fill=gray!8, below=of writeback] (done) {Wrapper latches \texttt{done} and cycle count; PS reads status and results};
+
+\draw[flowarrow] (boot) -- (cpu);
+\draw[flowarrow] (cpu) -- (launch);
+\draw[flowarrow] (launch) -- (accel);
+\draw[flowarrow] (accel) -- (writeback);
+\draw[flowarrow] (writeback) -- (done);
+\end{tikzpicture}
+}
+\caption{Runtime control flow of Prometheus SoC. The processor configures and launches the accelerator, which executes the Softmax kernel over shared BRAM.}
+\label{fig:runtime_flow}
+\end{figure}
 
 Measured across the project reports, the architecture progression is consistent: each stage traded additional area for a lower marginal Softmax cost. The important qualitative transition was from software execution on the pipelined core, to a standalone accelerator, and finally to an integrated SoC in which the processor remains the controller while the accelerator handles the numerically intensive kernel.
 
 \section{Experimental Methodology}
-The evaluation combines data from the implementation-level comparisons used during architecture selection and the board-level FPGA validation performed on the final system. The software baseline is the pipelined RV32IM core from Report~5. The final system is the integrated Prometheus SoC deployed on the Digilent PYNQ-Z1 with the \texttt{xc7z020clg400-1} device.
+The evaluation combines data from the implementation-level comparisons used during architecture selection and the board-level FPGA validation performed on the final system. The software baseline is the pipelined multiply-enabled core from Report~5. The final system is the integrated Prometheus SoC deployed on the Digilent PYNQ-Z1 with the \texttt{xc7z020clg400-1} device.
 
-All Softmax inputs use fixed-point Q16.16 values. For the architecture-selection study, vector lengths from $N=2$ to $N=128$ are compared using the same workload set previously reported for the core-only and SoC implementations. For board validation, the SoC is swept from $N=2$ to $N=256$ through the JTAG/PYNQ execution flows stored in the repository, and the resulting FPGA cycle counts and normalization sums are recorded. The primary metrics are:
+All Softmax inputs use fixed-point Q16.16 values. For the architecture-selection study, vector lengths from $N=2$ to $N=128$ are compared using the same workload set previously reported for the core-only and SoC implementations. For board validation, the SoC is swept from $N=2$ to $N=256$ through the JTAG execution flow stored in the repository, and the resulting FPGA cycle counts and normalization sums are recorded. The PYNQ runtime path is used for board deployment and functional interaction, but the timing values reported here come from the JTAG status-word measurement flow. The primary metrics are:
 \begin{itemize}
 \item clock cycles versus sequence length;
 \item Softmax probability sum as a numerical-stability proxy;
@@ -111,7 +177,7 @@ All Softmax inputs use fixed-point Q16.16 values. For the architecture-selection
 \subsection{Implementation-Level Architecture Selection}
 \begin{table}[t]
 \centering
-\caption{Implementation-level resource summary used for architecture selection. The baseline values come from the pipelined RV32IM implementation flow, while the SoC values come from the Prometheus SoC Vivado IP-flow implementation.}
+\caption{Implementation-level resource summary used for architecture selection. The baseline values come from the pipelined multiply-enabled implementation flow, while the SoC values come from the Prometheus SoC Vivado IP-flow implementation.}
 \label{tab:impl_compare}
 \begin{tabular}{lcc}
 \toprule
@@ -286,7 +352,7 @@ The combined evidence supports a clear architectural conclusion. A software-only
 The main limitation of the present design is scope rather than correctness. The integrated system accelerates Softmax only; it does not yet offload the earlier matrix-heavy layers of a full neural network, and it uses fixed-point arithmetic tuned for the tested workloads rather than a broad accuracy study over large benchmark suites. These are reasonable future directions. Another useful next step would be extending the accelerator interface beyond the current BRAM-centric deployment to a larger memory subsystem or DMA-capable integration.
 
 \section{Conclusion}
-This paper consolidated the full project progression from a reproduced HLS RV32I core to a deployed RISC-V plus accelerator SoC. The final architecture, Prometheus SoC, integrates a four-lane fixed-point Softmax accelerator with a RISC-V controller through shared BRAM and MMIO. Relative to the software-only pipelined RV32IM baseline, the integrated system reduces the effective marginal Softmax cost from $287.89$ cycles per element to $0.74$ cycles per element, delivers a measured $114.7\times$ speedup at $N=128$, preserves normalization accuracy near unity, and matches simulation when exercised on the PYNQ-Z1 FPGA. These results make the final architecture selection straightforward: the publishable contribution is not only an accelerator, but a validated SoC-level demonstration of hardware-software co-design for Softmax acceleration on a constrained FPGA platform.
+This paper consolidated the full project progression from a reproduced HLS RV32I core to a deployed RISC-V plus accelerator SoC. The final architecture, Prometheus SoC, integrates a four-lane fixed-point Softmax accelerator with a RISC-V controller through shared BRAM and MMIO. Relative to the software-only pipelined multiply-enabled baseline, the integrated system reduces the effective marginal Softmax cost from $287.89$ cycles per element to $0.74$ cycles per element, delivers a measured $114.7\times$ speedup at $N=128$, preserves normalization accuracy near unity, and matches simulation when exercised on the PYNQ-Z1 FPGA. These results make the final architecture selection straightforward: the publishable contribution is not only an accelerator, but a validated SoC-level demonstration of hardware-software co-design for Softmax acceleration on a constrained FPGA platform.
 
 \appendices
 \section{Summary of AI Usage}

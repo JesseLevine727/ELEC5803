@@ -120,6 +120,51 @@ def main() -> None:
         verification_rows,
     )
 
+    # Architecture progression assembled from the earlier phase reports and the
+    # final HLS/Vivado implementation results. These values are reused in the
+    # IEEE paper to show how the project traded area for throughput across
+    # successive softmax-capable designs.
+    evolution_rows = [
+        {
+            "stage": "SW Core",
+            "lut": 2169,
+            "dsp": 12,
+            "bram": 0,
+            "cycles_per_element": 287.89,
+            "latency_intercept": 74.34,
+        },
+        {
+            "stage": "Accel v1",
+            "lut": 3091,
+            "dsp": 7,
+            "bram": 2,
+            "cycles_per_element": 4.68,
+            "latency_intercept": 74.17,
+        },
+        {
+            "stage": "Accel SIMD4",
+            "lut": 5523,
+            "dsp": 22,
+            "bram": 20,
+            "cycles_per_element": 1.17,
+            "latency_intercept": 94.36,
+        },
+        {
+            "stage": "Integrated SoC",
+            "lut": 26090,
+            "dsp": 32,
+            "bram": 9,
+            "cycles_per_element": 0.74,
+            "latency_intercept": 226.61,
+        },
+    ]
+
+    write_csv(
+        DATA_DIR / "softmax_design_evolution.csv",
+        ["stage", "lut", "dsp", "bram", "cycles_per_element", "latency_intercept"],
+        evolution_rows,
+    )
+
 
 if __name__ == "__main__":
     main()

@@ -15,7 +15,7 @@ from pathlib import Path
 
 API_URL = "https://api.openai.com/v1/audio/speech"
 DEFAULT_MODEL = "gpt-4o-mini-tts"
-DEFAULT_VOICE = "alloy"
+DEFAULT_VOICE = "onyx"
 DEFAULT_FORMAT = "wav"
 MAX_INPUT_CHARS = 3900
 

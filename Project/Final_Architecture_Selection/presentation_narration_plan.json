@@ -1,0 +1,63 @@
+[
+  {
+    "page": 1,
+    "narration": "Hello. This presentation summarizes my final project, Prometheus SoC: a high-level synthesis implementation of a RISC-V controlled Softmax accelerator system on the PYNQ-Z1."
+  },
+  {
+    "page": 2,
+    "narration": "The objective was not just to make Softmax faster in isolation. The goal was to identify a meaningful inference bottleneck, build hardware for it, integrate it into a processor-based system, and validate that system on real FPGA hardware. Softmax was a good target because exponentiation, accumulation, and normalization are expensive on a small integer-oriented core and numerically fragile in fixed-point software."
+  },
+  {
+    "page": 3,
+    "narration": "The project evolved in stages: reproducing the baseline RV32I processor, adding multiplication support, defining the Softmax specialization strategy, optimizing the software baseline and building a standalone accelerator, and finally integrating the controller core and accelerator into Prometheus SoC. The result is a system-level architecture decision, not just a kernel benchmark."
+  },
+  {
+    "page": 4,
+    "narration": "Prometheus SoC combines a compact RISC-V controller, a fixed-point Softmax accelerator, and a shared BRAM-backed memory image. On the board, the PYNQ-Z1 processing system reaches the programmable logic through M AXI G P zero, AXI SmartConnect, an AXI BRAM controller, and GPIO control and status paths."
+  },
+  {
+    "page": 5,
+    "narration": "The shared memory is a true dual-port BRAM with one hundred twenty-eight bit lines and a total capacity of two hundred fifty-six kibibytes. That single image holds the program, input logits, output probabilities, and debug data. Inside the local map, the program starts at zero, inputs are at zero x four thousand, probabilities at zero x five thousand, debug at zero x six thousand, and the accelerator registers at zero x seven thousand."
+  },
+  {
+    "page": 6,
+    "narration": "At runtime, the host loads the BRAM image and pulses start. The RISC-V core boots from shared memory, programs the accelerator memory mapped registers, and writes the start bit. The accelerator then reads the logits, performs Softmax, writes probabilities and debug data back into BRAM, and the wrapper latches done and the cycle count for the host to read."
+  },
+  {
+    "page": 7,
+    "narration": "The accelerator uses signed Q sixteen point sixteen arithmetic and a four-lane vector datapath. It first finds the maximum for numerical stability, then computes approximate exponentials, accumulates a sixty-four bit sum, approximates the reciprocal in Q two point thirty, and finally normalizes and writes probabilities back to memory. H L S dataflow allows exponentiation, buffering, normalization, and writeback to overlap."
+  },
+  {
+    "page": 8,
+    "narration": "Integrating the accelerator into the SoC increases resource usage substantially compared with the software-only core, because the final design includes the datapath, local buffering, shared memory infrastructure, and control integration. The key question is whether that area cost is justified by throughput and numerical behavior."
+  },
+  {
+    "page": 9,
+    "narration": "The answer is yes. The software-only implementation scales linearly with a very large slope, while the integrated SoC keeps the per-element cost extremely small. In the final comparison, the software baseline scales at roughly two hundred eighty-seven point eight nine N plus seventy-four point three four cycles, while the integrated SoC scales at about zero point seven four N plus two hundred twenty-six point six one cycles."
+  },
+  {
+    "page": 10,
+    "narration": "This is not only a speed result. The software approximation path loses probability mass as sequence length increases, and its Softmax sum collapses toward about zero point six seven five for longer vectors. The accelerator-based SoC keeps the sum close to one, so it is materially better behaved numerically."
+  },
+  {
+    "page": 11,
+    "narration": "At N equals one hundred twenty-eight, the integrated SoC achieves a measured speedup of about one hundred fourteen point seven times over the software-only baseline. If we compare the fitted slopes, the large-N asymptotic speedup limit is about three hundred eighty-nine times."
+  },
+  {
+    "page": 12,
+    "narration": "The final system was implemented on the Digilent PYNQ-Z1 using the Xilinx Zynq seven zero two zero device. The complete board-integrated design met timing at about eighty-four point two megahertz, which means this is a measured FPGA system result rather than a simulation-only argument."
+  },
+  {
+    "page": 13,
+    "narration": "Board-level measurements matched simulation exactly at representative points including N equals two, eight, thirty-two, sixty-four, and one hundred twenty-eight. Across the broader sweep up to N equals two hundred fifty-six, latency stayed low and the Softmax sum remained close to one, supporting the claim that the architecture is both fast and numerically stable on real hardware."
+  },
+  {
+    "page": 14,
+    "narration": "In summary, Prometheus SoC is a tightly integrated RISC-V plus Softmax accelerator system built with high-level synthesis and validated on a real FPGA platform. The contribution is a complete shared-memory hardware-software co-design in which a simple controller orchestrates a specialized accelerator through memory mapped control while the wrapper exposes clean end-to-end measurement."
+  },
+  {
+    "page": 15,
+    "narration": "Thank you.",
+    "hold_seconds": 2.0
+  }
+]
